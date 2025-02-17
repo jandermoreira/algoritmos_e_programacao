@@ -1,7 +1,9 @@
-.quarto/
-.venv/
-_site/
+
+/.venv/
+/_site/
 
 /.quarto/
 
 /.luarc.json
+
+/algxpar

@@ -1,21 +1,133 @@
 project:
   type: website
 
+filters: 
+  - algxpar-quarto
+  - cap-filters.lua
+  - runenv.lua
+
+algxpar:
+  algorithm-title: "Algoritmo"
+  algorithm-prefix: "Algoritmo"
+
+# Opções gerais
+lang: pt-BR
+number-sections: false
+toc: true
+crossref: 
+  lst-title: Código
+  lst-prefix: Código
+  # prf-prefix: "Resposta"
+biblio-style: abnt
+syntax-definitions: 
+  - terminal.xml
+
+
 website:
   title: "CAP"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
+      - text: Algoritmos
+        href: algoritmos/introducao.qmd
+      - text: Linguagem C
+        href: linguagem-c/index.qmd
+    right:
       - about.qmd
+
+  sidebar:
+    - id: principal
+      background: light
+      contents: 
+      - text: "---"
+      # - sidebar:algoritmos
+
+    - id: algoritmos
+      style: "docked"
+      collapse-level: 1
+      background: light
+      contents: 
+        - algoritmos/introducao.qmd
+
+    - id: c
+      style: "docked"
+      background: light
+      collapse-level: 2
+      contents: 
+        - linguagem-c/introducao.qmd
+
+        - section: "Programação básica"
+          contents:
+          - linguagem-c/index.qmd  # título real: introducao-a-linguagem-c.qmd
+          - linguagem-c/tipos-de-dados.qmd
+          - linguagem-c/variaveis-identificadores-e-leitura.qmd
+          - linguagem-c/expressoes-aritmeticas.qmd
+          - linguagem-c/expressoes-relacionais-e-logicas.qmd
+
+        - section: "Controle de fluxo simples"
+          contents:
+          - linguagem-c/execucao-condicional-com-if.qmd
+          - linguagem-c/execucao-condicional-com-switch.qmd
+
+        - section: "Organização geral do código"
+          contents:
+          - linguagem-c/escopo-basico-de-declaracoes.qmd
+          - linguagem-c/organizacao-do-codigo-fonte.qmd
+          # - linguagem-c/define.qmd
+
+        - section: "Controle de repetição do fluxo"
+          contents:
+          - linguagem-c/repeticoes-com-while.qmd
+          - linguagem-c/repeticoes-com-for.qmd
+          - linguagem-c/repeticoes-com-do-while.qmd
+          - linguagem-c/arquivos-texto.qmd
+          - linguagem-c/desvirtuacao-das-repeticoes.qmd
+
+        - section: "Cadeias de caracteres"
+          contents:
+          - linguagem-c/dados-textuais.qmd
+          - linguagem-c/manipulacao-de-dados-textuais.qmd
+
+        - section: "Modularização e memória"
+          contents:
+          - linguagem-c/funcoes.qmd
+          - linguagem-c/regras-de-escopo-com-modularizacao.qmd
+          - linguagem-c/enderecamento-de-memoria-e-ponteiros.qmd
+          - linguagem-c/procedimentos.qmd
+          - linguagem-c/parametros-de-funcoes.qmd
+
+        - section: "Estruturação de dados"
+          contents:
+          - linguagem-c/dados-com-struct.qmd
+          - linguagem-c/dados-em-vetores.qmd
+          - linguagem-c/modularizacao-com-vetores.qmd
+          - linguagem-c/dados-em-matrizes.qmd
+          - linguagem-c/modularizacao-com-matrizes.qmd
+          - linguagem-c/alocacao-dinamica-de-memoria.qmd
+
+        - section: "Manipulação de arquivos binários"
+          contents:
+          - linguagem-c/arquivos-binarios.qmd
+
+        - section: "Recursividade"
+          contents:
+            - linguagem-c/recursividade.qmd
+
+        - section: "Organização avançada do código"
+          contents:
+          - linguagem-c/organizacao-do-codigo-separado.qmd
+
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
-    css: styles.css
+    theme: yeti  # materia yeti zephyr
+    css: book.css
     toc: true
-
-
-
+    fontsize: 12pt
+    number-depth: 3
+    toc-title: "Nesta página:"
+    toc-depth: 3
+    highlight-style: tango
+    code-block-border-left: true
+    fig-align: center
+    # fig-responsive: false
+    fig-cap-location: bottom

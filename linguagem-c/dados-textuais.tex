@@ -1,0 +1,841 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Índice}
+\else
+  \newcommand\contentsname{Índice}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Lista de Figuras}
+\else
+  \newcommand\listfigurename{Lista de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Lista de Tabelas}
+\else
+  \newcommand\listtablename{Lista de Tabelas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabela}
+\else
+  \newcommand\tablename{Tabela}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Código}
+\newcommand*\listoflistings{\listof{codelisting}{Lista de Listagens}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{algorithm}{}{\usepackage{algorithm}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{algxpar}{}{\usepackage[brazilian]{algxpar}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{newunicodechar}{}{\usepackage{newunicodechar}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tikz}{}{\usepackage{tikz}}
+\makeatother
+\usetikzlibrary {shapes.geometric}
+\newcommand*\invalidchar[1]{\tikz[baseline=(char.base)]{
+            \node[fill=black,shape=diamond,draw,inner sep=0pt] (char) {\scriptsize\color{white} #1};}
+}
+\newunicodechar{�}{\invalidchar{?}}
+\newunicodechar{‘}{\'{}}
+\newunicodechar{’}{\'{}}
+
+\catcode0=9  % for terminal
+\catcode7=9  % for terminal
+
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{brazilian}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\usepackage{bookmark}
+
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Dados textuais em C},
+  pdflang={pt-BR},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Dados textuais em C}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\floatstyle{plaintop}\restylefloat{algorithm}
+\floatname{algorithm}{Algoritmo}
+
+\counterwithin{algorithm}{chapter}
+
+\renewcommand*\contentsname{Índice}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+
+A linguagem C não é uma linguagem simples para trabalhar com cadeias de
+caracteres, as chamadas \emph{strings}. O suporte para textos na
+linguagem é feito por constantes inseridas diretamente no código ou
+manipuladas em variáveis simples ou compostas do tipo \texttt{char}.
+
+Este capítulo apresenta uma visão inicial das constantes textuais da
+linguagem e como fazer referências a essas constantes.
+
+\subsection{Revisitando as constantes
+textuais}\label{revisitando-as-constantes-textuais}
+
+No \textbf{?@sec-tipos-de-dados} foram apresentados os principais tipos
+de dados da linguagem~C, incluindo os dados textuais, mas ainda é
+preciso complementar as informações sobre os tipos literais.
+
+A linguagem C apresenta duas notações para especificar valores textuais.
+A primeira é para caracteres únicos, como uma letra ou um símbolo de
+pontuação, e é expressa usando aspas simples, como
+\texttt{\textquotesingle{}A\textquotesingle{}} ou
+\texttt{\textquotesingle{}@\textquotesingle{}}, por exemplo.
+
+O programa seguinte ilustra três escritas usando o formato \texttt{\%c}
+(caractere) para apresentar cada valor.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*}
+\CommentTok{Apresentação de caracteres simples}
+\CommentTok{Assegura: escrita de caracteres únicos}
+\CommentTok{*/}
+\PreprocessorTok{\#include }\ImportTok{\textless{}stdio.h\textgreater{}}
+
+\DataTypeTok{int}\NormalTok{ main}\OperatorTok{(}\DataTypeTok{void}\OperatorTok{)} \OperatorTok{\{}
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"Uma letra simples: }\SpecialCharTok{\%c}\StringTok{.}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\OperatorTok{,} \CharTok{\textquotesingle{}f\textquotesingle{}}\OperatorTok{);}
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"Um símbolo de pontuação: }\SpecialCharTok{\%c}\StringTok{.}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\OperatorTok{,} \CharTok{\textquotesingle{};\textquotesingle{}}\OperatorTok{);}
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"O espaço: }\SpecialCharTok{\%c}\StringTok{.}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\OperatorTok{,} \CharTok{\textquotesingle{} \textquotesingle{}}\OperatorTok{);}
+
+    \ControlFlowTok{return} \DecValTok{0}\OperatorTok{;}
+\OperatorTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Uma letra simples: f.}
+\NormalTok{Um símbolo de pontuação: ;.}
+\NormalTok{O espaço:  .}
+\end{Highlighting}
+\end{Shaded}
+
+A segunda forma de expressar constantes literais usa aspas duplas e
+indica uma sequência de caracteres, como \texttt{"linguagem"} e
+\texttt{"compilador\ gcc"}. O \texttt{printf} usa a especificação de
+formato \texttt{\%s} para substituir cadeias de caracteres.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*}
+\CommentTok{Apresentação de cadeias de caracteres}
+\CommentTok{Assegura: escrita de sequências de caracteres}
+\CommentTok{*/}
+\PreprocessorTok{\#include }\ImportTok{\textless{}stdio.h\textgreater{}}
+
+\DataTypeTok{int}\NormalTok{ main}\OperatorTok{(}\DataTypeTok{void}\OperatorTok{)} \OperatorTok{\{}
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"Um texto: }\SpecialCharTok{\%s}\StringTok{.}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\OperatorTok{,} \StringTok{"Era uma vez..."}\OperatorTok{);}
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"Texto com uma tabulação: }\SpecialCharTok{\%s\textbackslash{}n}\StringTok{"}\OperatorTok{,} \StringTok{"n =}\SpecialCharTok{\textbackslash{}t}\StringTok{20"}\OperatorTok{);}
+
+    \ControlFlowTok{return} \DecValTok{0}\OperatorTok{;}
+\OperatorTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Um texto: Era uma vez....}
+\NormalTok{Texto com uma tabulação: n =	20}
+\end{Highlighting}
+\end{Shaded}
+
+A principal diferença entre um caractere simples e uma cadeia de
+caracteres é, além do evidente número de caracteres em si, é a
+representação. Enquanto caracteres simples apenas são representados
+apenas por um valor, a cadeia usa uma sequência de caracteres simples
+seguida pelo terminador \texttt{\textbackslash{}0}, chamado caractere
+nulo e que é representado com todos os bits iguais a zero. Na prática,
+quando o compilador encontra uma constante como \texttt{"programa"} em
+um código, ele armazena esse valor como
+\texttt{programa\textbackslash{}0}, ou seja, sempre com um byte nulo
+depois do texto em si. Para explicitar um pouco mais,
+\texttt{\textquotesingle{}Y\textquotesingle{}} é só o \texttt{Y},
+enquanto \texttt{"Y"} é \texttt{Y\textbackslash{}0}.
+
+\subsection{\texorpdfstring{Armazenamento de caracteres simples: o tipo
+\texttt{char}}{Armazenamento de caracteres simples: o tipo char}}\label{armazenamento-de-caracteres-simples-o-tipo-char}
+
+Para criar uma variável para armazenar um único caractere deve ser usado
+o tipo \texttt{char}. Segue um programa simples ilustrando o conceito.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*}
+\CommentTok{Armazenamento em um char}
+\CommentTok{Assegura: escrita dos valores armazenados}
+\CommentTok{*/}
+\PreprocessorTok{\#include }\ImportTok{\textless{}stdio.h\textgreater{}}
+
+\DataTypeTok{int}\NormalTok{ main}\OperatorTok{(}\DataTypeTok{void}\OperatorTok{)} \OperatorTok{\{}
+    \DataTypeTok{char}\NormalTok{ pontuacao }\OperatorTok{=} \CharTok{\textquotesingle{}?\textquotesingle{}}\OperatorTok{;}
+    \DataTypeTok{char}\NormalTok{ letra }\OperatorTok{=} \CharTok{\textquotesingle{}A\textquotesingle{}}\OperatorTok{;}
+
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"Qual é a letra}\SpecialCharTok{\%c}\StringTok{ Resposta: }\SpecialCharTok{\%c}\StringTok{!}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\OperatorTok{,}\NormalTok{ pontuacao}\OperatorTok{,}\NormalTok{ letra}\OperatorTok{);}
+
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"Quantidade de bytes em um char: }\SpecialCharTok{\%zu}\StringTok{.}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\OperatorTok{,} \KeywordTok{sizeof}\NormalTok{ letra}\OperatorTok{);}
+
+    \ControlFlowTok{return} \DecValTok{0}\OperatorTok{;}
+\OperatorTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Qual é a letra? Resposta: A!}
+\NormalTok{Quantidade de bytes em um char: 1.}
+\end{Highlighting}
+\end{Shaded}
+
+A linguagem C usa o tipo \texttt{char} para caracteres mas, na prática,
+trata esse valor como um valor inteiro. Apenas a apresentação com o
+\texttt{printf} é que escolhe usar o caractere como valor apresentado.
+
+Seguem dois programas para mostrar que \texttt{char} e \texttt{int} são
+muito próximos (mas não iguais!).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*}
+\CommentTok{Apresentação do char como caractere e como inteiro}
+\CommentTok{Assegura: apresentação de um char e seu valor associado}
+\CommentTok{*/}
+\PreprocessorTok{\#include }\ImportTok{\textless{}stdio.h\textgreater{}}
+
+\DataTypeTok{int}\NormalTok{ main}\OperatorTok{(}\DataTypeTok{void}\OperatorTok{)} \OperatorTok{\{}
+    \DataTypeTok{char}\NormalTok{ letra }\OperatorTok{=} \CharTok{\textquotesingle{}Z\textquotesingle{}}\OperatorTok{;}
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"O caractere }\SpecialCharTok{\%c}\StringTok{ é armazenado usando o valor decimal }\SpecialCharTok{\%d}\StringTok{.}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\OperatorTok{,}
+\NormalTok{           letra}\OperatorTok{,}\NormalTok{ letra}\OperatorTok{);}
+
+    \DataTypeTok{int}\NormalTok{ valor }\OperatorTok{=} \DecValTok{90}\OperatorTok{;}
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"O valor decimal }\SpecialCharTok{\%d}\StringTok{ pode ser visto como o caractere }\SpecialCharTok{\%c}\StringTok{.}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\OperatorTok{,}
+\NormalTok{            valor}\OperatorTok{,}\NormalTok{ valor}\OperatorTok{);}
+
+    \ControlFlowTok{return} \DecValTok{0}\OperatorTok{;}
+\OperatorTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{O caractere Z é armazenado usando o valor decimal 90.}
+\NormalTok{O valor decimal 90 pode ser visto como o caractere Z.}
+\end{Highlighting}
+\end{Shaded}
+
+Nesse programa, o valor de \texttt{letra}, que é do tipo \texttt{char},
+é apresentado usando-se tanto a interpretação como um caractere, com
+\texttt{\%c}, quanto como um valor decimal, com \texttt{\%d}. O mesmo é
+feito para a variável inteira \texttt{valor}. Nenhum erro ou aviso é
+emitido pelo compilador.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*}
+\CommentTok{Apresentação de manipulações curiosas com char}
+\CommentTok{Assegura: apresentação de resultados de manipulação}
+\CommentTok{*/}
+\PreprocessorTok{\#include }\ImportTok{\textless{}stdio.h\textgreater{}}
+
+\DataTypeTok{int}\NormalTok{ main}\OperatorTok{(}\DataTypeTok{void}\OperatorTok{)} \OperatorTok{\{}
+    \DataTypeTok{char}\NormalTok{ letra }\OperatorTok{=} \CharTok{\textquotesingle{}A\textquotesingle{}}\OperatorTok{;}
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"A letra atual é }\SpecialCharTok{\%c}\StringTok{. "}\OperatorTok{,}\NormalTok{ letra}\OperatorTok{);}
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"Depois dela vem o }\SpecialCharTok{\%c}\StringTok{.}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\OperatorTok{,}\NormalTok{ letra }\OperatorTok{+} \DecValTok{1}\OperatorTok{);}
+
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{Alfabeto minúsculo: "}\OperatorTok{);}
+    \ControlFlowTok{for} \OperatorTok{(}\DataTypeTok{char}\NormalTok{ letra }\OperatorTok{=} \CharTok{\textquotesingle{}a\textquotesingle{}}\OperatorTok{;}\NormalTok{ letra }\OperatorTok{\textless{}=} \CharTok{\textquotesingle{}z\textquotesingle{}}\OperatorTok{;}\NormalTok{ letra}\OperatorTok{++)}
+\NormalTok{        printf}\OperatorTok{(}\StringTok{"}\SpecialCharTok{\%c}\StringTok{"}\OperatorTok{,}\NormalTok{ letra}\OperatorTok{);}
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\OperatorTok{);}
+
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"Alfabeto maiúsculo: "}\OperatorTok{);}
+    \ControlFlowTok{for} \OperatorTok{(}\DataTypeTok{char}\NormalTok{ letra }\OperatorTok{=} \CharTok{\textquotesingle{}A\textquotesingle{}}\OperatorTok{;}\NormalTok{ letra }\OperatorTok{\textless{}=} \CharTok{\textquotesingle{}Z\textquotesingle{}}\OperatorTok{;}\NormalTok{ letra}\OperatorTok{++)}
+\NormalTok{        printf}\OperatorTok{(}\StringTok{"}\SpecialCharTok{\%c}\StringTok{"}\OperatorTok{,}\NormalTok{ letra}\OperatorTok{);}
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\OperatorTok{);}
+
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{A quantidade de letras de }\SpecialCharTok{\%c}\StringTok{ até }\SpecialCharTok{\%c}\StringTok{ é }\SpecialCharTok{\%d}\StringTok{.}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\OperatorTok{,}
+           \CharTok{\textquotesingle{}H\textquotesingle{}}\OperatorTok{,} \CharTok{\textquotesingle{}T\textquotesingle{}}\OperatorTok{,} \CharTok{\textquotesingle{}T\textquotesingle{}} \OperatorTok{{-}} \CharTok{\textquotesingle{}H\textquotesingle{}} \OperatorTok{+} \DecValTok{1}\OperatorTok{);}
+
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{A letra que fica no meio de }\SpecialCharTok{\%c}\StringTok{ e }\SpecialCharTok{\%c}\StringTok{ é }\SpecialCharTok{\%c}\StringTok{.}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\OperatorTok{,}
+           \CharTok{\textquotesingle{}G\textquotesingle{}}\OperatorTok{,} \CharTok{\textquotesingle{}K\textquotesingle{}}\OperatorTok{,} \OperatorTok{(}\CharTok{\textquotesingle{}G\textquotesingle{}} \OperatorTok{+} \CharTok{\textquotesingle{}K\textquotesingle{}}\OperatorTok{)} \OperatorTok{/} \DecValTok{2}\OperatorTok{);}
+
+    \ControlFlowTok{return} \DecValTok{0}\OperatorTok{;}
+\OperatorTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{A letra atual é A. Depois dela vem o B.}
+
+\NormalTok{Alfabeto minúsculo: abcdefghijklmnopqrstuvwxyz}
+\NormalTok{Alfabeto maiúsculo: ABCDEFGHIJKLMNOPQRSTUVWXYZ}
+
+\NormalTok{A quantidade de letras de H até T é 13.}
+
+\NormalTok{A letra que fica no meio de G e K é I.}
+\end{Highlighting}
+\end{Shaded}
+
+Reforçando a associação de \texttt{char} com um valor inteiro, o
+programa exemplifica operações como \texttt{letra\ +\ 1} e incrementos
+como \texttt{letra++}. Adicionalmente há ainda uma expressão
+interessante:
+\texttt{(\textquotesingle{}G\textquotesingle{}\ +\ \textquotesingle{}K\textquotesingle{})\ /\ 2},
+que soma \texttt{\textquotesingle{}G\textquotesingle{}} (71) com de
+\texttt{\textquotesingle{}K\textquotesingle{}} (75) e divide o resultado
+por 2 (divisão inteira), resultando em 73, que é
+\texttt{\textquotesingle{}I\textquotesingle{}}.
+
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-warning-color!10!white, left=2mm, coltitle=black, opacitybacktitle=0.6, colframe=quarto-callout-warning-color-frame, toprule=.15mm, bottomrule=.15mm, bottomtitle=1mm, rightrule=.15mm, opacityback=0, arc=.35mm, breakable, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Curiosidade}, titlerule=0mm, colback=white]
+
+Cada letra possui um valor específico associado a ela, assim como cada
+um dos outros caracteres. Por exemplo,
+\texttt{\textquotesingle{}A\textquotesingle{}} é o 65,
+\texttt{\textquotesingle{}\textbackslash{}n\textquotesingle{}} é o 10 e
+\texttt{\textquotesingle{}\ \textquotesingle{}} (espaço) é o 32.
+
+Como esperado, se \texttt{\textquotesingle{}A\textquotesingle{}} é 65,
+\texttt{\textquotesingle{}B\textquotesingle{}} é 66,
+\texttt{\textquotesingle{}C\textquotesingle{}} é 67 e assim por diante.
+Portanto, é possível verificar se \texttt{letra1\ \textless{}=\ letra2},
+pois uma comparação de inteiros é feita.
+
+Há um ``porém'' nessa história:
+\texttt{\textquotesingle{}Z\textquotesingle{}} é 90, mas
+\texttt{\textquotesingle{}a\textquotesingle{}} é 97. Na realidade, as
+minúsculas se iniciam no 97 e vão até o 122. Isso gera uma situação
+confusa, pois C tem certeza que
+\texttt{\textquotesingle{}a\textquotesingle{}\ \textgreater{}\ \textquotesingle{}Z\textquotesingle{}}
+é verdadeiro.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-tip-color!10!white, left=2mm, coltitle=black, opacitybacktitle=0.6, colframe=quarto-callout-tip-color-frame, toprule=.15mm, bottomrule=.15mm, bottomtitle=1mm, rightrule=.15mm, opacityback=0, arc=.35mm, breakable, leftrule=.75mm, toptitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Dica}, titlerule=0mm, colback=white]
+
+Embora haja um prejuízo quanto á clareza, o tipo \texttt{char} pode ser
+usado como um ``pequeno inteiro'' de um byte de comprimento. Dessa
+forma, usando o primeiro bit para indicar o sinal, uma variável desse
+tipo guardaria valores de -128 a 127. Caso necessário, pode-se usar a
+declaração de um \texttt{unsigned\ char} para ter valores de 0 até 255.
+
+Para se ter programas mais claros, entretanto, mesmo nesse caso é melhor
+usar os tipos de comprimento fixo definidos em \texttt{stdint.h}. Assim,
+para se ter um inteiro com sinal de oito bits, o tipo seria
+\texttt{int8\_t}, e poderia ser usado o \texttt{uint8\_t} para o mesmo
+comprimento sem o sinal. O tipo \texttt{char} deve ser deixado de fato
+apenas para caracteres. O uso de \texttt{stdint.h} é abordado no
+\textbf{?@sec-arquivos-binarios}.
+
+\end{tcolorbox}
+
+\subsubsection{Caracteres acentuados}\label{sec-caracteres-acentuados}
+
+Na década de 1960 cada sistema computacional usava sua própria tabela
+para associar um dado caractere a um valor numérico. Para que os
+diferentes sistemas pudessem trocar informações, foi elaborada em 1964
+uma codificação padronizada denominada \emph{American Standard Code for
+Information Interchange}, ou tabela ASCII. Essa tabela definia tanto os
+caracteres de controle (\texttt{\textbackslash{}n} ou
+\texttt{\textbackslash{}t}, por exemplo) quanto os caracteres legíveis
+(letras, dígitos e pontuação).
+
+Na prática, tanto os caracteres de controle quanto os símbolos legíveis
+significativos poderiam ser representados com apenas sete bits. Em
+sistemas com palavras de oito bits, o primeiro bit era usualmente zero,
+de forma que praticamente metade dos bytes não tinham uso. O ponto em
+questão é que o conjunto de caracteres era baseado na lingua inglesa, na
+qual acentuações ou outros símbolos de outras línguas não eram
+incluídos, como \texttt{á}, \texttt{ã}, \texttt{Ç}, \texttt{ß} (alemão)
+ou \texttt{č} (esloveno). Os bytes não usados na codificação ASCII
+(aqueles cujos bits começavam com 1) eram usados para esse fim, cada
+sistema usando uma codificação específica e particular para atender suas
+necessidades.
+
+\index{Unicode} \index{UTF-8} Em grande parte dos sistemas atuais é
+empregado o Unicode\footnote{Unicode Consortium:
+  \url{https://home.unicode.org}.}, que se propõe a ter representações
+para todas as línguas do planeta e usa com frequência a codificação
+UTF-8 para representar os símbolos (letras, ideogramas, emojis) em
+bytes. Como exemplo, o símbolo monetário do Euro é designado por
+\texttt{U+20AC} no Unicode e usa a sequência de bytes \texttt{E282AC}
+para representação em UTF-8.
+
+O problema que surge dessa representação é que UTF-8 usa uma quantidade
+de bytes variável conforme o símbolo. Os caracteres ASCII usam um único
+byte e possuem representação igual, o que mantém a compatibilidade.
+Outros símbolos, porém usam dois, três ou até quatro bytes, o que torna
+impossível armazená-los em uma variável \texttt{char}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*}
+\CommentTok{Incompatibilidade de símbolos Unicode/UTF{-}8}
+\CommentTok{*/}
+\PreprocessorTok{\#include }\ImportTok{\textless{}stdio.h\textgreater{}}
+
+\DataTypeTok{int}\NormalTok{ main}\OperatorTok{(}\DataTypeTok{void}\OperatorTok{)} \OperatorTok{\{}
+    \DataTypeTok{char}\NormalTok{ c }\OperatorTok{=} \CharTok{\textquotesingle{}é\textquotesingle{}}\OperatorTok{;}
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"c = }\SpecialCharTok{\%c}\StringTok{.}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\OperatorTok{,}\NormalTok{ c}\OperatorTok{);}
+
+    \ControlFlowTok{return} \DecValTok{0}\OperatorTok{;}
+\OperatorTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{main.c: In function ‘main’:}
+\NormalTok{main.c:7:14: warning: multi{-}character character constant [{-}Wmultichar]}
+\NormalTok{    7 |     char c = \textquotesingle{}é\textquotesingle{};}
+\NormalTok{      |              \^{}\textasciitilde{}\textasciitilde{}}
+\NormalTok{main.c:7:14: warning: overflow in conversion from ‘int’ to ‘char’ }
+\NormalTok{changes value from ‘50089’ to ‘{-}87’ [{-}Woverflow]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{c = �.}
+\end{Highlighting}
+\end{Shaded}
+
+A falha na compilação acima é que o caractere \texttt{é}
+(\texttt{U+00E9}) é codificado em dois bytes, \texttt{C3} e \texttt{A9},
+dos quais apenas o valor \texttt{A9} (decimal 169) é guardado na
+variável \texttt{c}. Esse valor 169, sozinho, não representa um
+caractere UTF-8 válido.
+
+Esse código fonte, armazenado no arquivo \texttt{acentuacao.c}, está
+codificado com UTF-8, como se indica com o comando \texttt{file}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$  file acentuacao.c }
+\NormalTok{acentuacao.c: C source, Unicode text, UTF{-}8 text}
+\end{Highlighting}
+\end{Shaded}
+
+Existe a codificação de caracteres ISO-8859, conhecida como
+\emph{latin1}, que inclui os caracteres latinos acentuados e que usa
+apenas um byte por caractere. O comando \texttt{iconv} pode ser usado
+para criar um novo arquivo fonte (\texttt{acentuacao-latin1.c}) com essa
+codificação, conforme segue.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$  iconv {-}f utf8 {-}t latin1 acentuacao.c \textgreater{} acentuacao{-}latin1.c }
+\NormalTok{$  file acentuacao{-}latin1.c }
+\NormalTok{acentuacao{-}latin1.c: C source, ISO{-}8859 text}
+\end{Highlighting}
+\end{Shaded}
+
+Como o caractere \texttt{é} usado no código fonte agora possui um único
+byte, ele pode ser guardado em um \texttt{char} e a compilação ocorre
+sem problemas.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$  gcc {-}Wall {-}pedantic {-}std=c17 acentuacao{-}latin1.c }
+\end{Highlighting}
+\end{Shaded}
+
+Ao executar o programa, como a saída produzida é ISO-8859, ela tem que
+ser convertida de volta para UTF-8 para que o terminal a exiba
+corretamente.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$  ./a.out | iconv {-}f latin1 {-}t utf8 }
+\NormalTok{c = é.}
+\end{Highlighting}
+\end{Shaded}
+
+Nos programas exemplificados neste texto, simplesmente são evitados os
+casos em que um \texttt{char} armazenará um caractere Unicode com mais
+que um byte, pois todas as codificações de caractere usam UTF-8. Para
+efetivamente usar caracteres de múltiplos bytes, C disponibiliza uma
+série de funções em \texttt{wchar.c}, as quais lidam com os ``caracteres
+largos'' (\emph{wide characters}). Porém, o uso dessas funções não é
+tratado neste livro.
+
+\subsection{Acesso às cadeias de caracteres
+constantes}\label{sec-ponteiros-para-strings-constantes}
+
+Nesta seção é apresentada uma visão básica sobre cadeias de caracteres
+em~C, sendo que a manipulação de variáveis com conteúdo textual é
+coberta pelo \textbf{?@sec-manipulacao-de-dados-textuais}.
+
+Em programas escritos em C, cadeias de caracteres são indicadas entre
+aspas duplas e, internamente, é acrescido um byte nulo para indicar seu
+fim. Quando uma constante literal é parte de um programa, ela é incluída
+na seção de dados do arquivo executável.
+
+Um exemplo trivial dessa inclusão pode ser vista com um código simples,
+como o seguinte.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*}
+\CommentTok{Apresentação de mensagens simples}
+\CommentTok{Assegura: apresentação de duas mensagens na tela}
+\CommentTok{*/}
+\PreprocessorTok{\#include }\ImportTok{\textless{}stdio.h\textgreater{}}
+
+\DataTypeTok{int}\NormalTok{ main}\OperatorTok{(}\DataTypeTok{void}\OperatorTok{)} \OperatorTok{\{}
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"Bom dia!}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\OperatorTok{);}
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"Boa noite.}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\OperatorTok{);}
+
+    \ControlFlowTok{return} \DecValTok{0}\OperatorTok{;}
+\OperatorTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Bom dia!}
+\NormalTok{Boa noite.}
+\end{Highlighting}
+\end{Shaded}
+
+Esse programa gera um executável denominado \texttt{a.out}, como
+observado pelos comandos que seguem.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$  ls {-}l a.out }
+\NormalTok{{-}rwxrwxr{-}x 1 jander jander 16136 fev 17 14:34 a.out}
+\NormalTok{$  file a.out }
+\NormalTok{a.out: ELF 64{-}bit LSB pie executable, x86{-}64, version 1 (SYSV), dynamically }
+\NormalTok{linked, interpreter /lib64/ld{-}linux{-}x86{-}64.so.2, }
+\NormalTok{BuildID[sha1]=a6b3fbd1826fd3417d0b649b1bca180bbeb2aae7, for GNU/Linux 3.2.0, }
+\NormalTok{not stripped}
+\end{Highlighting}
+\end{Shaded}
+
+O comando \texttt{strings} usado na sequência mostra as cadeias de
+caracteres detectadas no arquivo \texttt{a.out} (o \texttt{egrep} é
+usado para remover outras linhas, de forma a reduzir o tamanho da
+saída).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$  strings a.out | egrep {-}v \textquotesingle{}(\^{}\textbackslash{}.|\^{}\_)\textquotesingle{} }
+\NormalTok{/lib64/ld{-}linux{-}x86{-}64.so.2}
+\NormalTok{puts}
+\NormalTok{printf}
+\NormalTok{libc.so.6}
+\NormalTok{GLIBC\_2.2.5}
+\NormalTok{GLIBC\_2.34}
+\NormalTok{PTE1}
+\NormalTok{u+UH}
+\NormalTok{\%c\%s\%c}
+\NormalTok{Bom dia!}
+\NormalTok{Boa noite.}
+\NormalTok{9*3$"}
+\NormalTok{GCC: (Ubuntu 13.3.0{-}6ubuntu2\textasciitilde{}24.04) 13.3.0}
+\NormalTok{Scrt1.o}
+\NormalTok{crtstuff.c}
+\NormalTok{deregister\_tm\_clones}
+\NormalTok{completed.0}
+\NormalTok{frame\_dummy}
+\NormalTok{main.c}
+\NormalTok{puts@GLIBC\_2.2.5}
+\NormalTok{printf@GLIBC\_2.2.5}
+\NormalTok{user\_input\_time}
+\NormalTok{print\_user\_input}
+\NormalTok{main}
+\end{Highlighting}
+\end{Shaded}
+
+Como pode ser observado, \texttt{"Bom\ dia!"} e \texttt{"Boa\ noite."}
+fazem parte dos literais fisicamente presentes no arquivo.
+
+Com base no fato de que as constantes fazem parte do arquivo executável
+e que quando o programa é colocado em execução elas são também
+carregadas para a memória, o programa seguinte mostra como fazer
+referência a essas cadeias.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*}
+\CommentTok{Exemplificação de referência a constantes literais presentes em um programa}
+\CommentTok{Assegura: apresentação de textos}
+\CommentTok{*/}
+\PreprocessorTok{\#include }\ImportTok{\textless{}stdio.h\textgreater{}}
+\PreprocessorTok{\#include }\ImportTok{\textless{}stdlib.h\textgreater{}}
+
+\DataTypeTok{int}\NormalTok{ main}\OperatorTok{(}\DataTypeTok{void}\OperatorTok{)} \OperatorTok{\{}
+    \DataTypeTok{char} \OperatorTok{*}\NormalTok{texto1 }\OperatorTok{=} \StringTok{"Um primeiro texto"}\OperatorTok{;}
+    \DataTypeTok{char} \OperatorTok{*}\NormalTok{texto2 }\OperatorTok{=} \StringTok{"Texto número 2"}\OperatorTok{;}
+
+    \DataTypeTok{char} \OperatorTok{*}\NormalTok{texto\_selecionado}\OperatorTok{;}
+    \ControlFlowTok{if} \OperatorTok{(}\NormalTok{rand}\OperatorTok{()} \OperatorTok{\%} \DecValTok{100} \OperatorTok{\textless{}} \DecValTok{50}\OperatorTok{)}
+\NormalTok{        texto\_selecionado }\OperatorTok{=}\NormalTok{ texto1}\OperatorTok{;}
+    \ControlFlowTok{else}
+\NormalTok{        texto\_selecionado }\OperatorTok{=}\NormalTok{ texto2}\OperatorTok{;}
+
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"1) }\SpecialCharTok{\%s\textbackslash{}n}\StringTok{"}\OperatorTok{,}\NormalTok{ texto1}\OperatorTok{);}
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"2) }\SpecialCharTok{\%s\textbackslash{}n}\StringTok{"}\OperatorTok{,}\NormalTok{ texto2}\OperatorTok{);}
+\NormalTok{    printf}\OperatorTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{Sorteado: }\SpecialCharTok{\%s\textbackslash{}n}\StringTok{"}\OperatorTok{,}\NormalTok{ texto\_selecionado}\OperatorTok{);}
+
+    \ControlFlowTok{return} \DecValTok{0}\OperatorTok{;}
+\OperatorTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{1) Um primeiro texto}
+\NormalTok{2) Texto número 2}
+
+\NormalTok{Sorteado: Texto número 2}
+\end{Highlighting}
+\end{Shaded}
+
+Neste programa há dois textos importantes:
+\texttt{"Um\ primeiro\ texto"} e \texttt{"Texto\ número\ 2"}. Essas duas
+constantes textuais ficam em algum lugar do programa. Existem também as
+duas variáveis \texttt{texto1} e \texttt{texto2}, que são declaradas
+como sendo do tipo \texttt{char\ *}. O asterisco, nesse contexto, indica
+que as variáveis são referências aos textos e não que sejam um
+\texttt{char} comum. Dessa forma, \texttt{texto1} está referenciando a
+constante \texttt{"Um\ primeiro\ texto"}, por exemplo.
+
+Essas variáveis que guardam referências às coisas recebem, em
+programação, o nome de ponteiros\footnote{Esse tema é tratado em mais
+  detalhes no \textbf{?@sec-enderecamento-de-memoria-e-ponteiros}.}.
+Como elas são usadas apenas como referência a um texto já existente, não
+podem ser diretamente usadas para outras manipulações, como para guardar
+um valor digitado pelo usuário ou tentar modificar a constante
+referenciada.
+
+No jargão computacional, diz-se que ``\texttt{texto1} aponta para a
+constante \texttt{"Um\ primeiro\ texto"}'', da mesma forma que
+\texttt{texto2} aponta para a constante \texttt{"Texto\ número\ 2"}.
+
+No código há ainda a variável \texttt{texto\_selecionado}, também do
+tipo \texttt{char\ *}, cujo valor inicialmente é indefinido (lixo). A
+expressão \texttt{rand()\ \%\ 100} resulta em um valor (pseudo)aleatório
+de 0 a 99. Assim, a referência ser guardada em
+\texttt{texto\_selecionado} depende desse valor aleatório, com
+praticamente 50\% de chance para cada caso. Se o valor aleatório for
+menor que 50, \texttt{texto\_selecionado} guarda a mesma referência
+guardada em \texttt{texto1}, ou seja, ela também aponta para a constante
+\texttt{"Um\ primeiro\ texto"}
+
+Nas chamadas a \texttt{printf}, a especificação de formato \texttt{\%s}
+apresenta o texto apontado por cada variável. Desse modo,
+\texttt{printf("2)\ \%s\textbackslash{}n",\ texto2);} significa mostre o
+texto que \texttt{texto2} está apontando.
+
+O uso desse recurso é relativamente simples de der feito, porém muito
+limitado, visto que apenas aceita mudar para qual constante cada
+variável aponta.
+
+Para finalizar, é interessante ver que esse recurso foi empregado na
+implementação do Algoritmo~\ref{alg-classificacao-triangulo-lados}.
+
+
+
+
+\end{document}

@@ -1,0 +1,6 @@
+# Dados em matrizes
+
+Em construção...
+
+
+## Estruturação da matriz em C

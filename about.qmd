@@ -2,8 +2,3 @@
 title: "About"
 ---
 
-```{latex .pseudocode}
-\begin{algorithmic}
-    \Statep{$x \gets 0$}
-\end{algorithmic}
-```

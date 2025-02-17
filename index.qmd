@@ -1,5 +1,5 @@
 ---
-title: "CAP"
+title: "Algoritmos & Programação"
 ---
 
-This is CAP.
+Este site é dedicado ao ensino para a **construção de algoritmos** e para o básico da **programação na linguagem C**.

@@ -24,6 +24,13 @@ syntax-definitions:
 
 
 website:
+  announcement: 
+    icon: exclamation-octagon
+    dismissable: false
+    content: "**Atenção** - Este site é apenas um protótipo/estudo de conceito. As informações aqui estão incompletas."
+    type: danger
+    position: below-navbar
+
   title: "Algoritmos & Programação"
   navbar:
     # logo: figuras/cap.png
@@ -33,7 +40,9 @@ website:
       - text: Linguagem C
         href: linguagem-c/index.qmd
     right:
-      - about.qmd
+      - sobre.qmd
+      - icon: github
+        href: https://jandermoreira.github.io
 
   sidebar:
     - id: principal
@@ -44,7 +53,7 @@ website:
 
     - id: algoritmos
       style: "docked"
-      collapse-level: 1
+      collapse-level: 2
       background: light
       contents: 
         - algoritmos/introducao.qmd

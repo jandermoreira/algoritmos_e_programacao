@@ -1,0 +1,15 @@
+---
+title: "Sobre..."
+about:
+  template: trestles
+  image: figuras/cap.png
+toc: false
+---
+
+## Sobre o material
+
+A escrita desse material é uma decorrência do conteúdo abordado na disciplina **Construção de Algoritmos e Programação**, CAP, oferecida pelo Departamento de Computação da Universidade Federal de São Carlos.
+
+## Sobre mim
+
+[Jander Moreira](jandermoreira.github.io) é docente na Universidade Federal de São Carlos.

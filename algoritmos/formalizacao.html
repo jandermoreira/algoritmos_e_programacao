@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>formalizacao – Algoritmos &amp; Programação</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-9e1f2a4632985dffc2c80318c992baf5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-ca7e136d0d5988c87344814d6f3e778b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../book.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Algoritmos &amp; Programação</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../algoritmos/introducao.html" aria-current="page"> 
+<span class="menu-text">Algoritmos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../linguagem-c/index.html"> 
+<span class="menu-text">Linguagem C</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../algoritmos/nocoes.html">Representação e uso de algoritmos</a></li><li class="breadcrumb-item"><a href="../algoritmos/formalizacao.html">Formalização dos algoritmos computacionais</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/introducao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introdução</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Representação e uso de algoritmos</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/nocoes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Noções de algoritmos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/formalizacao.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Formalização dos algoritmos computacionais</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/desenvolvimento-basico-e-codificacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: desenvolvimento básico e codificação</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/execucao-condicional.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: execução condicional</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/desenvolvimento-com-condicionais-e-codificacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: desenvolvimento com condicionais e codificação</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Processamento de sequências de dados</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/processamento-basico-de-sequencias-de-dados.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estruturas algorítmicas básicas para processamento de sequências de dados</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Desenvolvimento de algoritmos para processamento de sequências de dados</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Desenvolvimento e organização de algoritmos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/desenvolvimento-por-refinamentos-sucessivos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: desenvolvimento por refinamentos sucessivos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/testes-de-mesa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: testes de mesa</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/modularizacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: modularização</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/desenvolvimento-com-modularizacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: desenvolvimento com modularização</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Representação de dados estruturados</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/cadeias-de-caracteres.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">algoritmos-cadeias-de-caracteres.qmd</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/dados-compostos-registros.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: dados compostos (registros)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/dados-compostos-vetores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: dados compostos (vetores)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/dados-compostos-matrizes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">algoritmos-dados-compostos-matrizes.qmd</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Desenvolvimento com arquivos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/manipulacao-de-arquivos-de-registros.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: Manipulação de arquivos de registros</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Recursividade</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/recursividade.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">algoritmos-recursividade.qmd</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+ <span class="menu-text">referencias.qmd</span>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Nesta página:</h2>
+   
+  <ul>
+  <li><a href="#formalização-dos-algoritmos-computacionais" id="toc-formalização-dos-algoritmos-computacionais" class="nav-link active" data-scroll-target="#formalização-dos-algoritmos-computacionais">Formalização dos algoritmos computacionais</a>
+  <ul class="collapse">
+  <li><a href="#objetivos-do-pseudocódigo" id="toc-objetivos-do-pseudocódigo" class="nav-link" data-scroll-target="#objetivos-do-pseudocódigo">Objetivos do pseudocódigo</a>
+  <ul class="collapse">
+  <li><a href="#público-alvo-e-nível-de-abstração" id="toc-público-alvo-e-nível-de-abstração" class="nav-link" data-scroll-target="#público-alvo-e-nível-de-abstração">Público-alvo e nível de abstração</a></li>
+  </ul></li>
+  <li><a href="#formalização-do-pseudocódigo" id="toc-formalização-do-pseudocódigo" class="nav-link" data-scroll-target="#formalização-do-pseudocódigo">Formalização do pseudocódigo</a>
+  <ul class="collapse">
+  <li><a href="#padronização" id="toc-padronização" class="nav-link" data-scroll-target="#padronização">Padronização</a></li>
+  <li><a href="#documentação" id="toc-documentação" class="nav-link" data-scroll-target="#documentação">Documentação</a></li>
+  <li><a href="#declaração-e-uso-de-variáveis" id="toc-declaração-e-uso-de-variáveis" class="nav-link" data-scroll-target="#declaração-e-uso-de-variáveis">Declaração e uso de variáveis</a></li>
+  </ul></li>
+  <li><a href="#elementos-estruturais" id="toc-elementos-estruturais" class="nav-link" data-scroll-target="#elementos-estruturais">Elementos estruturais</a>
+  <ul class="collapse">
+  <li><a href="#execução-sequencial" id="toc-execução-sequencial" class="nav-link" data-scroll-target="#execução-sequencial">Execução sequencial</a></li>
+  <li><a href="#obtenção-e-apresentação-de-dados" id="toc-obtenção-e-apresentação-de-dados" class="nav-link" data-scroll-target="#obtenção-e-apresentação-de-dados">Obtenção e apresentação de dados</a></li>
+  <li><a href="#execução-condicional" id="toc-execução-condicional" class="nav-link" data-scroll-target="#execução-condicional">Execução condicional</a></li>
+  <li><a href="#repetições" id="toc-repetições" class="nav-link" data-scroll-target="#repetições">Repetições</a></li>
+  <li><a href="#modularização" id="toc-modularização" class="nav-link" data-scroll-target="#modularização">Modularização</a></li>
+  <li><a href="#comentários" id="toc-comentários" class="nav-link" data-scroll-target="#comentários">Comentários</a></li>
+  </ul></li>
+  <li><a href="#algoritmos-estruturados" id="toc-algoritmos-estruturados" class="nav-link" data-scroll-target="#algoritmos-estruturados">Algoritmos estruturados</a></li>
+  <li><a href="#notação-programática-versus-notação-matemática" id="toc-notação-programática-versus-notação-matemática" class="nav-link" data-scroll-target="#notação-programática-versus-notação-matemática">Notação programática <em>versus</em> notação matemática</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../algoritmos/nocoes.html">Representação e uso de algoritmos</a></li><li class="breadcrumb-item"><a href="../algoritmos/formalizacao.html">Formalização dos algoritmos computacionais</a></li></ol></nav></header>
+
+
+
+
+<span class="math inline">\(\newcommand\Id[1]{\mbox{\textit{#1}}}\)</span>
+<section id="formalização-dos-algoritmos-computacionais" class="level1">
+<h1>Formalização dos algoritmos computacionais</h1>
+<p>Neste livro as soluções algorítmicas serão apresentadas por meio de pseudocódigo, embora haja uma certa variedade de outras opções de representação.</p>
+<p>A formalização do pseudocódigo a ser adotado neste livro é o foco deste capítulo.</p>
+<section id="objetivos-do-pseudocódigo" class="level2">
+<h2 class="anchored" data-anchor-id="objetivos-do-pseudocódigo">Objetivos do pseudocódigo</h2>
+<p>O pseudocódigo pode ser visto como uma mistura de aspectos mais formais, como computação ou notação matemática, com linguagem natural.</p>
+<p>Como um primeiro exemplo é apresentado o <a href="../algoritmos/formalizacao.html#alg-estimativa-altura-predio">Algoritmo 1</a>, que considera uma forma de se obter indiretamente a altura de um prédio dados os comprimentos das sombras do prédio de de uma pessoa, juntamente com a altura dessa pessoa. Este tipo de algoritmo pode ser facilmente implementado em C.</p>
+<div id="alg-estimativa-altura-predio">
+<figcaption class="figure-caption">
+<p>Algoritmo 1: Estimativa da altura de um prédio em função de sobras projetadas.</p>
+</figcaption>
+<p><img src="../algxpar/pseudocode.e0775d007745a1cf09bbb1b59d7be205e68ffb29.svg" class="img-fluid" alt="Algoritmo 1: Estimativa da altura de um prédio em função de sobras projetadas." width="648"></p>
+</div>
+<p>Este é um típico problema e programa solicitado em listas de exercícios de cursos de programação. O algoritmo apresenta uma solução praticamente pronta para a implementação do programa, incluindo sugestões para os nomes das variáveis e até induzindo os comandos que serão usados. A escrita do <a href="../algoritmos/formalizacao.html#alg-estimativa-altura-predio">Algoritmo 1</a> foi feita considerando que o algoritmo seria lido por um programador com, minimamente, as capacidades básicas de codificação.</p>
+<p>Como um segundo exemplo de pseudocódigo, o <a href="../algoritmos/formalizacao.html#alg-alexandre-levada">Algoritmo 2</a> pode ser considerado.</p>
+<div id="alg-alexandre-levada">
+<figcaption class="figure-caption">
+<p>Algoritmo 2: PNN based LPP, adaptado de <span class="citation" data-cites="levada">@levada</span></p>
+</figcaption>
+<p><img src="../algxpar/pseudocode.6367b4df565054dd74623859564fc45143c835e9.svg" class="img-fluid" alt="Algoritmo 2: PNN based LPP, adaptado de @levada" width="648"></p>
+</div>
+<p>Este algoritmo é uma adaptação do apresentado no artigo de <span class="citation" data-cites="levada">@levada</span> e, para entendê-lo por completo, tanto o texto do artigo deve ser lido quanto o leitor deve ter conhecimento sobre o tema abordado. O objetivo do algoritmo não é o entendimento do procedimento que ele realiza em detalhes, mas observar a sequência de passos para produzir o resultado desejado. Ele ainda envolve a integração da linguagem natural com notação matemática para representar as expressões e matrizes utilizadas. No algoritmo original não há a documentação com a descrição nem as pré e pós-condições, uma vez que ele está inserido na discussão apresentada pelo artigo como um todo.</p>
+<p>O <a href="../algoritmos/formalizacao.html#alg-alexandre-levada">Algoritmo 2</a> não foi escrito para pronta implementação. Ele deixa muitos pontos em aberto, mesmo sendo claro quanto a todos os cálculos que devem ser feitos e em que sequência. Esse é um algoritmo de nível alto de abstração, ou seja, muitos detalhes são omitidos propositalmente em função do público-alvo, que são os leitores do artigo científico. Apresentar todos os detalhes, como o passo a passo da criação dos vetores de distâncias <span class="math inline">\(\vec{d}_i\)</span> ou a própria fórmula usada para a distância somente tornaria o código desnecessariamente complexo, prejudicando a compreensão da estratégia da solução.</p>
+<section id="público-alvo-e-nível-de-abstração" class="level3">
+<h3 class="anchored" data-anchor-id="público-alvo-e-nível-de-abstração">Público-alvo e nível de abstração</h3>
+<p>Quando um algoritmo vai ser escrito, é preciso ter claro qual é o público-alvo que ele pretende atingir. As instruções, portanto, assumem uma forma baseada no conhecimento prévio de quem vai interpretá-las. Essa decisão implica na escolha do nível de abstração que será empregado.</p>
+<p>Um algoritmo escrito com nível de abstração baixo é aquele mais próximo do programa que será implementado. Ele costuma apresentar as variáveis e comandos de forma mais explícita. Quando o nível de abstração sobe, os detalhes de implementação são substituídos por descrições mais genéricas.</p>
+<p>Supondo que o problema a ser resolvido seja a soma de duas matrizes de mesma dimensão, são apresentados algoritmos em níveis de abstração diferentes, todos corretos e abordando exatamente a mesma solução. O <a href="../algoritmos/formalizacao.html#alg-soma-matrizes-nivel-alto">Algoritmo 3</a> possui um nível de abstração bastante alto, seguido pelo <a href="../algoritmos/formalizacao.html#alg-soma-matrizes-nivel-medio">Algoritmo 4</a>, o qual apresenta mais detalhes e pode ser considerado de nível médio; por sua vez, o <a href="../algoritmos/formalizacao.html#alg-soma-matrizes-nivel-mais-baixo">Algoritmo 5</a> e o <a href="../algoritmos/formalizacao.html#alg-soma-matrizes-nivel-baixo">Algoritmo 6</a> já possuem nível baixo e se aproximam mais de uma possível implementação em um programa.</p>
+<div id="alg-soma-matrizes-nivel-alto">
+<figcaption class="figure-caption">
+<p>Algoritmo 3: Soma de duas matrizes de mesma dimensão (nível alto).</p>
+</figcaption>
+<p><img src="../algxpar/pseudocode.5d9feff925aa7d42dfb63f61907b56f59066269d.svg" class="img-fluid" alt="Algoritmo 3: Soma de duas matrizes de mesma dimensão (nível alto)." width="648"></p>
+</div>
+<div id="alg-soma-matrizes-nivel-medio">
+<figcaption class="figure-caption">
+<p>Algoritmo 4: Soma de duas matrizes de mesma dimensão (nível médio).</p>
+</figcaption>
+<p><img src="../algxpar/pseudocode.a5ee95efe6c7ff20ca3121a2d69e91f51adda0d3.svg" class="img-fluid" alt="Algoritmo 4: Soma de duas matrizes de mesma dimensão (nível médio)." width="648"></p>
+</div>
+<div id="alg-soma-matrizes-nivel-mais-baixo">
+<figcaption class="figure-caption">
+<p>Algoritmo 5: Soma de duas matrizes de mesma dimensão (nível mais baixo).</p>
+</figcaption>
+<p><img src="../algxpar/pseudocode.bd3fce43ba4738c63713a3b0b6e466a9ba69d626.svg" class="img-fluid" alt="Algoritmo 5: Soma de duas matrizes de mesma dimensão (nível mais baixo)." width="648"></p>
+</div>
+<div id="alg-soma-matrizes-nivel-baixo">
+<figcaption class="figure-caption">
+<p>Algoritmo 6: Soma de duas matrizes de mesma dimensão (nível baixo).</p>
+</figcaption>
+<p><img src="../algxpar/pseudocode.9403516c07f89f707eb3abd49a4c60353a2e90c2.svg" class="img-fluid" alt="Algoritmo 6: Soma de duas matrizes de mesma dimensão (nível baixo)." width="648"></p>
+</div>
+<p>Os algoritmos são apresentados em quatro níveis de abstração diferentes. A <a href="#tbl-comparacao-niveis-abstracao" class="quarto-xref">Tabela&nbsp;1</a> sumariza uma comparação desses algoritmos.</p>
+<div id="tbl-comparacao-niveis-abstracao" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-comparacao-niveis-abstracao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabela&nbsp;1: Comparação da soma de matrizes com algoritmos em diferentes níveis de abstração.
+</figcaption>
+<div aria-describedby="tbl-comparacao-niveis-abstracao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Algoritmo</th>
+<th style="text-align: center;">Nível</th>
+<th style="text-align: left;">Comentário</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><a href="../algoritmos/formalizacao.html#alg-soma-matrizes-nivel-alto">Algoritmo 3</a></td>
+<td style="text-align: center;">Alto</td>
+<td style="text-align: left;">Pressupõe o conhecimento de matrizes e suas operações; detalhes como as dimensões são omitidos.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><a href="../algoritmos/formalizacao.html#alg-soma-matrizes-nivel-medio">Algoritmo 4</a></td>
+<td style="text-align: center;">Médio</td>
+<td style="text-align: left;">Ainda considera o conhecimento sobre matrizes; há mais detalhes de como os dados são obtidos e como o cálculo da soma é feito.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><a href="../algoritmos/formalizacao.html#alg-soma-matrizes-nivel-mais-baixo">Algoritmo 5</a></td>
+<td style="text-align: center;">Mais baixo</td>
+<td style="text-align: left;">A necessidade de conhecer matrizes é mínima, bastando assumir cada elemento como uma variável separada; introduz a necessidade das dimensões para controle da somas; mantém uma linguagem mais natural.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><a href="../algoritmos/formalizacao.html#alg-soma-matrizes-nivel-baixo">Algoritmo 6</a></td>
+<td style="text-align: center;">Baixo</td>
+<td style="text-align: left;">Não há praticamente necessidade de entender o que é uma matriz; uma estruturação de pseudocódigo é adicionada; cada ação é hiperdetalhada; a linguagem natural é mínima.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Da mesma forma que o nível de abstração depende do público-alvo, também inexiste a necessidade de que um mesmo algoritmo mantenha o nível de abstração constante para todas suas partes. Desse modo, pontos menos importantes, ou seja, que não são o foco do algoritmo, podem ter nível mais alto enquanto outras partes podem ser mais detalhadas, deixando o nível mais baixo para explicitar pontos relevantes da solução.</p>
+</section>
+</section>
+<section id="formalização-do-pseudocódigo" class="level2">
+<h2 class="anchored" data-anchor-id="formalização-do-pseudocódigo">Formalização do pseudocódigo</h2>
+<p>Não existem regras para a escrita de pseudocódigo. Nada é necessariamente fixo, nem existem estruturas imutáveis que possam ser empregadas. O principal ponto é a representação clara do algoritmo para o leitor.</p>
+<p>Embora as regras não existam absolutamente, há um convenção geral adotada pela comunidade, ficando um grupo de estruturas e aspectos relativamente consolidados.</p>
+<section id="padronização" class="level3">
+<h3 class="anchored" data-anchor-id="padronização">Padronização</h3>
+<p>Os algoritmos apresentados neste livro seguem um pseudocódigo próprio, baseado no uso geral dos algoritmos escritos pela comunidade de computação. Alguns elementos são mais usuais (condicionais, repetições e funções), outras são menos utilizadas (documentação com pré e pós-condições) e outras não são convencionais (condicional de seleção).</p>
+<p>A opção por ter tanto os elementos de uso geral e quanto algumas “invovações” vem do caráter didático a que este material se propõe a ter.</p>
+</section>
+<section id="documentação" class="level3">
+<h3 class="anchored" data-anchor-id="documentação">Documentação</h3>
+<p>Todos os algoritmos neste livro conterão um cabeçalho de documentação. Nele são exibidos os seguintes elementos:</p>
+<ul>
+<li>Descrição;</li>
+<li>Pré-condições;</li>
+<li>Pós-condições.</li>
+</ul>
+<p>A descrição é a caracterização do problema que o algoritmo resolve e tem a extensão necessária para apresentar com clareza o problema. Em particular, a descrição não apresenta como o problema é resolvido, pois isso é a parte das instruções.</p>
+<p>As pré-condições e pós-condições reportam de forma tão precisa quanto possível, o que o algoritmo precisa e em que condições esses dados devem estar e também o que ele produz, dando detalhes para que não haja problemas em interpretar o que o algoritmo produz como resultado. Estes dois elementos são apresentados no <strong>?@sec-nocoes-de-algoritmos</strong>.</p>
+</section>
+<section id="declaração-e-uso-de-variáveis" class="level3">
+<h3 class="anchored" data-anchor-id="declaração-e-uso-de-variáveis">Declaração e uso de variáveis</h3>
+<p>Embora ocorram em alguns algoritmos, as declarações de variáveis não são empregadas nas soluções apresentadas. A ideia de declaração introduz um detalhamento desnecessário no pseudocódigo, pois levaria à necessidade de especificar tipos de dados e impor, eventualmente, limitações e particularidades a eles. Manteve-se, assim, um nível mais alto de abstração para as variáveis.</p>
+<p>Os identificadores são expressos de forma relativamente livre, usando <em>snake case</em> e notação matemática. As atribuições usam </p>
+</section>
+</section>
+<section id="elementos-estruturais" class="level2">
+<h2 class="anchored" data-anchor-id="elementos-estruturais">Elementos estruturais</h2>
+<p>Seguindo uma convenção geral, o pseudocódigo adotado segue padrões comuns a artigos científicos e muitos outros materiais disponíveis. Em particular, a formalização adotada no texto segue alguns elementos de estruturação importantes.</p>
+<section id="execução-sequencial" class="level3">
+<h3 class="anchored" data-anchor-id="execução-sequencial">Execução sequencial</h3>
+<p>Cada instrução do algoritmo é escrita em sua própria linha, estabelecendo uma execução sequencial das instruções. Uma nova instrução somente será executada depois da anterior ter sido completamente finalizada.</p>
+<div>
+<figcaption class="figure-caption">
+</figcaption>
+<p><img src="../algxpar/pseudocode.bd47834bdb47af18c817727524f4b15f5c738369.svg" class="img-fluid" alt="" width="648"></p>
+</div>
+<p>Muitas vezes a inversão na ordem não impacta no resultado, mas uma ordem incorreta implica em uma solução incorreta.</p>
+<p>Como o algoritmo é uma sequência de ordens que devem ser seguidas à risca, o modo verbal usado será sempre o imperativo.</p>
+</section>
+<section id="obtenção-e-apresentação-de-dados" class="level3">
+<h3 class="anchored" data-anchor-id="obtenção-e-apresentação-de-dados">Obtenção e apresentação de dados</h3>
+<p>Nos algoritmos, os dados necessários devem ser “entrados” de forma a produzir “saídas”. Por uma associação livre e direta, as entradas são as informações que um usuário digitaria para o programa utilizar, enquanto as saídas são os resultados apresentados no terminal.</p>
+<p>Neste texto, as entradas estarão associadas principalmente ao verbo <em>obter</em>, enquanto a saída usa o verbo <em>apresentar</em>. Por associação às linguagens de programação, também é comum o uso dos verbos <em>ler</em> e <em>escrever</em>, respectivamente.</p>
+<p>Na sequência é apresentada uma entrada e uma saída de dados.</p>
+<div>
+<figcaption class="figure-caption">
+</figcaption>
+<p><img src="../algxpar/pseudocode.92adaba6f7e80a08b44ad6e15d261ac13c54970c.svg" class="img-fluid" alt="" width="648"></p>
+</div>
+<p>Alternativamente, as mesmas instruções podem ser apresentadas como se segue. Nesta versão a verbosidade dá lugar a uma apresentação mais compacta e mais próxima a uma linguagem de programação.</p>
+<div>
+<figcaption class="figure-caption">
+</figcaption>
+<p><img src="../algxpar/pseudocode.79e80dbddaaa0ad61b205682d96015039f3568d6.svg" class="img-fluid" alt="" width="648"></p>
+</div>
+</section>
+<section id="execução-condicional" class="level3">
+<h3 class="anchored" data-anchor-id="execução-condicional">Execução condicional</h3>
+<p>A execução condicional assume a forma tradicional da estrutura <strong>se</strong>, na qual a lista de instruções indicada somente deve ser executada quando a condição verificada for verdadeira.</p>
+<div>
+<figcaption class="figure-caption">
+</figcaption>
+<p><img src="../algxpar/pseudocode.5bf396216ed2286a00cd66fbcd274229c682207d.svg" class="img-fluid" alt="" width="648"></p>
+</div>
+<p>Nesta estrutura condicional, a ação somente será executada se a condição indicada for verdadeira. Caso seja falsa, essa ação é simplesmente ignorada.</p>
+<p>Alternativamente, uma ação pode ser indicada caso a condição não seja satisfeita, usando-se uma alternativa com <strong>senão</strong>.</p>
+<div>
+<figcaption class="figure-caption">
+</figcaption>
+<p><img src="../algxpar/pseudocode.ab28c9a750d4330ecde6d837f7b0751bf93d6ab1.svg" class="img-fluid" alt="" width="648"></p>
+</div>
+<p>Uma terceira forma de expressar a execução condicional com <strong>se</strong> é pelo sequenciamento de condições, cada uma excluindo a condição anterior.</p>
+<div>
+<figcaption class="figure-caption">
+</figcaption>
+<p><img src="../algxpar/pseudocode.7896268e0d5d5deb61563870c3ef85de13b9e4a7.svg" class="img-fluid" alt="" width="648"></p>
+</div>
+<p>Cada novo <strong>se</strong> somente é verificado caso o imediatamente anterior tenha condição avaliada como falsa.</p>
+<p>Esta última construção da estrutura condicional equivale à apresentada na sequência.</p>
+<div>
+<figcaption class="figure-caption">
+</figcaption>
+<p><img src="../algxpar/pseudocode.1ab970c2a293cad4b3281dc76cf9809793816585.svg" class="img-fluid" alt="" width="648"></p>
+</div>
+<p>As duas formas são equivalentes, porém a primeira é mais sintética e clara.</p>
+<p>Outro modo de execução condicional pode ser indicado pela estrutura de seleção. Embora estruturas similares estejam presentes em linguagens de programação, esta alternativa é raramente usada em pseudocódigos em geral.</p>
+<p>A estrutura de seleção é uma comparação por igualdades e tem a estrutura seguinte.</p>
+<div>
+<figcaption class="figure-caption">
+</figcaption>
+<p><img src="../algxpar/pseudocode.dc7cd57e00c35156f0060096f9e472b13a93db71.svg" class="img-fluid" alt="" width="648"></p>
+</div>
+<p>O conceito desta estrutura de condicional é a indicação de seleções diretas. Assim, entende-se que apenas uma das alternativas será executada e que os valores constantes indicados (cada <span class="math inline">\(c_i\)</span> do exemplo anterior) serão distintos entre si.</p>
+<p>A omissão do <strong>caso contrário</strong> representa a situação em que, não havendo coincidência com nenhuma das opções, nenhuma ação é realizada.</p>
+<p>Qualquer seleção pode ser escrita com a estrutura condicional <strong>se</strong>.</p>
+</section>
+<section id="repetições" class="level3">
+<h3 class="anchored" data-anchor-id="repetições">Repetições</h3>
+<p>Instruções executadas repetidamente são representadas pelas repetições com <strong>enquanto</strong>, <strong>repita</strong> e <strong>para</strong>.</p>
+<p>A estrutura <strong>enquanto</strong> utiliza o teste de continuidade da repetição no início, permitindo zero ou mais repetições. Para a condição é esperado uma expressão que resulte em verdadeiro ou falso.</p>
+<div>
+<figcaption class="figure-caption">
+</figcaption>
+<p><img src="../algxpar/pseudocode.b2e8c5dbec37afd607a698969be67c9ca9d0bf60.svg" class="img-fluid" alt="" width="648"></p>
+</div>
+<p>A repetição com teste no final utiliza a estrutura <strong>repita</strong>, encerrada com <strong>até que</strong>, na qual consta a condição de término das repetições. A condição é avaliada apenas ao final de cada execução, o que implica que pelo menos a primeira das repetições tem que ser completada.</p>
+<div>
+<figcaption class="figure-caption">
+</figcaption>
+<p><img src="../algxpar/pseudocode.6b049a6afaf1a62a8e6fb823c08341a86c1240c9.svg" class="img-fluid" alt="" width="648"></p>
+</div>
+<p>Tanto as repetições com <strong>enquanto</strong> quanto com <strong>repita</strong> são “abertas”, ou seja, dependem das ações nas instruções internas alterarem a condição para que laço seja interrompido.</p>
+<p>As repetições definidas (i.e., não “abertas”) são expressas com <strong>para</strong>. Usualmente uma repetição deste tipo pressupões o conhecimento do número de vezes que as instruções serão executadas. Na sequência são apresentadas as estruturas com <strong>para</strong>.</p>
+<div>
+<figcaption class="figure-caption">
+</figcaption>
+<p><img src="../algxpar/pseudocode.0bb737659954f2bfda14ac997d1c65e27a8a52eb.svg" class="img-fluid" alt="" width="648"></p>
+</div>
+<div>
+<figcaption class="figure-caption">
+</figcaption>
+<p><img src="../algxpar/pseudocode.af3389b244034eca6746eee29e50120b492098d2.svg" class="img-fluid" alt="" width="648"></p>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Repetições com <strong>para</strong> podem ser abertas como no exemplo seguinte.</p>
+<div>
+<figcaption class="figure-caption">
+</figcaption>
+<p><img src="../algxpar/pseudocode.e3dd3e152b54120579839e3a34260997f801d236.svg" class="img-fluid" alt="" width="648"></p>
+</div>
+<p>Esse uso é evitado (com sucesso relativo) neste livro, dando-se preferência para laços com <strong>enquanto</strong> e <strong>repita</strong> quando o número de repetições é desconhecido.</p>
+<div>
+<figcaption class="figure-caption">
+</figcaption>
+<p><img src="../algxpar/pseudocode.94382d7a4b93e81e50707638d94847e98ccd985e.svg" class="img-fluid" alt="" width="648"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="modularização" class="level3">
+<h3 class="anchored" data-anchor-id="modularização">Modularização</h3>
+</section>
+<section id="comentários" class="level3">
+<h3 class="anchored" data-anchor-id="comentários">Comentários</h3>
+</section>
+</section>
+<section id="algoritmos-estruturados" class="level2">
+<h2 class="anchored" data-anchor-id="algoritmos-estruturados">Algoritmos estruturados</h2>
+</section>
+<section id="notação-programática-versus-notação-matemática" class="level2">
+<h2 class="anchored" data-anchor-id="notação-programática-versus-notação-matemática">Notação programática <em>versus</em> notação matemática</h2>
+<p><code>temperatura_celsius</code> vs.&nbsp;<span class="math inline">\(t_c\)</span>.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiada");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiada");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

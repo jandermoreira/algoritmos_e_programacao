@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>desenvolvimento-de-algoritmos-para-processamento-de-sequencias – Algoritmos &amp; Programação</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-9e1f2a4632985dffc2c80318c992baf5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-ca7e136d0d5988c87344814d6f3e778b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../book.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Algoritmos &amp; Programação</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../algoritmos/introducao.html" aria-current="page"> 
+<span class="menu-text">Algoritmos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../linguagem-c/index.html"> 
+<span class="menu-text">Linguagem C</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../algoritmos/processamento-basico-de-sequencias-de-dados.html">Processamento de sequências de dados</a></li><li class="breadcrumb-item"><a href="../algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.html">Desenvolvimento de algoritmos para processamento de sequências de dados</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/introducao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introdução</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Representação e uso de algoritmos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/nocoes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Noções de algoritmos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/formalizacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Formalização dos algoritmos computacionais</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/desenvolvimento-basico-e-codificacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: desenvolvimento básico e codificação</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/execucao-condicional.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: execução condicional</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/desenvolvimento-com-condicionais-e-codificacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: desenvolvimento com condicionais e codificação</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Processamento de sequências de dados</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/processamento-basico-de-sequencias-de-dados.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estruturas algorítmicas básicas para processamento de sequências de dados</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Desenvolvimento de algoritmos para processamento de sequências de dados</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Desenvolvimento e organização de algoritmos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/desenvolvimento-por-refinamentos-sucessivos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: desenvolvimento por refinamentos sucessivos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/testes-de-mesa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: testes de mesa</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/modularizacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: modularização</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/desenvolvimento-com-modularizacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: desenvolvimento com modularização</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Representação de dados estruturados</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/cadeias-de-caracteres.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">algoritmos-cadeias-de-caracteres.qmd</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/dados-compostos-registros.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: dados compostos (registros)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/dados-compostos-vetores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: dados compostos (vetores)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/dados-compostos-matrizes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">algoritmos-dados-compostos-matrizes.qmd</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Desenvolvimento com arquivos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/manipulacao-de-arquivos-de-registros.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: Manipulação de arquivos de registros</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Recursividade</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/recursividade.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">algoritmos-recursividade.qmd</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+ <span class="menu-text">referencias.qmd</span>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Nesta página:</h2>
+   
+  <ul>
+  <li><a href="#seq-desenvolvimento-de-algoritmos-para-processamento-de-sequencias" id="toc-seq-desenvolvimento-de-algoritmos-para-processamento-de-sequencias" class="nav-link active" data-scroll-target="#seq-desenvolvimento-de-algoritmos-para-processamento-de-sequencias">Desenvolvimento de algoritmos para processamento de sequências de dados</a>
+  <ul class="collapse">
+  <li><a href="#ações-simples-contagens-e-somas" id="toc-ações-simples-contagens-e-somas" class="nav-link" data-scroll-target="#ações-simples-contagens-e-somas">Ações simples: contagens e somas</a>
+  <ul class="collapse">
+  <li><a href="#sec-contagem-em-sequencias" id="toc-sec-contagem-em-sequencias" class="nav-link" data-scroll-target="#sec-contagem-em-sequencias">Contagem</a></li>
+  <li><a href="#somas" id="toc-somas" class="nav-link" data-scroll-target="#somas">Somas</a></li>
+  <li><a href="#mínimos-e-máximos" id="toc-mínimos-e-máximos" class="nav-link" data-scroll-target="#mínimos-e-máximos">Mínimos e máximos</a></li>
+  <li><a href="#derivações" id="toc-derivações" class="nav-link" data-scroll-target="#derivações">Derivações</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../algoritmos/processamento-basico-de-sequencias-de-dados.html">Processamento de sequências de dados</a></li><li class="breadcrumb-item"><a href="../algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.html">Desenvolvimento de algoritmos para processamento de sequências de dados</a></li></ol></nav></header>
+
+
+
+
+<span class="math inline">\(\newcommand\Id[1]{\mbox{\textit{#1}}}\)</span>
+<section id="seq-desenvolvimento-de-algoritmos-para-processamento-de-sequencias" class="level1">
+<h1>Desenvolvimento de algoritmos para processamento de sequências de dados</h1>
+<p>Este capítulo estende a discussão do <strong>?@sec-estruturas-algoritmicas-para-processamento-de-sequencias</strong> quanto ao uso das estruturas de controle execução repetitiva, apresentando problemas práticos e indicando ações de uso frequente, como contagens e somas, por exemplo.</p>
+<p>O contexto principal abordado é o do processamento de sequências de dados, como as caracterizadas na seção <strong>?@sec-caracterizacao-das-sequencias-de-dados</strong>, abordando coleções de dados disponíveis como entrada para algoritmo.</p>
+<section id="ações-simples-contagens-e-somas" class="level2">
+<h2 class="anchored" data-anchor-id="ações-simples-contagens-e-somas">Ações simples: contagens e somas</h2>
+<p>O levantamento de informações a partir de coleções de dados é sempre relevante para análises em nível mais alto. Por exemplo, a determinação do número de estudantes que obtiveram nota zero em um exame do ENEM é um indicador relevante, assim como saber a média das provas de matemática por estado da federação. Da forma similar, a identificação de transações acima de um limite em operações bancárias pode ser um indicador relevante para o mercado e para o governo.</p>
+<p>A obtenção dessas informações recai, em última (e simplificada) instância, em ações básicas como contar e somar.</p>
+<section id="sec-contagem-em-sequencias" class="level3">
+<h3 class="anchored" data-anchor-id="sec-contagem-em-sequencias">Contagem</h3>
+<p>A contagem nada mais é que a identificação do número de ocorrências. Para exemplificar, um problema bastante trivial é apresentado: determinar, para uma sequência de idades, a quantidade de crianças, o seja, com até 12 anos incompletos<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. A quantidade de idades disponíveis é considerada desconhecida, podendo também ser nula. O <a href="../algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.html#alg-quantidade-criancas-sequencia-pura-impreciso">Algoritmo 1</a> apresenta uma solução para processar essa coleção de dados como uma sequência.</p>
+<div id="alg-quantidade-criancas-sequencia-pura-impreciso">
+<figcaption class="figure-caption">
+<p>Algoritmo 1: Determinação do número de crianças em uma coleção de idades zero ou mais itens (versão com imprecisão).</p>
+</figcaption>
+<p><img src="../algxpar/pseudocode.c6e5ca7bfadb33675f71fb1fada71b364a48b16d.svg" class="img-fluid" alt="Algoritmo 1: Determinação do número de crianças em uma coleção de idades zero ou mais itens (versão com imprecisão)." width="648"></p>
+</div>
+<p>O uso da estrutura <strong>enquanto</strong> é relevante, pois controla uma quantidade indeterminada de idades como entrada e trata, também, o caso dessa quantidade ser nula.</p>
+<p>Esse algoritmo contém um elemento de imprecisão. No caso, por exemplo, de não haver nenhuma idade abaixo dos 12&nbsp;anos, a condição do <strong>se</strong> nunca será verdadeira e nenhuma contagem é feita. Porém, a última instrução explicita que que uma contagem que nunca foi feita deva ser apresentada.</p>
+<p>É interessante que, nos algoritmos, essa ambiguidade seja explicitamente resolvida e, para isso, a forma com que a contagem é feita pode ser detalhada, indicando claramente o resultado esperado. O resultado da modificação é o <a href="../algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.html#alg-quantidade-criancas-sequencia-pura">Algoritmo 2</a></p>
+<div id="alg-quantidade-criancas-sequencia-pura">
+<figcaption class="figure-caption">
+<p>Algoritmo 2: Determinação do número de crianças em uma coleção de idades zero ou mais itens (versão com imprecisão).</p>
+</figcaption>
+<p><img src="../algxpar/pseudocode.f21c32a7b0109aecf8bb8d7236b623ce5211046e.svg" class="img-fluid" alt="Algoritmo 2: Determinação do número de crianças em uma coleção de idades zero ou mais itens (versão com imprecisão)." width="648"></p>
+</div>
+<p>Nesta versão, <span class="math inline">\(\Id{contador}\)</span> é uma variável usada para fazer a contagem, começando explicitamente com zero, o que deixa claro o valor que será apresentado caso não haja nenhuma repetição.</p>
+<p>O princípio da contagem é a atualização do valor de uma variável com seu sucessor, de forma que “adicione 1 a <span class="math inline">\(\Id{contador}\)</span>” significa <span class="math inline">\({\Id{contador} \gets \Id{contador} + 1}\)</span>.</p>
+<p>Contadores podem ser aplicados em diferentes cenários de entrada, como sequências com sentinela ou com comprimento conhecido ou previamente informado.</p>
+<p>O mesmo problema base (contagem de idades inferiores a 12) pode ter especificação e solução novas se a sequência possuir um valor especial de término (sentinela). O problema passa a ser determinar o número de crianças em uma sequência de idades que possui um valor sentinela igual a -1.</p>
+<p>Para esse novo problema, uma solução é apresentada no <a href="../algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.html#alg-quantidade-criancas-sequencia-sentinela-enquanto">Algoritmo 3</a>.</p>
+<div id="alg-quantidade-criancas-sequencia-sentinela-enquanto">
+<figcaption class="figure-caption">
+<p>Algoritmo 3: Determinação do número de crianças em uma coleção de idades zero ou mais itens com sentinela (versão 1).</p>
+</figcaption>
+<p><img src="../algxpar/pseudocode.d97e5ec81993434f9c835a4ef9defbb46c6e8e0c.svg" class="img-fluid" alt="Algoritmo 3: Determinação do número de crianças em uma coleção de idades zero ou mais itens com sentinela (versão 1)." width="648"></p>
+</div>
+<p>Essa solução usa o <strong>enquanto</strong> para controlar a aparição do valor sentinela. Há uma primeira leitura antes da repetição e, caso já apareça o valor sentinela, não é feita nenhuma repetição e o valor da contagem é zero. Se o primeiro valor for uma idade, ela é verificada para a contagem. Antes de nova verificação no <strong>enquanto</strong>, o próximo valor da sequência é obtido e, logo em seguida, verificado na condição do <strong>enquanto</strong>.</p>
+<p>O <a href="../algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.html#alg-quantidade-criancas-sequencia-sentinela-repita">Algoritmo 4</a> é outra solução para a sequência com sentinela usando <strong>repita</strong>.</p>
+<div id="alg-quantidade-criancas-sequencia-sentinela-repita">
+<figcaption class="figure-caption">
+<p>Algoritmo 4: Determinação do número de crianças em uma coleção de idades zero ou mais itens com sentinela (versão 2).</p>
+</figcaption>
+<p><img src="../algxpar/pseudocode.c9743e6bc271eb3db0097681f4ae9f9b213d271a.svg" class="img-fluid" alt="Algoritmo 4: Determinação do número de crianças em uma coleção de idades zero ou mais itens com sentinela (versão 2)." width="648"></p>
+</div>
+<p>Com o uso da estrutura <strong>repita</strong>, obrigatoriamente os comandos internos serão executados pelo menos uma vez. Caso a sequência de idades esteja vazia, o valor obtido será o sentinela, o qual é desconsiderado no <strong>se</strong> e a repetição já se encerra no <strong>até que</strong>, o que resulta em <span class="math inline">\(\Id{contador}\)</span> igual a zero. Caso o valor não seja o sentinela, a idade é analisada e o contador incrementado se necessário, implicando em novo ciclo de repetição.</p>
+<p>A questão de contagem de idades pode, por exemplo, também ser aplicada a um problema para o qual a quantidade de idades a ser analisada seja predefinido. Supondo agora a contagem de crianças para uma coleção com quantidade fixa de 100 idades, a solução pode ser dada pelo <a href="../algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.html#alg-quantidade-criancas-sequencia-conhecida">Algoritmo 5</a>. Como o valor é fixo, a estrutura <strong>para</strong> é empregada para a repetição.</p>
+<div id="alg-quantidade-criancas-sequencia-conhecida">
+<figcaption class="figure-caption">
+<p>Algoritmo 5: Determinação do número de crianças em uma coleção de 100 idades.</p>
+</figcaption>
+<p><img src="../algxpar/pseudocode.72bd7122cb95e34a5460b0b66561ea104e827f31.svg" class="img-fluid" alt="Algoritmo 5: Determinação do número de crianças em uma coleção de 100 idades." width="648"></p>
+</div>
+<p>Como outra possibilidade, o problema pode considerar uma sequência para a qual seja informada sua quantidade. Por exemplo, para uma sequência de 10&nbsp;idades, a quantidade 10 é conhecida antes da repetição. O@alg-quantidade-criancas-sequencia-informada considera que o comprimento da sequência esteja disponível antes de cada idade.</p>
+<div id="alg-quantidade-criancas-sequencia-informada">
+<figcaption class="figure-caption">
+<p>Algoritmo 6: Determinação do número de crianças em uma coleção de idades com zero ou mais itens precedida pela quantidade de itens.</p>
+</figcaption>
+<p><img src="../algxpar/pseudocode.230453f00917abc35f0b76f1e86e94277382611d.svg" class="img-fluid" alt="Algoritmo 6: Determinação do número de crianças em uma coleção de idades com zero ou mais itens precedida pela quantidade de itens." width="648"></p>
+</div>
+<p>Nesse algoritmo, os requisitos são a quantidade e os valores das idades. Antes da repetição, o número de itens deve ser obtido (variável <span class="math inline">\(\Id{quantidade}\)</span>) e a repetição, usando um <strong>para</strong>, executa a obtenção e a análise de cada idade na quantidade de vezes informada.</p>
+<p>Nas duas soluções que usam o <strong>para</strong>, a variável de controle da repetição (<span class="math inline">\(i\)</span>) é irrelevante para a solução do problema, sendo usada exclusivamente como indicador para o número de execuções.</p>
+</section>
+<section id="somas" class="level3">
+<h3 class="anchored" data-anchor-id="somas">Somas</h3>
+<p>No processamento de volumes de dados, os totais também são uma informação de interesse comumente usada. Por exemplo, nas transações de venda de um estabelecimento, saber o valor total de vendas em um dia pode ser relevante. Também são importantes os volumes de chuva ao longo de um dado período, obtido pela soma das precipitações diárias. Assim, somas são o tema desta seção.</p>
+<p>Para explorar somas em sequências, o princípio é similares ao das contagens da <a href="#sec-contagem-em-sequencias" class="quarto-xref">Seção&nbsp;1.1.1</a>, com o reuso de uma variável com a função de acumular valores. Por exemplo, as instruções seguintes ilustram uma forma de reuso para uma soma.</p>
+<div>
+<figcaption class="figure-caption">
+</figcaption>
+<p><img src="../algxpar/pseudocode.e70d64ba7124e3097180cef8d562442dcb51c3ae.svg" class="img-fluid" alt="" width="648"></p>
+</div>
+<p>Esta sequência de ações gradativamente calculam <span class="math inline">\(12 + 18 + 31\)</span>.</p>
+<p>O problema exemplo a ser resolvido agora envolve a apresentação das entradas e saídas de um caixa ao longo do dia. Cada transação feita é registrada por um valor em reais, sendo valores positivos indicativos de entrada de dinheiro no caixa e, em consequência, valores negativos, as saídas. Como transações com valor nulo não fazem sentido neste contexto, o valor R$0,00 é usado como sentinela para indicar o fim da sequência de valores de transações. O objetivo é apresentar o total de entradas e de saídas, além da diferença entre eles.</p>
+<p>Uma solução para esse problema está descrita no <a href="../algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.html#alg-fluxo-caixa">Algoritmo 7</a>.</p>
+<div id="alg-fluxo-caixa">
+<figcaption class="figure-caption">
+<p>Algoritmo 7: Cálculo do montante de entrada e de saída a partir de uma sequência de valores de transações (com sentinela).</p>
+</figcaption>
+<p><img src="../algxpar/pseudocode.4c5afd2c9ad251d72563b7f98f208a7ef35419c9.svg" class="img-fluid" alt="Algoritmo 7: Cálculo do montante de entrada e de saída a partir de uma sequência de valores de transações (com sentinela)." width="648"></p>
+</div>
+<p>A estratégia de varredura dos valores das transações é o mesmo do <a href="../algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.html#alg-quantidade-criancas-sequencia-sentinela-enquanto">Algoritmo 3</a>, com a obtenção do primeiro valor antes do <strong>enquanto</strong> e a obtenção de cada sucessor no final, antes de nova verificação da condição.</p>
+<p>A iniciação dos somadores <span class="math inline">\(\Id{soma\_entradas}\)</span> e <span class="math inline">\(\Id{soma\_saídas}\)</span> é feita com zero. A cada transação, um ou outro tem seu valor aumentado pelo montante da transação atual.</p>
+</section>
+<section id="mínimos-e-máximos" class="level3">
+<h3 class="anchored" data-anchor-id="mínimos-e-máximos">Mínimos e máximos</h3>
+<p>Valores extremos são itens usualmente buscados em coleções de dados, como, por exemplo, a transação de maior valor no mercado imobiliário ou a idade mínima para um conjunto de pessoas.</p>
+<p>A estratégia por trás da determinação dos valores mínimo e máximo é simples. Na procura pelo valor mínimo, cada novo valor é comparado ao mínimo atual e, sendo menor, o mínimo atual é atualizado. Situação análoga ocorre com o valor máximo, substituído apenas quando encontrar um valor maior. Algoritmicamente, essa verificação para o valor mínimo pode ser escrita como indicado na sequência.</p>
+<div>
+<figcaption class="figure-caption">
+</figcaption>
+<p><img src="../algxpar/pseudocode.b4432f87c58c070a8fcf115f755f55f8ba5651ba.svg" class="img-fluid" alt="" width="648"></p>
+</div>
+<p>Uma questão que surge é sobre qual deve ser o valor inicial da variável quem mantém o mínimo ou o máximo. A resposta, naturalmente, é que a variável deve ser iniciada com um valor que garanta que as substituições ocorram corretamente.</p>
+<!-- Há dois cenários comuns para busca por mínimos e máximos. Em um deles, há uma faixa de valores possíveis para os dados, como a idade de pessoas, por exemplo, em que os valores são sempre maiores ou iguais a zero e menores que 150 anos (para trabalhar com folga). O outro cenário é aquele em que não há limitações diretas, como valores reais genéricos. -->
+<p>Uma estratégia segura é sempre adotar o primeiro valor como o valor extremo, seja ele o mínimo ou o máximo, e depois verificar os demais itens.</p>
+<p>O problema para exemplificar a localização dos extremos é a determinação, para um coleção de idades, qual o mínimo e o máximo. As idades estão disponíveis em uma sequência precedida por sua quantidade e há pelo menos um valor na sequência.</p>
+<div id="alg-idade-minima-maxima">
+<figcaption class="figure-caption">
+<p>Algoritmo 8: Determinação da idade mínima e máxima em uma coleção de idades precedida pelo número de itens.</p>
+</figcaption>
+<p><img src="../algxpar/pseudocode.277cbea5fdd9a63365b7365017ed6718d44ce5f5.svg" class="img-fluid" alt="Algoritmo 8: Determinação da idade mínima e máxima em uma coleção de idades precedida pelo número de itens." width="648"></p>
+</div>
+<p>Uma alternativa comum é iniciar com valores que certamente serão substituídos, como apresentado no <a href="../algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.html#alg-idade-minima-maxima-infinito">Algoritmo 9</a>.</p>
+<div id="alg-idade-minima-maxima-infinito">
+<figcaption class="figure-caption">
+<p>Algoritmo 9: Determinação da idade mínima e máxima em uma coleção de idades precedida pelo número de itens.</p>
+</figcaption>
+<p><img src="../algxpar/pseudocode.bc83fe5048d864822bdeccb688e14d2566420e07.svg" class="img-fluid" alt="Algoritmo 9: Determinação da idade mínima e máxima em uma coleção de idades precedida pelo número de itens." width="648"></p>
+</div>
+<p>Nesta solução, qualquer que seja a primeira idade, ela certamente será menor que <span class="math inline">\(+\infty\)</span> e maior que <span class="math inline">\(-\infty\)</span>, forçando as substituições de <span class="math inline">\(\Id{idade}_{min}\)</span> e <span class="math inline">\(\Id{idade}_{max}\)</span>. No caso de idades, as iniciações poderiam ser, respectivamente, com 200 anos (com uma boa folga) e -1, ambos valores fora do intervalo de idades aceitável.</p>
+</section>
+<section id="derivações" class="level3">
+<h3 class="anchored" data-anchor-id="derivações">Derivações</h3>
+<p>Em decorrência de contagens e somatórios, outros cálculos seguem diretamente, com médias e porcentagens.</p>
+<section id="médias" class="level4">
+<h4 class="anchored" data-anchor-id="médias">Médias</h4>
+<p>O cálculo de uma média consiste na soma dos valores seguida da divisão pela quantidade. Na prática, é um somatório e uma contagem seguida do cálculo da razão entre eles.</p>
+<p>Supondo que o problema seja o processamento de uma sequência simples de pontuações, todas de 0 a 100, e se deseja a pontuação média. O <a href="../algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.html#alg-media-pontuacoes">Algoritmo 10</a> apresenta uma solução para o problema, considerando que a sequência de entrada contém pelo menos uma pontuação.</p>
+<div id="alg-media-pontuacoes">
+<figcaption class="figure-caption">
+<p>Algoritmo 10: Determinação da pontuação média para uma coleção de pontuações.</p>
+</figcaption>
+<p><img src="../algxpar/pseudocode.095bfd70cc1e30d7cb7f509cc248eb7899962007.svg" class="img-fluid" alt="Algoritmo 10: Determinação da pontuação média para uma coleção de pontuações." width="648"></p>
+</div>
+</section>
+<section id="porcentagens" class="level4">
+<h4 class="anchored" data-anchor-id="porcentagens">Porcentagens</h4>
+<p>Para porcentagens é preciso ter uma quantidade de ocorrências específicas e dividir esse valor pelo número total de ocorrências. Basicamente, contam-se as ocorrências específicas o e o total, realizando a divisão de um pelo outro na sequência.</p>
+<p>Supondo uma sequência de pontuações (de 0 a 100) e desejando-se saber a porcentagem das pontuações no intervalo [90, 100], uma solução algorítmica pode ser dada pelo pseudocódigo do <a href="../algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.html#alg-porcentagem-pontuacoes">Algoritmo 11</a>.</p>
+<div id="alg-porcentagem-pontuacoes">
+<figcaption class="figure-caption">
+<p>Algoritmo 11: Determinação, para uma coleção de pontuações, a porcentagem de pontuações de 90 a 100.</p>
+</figcaption>
+<p><img src="../algxpar/pseudocode.e3528520f0107f7ab552206630b03a4bb82901e0.svg" class="img-fluid" alt="Algoritmo 11: Determinação, para uma coleção de pontuações, a porcentagem de pontuações de 90 a 100." width="648"></p>
+</div>
+<!-- ## Determinação de ocorrência -->
+
+
+</section>
+</section>
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Notas de rodapé</h2>
+
+<ol>
+<li id="fn1"><p>Faixa etária definida pelo <span class="citation" data-cites="eca">@eca</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiada");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiada");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -74,14 +74,14 @@ end
 
 -- Links com abertura em nova aba
 local function links_in_new_window(link)
-    debug(">", pandoc.utils.stringify(link.content[1].text), "<\n")
-    if pandoc.utils.stringify(link.content[1].text) == "+veja+" then
+    -- debug(">", pandoc.utils.stringify(link.content[1].text), "<\n")
+    if pandoc.utils.stringify(link.content[1].text) == ":veja:" then
         link.content[1] = pandoc.Superscript(
             pandoc.Image(
                 {},
                 "/figuras/connection.png",
                 "Veja mais",
-                { width = "16px", base = "bottom"}
+                { width = "16px", base = "bottom" }
             )
         )
     end
@@ -105,8 +105,8 @@ end
 -- chop_down_table: true
 return {
     { Pandoc = init },
-    -- { Str = keyword },
-    -- { Str = module },
-    -- { Str = id },
+    { Str = keyword },
+    { Str = module },
+    { Str = id },
     { Link = links_in_new_window }
 }

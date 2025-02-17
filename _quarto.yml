@@ -24,8 +24,9 @@ syntax-definitions:
 
 
 website:
-  title: "CAP"
+  title: "Algoritmos & Programação"
   navbar:
+    # logo: figuras/cap.png
     left:
       - text: Algoritmos
         href: algoritmos/introducao.qmd
@@ -47,6 +48,38 @@ website:
       background: light
       contents: 
         - algoritmos/introducao.qmd
+
+        - section: "Representação e uso de algoritmos"
+          contents:
+            - algoritmos/nocoes.qmd
+            - algoritmos/formalizacao.qmd
+            - algoritmos/desenvolvimento-basico-e-codificacao.qmd
+            - algoritmos/execucao-condicional.qmd
+            - algoritmos/desenvolvimento-com-condicionais-e-codificacao.qmd
+        - section: "Processamento de sequências de dados"
+          contents:
+            - algoritmos/processamento-basico-de-sequencias-de-dados.qmd
+            - algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.qmd
+        - section: "Desenvolvimento e organização de algoritmos"
+          contents:
+            - algoritmos/desenvolvimento-por-refinamentos-sucessivos.qmd
+            - algoritmos/testes-de-mesa.qmd
+            - algoritmos/modularizacao.qmd
+            - algoritmos/desenvolvimento-com-modularizacao.qmd
+        - section: "Representação de dados estruturados"
+          contents: 
+            - algoritmos/cadeias-de-caracteres.qmd
+            - algoritmos/dados-compostos-registros.qmd
+            - algoritmos/dados-compostos-vetores.qmd
+            - algoritmos/dados-compostos-matrizes.qmd
+        - section: "Desenvolvimento com arquivos"
+          contents: 
+            - algoritmos/manipulacao-de-arquivos-de-registros.qmd
+        - section: "Recursividade"
+          contents:
+            - algoritmos/recursividade.qmd
+
+        - referencias.qmd        
 
     - id: c
       style: "docked"

@@ -5,7 +5,7 @@ Um programa em C lida com dados, que podem ser de diferentes tipos, como `int`, 
 
 ## Variáveis, declarações e atribuição
 
-Qualquer informação precisa ser mapeada para bytes para poder ser utilizada em um sistema computacional.\ [+veja+](tipos-de-dados.html#sec-representacao-de-dados)
+Qualquer informação precisa ser mapeada para bytes para poder ser utilizada em um sistema computacional.\ [:veja:](tipos-de-dados.html#sec-representacao-de-dados)
 
 Para que um programa faça sua tarefa de resolver um dado problema, é preciso que ele tenha acesso à memória e sua representação. Quase na totalidade das linguagens de programação, uma área da memória na qual está guardado um dado é referenciado por um nome arbitrário. Por exemplo, se o ano de um evento é um dado que precisa ser guardado, os bytes reservados para o armazenamento dessa informação é referenciado por um identificador. E dado que o conteúdo da memória possa eventualmente ser modificado, a esse armazenamento é dado o nome de variável, no sentido de mutável.
 

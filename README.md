@@ -1,2 +1,2 @@
-# cap.github.io
-Construção de algoritmos e programação
+# ap.github.io
+Algoritmos e programação: material de estudo

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Algoritmos &amp; Programação</title>
+<title>Sobre… – Algoritmos &amp; Programação</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-9e1f2a4632985dffc2c80318c992baf5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -100,7 +99,7 @@ window.Quarto = {
 <link rel="stylesheet" href="book.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -128,7 +127,7 @@ window.Quarto = {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./sobre.html"> 
+    <a class="nav-link active" href="./sobre.html" aria-current="page"> 
 <span class="menu-text">Sobre…</span></a>
   </li>  
   <li class="nav-item compact">
@@ -150,37 +149,35 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
+<div class="quarto-about-trestles">
+  <div class="about-entity">
+    <img src="figuras/cap.png" class="about-image
+  rounded " style="width: 20em;">
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Algoritmos &amp; Programação</h1>
+<h1 class="title">Sobre…</h1>
 </div>
-
-
-
 <div class="quarto-title-meta">
-
-    
-  
-    
   </div>
-  
-
-
 </header>
-
-
+  </div>
+  <div class="about-contents"><main class="content" id="quarto-document-content">
 <span class="math inline">\(\newcommand\Id[1]{\mbox{\textit{#1}}}\)</span>
-<p>Este site é dedicado ao ensino para a <strong>construção de algoritmos</strong> e para o básico da <strong>programação na linguagem C</strong>.</p>
+<section id="sobre-o-material" class="level2">
+<h2 data-anchor-id="sobre-o-material">Sobre o material</h2>
+<p>A escrita desse material é uma decorrência do conteúdo abordado na disciplina <strong>Construção de Algoritmos e Programação</strong>, CAP, oferecida pelo Departamento de Computação da Universidade Federal de São Carlos.</p>
+</section>
+<section id="sobre-mim" class="level2">
+<h2 data-anchor-id="sobre-mim">Sobre mim</h2>
+<p><a href="jandermoreira.github.io">Jander Moreira</a> é docente na Universidade Federal de São Carlos.</p>
 
 
-
-</main> <!-- /main -->
+</section>
+</main></div>
+</div>
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -201,13 +198,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

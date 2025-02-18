@@ -162,8 +162,13 @@ window.Quarto = {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="../sobre.html"> 
+<span class="menu-text">Sobre…</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://jandermoreira.github.io"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -181,6 +186,9 @@ window.Quarto = {
         </a>
     </div>
   </nav>
+  <div id="quarto-announcement" data-announcement-id="488ded3f584a619e97fbebbe9d888524" class="alert alert-danger hidden"><i class="bi bi-exclamation-octagon quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong>Atenção</strong> - Este site é apenas um protótipo/estudo de conceito. As informações aqui estão incompletas.</p>
+</div></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
@@ -670,7 +678,7 @@ Declaração de função
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>[-Wimplicit-function-declaration]</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>   17 |         if (eh_vogal(texto[i]))</span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>      |             ^~~~~~~~</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>/usr/bin/ld: /tmp/ccCYNsJr.o: na função "main":</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>/usr/bin/ld: /tmp/ccB7HHo3.o: na função "main":</span>
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>main.c:(.text+0x99): undefined reference to `eh_vogal'</span>
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>collect2: error: ld returned 1 exit status</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Há dois problemas dignos de destaque no resultado da compilação. O primeiro se refere ao uso de <code>eh_vogal</code>, dando um alerta (<em>warning</em>) de declaração implícita, o que significa que a função não possui declaração e o compilador assumiu um formato padrão. O segundo ponto é o que diz “referência não definida para <code>eh_vogal</code>”, que significa que a função não foi implementada e não existe nenhum código para ela.</p>
@@ -702,7 +710,7 @@ Declaração de função
 <span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
 <span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb12"><pre class="sourceCode terminal cell-output code-with-copy"><code class="sourceCode terminal"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>/usr/bin/ld: /tmp/ccipW6Y6.o: na função "main":</span>
+<div class="sourceCode" id="cb12"><pre class="sourceCode terminal cell-output code-with-copy"><code class="sourceCode terminal"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>/usr/bin/ld: /tmp/ccRPXYf3.o: na função "main":</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>main.c:(.text+0x94): undefined reference to `eh_vogal'</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>collect2: error: ld returned 1 exit status</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>A declaração é feita por meio de seu protótipo, que indica o tipo, o nome e os parâmetros que a função possui. A prototipagem da função requereu também incluir <code>stdbool.h</code> para poder especificar o tipo de retorno <code>bool</code>.</p>
@@ -1256,7 +1264,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/jandermoreira\.github\.io\/ap\.github\.io\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

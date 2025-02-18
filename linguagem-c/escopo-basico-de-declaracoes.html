@@ -162,8 +162,13 @@ window.Quarto = {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="../sobre.html"> 
+<span class="menu-text">Sobre…</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://jandermoreira.github.io"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -181,6 +186,9 @@ window.Quarto = {
         </a>
     </div>
   </nav>
+  <div id="quarto-announcement" data-announcement-id="488ded3f584a619e97fbebbe9d888524" class="alert alert-danger hidden"><i class="bi bi-exclamation-octagon quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong>Atenção</strong> - Este site é apenas um protótipo/estudo de conceito. As informações aqui estão incompletas.</p>
+</div></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
@@ -584,7 +592,7 @@ Dica
 <p>É indicado que a declaração de uma variável seja feita o mais próximo possível de seu uso, o que promove clareza de padronização ao programa.</p>
 </div>
 </div>
-<p>O programa que implementa o ??alg-escrita-nao-decrescente é reproduzido na sequência.</p>
+<p>O programa que implementa o <a href="../linguagem-c/execucao-condicional-com-if.html#alg-escrita-nao-decrescente">Algoritmo 1</a> é reproduzido na sequência.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode numberSource c number-lines code-with-copy"><code class="sourceCode c"><span id="cb3-1"><a href="#cb3-1"></a><span class="co">/*</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="co">Apresentação de dois valores em ordem não decrescente</span></span>
 <span id="cb3-3"><a href="#cb3-3"></a><span class="co">Requer: dois valores reais v1 e v2</span></span>
@@ -851,7 +859,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/jandermoreira\.github\.io\/ap\.github\.io\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

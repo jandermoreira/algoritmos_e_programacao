@@ -162,8 +162,13 @@ window.Quarto = {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="../sobre.html"> 
+<span class="menu-text">Sobre…</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://jandermoreira.github.io"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -181,6 +186,9 @@ window.Quarto = {
         </a>
     </div>
   </nav>
+  <div id="quarto-announcement" data-announcement-id="488ded3f584a619e97fbebbe9d888524" class="alert alert-danger hidden"><i class="bi bi-exclamation-octagon quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong>Atenção</strong> - Este site é apenas um protótipo/estudo de conceito. As informações aqui estão incompletas.</p>
+</div></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
@@ -776,7 +784,7 @@ Dica
 <section id="expressões-inteiras-vs.-reais-promoção-de-tipo" class="level2">
 <h2 class="anchored" data-anchor-id="expressões-inteiras-vs.-reais-promoção-de-tipo">Expressões inteiras vs.&nbsp;reais (promoção de tipo)</h2>
 <p>As expressões aritméticas envolvem valores numéricos, mas C pode tratar de forma diferente valores numéricos inteiros (<code>int</code>) e reais (<code>double</code>). Um exemplo é a divisão, que resulta em valores diferentes para <code>18/7</code> e <code>18.0/7.0</code>, por exemplo, ou o operador modular <code>%</code>, que não pode ser usado para valores reais.</p>
-<p>Para iniciar o entendimento de como expressões com tipos diferentes são tratadas, o exemplo da conversão de temperaturas do ??alg-pseudocodigo-conversao-celsius-fahrenheit é revisitado.</p>
+<p>Para iniciar o entendimento de como expressões com tipos diferentes são tratadas, o exemplo da conversão de temperaturas do <a href="../algoritmos/nocoes.html#alg-pseudocodigo-conversao-celsius-fahrenheit">Algoritmo 2</a> é revisitado.</p>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* </span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">Conversão de escalas termométricas, de graus Celsius para Fahrenheit</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">Requer: valor da temperatura em graus Celsius</span></span>
@@ -1205,7 +1213,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/jandermoreira\.github\.io\/ap\.github\.io\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

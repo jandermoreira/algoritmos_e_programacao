@@ -1,9 +1,11 @@
-# Repetições com `do while` {#sec-repeticoes-com-do-while}
+---
+title: Repetições com `do while`
+---
 
 Este capítulo contempla a estrutura e aspectos lógicos do `do while`, cuja função é executar comandos repetitivamente.
 
 
-## A estrutura de repetição `do while`
+# A estrutura de repetição `do while`
 
 O `do while` é uma estrutura de repetição condicional e, assim, depende de uma dada condição para determinar se haverá ou não outra repetição. Em oposição ao `while` (@sec-repeticoes-com-while) e ao `for` (@sec-repeticoes-com-for), o teste de continuidade é feito depois da execução do comando.
 
@@ -67,12 +69,12 @@ do {
 
 
 
-## Exemplos
+# Exemplos
 Nesta seção há alguns exemplos de programas que utilizam a estrutura de repetição `do while`.
 
 
 
-### Leitura de senha
+## Leitura de senha
 Este exemplo é de um programa que solicita uma senha para autorizar ou não a execução. A senha é _hardcoded_ (i.e., fixa no código e nada versátil) e há um limite de três tentativas.
 
 ```{c}
@@ -117,7 +119,7 @@ Neste código há o uso da função `strcmp`, declarada no arquivo de cabeçalho
 [^capitulo-strings]: Manipulações de cadeias de caracteres são tratadas em detalhes no @sec-dados-textuais.
 
 
-### Pense em um número de 1 a 15.000!
+## Pense em um número de 1 a 15.000!
 
 O programa deste exemplo se propõe a adivinhar um número pensado pelo usuário em no máximo 13\ tentativas.
 
@@ -192,3 +194,11 @@ int main(void) {
     return 0;
 }
 ```
+
+# Boas práticas
+
+-   Escolha da repetição adequada.
+-   Determinação de uma condição de parada válida e atingível.
+-   Evitação de laços infinitos.
+-   Escrita de código legível e bem documentado.
+-   Uso de identificadores adequados.

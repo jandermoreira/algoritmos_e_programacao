@@ -1,8 +1,10 @@
-# expressões relacionais e lógicas
+---
+title: Expressões relacionais e lógicas
+---
 
 Além de expressões aritméticas, há outros dois tipos de expressões relevantes, ambas tratadas neste capítulo: relacionais e lógicas.
 
-## Expressões relacionais
+# Expressões relacionais
 
 Uma expressão relacional é a que compara (i.e., relaciona) valores. Assim, para determinar de um valor é maior que zero, usa-se uma expressão relacional: `valor > 0`.
 
@@ -113,7 +115,7 @@ Vale notar que, embora `filhos` possa ser usada com significando se tem ou não 
 :::
 
 
-### Afinal, `_Bool` ou `bool`?
+## Afinal, `_Bool` ou `bool`?
 
 A linguagem C, no início, não possuía um tipo lógico específico. Eram empregadas variáveis do tipo `int` para representar tanto os valores realmente inteiros (como idades ou contadores) quanto para valores lógicos. Assim, para o programador com alguma experiência, não é estranha essa mistura de significados nos códigos mais antigo e também nos novos.
 
@@ -186,7 +188,7 @@ As modificações para o uso de `bool` foram feitas e, para o condicional terná
 
 
 
-## Expressões lógicas
+# Expressões lógicas
 
 Neste tópico serão detalhadas as expressões lógicas, as quais foram usadas nos exemplos anteriores mas não foram explicadas completamente.
 
@@ -246,7 +248,7 @@ Note-se que os parênteses nesta última expressão servem apenas para ênfase e
 :::
 
 
-### Relações matemáticas ternárias e sucessivas {#sec-relacoes-ternarias}
+## Relações matemáticas ternárias e sucessivas {#sec-relacoes-ternarias}
 
 No cotidiano é comum usar expressões ternárias como 0\ $< x <$\ 10 para indicar que $x$ está em um determinado intervalo. Em C é preciso cuidado com tais expressões, pois cada expressão relacional resulta em um valor inteiro.
 
@@ -269,7 +271,7 @@ a == b && b < c             // a = b < c
 ```
 
 
-### Comparações com vários valores
+## Comparações com vários valores
 
 Outra questão que surgem com frequência é a verificação de uma variável com uma série de valores. Este é o caso, por exemplo, para verificar se uma variável inteira `mes` é um dos meses com 31\ dias, ou seja, se ${m \in \{ 1, 3, 5, 7, 8, 10, 12 \}}$. Não é incomum que programados iniciantes tentem fazer essa comparação como se segue.
 
@@ -291,7 +293,7 @@ Elaborar expressões lógicas requer prática e atenção. Nem sempre as verific
 :::
 
 
-## Ordem de precedência entre operadores relacionais e lógicos
+# Ordem de precedência entre operadores relacionais e lógicos
 
 A linguagem C estabelece um padrão curioso (e potencialmente confuso) para ordem de precedência dos operadores relacionais e lógicos. A regra geral é que operações relacionais sejam feitas antes das lógicas, ou seja, comparações antes das combinações com -e- e -ou-. Isso é verdade, exceto para o -não-. Em C, o operador `!` tem precedência sobre os operadores relacionais.
 
@@ -315,12 +317,12 @@ A ordem é, portanto:
 #. O operador `||`.
 
 
-## Exemplos práticos
+# Exemplos práticos
 
 Esta seção cobre exemplos diversos de implementações que usam expressões relacionais e lógicas em problemas diretos, com maior ou menor grau de complexidade.
 
 
-### Verificação de cédulas válidas
+## Verificação de cédulas válidas
 
 Este é um exemplo para determinar se um determinado valor é ou não um valor de cédula válido. Atualmente no Brasil, há cédulas e moedas usadas sendo usada cotidianamente no comércio. As cédulas em papel possuem valores de face de 2, 5, 10, 20, 50, 100 e 200 reais.
 
@@ -378,7 +380,7 @@ int main(void) {
 
 
 
-### Verificação de aprovação em disciplina
+## Verificação de aprovação em disciplina
 
 Considerando-se que a aprovação de um aluno em uma disciplina exija que ele tenha média maior ou superior a\ 6 e que sua frequência não seja inferior a 75%, o problema que deve ser resolvido é determinar se um aluno foi ou não aprovado. Para determinar média final, há duas notas e deve ser calculada sua média. Para a frequência, estão disponíveis o número de faltas e o número total de aulas. Assim, é proposto como solução o @alg-media-e-frequencia.
 
@@ -461,7 +463,7 @@ tem_aprovacao != false ? "aprovado" : "reprovado"  // pior ainda!
 Pode-se considerar que comparar uma variável com `true` ou `false` faz tanto sentido como escrever `(a > b) == true`.
 :::
 
-### Verificação de existência de triângulo
+## Verificação de existência de triângulo
 
 Para ilustrar tanto as expressões como o uso de valores lógicos, o problema de verificar se três segmentos de reta podem ser os lados de um triângulo é apresentado. Um triângulo não pode ser formado caso um dos segmentos seja maior ou igual à soma dos outros dois, situação em que o triângulo "não fecha". Seguem a solução no @alg-triangulo-valido-logico e sua implementação em C.
 
@@ -512,7 +514,7 @@ Neste programa, a variável `triangulo_eh_valido` é usada como uma variável l�
 
 
 
-### Verificação de validade de uma data
+## Verificação de validade de uma data
 
 Como exemplo com expressões lógicas, segue um algoritmo para determinar se valores para dia, mês e ano formam uma data válida (@alg-data-valida). Os valores formam uma data válida se o valor do dia estiver dentro do intervalo do mês e o ano for diferente de zero[^anno-domini]. A solução desconsidera anos bissextos, de forma que fevereiro considera apenas 28 dias. Também considera que valores negativos para um ano indicam AC (antes de Cristo).
 
@@ -609,7 +611,7 @@ int main(void) {
 ```
 
 
-### Mais sobre valores lógicos em C
+## Mais sobre valores lógicos em C
 
 Como já exposto no início do capítulo, se um valor for igual a zero ele é considerado falso e se for diferente de zero é verdadeiro. A questão é que, na linguagem C, isso é válido para qualquer valor e não somente os do tipo `bool` e inteiros.
 
@@ -669,3 +671,12 @@ Não é uma boa prática usar um valor que não seja lógico como se assim fosse
 
 Por exemplo, mesmo que `2 * i - 1 ? "Ok" : "Não ok"` funcione, resultando em `"Ok"` sempre que `2 * i - 1` for diferente de zero, deve-se sempre escrever `2 * i - 1 != 0 ? "Ok" : "Não ok"`, já que a operação aritmética não é, em si, uma expressão lógica.
 :::
+
+
+
+# Boas práticas
+
+- Cuidado com a ordem de precedência dos operadores e uso correto dos parênteses.
+- Uso de parênteses para aumentar a clareza das expressões.
+- Uso de variáveis lógicas com nomes apropriados para melhor entendimento do código.
+- Avaliação das expressões para verificar se os resultados correspondem às expectativas.

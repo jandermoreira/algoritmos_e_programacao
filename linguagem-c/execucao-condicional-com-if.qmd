@@ -1,10 +1,12 @@
-# Execução condicional com `if`
+---
+title: Execução condicional com `if`
+---
 
 A maioria dos programas requer que alguns comandos apenas sejam executados em algumas condições e isso é chamado, naturalmente, de execução condicional.
 
 A principal estrutura na linguagem\ C para determinar se determinados comandos são ou não executados é o `if`. Esta estrutura é o assunto deste capítulo.
 
-## A estrutura condicional `if`
+# A estrutura condicional `if`
 
 Para introduzir a estrutura condicional é apresentado um programa que implementa o @alg-escrita-nao-decrescente.
 
@@ -82,7 +84,7 @@ if(valor < 0) {
 }
 ```
 
-## `if` + `else`
+# `if` + `else`
 
 A cláusula `else` pode ser adicionada ao `if` para indicar uma ação a ser feita caso a condição de teste seja avaliada como falsa.
 
@@ -292,7 +294,7 @@ int main(void) {
 }
 ```
 
-## De quem é esse `else`?
+# De quem é esse `else`?
 
 Um ponto relevante quando se usa `if` dentro de `if` é a quem pertence um determinado `else`. Para considerar esse problema é apresentado um código em C.
 
@@ -408,3 +410,13 @@ int main(void) {
 ::: {.callout-tip}
 A manutenção da organização visual do código com as indentações corretas ajuda na identificação dos erros.
 :::
+
+
+# Boas práticas
+
+- Evitação de redundância nas condições.
+- Escrita de código com legibilidade.
+- Evitação de comparações desnecessárias.
+- Cuidado com a qual `if` um dado `else` pertence.
+- Emprego coerente de declarações locais a comandos compostos (blocos).
+- Evitação de "sombreamento" de identificadores (repetição de identificador em escopos diferentes muito próximos).

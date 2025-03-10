@@ -1,8 +1,10 @@
-# Dados com `struct`
+---
+title: Dados com `struct`
+---
 
 Este capítulo discute como variáveis compostas heterogêneas, comumente chamadas de registros, são declaradas e usadas em\ C. São cobertos os aspectos de declaração, atribuição e seu uso com funções.
 
-## Variáveis compostas
+# Variáveis compostas
 
 A exploração de variáveis compostas se inicia com a apresentação de um problema envolvendo pontos em $\mathbb{R}^3$. Se três pontos no espaço são especificados, então um triângulo é formado e sua área pode ser calculada. O @alg-area-triangulo-espaco apresenta a estratégia para esse cálculo.
 
@@ -161,7 +163,7 @@ Para esse fim, cada ponto pode ser estruturado como um registro e, em C, esse ag
 
 
 
-## Declaração e uso do `struct`
+# Declaração e uso do `struct`
 
 As variáveis compostas, chamadas registros, são criadas com `struct` em C. A declaração de registros na linguagem pode assumir diversos formatos. Neste texto será adotado, com poucas exceções, um formato padronizado para manter a clareza.
 
@@ -183,7 +185,7 @@ struct ponto ponto1, ponto2;  // duas variáveis (ponto1 e ponto2), ambas
                               // do tipo struct ponto
 ```
 
-### Uso e acesso a campos
+## Uso e acesso a campos
 
 O acesso aos campos é feito com o operador `.` (ponto). Assim, `ponto1.x` é o campo `x` da variável `ponto1`.
 
@@ -199,7 +201,7 @@ Uma vantagem interessante de variáveis `struct` é a capacidade de atribuição
 
 
 
-### Declaração com iniciação
+## Declaração com iniciação
 
 É possível, ao declarar uma varável do tipo registro, já incluir a iniciação de seus valores. O programa seguinte ilustra essa manipulação.
 
@@ -255,7 +257,7 @@ int main(void) {
 
 
 
-## Modularização com `struct`
+# Modularização com `struct`
 
 Um ponto positivo do `struct` na linguagem C é a possibilidade da atribuição de um registro para outro, copiando todos os campos de uma única vez, desde que sejam do mesmo tipo. Essa característica é interessante, em particular, ao passar um registro completo como parâmetro.
 
@@ -407,7 +409,7 @@ void leia_ponto(char *mensagem, double *x, double *y, double *z) {
 
 
 
-### Passagem de registro por referência
+## Passagem de registro por referência
 
 Da mesma forma que outras variáveis, é possível passar a referência de um registro para uma função. O endereço de um registro é o endereço de seu primeiro byte, independentemente de seus campos.
 
@@ -432,7 +434,7 @@ leia_ponto("Digite as coordenadas: ", &ponto);
 ```
 
 
-### Ponteiros para `struct` e acesso a campos
+## Ponteiros para `struct` e acesso a campos
 
 O entendimento da passagem por referência quando os parâmetros são `struct` requer entender a natureza da notação específica usada em C para esses casos. Dessa forma, uma sequência de exemplos proporcionam o entendimento dos operadores utilizados.
 
@@ -505,7 +507,7 @@ Quando uma variável `p` é um ponteiro para um `struct`, `*p` é o registro apo
 
 
 
-### Uso dos ponteiros na passagem por referência
+## Uso dos ponteiros na passagem por referência
 
 Com o uso de ponteiros, a passagem por referência de um registro pode ser feita. O programa seguinte modifica a função de leitura de um ponto, trocando as três coordenadas separadas pelo registro como um todo. As demais funções ficaram inalteradas e foram suprimidas para simplificar a listagem.
 
@@ -613,14 +615,14 @@ leia_ponto("Digite as coordenadas 1: ", &vertice1);
 
 
 
-## Mais sobre as declarações de `struct`
+# Mais sobre as declarações de `struct`
 
 Declarações de registros na linguagem C apresentam uma certa variedade de formatos. Nesta seção há comentários sobre algumas variações, embora nem todas sejam consideradas.
 
 
 
 
-### Declaração sem nome de registro {#sec-declaracao-struct-sem-nome}
+## Declaração sem nome de registro {#sec-declaracao-struct-sem-nome}
 
 Em algumas situações, é possível agrupar os campos em um registro sem que o `struct` tenha um nome próprio. 
 
@@ -657,7 +659,7 @@ Nesse exemplo, o registro é criado e a variável é declarada de uma única vez
 
 
 
-### Declarações "iguais" {#sec-declaracoes-struct-iguais}
+## Declarações "iguais" {#sec-declaracoes-struct-iguais}
 
 Em C, ao se encontrar a definição do registro como um tipo, o compilador adiciona esse novo `struct` a uma tabela interna de novos tipos. Se duas definições são idênticas, porém criadas em momentos diferentes, elas não são compatíveis.
 
@@ -698,13 +700,13 @@ O uso de `struct` com nome permite a declaração de novas variáveis referencia
 
 
 
-## Exemplos
+# Exemplos
 
 Mais alguns exemplos com registros são apresentados.
 
 
 
-### Apresentação de um registro em uma função
+## Apresentação de um registro em uma função
 
 O programa seguinte mostra mais um exemplo de passagem de um registro como parâmetro por valor.
 
@@ -751,7 +753,7 @@ void escreva_vetor(struct vetor vetor) {
 Dessa forma, a função `escreva_vetor` tem como único parâmetro um `struct vetor`. Em `main`, duas variáveis (`vetor1` e `vetor2`) são declaradas e compartilham o mesmo tipo do parâmetro. Nas chamadas à função, cada um dos registros é passado por valor, com cópia do registro de `main` para o parâmetro `vetor` de `escreva_vetor`.
 
 
-### Normalização de vetores
+## Normalização de vetores
 
 Um vetor $\vec{v}$ é usualmente representando por um segmento orientado, indicando sua direção e intensidade. A norma de um vetor, também chamada módulo, é representada por $\lvert\vec{v}\rvert$ e corresponde, graficamente, ao comprimento do segmento. 
 
@@ -833,3 +835,11 @@ double norma_vetor(struct vetor vetor) {
 ```
 
 As funções `escreva_vetor` e `norma_vetor` recebem um `struct vetor` por valor, com cópia do conteúdo do argumento. A normalização, por sua vez, recebe seu parâmetro por referência e altera o conteúdo do registro apontado.
+
+
+# Boas práticas
+
+- Uso de identificadores adequados (*camel-case* para `typedef`).
+- Cuidado com estruturas muito grandes (uso de memória em passagem por valor).
+- Evitar uso de `struct`s globais, dando preferência à passagem como parâmetro.
+- Cuidado com a atribuição de `struct`s, os quais podem requerer cópia de muitos bytes dependendo do tamanho do registro.

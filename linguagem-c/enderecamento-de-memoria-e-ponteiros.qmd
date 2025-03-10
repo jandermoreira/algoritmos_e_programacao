@@ -1,4 +1,6 @@
-# Endereçamento de memória e ponteiros nos programas {#sec-enderecamento-de-memoria-e-ponteiros}
+---
+title: Endereçamento de memória e ponteiros nos programas 
+---
 
 Este capítulo aborda alguns detalhes sobre como os diversos elementos se relacionam à memória do dispositivo onde um programa é executado. Esse tema pode parecer desconexo do conteúdo de todos os capítulos anteriores, mas os conceitos descritos aqui são muito importantes para capítulos seguintes. Para capítulos anteriores este material complementa informações já apresentadas de forma mais superficial. Nos capítulos seguintes este conteúdo será relevante, pois são tratados mecanismos para modificar, dentro de funções, variáveis declaradas em outros escopos (@sec-procedimentos, @sec-passagem-por-referencia) e também meios para requerer dinamicamente espaços para armazenamento de dados (@sec-alocacao-dinamica-de-memoria).
 
@@ -7,7 +9,7 @@ Nesta parte do texto apenas os conceitos de armazenamento e uso da memória são
 
 
 
-## Endereçamento de memória 
+# Endereçamento de memória 
 
 Quando uma variável é declarada, um espaço na memória é reservado para guardar seu valor. Por exemplo, ao se criar uma variável `i` do tipo `int`, alguns bytes da memória precisam ser reservados para guardar o valor da variável.
 
@@ -60,7 +62,7 @@ Para os objetivos desta seção, é apenas relevante saber, que cada variável e
 
 
 
-## Armazenamento de endereços
+# Armazenamento de endereços
 
 Endereços de memória podem ser guardados em variáveis, as quais recebem genericamente o nome de ponteiros. Quando um ponteiro guarda um endereço, diz-se que ele guarda uma referência àquele endereço e, portanto, ao seu conteúdo.
 
@@ -100,7 +102,7 @@ unsigned long int *puli;  // endereço de um unsigned long int
 
 
 
-## Ponteiros nulos
+# Ponteiros nulos
 
 Não custa lembrar que uma variável do tipo ponteiro é como qualquer outra variável e, para ser usada, precisa ter um valor válido atribuído a ela. O programa que segue mostra o conteúdo de um ponteiro para `double` que não foi iniciado e, portanto, contém lixo. 
 
@@ -144,7 +146,7 @@ Para recordar essa situação é possível citar o acesso a arquivos. Uma variá
 
 
 
-## Manipulação da memória com uso de ponteiros
+# Manipulação da memória com uso de ponteiros
 
 Uma aplicação importante de ponteiros é a possibilidade de, tendo em mãos um endereço, modificar o que há naquele local. Assim, se um ponteiro contém o endereço de um inteiro, é viável ver e alterar o valor apontado.
 
@@ -259,7 +261,7 @@ j = *pi;  // copia o valor 10 (de i) para j
 
 
 
-## Os ponteiros têm tipos
+# Os ponteiros têm tipos
 
 Os ponteiros são sempre declarados usando um tipo (`char`, `int`, `double` etc.) e especificando um asterisco antes do identificador, conforme os exemplos que seguem.
 
@@ -297,7 +299,7 @@ Como as representações de `float` e `int` são diferentes, a variável `f` ten
 
 
 
-## Ponteiros para cadeias de caracteres {#sec-ponteiros-para-cadeias-de-caracteres}
+# Ponteiros para cadeias de caracteres {#sec-ponteiros-para-cadeias-de-caracteres}
 
 Em C, uma cadeia de caracteres é uma sequência de bytes contínuos na memória (os caracteres) seguida por um byte nulo `\0`. É dessa forma, por exemplo, que a função `printf`, quando usa o formato `%s`, interpreta a memória e decide o que apresentar na tela.
 
@@ -361,11 +363,11 @@ outro_nome = nome;  // não funciona, pois 'nome' é um endereço e não
 
 
 
-## Exemplos
+# Exemplos
 
 Nesta seção são apresentados alguns programas relativamente simples e genéricos que usam ponteiros, tendo como objetivo reforçar os conceitos e indicar alguns de seus usos.
 
-### Selecionando o menor valor
+## Selecionando o menor valor
 
 O exemplo seguinte usa um ponteiro para modificar o valor de uma entre duas variáveis. A variável a ser modificada é sempre a de valor mínimo.
 
@@ -409,7 +411,7 @@ A estrutura `if` usada poderia ser substituída por uma atribuição com o condi
 ponteiro_minimo = (valor1 < valor2) ? &valor1 : &valor2;
 ```
 
-### Vários ponteiros para um mesmo local {#sec-exemplo-varios-ponteiros-para-mesmo-local}
+## Vários ponteiros para um mesmo local {#sec-exemplo-varios-ponteiros-para-mesmo-local}
 
 Assim como nada impede que duas ou mais variáveis `double` tenham um mesmo valor, também é possível que vários ponteiros armazenem o mesmo endereço. Nesse caso, diz-se que vários ponteiros apontam para o mesmo local.
 
@@ -447,7 +449,7 @@ int main(void) {
 
 Como todas as variáveis (`c`, `*p1`, `*p2` e `*p3`) estão se referenciando ao mesmo `char` na memória, esse caractere pode ser modificado por qualquer uma delas.
 
-### Copiando referências
+## Copiando referências
 
 Ao se atribuir o endereço de uma variável a um ponteiro, o valor armazenado é o endereço de memória do primeiro byte dessa variável. Se houver outra variável do tipo ponteiro, esse endereço pode ser copiado para ela com uma atribuição simples. Dessa forma, como no exemplo da @sec-exemplo-varios-ponteiros-para-mesmo-local, o resultado é que se tem mais de um ponteiro referenciando uma mesma posição.
 
@@ -474,3 +476,9 @@ int main(void) {
 
 Neste programa, `p1` aponta para `c` ao receber `&c`. Para `p2` é atribuído o valor de `p1`, o qual, nesse momento, é igual ao `&c`.
 
+
+
+# Boas práticas
+
+-   Garantia de iniciação de ponteiro antes do uso.
+-   Evitação de acesso a ponteiros nulos.

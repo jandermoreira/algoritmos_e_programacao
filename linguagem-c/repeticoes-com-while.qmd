@@ -1,8 +1,10 @@
-# Repetições com `while` {#sec-repeticoes-com-while}
+---
+title: Repetições com `while`
+---
 
 A linguagem C permite laços de repetição usando `while`, `for` e `do while`. Neste capítulo a estrutura e aspectos lógicos do `while` são apresentados. O `for` é abordado no @sec-repeticoes-com-for e o `do while`, no @sec-repeticoes-com-do-while.
 
-## A estrutura de repetição `while`
+# A estrutura de repetição `while`
 
 A estrutura de repetição que o `while` implementa pode ser chamada de indefinida, pois o número de repetições depende de uma condição que se altera ao longo do tempo. Sua estrutura é apresentada na sequência.
 
@@ -88,7 +90,7 @@ Outro ponto curioso sobre a implementação é a verificação de igualdade feit
 Para outro exemplo, segue um algoritmo para contabilização do resultado de uma pesquisa, que considera 
 
 
-## O `double` nas verificações do `while`
+# O `double` nas verificações do `while`
 
 Um cuidado essencial ao programador são as verificações que, embora façam sentido no código, falham por conta da precisão dos tipos numéricos reais, como `double` ou `float`.
 
@@ -142,13 +144,13 @@ Mesmo assim, recomenda-se fortemente que a igualdade ou desigualdade não seja e
 :::
 
 
-## Repetições baseadas na entrada
+# Repetições baseadas na entrada
 
 Muitas das repetições nos programas são necessárias para processar uma sequência de dados de entrada. De forma geral, o `while` é usado quando não se conhece a quantidade de repetições que serão executadas, relacionadas neste caso ao número de dados que servirão como entrada para o programa.
 
 Nesse contexto, há duas formas importantes para a entrada, uma usando um valor sentinela (que indica o fim dos dados) e outra que reconhece que os dados acabaram por si, em um indicador explícito.
 
-### Entrada com sentinela
+## Entrada com sentinela
 
 Uma forma comum de entrada de dados é o uso de um valor sentinela que indica o fim dos dados. O programa seguinte apresenta uma sequência de leituras para a soma de valores inteiros maiores que zero, usando o valor nulo como sentinela para indicar o fim dos dados.
 
@@ -190,7 +192,7 @@ Não é incomum o programador optar por expandir o conceito do valor sentinela. 
 
 
 
-### Detecção do encerramento do fluxo de entrada
+## Detecção do encerramento do fluxo de entrada
 
 Outra alternativa para indicar o fim da sequência de dados é o encerramento da entrada em si. Em sistemas Linux, ao se digitar `Ctrl-D` em uma linha vazia é indicado ao programa que a entrada de dados foi encerrada. No Windows, o equivalente é digitar `Ctrl-Z` seguido de `ENTER`.
 
@@ -287,11 +289,11 @@ int main(void) {
 Sem a chamada a `clearerr`, a leitura do nome é ignorada.
 :::
 
-## Exemplos
+# Exemplos
 Esta seção apresenta alguns exemplos mais realistas do uso do `while` na codificação de alguns algoritmos.
 
 
-### Contagem regressiva
+## Contagem regressiva
 
 Um exemplo simples de repetição com `while` é apresentado na sequência. O programa implementa um cronômetro regressivo simples e segue o @alg-cronometro-regressivo.
 
@@ -373,7 +375,7 @@ O programa de contagem regressiva não é preciso. Ele se baseia em intervalos d
 
 
 
-### Atualização de saldo
+## Atualização de saldo
 
 Um saldo bancário tem um valor inicial e, dependendo de uma série de transações de crédito ou débito, o montante é modificado. Esta é a proposta do @alg-atualizacao-de-saldo.
 
@@ -462,3 +464,12 @@ int main(void) {
     return 0;
 }
 ```
+
+
+# Boas práticas
+
+-   Escolha da repetição adequada.
+-   Determinação de uma condição de parada válida e atingível.
+-   Evitação de laços infinitos.
+-   Escrita de código legível e bem documentado.
+-   Uso de identificadores adequados.

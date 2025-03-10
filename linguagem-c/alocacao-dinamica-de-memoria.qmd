@@ -1,13 +1,27 @@
-# Alocação dinâmica de memória {#sec-alocacao-dinamica-de-memoria}
+---
+title: Alocação dinâmica de memória
+---
 
 Em construção...
 
-## `malloc` e `free`
+# `malloc` e `free`
 
-## `calloc` e `realloc`
+# `calloc` e `realloc`
 
-## Alocação em conjunto com modularização
+# Alocação em conjunto com modularização
 
-## Outras alocações
+# Outras alocações
 
 `getline` aloca automaticamente e precisa de `free`.
+
+
+# Boas práticas
+
+- Verificação de sucesso na alocação.
+- Uso mandatório de desalocação.
+- Cuidado com vazamentos de memória.
+- Evitação do uso de memória já desalocada.
+- Verificar sucesso e movimentação de dados no `realloc`.
+- Cuidado para evitar alocação excessiva (e.g., em repetições).
+- Cuidado com a aritmética de ponteiros.
+- Cuidado com o acesso a posições fora do bloco alocado.

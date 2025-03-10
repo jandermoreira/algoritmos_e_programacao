@@ -1,12 +1,24 @@
-# Arquivos binários {#sec-arquivos-binarios}
+---
+title: Arquivos binários
+---
 
 Em construção...
 
 
-## Arquivos binários
+# Arquivos binários
 
-## Acesso direto (`fseek`)
+# Acesso direto (`fseek`)
 
-## `stdint.h`
+# `stdint.h`
 
-## Arquivos de registros
+# Arquivos de registros
+
+
+
+# Boas práticas
+
+-   Atenção aos parâmetros de `fread` e `fwrite`.
+-   Uso de `sizeof` para especificar o tamanho do objeto.
+-   Uso dos valores de retorno da leitura e escrita.
+-   Atenção para movimentar para a posição correta ao usar `fseek`.
+-   Sempre fechar arquivo com `fclose`.

@@ -116,7 +116,6 @@ website:
           - linguagem-c/repeticoes-com-while.qmd
           - linguagem-c/repeticoes-com-for.qmd
           - linguagem-c/repeticoes-com-do-while.qmd
-          - linguagem-c/arquivos-texto.qmd
           - linguagem-c/desvirtuacao-das-repeticoes.qmd
 
         - section: "Cadeias de caracteres"
@@ -127,31 +126,35 @@ website:
         - section: "Modularização e memória"
           contents:
           - linguagem-c/funcoes.qmd
-          - linguagem-c/regras-de-escopo-com-modularizacao.qmd
-          - linguagem-c/enderecamento-de-memoria-e-ponteiros.qmd
           - linguagem-c/procedimentos.qmd
+          - linguagem-c/regras-de-escopo-com-modularizacao.qmd
           - linguagem-c/parametros-de-funcoes.qmd
+
+        - section: "Acesso à memória"
+          contents:
+          - linguagem-c/enderecamento-de-memoria-e-ponteiros.qmd
+          # - linguagem-c/alocacao-dinamica-de-memoria.qmd
 
         - section: "Estruturação de dados"
           contents:
           - linguagem-c/dados-com-struct.qmd
           - linguagem-c/dados-em-vetores.qmd
-          - linguagem-c/modularizacao-com-vetores.qmd
-          - linguagem-c/dados-em-matrizes.qmd
-          - linguagem-c/modularizacao-com-matrizes.qmd
-          - linguagem-c/alocacao-dinamica-de-memoria.qmd
+          # - linguagem-c/modularizacao-com-vetores.qmd
+          # - linguagem-c/dados-em-matrizes.qmd
+          # - linguagem-c/modularizacao-com-matrizes.qmd
 
-        - section: "Manipulação de arquivos binários"
+        - section: "Manipulação de arquivos"
           contents:
-          - linguagem-c/arquivos-binarios.qmd
+          - linguagem-c/arquivos-texto.qmd
+          # - linguagem-c/arquivos-binarios.qmd
 
-        - section: "Recursividade"
-          contents:
-            - linguagem-c/recursividade.qmd
+        # - section: "Recursividade"
+        #   contents:
+        #     - linguagem-c/recursividade.qmd
 
-        - section: "Organização avançada do código"
-          contents:
-          - linguagem-c/organizacao-do-codigo-separado.qmd
+        # - section: "Organização avançada do código"
+        #   contents:
+        #   - linguagem-c/organizacao-do-codigo-separado.qmd
 
 
 format:

@@ -1,10 +1,12 @@
-# Dados textuais em C {#sec-dados-textuais}
+---
+title: Dados textuais em C
+---
 
 A linguagem C não é uma linguagem simples para trabalhar com cadeias de caracteres, as chamadas _strings_. O suporte para textos na linguagem é feito por constantes inseridas diretamente no código ou manipuladas em variáveis simples ou compostas do tipo `char`.
 
 Este capítulo apresenta uma visão inicial das constantes textuais da linguagem e como fazer referências a essas constantes.
 
-## Revisitando as constantes textuais
+# Revisitando as constantes textuais
 
 No @sec-tipos-de-dados foram apresentados os principais tipos de dados da linguagem\ C, incluindo os dados textuais, mas ainda é preciso complementar as informações sobre os tipos literais.
 
@@ -48,7 +50,7 @@ int main(void) {
 A principal diferença entre um caractere simples e uma cadeia de caracteres é, além do evidente número de caracteres em si, é a representação. Enquanto caracteres simples apenas são representados apenas por um valor, a cadeia usa uma sequência de caracteres simples seguida pelo terminador `\0`, chamado caractere nulo e que é representado com todos os bits iguais a zero. Na prática, quando o compilador encontra uma constante como `"programa"` em um código, ele armazena esse valor como `programa\0`, ou seja, sempre com um byte nulo depois do texto em si. Para explicitar um pouco mais, `'Y'` é só o `Y`, enquanto `"Y"` é `Y\0`.
 
 
-## Armazenamento de caracteres simples: o tipo `char`
+# Armazenamento de caracteres simples: o tipo `char`
 
 Para criar uma variável para armazenar um único caractere deve ser usado o tipo `char`. Segue um programa simples ilustrando o conceito.
 
@@ -145,7 +147,7 @@ Embora haja um prejuízo quanto á clareza, o tipo `char` pode ser usado como um
 Para se ter programas mais claros, entretanto, mesmo nesse caso é melhor usar os tipos de comprimento fixo definidos em `stdint.h`. Assim, para se ter um inteiro com sinal de oito bits, o tipo seria `int8_t`, e poderia ser usado o `uint8_t` para o mesmo comprimento sem o sinal. O tipo `char` deve ser deixado de fato apenas para caracteres. O uso de `stdint.h` é abordado no @sec-arquivos-binarios.
 :::
 
-### Caracteres acentuados {#sec-caracteres-acentuados}
+## Caracteres acentuados {#sec-caracteres-acentuados}
 
 Na década de 1960 cada sistema computacional usava sua própria tabela para associar um dado caractere a um valor numérico. Para que os diferentes sistemas pudessem trocar informações, foi elaborada em 1964 uma codificação padronizada denominada _American Standard Code for Information Interchange_, ou tabela ASCII. Essa tabela definia tanto os caracteres de controle (`\n` ou `\t`, por exemplo) quanto os caracteres legíveis (letras, dígitos e pontuação).
 
@@ -211,7 +213,7 @@ Ao executar o programa, como a saída produzida é ISO-8859, ela tem que ser con
 
 Nos programas exemplificados neste texto, simplesmente são evitados os casos em que um `char` armazenará um caractere Unicode com mais que um byte, pois todas as codificações de caractere usam UTF-8. Para efetivamente usar caracteres de múltiplos bytes, C disponibiliza uma série de funções em `wchar.c`, as quais lidam com os "caracteres largos" (_wide characters_). Porém, o uso dessas funções não é tratado neste livro.
 
-## Acesso às cadeias de caracteres constantes {#sec-ponteiros-para-strings-constantes}
+# Acesso às cadeias de caracteres constantes {#sec-ponteiros-para-strings-constantes}
 
 Nesta seção é apresentada uma visão básica sobre cadeias de caracteres em\ C, sendo que a manipulação de variáveis com conteúdo textual é coberta pelo @sec-manipulacao-de-dados-textuais.
 
@@ -298,3 +300,13 @@ Nas chamadas a `printf`, a especificação de formato `%s` apresenta o texto apo
 O uso desse recurso é relativamente simples de der feito, porém muito limitado, visto que apenas aceita mudar para qual constante cada variável aponta.
 
 Para finalizar, é interessante ver que esse recurso foi empregado na implementação do @alg-classificacao-triangulo-lados.
+
+
+
+# Boas práticas
+
+-   Banimento do uso de `gets`.
+-   Realização de leitura cuidando do tamanho do vetor.
+-   Acesso dentro dos limites de indexação válidos.
+-   Garantia da existência do terminador `\0`.
+-   Verificação de sucesso em alocações dinâmicas com necessária liberação da memória.

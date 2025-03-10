@@ -1,10 +1,12 @@
-# Expressões aritméticas de C
+---
+title: Expressões aritméticas
+---
 
 Uma coisa que um computador consegue fazer com eficiência são contas e faz isso muito rapidamente. Nesta parte são tratados os principais aspectos dos cálculos feitos por programas escritos em\ C. 
 
 Uma expressão aritmética é aquela que envolve valores numéricos e, pelo uso operadores, produzem um resultado também numérico. Um exemplo de uma expressão aritmética é o cálculo do discriminante ${b^2 - 4ac}$, referente a uma equação de segundo grau ${ax^2 + bx + c = 0}$ ($a\neq 0$).
 
-## Operadores aritméticos
+# Operadores aritméticos
 
 A linguagem C dispõe dos operadores aritméticos tradicionais para soma, subtração, multiplicação e divisão. Como na matemática, os operadores possuem prioridades entre si, sendo que multiplicações e divisões tem precedência sobre somas e subtrações. Os operadores aritméticos são apresentados na @tbl-operadores-aritmeticos.
 
@@ -91,7 +93,7 @@ int main(void) {
 Quando os operadores são usados em valores reais (`double`), os resultados são os esperados da matemática. Como a aritmética modular é aplicada exclusivamente a valores inteiros, o operador `%` é inválido quando os operandos são `double`.
 
 
-### Ordem de avaliação
+## Ordem de avaliação
 
 A ordem de avaliação de uma expressão aritmética em C pode ser traiçoeira. Embora, em grande parte das vezes, o valor de uma expressão seja direto, há um não tão pequeno número de situações em que o programador pode se equivocar.
 
@@ -121,7 +123,7 @@ Quando há uma divisão, uma margem para erros acaba se apresentando. Como exemp
 
 A ordem de avaliação segue a associatividade dos operadores de mesma precedência, que neste caso é da esquerda para a direita. Assim, `a * b / c * d` é avaliado como `(((a * b) / c) * d)`.
 
-### Quebra da ordem de precedência e da associatividade
+## Quebra da ordem de precedência e da associatividade
 
 Conhecido o procedimento usado pelo compilador para avaliar uma expressão aritmética, fica expressa a necessidade de, por vezes, escolher uma ordem diferente. A linguagem C usa os parênteses para definir a ordem de avaliação. Um exemplo importante e simples é o cálculo media: `(v1 + v2)/2`. Sem os parênteses, apenas `v2` seria dividido por 2.
 
@@ -152,7 +154,7 @@ Mesmo que desnecessário, muitas vezes o uso dos parênteses para deixar clara a
 Por exemplo, é comum, no lugar de elevar um valor ao quadrado, usar a multiplicação dele por ele mesmo. Uma expressão que usa esse recurso, por exemplo, seria $a^2(b+c)^2$, que poderia ser escrita `(a * a) * ((b + c) * (b + c))`, mesmo que `a * a * (b + c) * (b + c)` seja exatamente equivalente. Os parênteses servem apenas para ênfase.
 :::
 
-## Expressões inteiras vs. reais (promoção de tipo)
+# Expressões inteiras vs. reais (promoção de tipo)
 
 As expressões aritméticas envolvem valores numéricos, mas C pode tratar de forma diferente valores numéricos inteiros (`int`) e reais (`double`). Um exemplo é a divisão, que resulta em valores diferentes para `18/7` e `18.0/7.0`, por exemplo, ou o operador modular `%`, que não pode ser usado para valores reais.
 
@@ -427,7 +429,7 @@ Nesse programa, o valor 2.000.000.000 é intencionalmente grande, pois chega qua
 
 [^transbordo]: Há um transbordo quando o resultado de uma operação precisa de mais bits que o tipo tem disponível, corrompendo a representação por causa dos bits perdidos.
 
-## funções matemáticas
+# Funções matemáticas
 
 Existe um arquivo de cabeçalho chamado `math.h`, o qual define a interface a uma série de funções matemáticas, como radiciação, potenciação e logaritmos, entre outras. O uso das funções requer a inclusão do cabeçalho no código fonte.
 
@@ -494,7 +496,7 @@ int main(void) {
 Como as conversões de tipo são um tópico importante nesta seção do texto, é interessante identificar que, ao elevar ao quadrado com a função `pow`, para o segundo argumento foi usado `2` (que é `int`) e a função espera um `double`; neste caso o `int` é automaticamente promovido para `double` ao ser chamada a função.
 
 ::: {.content-visible when-profile="programacao"}
-## Atribuições são operadores
+# Atribuições são operadores
 
 Da mesma forma que `+` ou `/` são operadores, também é a atribuição com `=`. Ao se escrever `valor = 10`, por exemplo, o sinal de igual funciona como um operador com dois efeitos:
 
@@ -522,3 +524,16 @@ O uso de atribuições em locais inusitados deve ser evitado. Não é só porque
 
 
 :::
+
+
+# Boas práticas
+
+-   Escolha do melhor tipo para clareza e bom uso da memória.
+-   Uso de `unsigned` apenas quando necessário.
+-   Preferência por **double** no lugar de **float**.
+-   Garantia de variável iniciada antes de seu uso.
+-   Uso de identificadores significativos.
+-   Observância de divisão por zero.
+-   Uso de parênteses para clareza.
+-   Observância de não usar `=` no lugar de `==`.
+-   Emprego de variáveis lógicas para aumentar a clareza do código.

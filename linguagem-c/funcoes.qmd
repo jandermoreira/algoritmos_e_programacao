@@ -1,8 +1,10 @@
-# Funções em C {#sec-funcoes}
+---
+title: Funções
+---
 
 As funções são parte essencial do desenvolvimento de qualquer código. Não somente evitam que trabalho extra tenha que ser feito mas também melhoram a qualidade geral do código como um todo. As estruturas e estratégias das funções serão abordadas ao longo deste capítulo.
 
-## O que é uma função
+# O que é uma função
 
 O conceito de função nas linguagens de programação é bastante similar ao das funções matemáticas, estas últimas mapeando um conjunto domínio em um conjunto chamado contradomínio. A função ${y = \cos x}$, por exemplo, é usualmente definida para mapear valores ${x \in \mathbb{R}}$ para ${y \in \mathbb{R}}$, sendo domínio e contradomínio iguais; a função ${y = \lfloor x \rfloor}$ (função piso), por sua vez, tem domínio real e contradomínio inteiro.
 
@@ -55,7 +57,7 @@ As funções em C podem mapear os mais diferentes tipos de dados para outros tan
 
 
 
-## Declaração e implementação das funções
+# Declaração e implementação das funções
 
 Todo programa em C contém pelo menos uma função. Desde o primeiro código apresentado nesse livro (o programa que não faz nada, na @sec-programa-minimo), fica patente que todo executável gerado a partir de um código em C precisa de `main`, e `main` é uma função. Como usado em todos os programas até o momento, a função principal tem domínio vazio (indicado por `void`) e seu contradomínio é o tipo `int`.
 
@@ -79,7 +81,7 @@ Colocando-se isso mais explicitamente, `sqrt` aceita um `double` como parâmetro
 
 
 
-### Declaração e implementação de funções próprias
+## Declaração e implementação de funções próprias
 
 O programador tem como uma grande vantagem poder escrever suas próprias funções e, para isso, precisa fazer sua declaração.
 
@@ -279,7 +281,7 @@ Assim, para o exemplo do contador de vogais, a declaração foi feita na forma d
 
 
 
-### Onde declarar a função?
+## Onde declarar a função?
 
 Há duas estratégias usuais para declarar funções em C. A primeira é usando protótipos para a declaração e ter a implementação feita posterioriormente. Outra forma é pela inserção direta da implementação, a qual tanto implementa quanto declara a função ao mesmo tempo.
 
@@ -362,7 +364,7 @@ Esse assunto é abordado no @sec-organizacao-do-codigo-separado.
 
 
 
-### Escopo da declaração das funções {#sec-escopo-da-declaracao-de-funcoes}
+## Escopo da declaração das funções {#sec-escopo-da-declaracao-de-funcoes}
 
 Uma discussão prévia sobre declarações e escopo está apresentada na @sec-declaracoes-e-validade, tratando da validade de cada variável em um programa. Com a introdução do assunto da modularização, o conceito de escopo se amplia. Qualquer variável usada nos diversos programas possuem sua validade definida internamente a `main`, ou seja, são locais à função principal e não existem fora dela.
 
@@ -488,7 +490,7 @@ Aderir aos recursos padronizados oficiais da linguagem é sempre uma boa opção
 :::
 
 
-### Funções com vários parâmetros
+## Funções com vários parâmetros
 
 Não é incomum que uma função precise de mais que um único parâmetro. Por exemplo, pode-se ter uma função que calcule o peso (massa) ideal de uma pessoa conforme seu sexo biológico e sua altura. Essa função poderia ser escrita com a declaração seguinte.
 
@@ -537,7 +539,7 @@ Nessa função, o parâmetro `a` é do tipo `double`. Porém `b` e `c` não poss
 
 
 
-### Documentação {#sec-documentacao-funcoes}
+## Documentação {#sec-documentacao-funcoes}
 
 Neste livro as funções são documentadas usando um padrão de formato aceito pelo Doxygen[^site-doxygen], que é uma ferramenta para gerar documentação para grandes projetos. No caso dos programas e funções apresentados como exemplos ao longo do texto, o termo "grande projeto", entretanto, não se aplica, nem tampouco é necessária uma ferramenta para gerar a documentação. Apesar disso, o formato escolhido para a documentação é simples e atende às necessidades.
 
@@ -575,7 +577,7 @@ Os IDEs em geral reconhecem a documentação das funções e auxiliam o programa
 
 
 
-## Criação de funções
+# Criação de funções
 
 Quando uma função é escrita em um programa, é importante que se tenha clareza do seu objetivo. A função deve, em consequência, ater-se somente a ele e não realizar outra tarefa qualquer. Por exemplo, se uma função é escrita para converter graus Celsius para Fahrenheit, é somente a conversão que deve ser feita; a função não deve ler nada nem escrever nada.
 
@@ -667,7 +669,7 @@ int leia_natural(char *mensagem) {
 ```
 
 
-## Escolha dos tipos de retorno e dos parâmetros
+# Escolha dos tipos de retorno e dos parâmetros
 
 Os tipos dos parâmetros devem satisfazer as necessidades das funções. Por exemplo, na conversão de graus Celsius para Fahrenheit é esperado que a temperatura em Celsius seja `double`, assim como o valor retornado em Fahrenheit.
 
@@ -730,3 +732,13 @@ the sign of the result [-Wsign-conversion]
 ```
 
 A boa escolha dos tipos sempre proporciona uma camada adicional de controle na escrita de programas.
+
+
+
+# Boas práticas
+
+-   Escolha de adequados para as funções.
+-   Realização de documentação.
+-   Emprego de diretivas do pré-processador.
+-   Evitação definições globais desnecessárias.
+-   Criação de módulos coesos.

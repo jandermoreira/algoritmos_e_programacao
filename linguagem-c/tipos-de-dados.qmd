@@ -1,11 +1,13 @@
-# Tipos de dados da linguagem C {#sec-tipos-de-dados}
+---
+title: Tipos de dados primitivos
+---
 
 Qualquer linguagem de programação, dentre as milhares existentes, têm como premissa a manipulação e a transformação de dados. Esta parte do texto trata de como dados são representados em computação e faz uma apresentação dos principais tipos de dados usados na linguagem\ C.
 
 A ilustração dos tipos de dados, suas limitações e principais características envolvem, adicionamente, a apresentação da função `printf`, responsável por apresentar os dados do programa para o usuário.
 
 
-## Representação de dados {#sec-representacao-de-dados}
+# Representação de dados {#sec-representacao-de-dados}
 
 Em computação, as informações são estruturadas em bits. A forma mais básica de circuitos eletrônicos representarem algo é pela ausência ou presença de corrente elétrica. Assim, um bit é uma parte do circuito que indica "desligado" ou "ligado", "sem corrente elétrica" ou "com corrente elétrica", "ausente" ou "presente" ou, simplificadamente, "zero" ou "um". O uso dos valores binários 0 e 1 é a forma tradicional de se representar um bit.
 
@@ -26,7 +28,7 @@ Números inteiros são frequentemente representados por uma certa quantidade fix
 Outros tipos de valores, como números reais, valores lógicos e endereços internos da memória também escolhem uma estratégia para representar seus valores usando um mapeamento adequado para um ou mais bytes.
 
 
-## Constantes e seus tipos {#sec-constantes-e-seus-tipos}
+# Constantes e seus tipos {#sec-constantes-e-seus-tipos}
 
 Tendo em vista que quaisquer dados (números, textos ou qualquer outro) usam bytes para serem representados, a linguagem C também designa uma codificação específica para os valores ao interpretar um código fonte.
 
@@ -93,7 +95,7 @@ A indicação `%s` é compatível com textos de comprimento variado, ou seja, ca
 A diferença entre `"Y"` e `'Y'` é abordada em mais detalhes no @sec-dados-textuais.
 
 
-## Mais sobre o `printf`
+# Mais sobre o `printf`
 
 O nome `printf` vem de *print formatted*, ou seja, apresente algo de forma formatada. O uso desta função requer o carregamento do arquivo de cabeçalho `stdio.h`.
 
@@ -176,7 +178,7 @@ int main(void) {
 ```
 
 
-## Constantes com tipo explícito {#sec-constante-com-tipo-explicito}
+# Constantes com tipo explícito {#sec-constante-com-tipo-explicito}
 
 As constantes expressas em C possuem tipos automáticos ligados à ela, como apresentado na @sec-constantes-e-seus-tipos. A linguagem, porém, permite escrever um valor constante e associar a ele um tipo específico.
 
@@ -198,7 +200,7 @@ int main(void) {
 ```
 
 
-## Hexadecimal e octal
+# Hexadecimal e octal
 
 As constantes inteiras são, usualmente, escritas usando a base 10. A linguagem C permite, além desta, escrever constantes na base oito (octal) e 16 (hexadecimal). O uso dessas bases é prático quando quando a linguagem é usada para manipulação em nível baixo, ou seja, no nível dos bits.
 
@@ -218,3 +220,15 @@ int main(void) {
     return 0;
 }
 ```
+
+# Boas práticas
+
+Para o uso de constantes de tipos distingos é sempre importante:
+
+- Ter consciência das capacidades e limitações de cada tipo.
+- Fazer o emprego coerente do tipo de dados conforme a situação.
+- Uso dos especificadores de formato adequados.
+- Uso dos especificadores de formato para precisão e largura dos campos.
+- Considerar que o `printf` é um comando com custo computacional relativamente alto.
+<!-- - Uso de `putchar` e `puts` (mais eficientes que `printf`).
+- Uso do `fflush` apenas quando necessário. -->

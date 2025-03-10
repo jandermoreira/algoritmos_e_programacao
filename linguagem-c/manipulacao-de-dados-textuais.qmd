@@ -1,8 +1,10 @@
-# Manipulação de dados textuais em C {#sec-manipulacao-de-dados-textuais}
+---
+title: Manipulação de dados textuais
+---
 
 O uso de variáveis para guardar valores textuais tem sido usado em praticamente todos os programas até o momento e seu uso para leitura está descrito na @sec-leitura-de-valores-textuais. Este capítulo apresenta com mais detalhes as cadeias de caracteres e introduz recursos para sua manipulação.
 
-## As cadeias de caracteres em variáveis
+# As cadeias de caracteres em variáveis
 
 Variáveis declaradas como `char *` armazenam, como visto na @sec-ponteiros-para-strings-constantes, apenas uma referência a uma cadeia de caracteres já existentes. Para que se tenha uma variável para guardar dados textuais de forma genérica, é preciso ter espaço para armazenar tanto os caracteres quanto o terminador `\0`.
 
@@ -22,7 +24,7 @@ Desse modo, pelo uso desse mecanismo de armazenamento, mantém-se uma compatibil
 
 
 
-## Manipulação de conteúdo
+# Manipulação de conteúdo
 
 Uma dificuldade imediata é que os vetores de caracteres não são uma variável simples, mas uma coleção de variáveis individuais tratadas como uma coisa só. Como não são variáveis como as declaradas como `int`, `double` ou mesmo `char` simples, não admitem atribuições ou manipulações diretas. Para tratar as variáveis textuais C provê uma série de funções, as quais podem ser usadas pela importação do cabeçalho `string.h`.
 
@@ -40,7 +42,7 @@ Para que se tenha utilidade prática na manipulação de variáveis textuais, é
 
 
 
-### Comprimento de cadeias de caracteres
+## Comprimento de cadeias de caracteres
 
 Uma função que já foi usada anteriormente em diversos programas é a `strlen` (_string length_), que retorna o comprimento da cadeia de caracteres sem o `\0` final.
 
@@ -68,7 +70,7 @@ int main(void) {
 
 
 
-### Atribuições de cadeias de caracteres
+## Atribuições de cadeias de caracteres
 
 O programa seguinte foca na questão da atribuição. Porém, esse código serve apenas para mostrar o que não funciona.
 
@@ -124,7 +126,7 @@ Existem funções de manipulação de cadeias de caracteres que não verificam o
 :::
 
 
-### Concatenação de cadeias de caracteres
+## Concatenação de cadeias de caracteres
 
 Além da cópia de uma sequência de caracteres para uma variável, é possível estender seu conteúdo, fazendo a concatenação. A função `strncat` (_string catenation_) faz a cópia de uma cadeia anexando-a a outra.
 
@@ -178,7 +180,7 @@ int main(void) {
 A função de concatenação acrescenta à variável do primeiro parâmetro (`linha_unica`) uma cópia dos caracteres contidos no segundo parâmetro (`texto`). O terceiro parâmetro é a quantidade máxima de caracteres a serem copiados, a qual é usada para respeitar o tamanho do espaço da variável destino. No código, a quantidade máxima para cada concatenação corresponde ao cálculo do espaço livre existente em `linha_unica`, respeitando um byte para ter espaço para o `\0` final.
 
 
-### Comparações de cadeias de caracteres {#sec-comparacao-strings}
+## Comparações de cadeias de caracteres {#sec-comparacao-strings}
 
 A comparação entre duas cadeias de caracteres é feita no sentido alfabético usual, sempre comparando os primeiros caracteres das duas cadeias e, sendo iguais, passando para os segundos, terceiros e assim por diante. Nas funções de `string.h`, a função `strncmp` (_string comparison_) tem a finalidade realizar as comparações.
 
@@ -235,7 +237,7 @@ int main(void) {
 Uma discussão sobre comparações de palavras acentuadas é apesentada na @sec-acentuacao-em-strings.
 
 
-## Mais sobre declaração de variáveis textuais
+# Mais sobre declaração de variáveis textuais
 
 Assim como variáveis aritméticas e lógicas, variáveis literais também podem ser iniciadas na declaração. Há formatos diferentes para essa iniciação.
 
@@ -298,7 +300,7 @@ char *texto[] = "Texto";  // a variável tem exatamente as 6 posições
 
 
 
-## Acesso direto ao conteúdo
+# Acesso direto ao conteúdo
 
 Uma forma prática de usar cadeias de caracteres é fazendo acesso a cada posição individual do vetor. Para isso, é possível indicar um `char` qualquer armazenado especificando sua posição no vetor.
 
@@ -414,7 +416,7 @@ Esse programa usa algumas das funções da @tbl-funcoes-para-caractere para faze
 
 
 
-### A remoção do `\n` incluído pelo `fgets`
+## A remoção do `\n` incluído pelo `fgets`
 
 Uma ação bastante comum quando a leitura de um valor textual é feito com a função `fgets` é a remoção do `\n` que ela deixa na cadeia de caracteres lida. Essa remoção é importante para ficar somente com o texto digitado. Em mais detalhes, essa remoção parte de dois princípios: primeiro, que a leitura com o `fgets` sempre terá um `\n` no seu final e, segundo, que tudo que estiver na variável a partir do `\0` é ignorado.
 
@@ -502,7 +504,7 @@ Pode-se observar que depois da leitura, a posição\ 5 contém o `\n` e a 6 o `\
 
 
 
-## Acentuações nas cadeias de caracteres {#sec-acentuacao-em-strings}
+# Acentuações nas cadeias de caracteres {#sec-acentuacao-em-strings}
 
 Como abordado na @sec-caracteres-acentuados, o uso de Unicode como tabela de caracteres e sua a codificação UTF-8 são bastante comuns nos sistemas computacionais atuais e seu suporte em C é muito limitado. Há, entretanto, uma boa notícia. Da forma em que foi desenvolvido o sistema de representação de caracteres com múltiplos bytes, as funções especificadas em `string.h` continuam funcionando a contento. Há, claro, exceções.
 
@@ -560,3 +562,14 @@ Declarar variáveis texto com espaço um pouco superdimensionado ajuda a evitar 
 
 Variáveis mais "apertadas" se justificam quando a variabilidade de comprimento é muito pequena. Para exemplificar, o armazenamento de um CPF pode usar comprimento 15, pois o comprimento é sempre fixo com 14 caracteres (dígitos, pontos e hífen). Neste caso, não há necessidade de folga.
 :::
+
+
+
+# Boas práticas
+
+-   Banimento do uso de `gets`.
+-   Realização de leitura cuidando do tamanho do vetor.
+-   Acesso dentro dos limites de indexação válidos.
+-   Garantia da existência do terminador `\0`.
+-   Verificação de sucesso em alocações dinâmicas com necessária liberação da memória.
+-   Evitação de `strcpy` e `strcat`.

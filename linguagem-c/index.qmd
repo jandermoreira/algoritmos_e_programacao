@@ -1,10 +1,12 @@
-# Introdução à linguagem C
+---
+title: Introdução à linguagem C
+---
 
-Neste capítulo é feita a apresentação da linguagem C, um pouco de suas origens e a evolução de sua especificação. Juntamente a essa introdução, a compilação e os conceitos de código fonte, objeto e executável também são tratados.
+Neste tópico é feita a apresentação da linguagem C, um pouco de suas origens e a evolução de sua especificação. Juntamente a essa introdução, a compilação e os conceitos de código fonte, objeto e executável também são tratados.
 
 
 ::: {.content-visible when-profile="completo"}
-## Conexão das linguagens de programação com os algoritmos
+# Conexão das linguagens de programação com os algoritmos
 
 O aprendizado do desenvolvimento de algoritmos computacionais requer reconhecer que, em última instância, um programa pode ser elaborado a partir dele. Assim, dentro de um certo limite, a prática na escrita de algoritmos passa por saber um pouco sobre o destino final de uma dada solução algorítmica.
 
@@ -12,7 +14,7 @@ Dessa forma, um primeiro passo para o aprendizado de algoritmos vai começar por
 :::
 
 
-## Origens da linguagem C
+# Origens da linguagem C
 
 ::: {.content-visible when-profile="programacao"}
 Conhecer um pouco do caminho de uma das mais importantes linguagens de programação deve trazer ao programador, de certa forma, uma sensação de pertencimento e autoridade no uso dessa linguagem.
@@ -34,7 +36,7 @@ Segundo consulta ao índice de popularidade elaborado pela TIOBE[^site-tiobe], C
 
 :::
 
-### Padronização da linguagem {#sec-padronizacao-da-linguagem}
+## Padronização da linguagem {#sec-padronizacao-da-linguagem}
 
 Sem uma padronização *de facto* da linguagem C nos anos seguintes a sua criação, havia uma liberdade grande demais na implementação dos diversos compiladores que apareceram. A especificação conhecida por K&R C era, na ocasião, a única disponível.
 
@@ -56,13 +58,13 @@ A especificação K&R C foi descrita em @ritchie1978; as demais especificaçõe
 
 
 
-## Programa básico
+# Programa básico
 
 Programar em C não é tão complexo, mas também não é tão natural. Muitos aspectos básicos da linguagem requereriam, em teoria, um conhecimento mais sólido sobre o que são variáveis, como estas existem na memória e como podem ser manipuladas.
 
 Em um primeiro momento, estes detalhes serão ignorados, visto que é possível começar a programar e apenas aceitar que algumas coisas são assim mesmo. Para estes detalhes, por enquanto, basta pensar "não sei, só sei que foi assim"^[Como diria Chicó, em _Auto da Compadecida_, peça de teatro de Ariano Suassuna também retratada em uma minissérie de televisão.].
 
-### Primeiro programa: um programa mínimo (e inútil) {#sec-programa-minimo}
+## Primeiro programa: um programa mínimo (e inútil) {#sec-programa-minimo}
 
 Para começar diferente, o primeiro programa exemplo não será o _Hello, world!_, amplamente utilizado na literatura e em tutoriais. Ele será o código mínimo na linguagem que é válido e coerente. Por ser mínimo, porém, não faz nada útil.
 
@@ -83,7 +85,7 @@ Neste exemplo, há um único comando dentro de `main`: `return 0;`. Este comando
 
 Ao ser compilado e executado, este programa apenas indica ao sistema operacional que terminou sem erros.
 
-### Segundo programa: _Hello, world!_
+## Segundo programa: _Hello, world!_
 
 O segundo exemplo expande o código anterior, agora para apresentar uma mensagem na tela. Para isso, ele usa uma função chamada `printf`, responsável por apresentar uma saída formatada.
 
@@ -171,7 +173,7 @@ Resta pensar quando um comando que não faz nada pode ser útil.
 :::
 
 
-## Código fonte, objeto e executável
+# Código fonte, objeto e executável
 
 Todos os programas em C são escritos em arquivos de texto simples, que são os que não dão suporte a negrito e itálico, tipos de fonte ou formatação de parágrafo, entre outros recursos. O código em C segue uma sintaxe bastante específica e os programas escritos são chamados de código fonte.
 
@@ -188,9 +190,9 @@ Finalmente, ainda há uma última etapa, na qual o código compilado é colocado
 Usualmente a etapa do código objeto é escondida de quem usa o compilador e, aparentemente, do código fonte é gerado diretamente o executável. Na prática, esse é o efeito final.
 
 
-### Compilação com o `gcc`
+## Compilação com o `gcc`
 
-Há uma diversidade de compiladores para a linguagem C, além de diversos IDEs[^explicação-ide] com diferentes facilidades para escrever códigos fonte. Há IDEs que podem ser instalados, como  Visual Studio Code[^site-vscode], Code::Blocks[^site-codeblocks], Visual Studio[^site-visualstudio] ou Eclipse[^site-eclipse], por exemplo, além das disponíveis _online_, como GDB[^site-gdb], Programiz[^site-programiz] ou Replit[^site-replit].
+Há uma diversidade de compiladores para a linguagem C, além de diversos IDEs[^explicação-ide] com diferentes facilidades para escrever códigos fonte. Há IDEs que podem ser instalados, como  Visual Studio Code[^site-vscode], Code::Blocks[^site-codeblocks], Visual Studio[^site-visualstudio] ou Eclipse[^site-eclipse], por exemplo, além das disponíveis _online_, como GDB[^site-gdb] ou Programiz[^site-programiz].
 
 
 <!-- Notas de rodapé -->
@@ -208,7 +210,6 @@ Há uma diversidade de compiladores para a linguagem C, além de diversos IDEs[^
 
 [^site-programiz]: Programiz: <https://www.programiz.com>.
 
-[^site-replit]: Replit: <https://replit.com>.
 <!-- Notas de rodapé - fim -->
 
 Neste livro os programas foram compilados invocando no terminal o compilador GNU GCC[^site-gcc] na versão mais recente disponível no repositório oficial do Debian.
@@ -271,7 +272,7 @@ Na sequência é apresentada a execução do programa `bom_dia`.
 
 :::
 
-### Erros de sintaxe
+## Erros de sintaxe
 
 Sendo uma linguagem de programação, os comandos são sempre analisados de forma rígida. A falta de um parêntese, um espaço no lugar errado ou uma grafia errada (como `prinft`, por exemplo) já dá margem para o compilador reclamar que algo está errado e se recusar a gerar o executável. Esses são os erros de sintaxe e é função do compilador encontrá-los.
 
@@ -312,8 +313,22 @@ int main(void) {
 ```
 
 
-### Erros de lógica
+## Erros de lógica
 
 Um programa pode ser compilado e gerar o executável sem erros ou qualquer tipo de aviso que o compilador esteja ajustado para dar. Mas apesar disso, a execução não produz o resultado desejado. Neste caso, mesmo com a sintaxe correta, as instruções contém um erro (uma falha de cálculo, uma comparação equivocada) que invalida o programa. Esse são os erros de lógica e, desta vez, cabe ao programador encontrá-los e corrigi-los.
 
 A evitação de erros de lógica é considerada ao longo de todo o livro.
+
+
+
+# Boas práticas
+
+A escrita de programas exige que alguns pontos sejam observados:
+
+- Garantia da existência de um ponto de entrada (`main`).
+- Garantia de um valor de retorno apropriado para `main` por meio do `return`.
+- Elaboração de documentação adequada e completa para o código.
+- Teste da execução projetando bem os casos de teste.
+- Inclusão apenas dos cabeçalhos necessários no código fonte.
+- Banimento de qualquer inclusão de arquivos `.c`.
+- Observância das mensagens de erro e avisos produzidos pelo compilador.

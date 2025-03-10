@@ -1,9 +1,11 @@
-# Dados em vetores
+---
+title: Dados em vetores
+---
 
 Os vetores são estruturas de dados que agrupam coleções de itens, todos com o mesmo tipo. Cada item de um vetor é individualizado por seu índice, que é um valor inteiro. Neste capítulo é abordado como vetores são criados em C e quais as peculiaridades que possuem.
 
 
-## Declaração de vetores em C
+# Declaração de vetores em C
 
 Ao se criar uma coleção de itens como um arranjo (outro nome comum para vetor), é preciso especificar o tipo que cada item deve ter e a quantidade de itens.
 
@@ -68,7 +70,7 @@ Como sempre, o programador nunca deve usar uma variável sem que um valor tenha 
 
 
 
-### Declarações com atribuição explícita
+## Declarações com atribuição explícita
 
 Assim como outras variáveis, é possível iniciar os valores de um vetor juntamente com sua declaração.
 
@@ -203,7 +205,7 @@ int main(void) {
 ```
 
 
-### Declarações com tamanho automático
+## Declarações com tamanho automático
 
 A linguagem permite uma facilidade ao programador quando um vetor é criado com valores inicialmente atribuídos, que é omitir a quantidade de itens que o vetor possui. Esse tamanho é determinado pelos valores atribuídos. Segue um exemplo.
 
@@ -283,7 +285,7 @@ int main(void) {
 ```
 
 
-### Vetores com tamanho sob demanda
+## Vetores com tamanho sob demanda
 
 O número de itens de um vetor pode ser especificado de duas formas básicas: com a especificação explícita do tamanho nos colchetes ou fazendo a iniciação com o número desejado de itens. Uma possibilidade adicional, relativa ao primeiro formato, é o uso de uma expressão para indicar a quantidade.
 
@@ -323,7 +325,7 @@ O uso desse recurso é interessante, por exemplo, quando o usuário fornece a qu
 
 
 
-## Vetores de `struct`
+# Vetores de `struct`
 
 O tipo base de um vetore pode ser um registro (`struct`), de modo que uma coleção de registros pode ser facilmente organizada.
 
@@ -339,7 +341,7 @@ struct ponto3d lista_pontos[200];  // 200 registros
 
 Cada elemento do vetor `lista_pontos` é um registro. Assim, `lista_pontos[0]` é o primeiro registro do vetor, o que leva a `lista_pontos[0].x`, `lista_pontos[0].y` e `lista_pontos[0].z` serem a especificação de cada um dos seus campos.
 
-## Ponteiros para vetores
+<!-- # Ponteiros para vetores
 
 Em C, quando o identificador de um vetor é usado, o compilador associa a ele o endereço dessa variável na memória.
 
@@ -349,6 +351,11 @@ int vet[10];
 
 // &i é o endereço de i
 // vet é o endereço de vet
-```
+``` -->
 
 
+# Boas práticas
+
+- Declaração e iniciação segura.
+- Cuidado com índices inválidos.
+- Evitação de vetores globais.

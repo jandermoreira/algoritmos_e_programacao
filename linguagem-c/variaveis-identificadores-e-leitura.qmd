@@ -3,7 +3,7 @@
 Um programa em C lida com dados, que podem ser de diferentes tipos, como `int`, `long int` ou `double`, por exemplo. Neste capítulo são apresentados onde os dados são armazenados nos programas (variáveis), seus nomes (identificadores) e como guardar e substituir os valores desses dados (atribuição e leitura).
 
 
-## Variáveis, declarações e atribuição
+# Variáveis, declarações e atribuição
 
 Qualquer informação precisa ser mapeada para bytes para poder ser utilizada em um sistema computacional.\ [:veja:](tipos-de-dados.html#sec-representacao-de-dados)
 
@@ -60,7 +60,7 @@ Por fim, vale ainda comentar que na função `printf` os valores armazenados nas
 
 
 
-## Identificadores
+# Identificadores
 
 Nas linguagens de programação, muitos de seus elementos possuem nomes, chamados de identificadores. O nome dado a uma variável é seu identificador; `main` é o identificador da função por onde o programa em C começa sua execução.
 
@@ -104,7 +104,7 @@ As letras podem ser maiúsculas ou minúsculas, como `valor`, `Idade` e `ponto_A
 
 A escolha dos identificadores é responsabilidade do programador.
 
-### Estilo
+## Estilo
 
 Nos programas apresentados neste livro, todos os identificadores de variáveis e de funções são escritos em _snake case_, que é um estilo de escrita. No _snake case_, todas as letras usadas são minúsculas e, quando um identificador é composto de duas ou mais palavras, é usada a sublinha para separá-las.
 
@@ -146,7 +146,7 @@ int main(void) {
 Fica registrada uma recomendação de que somente caracteres ASCII simples sejam usados para os identificadores. A manutenção do código por terceiros, por exemplo, pode se tornar complicada se outros programadores, com configurações de teclado diferentes, simplesmente não conseguirem digitar o nome de uma variável, como um código escrito em tcheco com uma variável chamada `stáří` (idade).
 :::
 
-### Identificadores significativos
+## Identificadores significativos
 
 Em programas bem escritos a clareza é importante. O compilador não se importa com o nome escolhido para uma variável; essa escolha é para os humanos que leem o código fonte. A escolha de bons nomes ajuda a entender melhor o que o comandos fazem e, em consequência, permitem a identificação de erros, a correção dessas falhas e a incorporação de novas funcionalidades.
 
@@ -222,7 +222,7 @@ int main(void) {
 ```
 
 
-## Mais sobre declarações de variáveis {#sec-mais-sobre-declaracoes-de-variaveis}
+# Mais sobre declarações de variáveis {#sec-mais-sobre-declaracoes-de-variaveis}
 
 Na prática, a atribuição a uma variável não é sempre necessária quando uma declaração é feita e, portanto, pode ser suprimida. Uma declaração simples de uma variável pode ser feita como se segue.
 
@@ -307,7 +307,7 @@ Nos programas em C, todas as variáveis que forem usadas precisam ser declaradas
 
 
 
-## Mais sobre atribuições
+# Mais sobre atribuições
 
 `\index{atribuição}`{=latex}
 A atribuição de um valor a uma variável utiliza a sintaxe seguinte.
@@ -356,7 +356,7 @@ Nesse programa, a atribuição de zero para `resultado` é irrelevante, pois ess
 Neste caso, apenas a declaração simples da variável deve ser feita.
 :::
 
-## Leitura para programas interativos
+# Leitura para programas interativos
 
 Até o momento, a manipulação de variáveis foi exemplificada apenas com atribuições diretas, o que torna o programa demasiadamente restrito. Por exemplo, no exemplo de conversão de Celsius para Fahrenheit, o programa não precisaria fazer as contas nem usar variáveis, pois como tudo é fixo, bastaria conter o comando seguinte e o resultado seria precisamente o mesmo.
 
@@ -370,7 +370,7 @@ Quando um programa obtém um dado externo ao código, esse processo é chamado d
 
 A leitura do que o usuário digita em um terminal usualmente opera em duas etapas. Na primeira, o usuário digita seu texto (podendo eventualmente apagar um erro de digitação) e, quando tiver terminado, ele pressiona a tecla `ENTER`. Aí se inicia a segunda etapa, que consiste em repassar para o programa todos os caracteres digitados, incluindo a mudança de linha (`\n`) produzida pelo `ENTER`.
 
-### Leitura conteúdo textual com `fgets` {#sec-leitura-de-valores-textuais}
+## Leitura conteúdo textual com `fgets` {#sec-leitura-de-valores-textuais}
 
 No programa seguinte, um nome é solicitado pelo programa e, em seguida, apresentado de volta juntamente com uma saudação.
 
@@ -423,7 +423,7 @@ int main(void) {
 
 O comando `nome[strlen(nome) - 1] = '\0'` determina a posição do `\n` usando o comprimento do texto digitado dado por `strlen` e atribui ali o `\0`. É importante notar que `'\0'` é escrito usando aspas simples, pois é um único caractere. Esses aspectos são abordados em mais detalhes no @sec-dados-textuais.
 
-### Leitura de valores numéricos
+## Leitura de valores numéricos
 
 Toda digitação provida pelo usuário e passada ao programa é textual. Como exemplo, se o usuário digita 10 como entrada, o programa recebe os caracteres `1`, `0` e o `ENTER`, ou seja, `"10\n"`. Para transformar essa sequência de caracteres em um `int`, por exemplo, é preciso convertê-la.
 
@@ -527,7 +527,7 @@ int main(void) {
 
 Valores do tipo `double` usam a especificação de formato `%lf` (`%g` só é usado no `printf`) e a interpretação é feita agora pela busca de qualquer combinação que possa ser interpretada como um valor real válido, incluindo a notação científica usada no exemplo.
 
-### Leitura de um único caractere
+## Leitura de um único caractere
 
 A função `fgets`, por si só, obtém o texto digitado no terminal. O filtro para que apenas o primeiro caractere seja capturado em uma variável do tipo `char` pode ser feito também com o `sscanf` usando-se o indicador de formato `%c`.
 
@@ -582,7 +582,7 @@ int main(void) {
 Esta última versão é, na opinião do autor, mais simples e direta, superando a leitura a obtenção do caractere com o `sscanf`.
 
 
-### Várias leituras em uma única linha
+## Várias leituras em uma única linha
 
 É bastante comum, em programas que processam dados, que uma linha possa conter mais que um valor. Desta forma, é preciso indicar ao `sscanf` para varrer a cadeia de entrada por mais que um valor.
 
@@ -679,7 +679,7 @@ No exemplo acima, na última leitura, é possível que o caractere seja `E` ou `
 ::: -->
 
 
-### Um pouco mais sobre o `sscanf`
+## Um pouco mais sobre o `sscanf`
 
 O objetivo da função `sscanf` é analisar uma cadeia de caracteres procurando por padrões, os quais, reconhecidos adequadamente, são convertidos para o tipo indicado e atribuído às variáveis indicadas por seus endereços (razão do operador `&` usado nos exemplos diversos). Assim, ao se especificar `%d%d%lf` o `sscanf` espera encontrar dois inteiros e um real, nesta ordem. Para sumarizar, a @tbl-formatos-sscanf apresenta as principais especificações de formato usadas no `sscanf`.
 
@@ -696,7 +696,7 @@ O objetivo da função `sscanf` é analisar uma cadeia de caracteres procurando 
 : Relação entre formatos e tipos utilizados pelo `sscanf`. {#tbl-formatos-sscanf}
 
 
-#### Sobre os padrões interpretados no `sscanf`
+## Sobre os padrões interpretados no `sscanf`
 
 O padrão especificado no segundo parâmetro da função `sscanf` é muito mais poderoso do que apenas a busca por números ou caracteres. Seguem alguns poucos exemplos sobre a versatilidade do `sscanf` na sua interpretação.
 
@@ -755,7 +755,7 @@ int main(void) {
 ```
 
 ::: {.content-visible when-profile="programacao"}
-#### Interpretação em bases decimal, octal e hexadecimal
+## Interpretação em bases decimal, octal e hexadecimal
 
 Além dos valores inteiros em decimal (`%d`), é possível interpretá-los nas bases 8 e 16. Nestes dois últimos casos, os valores devem ser sempre positivos e, para tanto, o tipo da variável tem que ser `unsigned int`, ou seja, um inteiro sem sinal.
 
@@ -842,7 +842,7 @@ Neste exemplo, `63` é o decimal 63, `063` é 63~8~ e `0x63` é 63~16~.
 :::
 
 
-#### Erros de interpretação do padrão
+## Erros de interpretação do padrão
 
 A função `sscanf` é capaz de interpretar corretamente um valor numérico tanto quanto o valor faça sentido. Se houver um erro na interpretação, a análise da varredura é interrompida e o valores corretamente convertidos são atribuídos às respectivas variáveis; as variáveis restantes não têm seu valor modificado.
 
@@ -882,7 +882,7 @@ int main(void) {
 Na primeira leitura do programa, todos os valores são lidos corretamente e todas as atribuições são feitas. Na segunda leitura a varredura falha ao encontrar `abc` quando um número inteiro era esperado. Com o erro na interpretação, apenas `i1` e `i2` são atualizados, enquanto `i3` e `i4` não têm seus valores modificados.
 
 ::: {.content-visible when-profile="programacao"}
-#### `sscanf` é uma função e tem valor de retorno
+## `sscanf` é uma função e tem valor de retorno
 
 Embora frequentemente usada como um comando simples, `sscanf` é, na realidade, uma função que retorna o número de leituras corretamente realizadas. Com essa característica, é possível contornar erros de leitura e deixar o código mais robusto.
 
@@ -913,7 +913,7 @@ Com apenas dois valores corretamente lidos, a execução do programa mostra que 
 :::
 
 
-## Ressalvas quanto ao `scanf`
+# Ressalvas quanto ao `scanf`
 
 Em grande parte do material disponível em páginas na Internet é comum que a leitura use a função `scanf` no lugar de um `fgets` seguido de um `sscanf`. O objetivo da função `scanf` é aplicar as especificações de formato diretamente na entrada de dados, sem usar a variável `entrada` como nos exemplos apresentados.
 
@@ -941,7 +941,7 @@ O emprego de `getline` e `strtol` em substituição a `fgets` e `sscanf` é uma 
 
 ::: {.content-visible when-profile="programacao"}
 
-## Sobre a função `gets`
+# Sobre a função `gets`
 
 `\index{gets@\texttt{gets}}`{=latex}
 Infelizmente, quando se procura por informações sobre leitura de dados em C nos diversos mecanismos de busca, ainda são comuns os exemplos usando a função `gets`. Esta função é uma "versão simplificada" de `fgets` que não precisa informar o espaço de memória disponível para a leitura nem requer a especificação do `stdin`, que é usado automaticamente. 
@@ -1009,3 +1009,13 @@ int main(void) {
 
 A conclusão simples e prática desta seção é, portanto, não usar `gets`. Nunca.
 :::
+
+# Boas práticas
+
+-   Escolha dos tipos apropriados.
+-   Uso de identificadores significativos.
+-   Uso de *case* de nomes de forma consistente (*camel-case*, *snake-case* etc.).
+-   Iniciação adequada (sempre iniciar por atribuição ou leitura).
+-   Evitação de iniciações desnecessárias (iniciar variável logo antes da leitura).
+-   Uso mínimo de variáveis globais.
+- Fazer a declaração o mais próximo possível do uso efetivo ou logo no início do bloco se o uso se aplicar de forma menos local.

@@ -1,9 +1,11 @@
-# Parâmetros das funções na linguagem C {#sec-parametros-de-funcoes}
+---
+title: Parâmetros das funções
+---
 
 Neste capítulo são retomados os conceitos de parâmetros de funções, detalhando seu funcionamento interno e dando alternativas para algumas necessidades reais dos programas.
 
 
-## Passagem de parâmetros por valor
+# Passagem de parâmetros por valor
 
 A ideia de se ter parâmetros nas funções é bastante intuitivo. Considerando-se uma função simples, pode ser escrito o código seguinte para o cálculo do quadrado de um valor real.
 
@@ -134,7 +136,7 @@ Em programação, quando um parâmetro recebe a cópia do valor de seu argumento
 
 
 
-## Passagem de referências {#sec-passagem-por-referencia}
+# Passagem de referências {#sec-passagem-por-referencia}
 
 Para introduzir uma nova necessidade, um novo programa é apresentado. Nele, dois valores são dados pelo usuário e eles devem ser trocados se estiverem em ordem decrescente. Esta implementação é uma nova versão para o @alg-escrita-nao-decrescente, agora usando um procedimento.
 
@@ -284,7 +286,7 @@ Na linguagem C, como não há passagem por referência, as referências têm que
 
 
 
-### Cadeias de caracteres são sempre passagem por referência
+## Cadeias de caracteres são sempre passagem por referência
 
 Para as variáveis que armazenam cadeias de caracteres, tem-se que seu identificador já representa seu endereço. Em consequência, quando a função `fgets` é usada, seu primeiro parâmetro é uma passagem da referência. Isso é ilustrado a seguir.
 
@@ -344,13 +346,13 @@ O modificador `const` adicionado ao parâmetro alerta o compilador que o identif
 :::
 
 
-## Exemplos
+# Exemplos
 
 Nesta seção alguns exemplos interessantes são apresentados.
 
 
 
-### "Já usei passagem por referência muitas vezes"
+## "Já usei passagem por referência muitas vezes"
 
 Ao longo dos inúmeros exemplos usados neste livro, a passagem por referência já vinha sendo utilizada. Por exemplo, na leitura de um valor real, a conversão é feita pelo `sscanf`, que pode ter o formato seguinte.
 
@@ -366,7 +368,7 @@ E, naturalmente, também `fgets` usa referência para fazer a leitura.
 
 
 
-### Simplificação de números racionais
+## Simplificação de números racionais
 
 Um número racional ($\mathbb{Q}$) é aquele que pode ser escrito na forma $a/b$, sendo $a \in \mathbb{Z}$ com $b \in \mathbb{Z}^*$. O @alg-simplificacao-padronizacao-racionais apresenta uma solução de como fazer a simplificação de um valor racional, padronizando sua apresentação. 
 
@@ -466,3 +468,12 @@ simplifique_racional(&numerador, &denominador);  // endereços das variáveis
 ```
 
 Um ponto positivo de ter funções para realizar as diversas tarefas é que a função `main` fica mais simples e mais legível.
+
+
+
+# Boas práticas
+
+- Fornecimento de todos os dados necessários a uma função por meio de parâmetros.
+- Evitação ao máximo do uso de variáveis globais.
+- Retornar valores adequadamente com `return`.
+- Retornar valores, quando necessário, por passagem de referência.

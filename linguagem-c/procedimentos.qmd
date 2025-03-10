@@ -1,4 +1,6 @@
-# Procedimentos em C {#sec-procedimentos}
+---
+title: Procedimentos
+---
 
 A modularização envolve as funções, como apresentado no @sec-funcoes. Há casos, porém, em que há necessidades de um módulo para realizar uma ação, mas ele não precisa retornar um valor. Módulos que não retornam valores são chamados procedimentos e, em C, são funções que não voltam valor.
 
@@ -7,7 +9,7 @@ Este capítulo trata das funções sem retorno de valor.
 
 
 
-## Funções sem retorno
+# Funções sem retorno
 
 Um exemplo simples de função que não retorna nada é a função (procedimento) `perror`, cuja função é apresentar uma mensagem de erro, como o programa seguinte que mostra as mensagens referentes aos códigos de erro de zero até nove.
 
@@ -52,7 +54,7 @@ O leitor, portanto, não deve assumir que o nome função se refere necessariame
 :::
 
 
-## Criação de procedimentos
+# Criação de procedimentos
 
 Para escrever um procedimento, basta que seu tipo de retorno seja `void`. Os parâmetros podem ser quantos e de quais tipos forem necessários.
 
@@ -133,3 +135,14 @@ O procedimento `faca_uma_saudacao` escolhe qual saudação apresentar, havendo e
 A função `obtenha_hora_atual` retorna um valor de zero a 23 dependendo da hora atual do sistema operacional. Os detalhes das funções envolvidas não são relevantes e não são discutidos.
 
 Como talvez tenha já sido constado pelo leitor, o uso de procedimentos costuma ser menor que o de funções (que voltam valores).
+
+
+
+
+# Boas práticas
+
+-   Escolha de adequados para os procedimentos.
+-   Realização de documentação.
+-   Emprego de diretivas do pré-processador.
+-   Evitação definições globais desnecessárias.
+-   Criação de módulos coesos.

@@ -1,10 +1,12 @@
-# Desvirtuação das repetições {#sec-desvirtuacao-das-repeticoes}
+---
+title: Desvirtuação das repetições
+---
 
 A estrutura do `for`, embora seja bem objetiva indicando iniciação, condição e incremento (seus três elementos de operação), ela é bastante flexível do ponto de vista de seu uso pelo programador.
 
 Um indicador dessa liberdade dada ao programador é que todos os elementos são opcionais, além de permitirem outros elementos.
 
-### Laços infinitos
+## Laços infinitos
 
 Em termos de argumentos opcionais, o trecho de código seguinte pode ser considerado.
 
@@ -31,7 +33,7 @@ for (int i = 0;; i = (i + 1) % 10)
 ```
 
 
-### Término forçado `for`
+## Término forçado `for`
 
 Enquanto se escreve um programa, o uso da repetição com `for` intuitivamente indica que um determinado número de repetições vai ocorrer. Muitos programadores deturpam essa percepção artificialmente interrompendo a repetição.
 
@@ -111,7 +113,7 @@ int main(void) {
 ```
 
 
-## Laços `while` infinitos, mas nem tanto {#sec-while-infinito}
+# Laços `while` infinitos, mas nem tanto {#sec-while-infinito}
 
 Não é incomum encontrar códigos em repositórios que utilizem falsos laços infinitos. Segue um programa exemplo desse recurso.
 
@@ -232,7 +234,7 @@ int main(void) {
 ```
 
 
-## O comando `break` nas repetições
+# O comando `break` nas repetições
 
 O uso do `break` para encerrar repetições não é, em si, um erro de programação ou uma falha em si. Em programas mais complexos, com aninhamento de repetições, a indicação explícita de todas as condições que mantém ou encerram uma repetição pode tornar o código difícil de entender.
 
@@ -282,3 +284,12 @@ Com o nome adequado, uma variável lógica somente acrescenta significado ao có
 Para os programadores que evitam novas variáveis para economizar memória (preocupação legítima!), sempre se deve também considerar a clareza do código. Além disso, uma variável `bool` em uma máquina com 8GiB de memória principal consome 0,0000002% do total disponível[^ressalva-bool].
 
 [^ressalva-bool]: O cálculo considera que `sizeof (bool)` é um byte, valor usado pelo compilador durante a escrita desse livro.
+
+
+# Boas práticas
+
+-   Escolha da repetição adequada.
+-   Determinação de uma condição de parada válida e atingível.
+-   Evitação de laços infinitos.
+-   Escrita de código legível e bem documentado.
+-   Uso de identificadores adequados.

@@ -1,8 +1,10 @@
-# Repetições com `for` {#sec-repeticoes-com-for}
+---
+title: Repetições com `for`
+---
 
 A linguagem C permite laços de repetição, sendo um deles dado pelo `for`. Neste capítulo essa estrutura é abordada.
 
-## A estrutura de repetição `for`
+# A estrutura de repetição `for`
 O `for` é um comando usado para repetições definidas, ou seja, para as quais o número de vezes que os comandos serão executados já é conhecida. Por exemplo, se houver um dado disponível para cada hora do dia, sabe-se de antemão que há 24\ dados e uma repetição com esse número de vezes pode ser empregado.
 
 `\index{for@\texttt{for}}`{=latex}
@@ -64,7 +66,7 @@ for (double i = 0; i <= 1; i += 0.1)
 
 
 
-## `for` _versus_ `while`
+# `for` _versus_ `while`
 
 Conforme apresentado na seção anterior, a estrutura do `for` equivale à de um `while`. A questão, então, é porque usar o `for`?
 
@@ -84,7 +86,7 @@ Um discussão mais ampla sobre o uso do `for`, complementando esta dica, está n
 :::
 
 
-## Repetições baseadas na entrada
+# Repetições baseadas na entrada
 
 Uma forma de se processar uma sequência de valores é prefixá-la com a quantidade de valores de entrada. Assim, se existirem 25\ dados para serem processados, o valor 25 é introduzido antes dos dados, o que viabiliza ter, antes da repetição, o número de vezes de execução e, assim, usar o `for` adequadamente e com clareza.
 
@@ -117,12 +119,12 @@ int main(void) {
 
 
 
-## Exemplos
+# Exemplos
 
 Nesta seção são apresentados alguns exemplos de programas simples com repetições para as quais o `for` é a escolha mais direta.
 
 
-### Média de 24 temperaturas
+## Média de 24 temperaturas
 
 Na linha do exemplo das temperaturas hora a hora é apresentado o @alg-temperaturas-diarias, o qual determina a média das temperaturas colhidas a cada hora de um dia.
 
@@ -203,7 +205,7 @@ int main(void) {
 ```
 
 
-### Áreas de triângulos
+## Áreas de triângulos
 
 O @alg-area-sequencia-triangulos é uma proposta de nível alto para a determinação da área de uma dada quantidade de triângulos. A quantidade de áreas a serem calculadas é a primeira entrada esperada pela solução.
 
@@ -315,7 +317,7 @@ int main(void) {
 ```
 
 
-### Desenho de um "círculo"
+## Desenho de um "círculo"
 
 O programa seguinte mostra o aninhamento de dois laços `for`. Cada um deles vai de -10 a 10 e a saída é um `*` caso a distância ao "centro" seja menor que 10. No programa, ao invés de calcular ${\sqrt{x^2 + y^2} \leq 10}$, optou-se por usar a expressão equivalente ${x^2 + y^2 \leq 10^2}$, que não requer calcular a raiz quadrada. 
 
@@ -342,3 +344,11 @@ int main(void) {
 ```
 
 Como cada caractere escrito sempre tem altura maior que a largura, optou-se por usar três caracteres para cada posição para tentar compensar essa diferença e obter o "círculo" com menor distorção. A escolha por três caracteres foi feita por tentativa e erro.
+
+# Boas práticas
+
+-   Escolha da repetição adequada.
+-   Determinação de uma condição de parada válida e atingível.
+-   Evitação de laços infinitos.
+-   Escrita de código legível e bem documentado.
+-   Uso de identificadores adequados.

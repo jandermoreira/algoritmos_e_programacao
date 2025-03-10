@@ -1,0 +1,283 @@
+# Conteúdo para a linguagem C
+
+## Introdução à Programação e à Linguagem C
+-   Conceito de linguagem estruturada
+-   Estrutura básica: `main()`
+-   Inclusão de cabeçalhos `.h`
+-   `return 0`
+-   Conceitos de código fonte, objeto e executável
+-   Compilador e o processo de compilação
+-   Erros lógicos e sintáticos
+-   Boas práticas
+    -   Garantia da existência de um ponto de entrada (`main`)
+    -   Garantia de um valor de retorno apropriado para `main`
+    -   Inclusão apenas dos cabeçalhos necessários
+    -   Banimento de inclusão de arquivos `.c`
+    -   Entendimento das mensagens de erro do compilador
+    -   Documentação adequada do código
+    -   Teste do código projetando bem os casos de teste
+
+## Tipos de Dados Primitivos
+-   Tipos de dados básicos: `int`, `double`, `_Bool/bool`, `char`
+-   Boas práticas
+    -   Consciência das capacidades e limitações de cada tipo
+    -   Emprego coerente do tipo de dados conforme a situação
+
+## Saída
+-   Função `printf`
+-   Especificadores de formato (`%d`, `%s` etc.)
+-   Conceito de tipos de dados (constantes)
+-   Noções de representação de dados em memória
+-   Funções `puts` e `putchar`
+-   Modificadores de formato (`%10s``, ``%010.2f`)
+-   Apresentação do `fflush`
+-   Boas práticas
+    -   Uso dos especificadores de formato adequados
+    -   Uso dos especificadores de formato para precisão e largura dos
+        campos
+    -   Considerar que o `printf` é um comando com custo computacional
+        relativamente alto
+    -   Uso de `putchar` e `puts` (mais eficientes que `printf`)
+    -   Uso do `fflush` apenas quando necessário
+
+## Entrada
+-   Declarações de variáveis
+-   Modificadores (`short`, `long`, `unsigned`)
+-   Operador `sizeof`
+-   Funções `scanf`, `fgets`, `sscanf`
+-   Boas práticas
+    -   Escolha dos tipos apropriados
+    -   Uso de identificadores significativos
+    -   Uso de *case* de nomes de forma consistente (*camel-case*,
+        *snake-case* etc.)
+    -   Iniciação adequada (sempre iniciar por atribuição ou leitura)
+    -   Evitação de iniciações desnecessárias (iniciar variável logo
+        antes da leitura)
+    -   Uso mínimo de variáveis globais
+
+## Expressões
+-   Operadores aritméticos (inteiros e reais)
+-   Ordem de precedência
+-   Promoção automática de tipo (e.g., `int` para `double`)
+-   Conversões de tipo: *typecast* e funções (e.g. `atoi`)
+-   Operadores relacionais
+-   Operadores lógicos
+-   Operador condicional ternário
+-   Funções matemáticas úteis em `math.h`
+-   Boas Práticas
+    -   Escolha do melhor tipo para clareza e bom uso da memória
+    -   Uso de `unsigned` apenas quando necessário
+    -   Preferência por **double** no lugar de **float**
+    -   Garantia de variável iniciada antes de seu uso
+    -   Uso de identificadores significativos
+    -   Observância de divisão por zero
+    -   Uso de parênteses para clareza
+    -   Observância de não usar `=` no lugar de `==`
+    -   Emprego de variáveis lógicas para aumentar a clareza do código
+
+## Estruturas Condicionais
+-   Contextualização da execução condicional e retomada das expressões
+    lógicas
+-   Sintaxe de `if`
+-   Comandos compostos com `{` ... `}`
+-   Sintaxe de `if-else`
+-   Sintaxe de `if-else if-else` e a ordem das condições
+-   Sintaxe do condicional ternário `? :`
+-   Comando de seleção com `switch` e `case` (`break` e `default`) e
+    limitações
+-   Aninhamento de condicionais
+-   Comparações envolvendo **double**
+-   Boas práticas
+    -   Evitação de redundância nas condições
+    -   Escrita de código com legibilidade
+    -   Evitação de comparações desnecessárias
+    -   Emprego coerente de declarações locais a comandos compostos        (blocos)
+    -   Evitação de "sombreamento" de identificadores (repetição de        identificador em escopos diferentes muito próximos)
+
+## Estruturas de Repetição
+-   Repetições **contadas** e **controladas por condição**
+-   Estruturas `while`, `do while` e `for`
+-   Uso de `break`, **continue** e **goto**
+-   Laços infinitos e comparações com **double**
+-   Comparação entre as estruturas
+-   Boas práticas
+    -   Escolha da repetição adequada.
+    -   Determinação de uma condição de parada válida e atingível.
+    -   Evitação de laços infinitos.
+    -   Escrita de código legível e bem documentado.
+    -   Uso de identificadores adequados.
+
+## Manipulação de Strings
+-   Declarações de *strings* como vetores de caracteres com terminador
+-   Iniciação de *strings* (`char s[] = ...` e `char s[10] = ...`)
+-   Cabeçalho `string.h`
+    -   `strlen`
+    -   `strncpy`
+    -   `strncat`
+    -   `strcmp`
+    -   `strstr` (busca por *substring*)
+    -   Leitura com `fgets` e `scanf` + `%19s`
+-   Acesso à *string* como vetor
+-   Ponteiros para *strings*
+-   Alocação dinâmica de *strings*
+-   Conversões com `sscanf` e `snprintf`
+-   Boas práticas
+    -   Banimento do uso de `gets`
+    -   Realização de leitura cuidando do tamanho do vetor
+    -   Acesso dentro dos limites de indexação válidos
+    -   Garantia da existência do terminador `\0`
+    -   Verificação de sucesso em alocações dinâmicas com necessária liberação da memória
+    -   Evitação de `strcpy` e `strcat`
+
+## Manipulação de Arquivos Texto
+-   Conceito de abertura e fechamento de arquivos (`fopen` e `fclose`)
+-   Modos de abertura (`r`, `w`, `a` e variantes com `+` e `b`)
+-   Conceito de posição corrente
+-   Retorno ao início com `rewind`
+-   Função `fscanf` e seu retorno
+-   Função `fprintf`
+-   Funções `fputs` e `fputc`
+-   Função `fgets` e `fgetc`
+-   Conceito de "fim de arquivo"
+-   Tratamento de erros (retorno de `fopen`)
+-   Boas práticas:.
+    -   Atenção ao modo de abertura de arquivo.
+    -   Verificação do sucesso de `fopen`.
+    -   Uso de `perror` para mensagens de erro.
+    -   Sempre fechar o arquivo com `fclose`.
+    -   Uso dos valores de retorno das funções de leitura.
+    -   Preferência ao uso de `fgets` no lugar de `fscanf`.
+    -   Usar `fflush apenas quando necessário`.
+
+## Manipulação de Arquivos Binários
+-   Conceito de abertura e fechamento de arquivos (`fopen` e `fclose`)
+-   Conceito de arquivo de registros
+-   Modos de abertura (`r`, `w`, `a` e variantes com `+`; uso do
+    especificador `b`)
+-   Funções `fread` e `fwrite`
+-   Funções `ftell` e `fseek`
+-   Atualização de registros
+-   Problemas de portabilidade
+-   Boas práticas:
+    -   Atenção aos parâmetros de `fread` e `fwrite`
+    -   Uso de `sizeof` para especificar o tamanho do objeto
+    -   Uso dos valores de retorno da leitura e escrita
+    -   Atenção para movimentar para a posição correta ao usar `fseek`
+    -   Sempre fechar arquivo com `fclose`
+
+## Modularização
+-   Benefícios da modularização
+    -   Reutilização de código
+    -   Facilidade de manutenção
+    -   Legibilidade e organização
+    -   Redução de complexidade
+    -   Separação lógica de funcionalidades
+-   Arquivos: cabeçalho (`.h`) e implementação (`.c`)
+-   Funções e procedimentos
+-   Parâmetros formais: passagem por valor e referência
+-   Escopo de declarações
+-   Endereços e ponteiros
+-   Compilação e ligação de módulos
+-   Boas práticas
+    -   Escolha de nomes de arquivos e funções.
+    -   Emprego de diretivas do pré-processador.
+    -   Evitação definições globais desnecessárias.
+    -   Criação de módulos coesos.
+    -   Realização de documentação.
+
+## Recursividade
+-   Conceito de função que chama a si própria
+-   Identificação de caso base e passo recursivo
+    -   Base: determinação de ponto de parada para as chamadas
+    -   Recursivo: Divisão do problema em problemas menores
+-   Questões de desempenho e eficiência
+-   Comparação com implementações iterativas
+-   Limitações (*stack overflow*)
+-   Projeto de funções recursivas
+    -   Avaliação do problema e possibilidade de solução recursiva
+    -   Identificação do caso base
+    -   Definição do passo recursivo com garantia de convergência
+-   Noções de memoização
+-   Noções de recursão de cauda
+-   Boas práticas:
+    -   Garantir a existência da condição de parada (caso base e
+        convergência)
+    -   Preferência para iteração para cálculos simples
+    -   Controlar o consumo de memória
+    -   Quebrar funções complexas em funções auxiliares
+
+## Registros
+-   Aplicações e uso de registros
+-   Sintaxe básica `stuct` (declaração e iniciação)
+-   Acesso a campos (operador `.`), com atribuição e leitura
+-   Uso do `typedef`
+-   Aninhamento de registros
+-   Acesso a campos com uso de ponteiros (operador `->`)
+-   Registros como parâmetros de funções (valor e referência)
+-   Registros como valor de retorno de funções
+-   Alinhamento de memória dentro de `struct`
+-   Campos que são ponteiros
+-   Sintaxe e uso de `union`
+-   Boas práticas
+    -   Uso de identificadores adequados (*camel-case* para `typedef`)
+    -   Cuidado com estruturas muito grandes (uso de memória em passagem por valor)
+    -   Evitar uso de `struct`s globais usando passagem como parâmetro
+
+## Vetores
+-   Aplicações e uso de vetores
+-   Sintaxe de declaração e iniciação
+-   Leitura de dados
+-   Acesso aos itens e cuidado com limites
+-   Passagem de vetores como parâmetros de funções
+-   Uso do `const` em parâmetros
+-   Vetores dentro de registros
+-   *Strings* como vetores de char com terminador
+-   Alocação dinâmica de vetores
+-   Boas práticas
+    -   Declaração e iniciação segura
+    -   Cuidado com índices inválidos
+    -   Evitação de vetores globais
+
+## Matrizes
+-   Aplicação e uso de matrizes
+-   Declaração e iniciação
+-   Acesso e modificação com índices
+-   Passagem de matrizes como parâmetros para funções
+-   Alocação dinâmica de matrizes
+-   Matrizes multidimensionais
+    -   Identificadores
+    -   Cuidado com limites de índices
+    -   Cuidado com passagem de matrizes para funções
+    -   Evitação de matrizes globais
+
+## Endereçamento de memória e ponteiros
+-   Noções de ponteiros
+-   Declaração de ponteiros e seus tipos
+-   Operadores `&` (endereço) e `*` (desreferência)
+-   Representação da memória em endereços
+-   Tamanho do ponteiro e do objeto apontado (`sizeof`)
+-   Ponteiro nulo (`NULL`)
+-   Boas práticas:
+    -   Garantia de iniciação de ponteiro antes do uso
+    -   Evitação de acesso a ponteiros nulos
+
+## Alocação Dinâmica
+-   Noções de *heap* como memória disponível
+-   Funções: `malloc`, `calloc`, `realloc` e `free` (`stdlib.h`)
+-   Uso de `malloc`
+-   Uso de `calloc`
+-   Comparação entre `malloc` e `calloc`
+-   Uso de `realloc` e cuidado com movimentação de dados
+-   Liberação de memória com `free`
+-   Vazamento de memória
+-   Ponteiros para blocos desalocados
+-   Uso do `valgrind`
+-   Aritmética de ponteiros
+-   Boas práticas
+    -   Verificação de sucesso na alocação
+    -   Uso mandatório de desalocação
+    -   Cuidado com vazamentos de memória
+    -   Evitação do uso de memória já desalocada
+    -   Verificar sucesso e movimentação de dados no `realloc`
+    -   Cuidado para evitar alocação excessiva (e.g., em repetições)
+    -   Cuidado com a aritmética de ponteiros

@@ -73,9 +73,9 @@ Existem diversas maneiras de se representar um algoritmo. Para algoritmos gerais
 :::::: {.content-visible when-format="pdf"}
 
 ::: {#fig-limpeza-maquina-lavar-roupas layout="[100, 100]"}
-![Como limpar máquina de lavar.[^site-buscape]](figuras/limpeza-lava-roupas-buscape.png){#fig-limpeza-maquina-lavar-roupas-buscape width="80%"}
+![Como limpar máquina de lavar.[^site-buscape]](/figuras/limpeza-lava-roupas-buscape.png){#fig-limpeza-maquina-lavar-roupas-buscape width="80%"}
 
-![Central de Ajuda Panasonic.[^site-panasonic]](figuras/limpeza-lava-roupas-panasonic.png){#fig-limpeza-maquina-lavar-roupas-panasonic width="100%"}
+![Central de Ajuda Panasonic.[^site-panasonic]](/figuras/limpeza-lava-roupas-panasonic.png){#fig-limpeza-maquina-lavar-roupas-panasonic width="100%"}
 
 Duas representações distintas para uma mesma tarefa: representação por figuras ilustrativas e textual.
 
@@ -87,9 +87,9 @@ Duas representações distintas para uma mesma tarefa: representação por figur
 
 ::: {#fig-limpeza-maquina-lavar-roupas layout-ncol="2" layout-valign="bottom"}
 
-![Central de Ajuda Panasonic.[^site-panasonic]](figuras/limpeza-lava-roupas-panasonic.png){#fig-limpeza-maquina-lavar-roupas-buscape}
+![Central de Ajuda Panasonic.[^site-panasonic]](/figuras/limpeza-lava-roupas-panasonic.png){#fig-limpeza-maquina-lavar-roupas-buscape}
 
-![Como limpar máquina de lavar.[^site-buscape]](figuras/limpeza-lava-roupas-buscape.png){#fig-limpeza-maquina-lavar-roupas-panasonic}
+![Como limpar máquina de lavar.[^site-buscape]](/figuras/limpeza-lava-roupas-buscape.png){#fig-limpeza-maquina-lavar-roupas-panasonic}
 
 Duas representações distintas para uma mesma tarefa: representação por figuras ilustrativas e textual.
 
@@ -111,12 +111,13 @@ Para o caso dos algoritmos computacionais há duas formas mais usuais para repre
 Os fluxogramas são representações visuais com os passos que implementam cada algoritmo. Os símbolos (caixas) possuem formas específicas para cada função e setas as ligam indicando a ordem em que devem ser executadas. Na @fig-fluxograma-raizes-equacao é apresentado um fluxograma para o cálculo das raízes reais de equação de segundo grau e apresentação de mensagens de erro nos casos adequados.
 
 ::: {.content-visible when-format="pdf"}
-![Fluxograma para cálculo e apresentação das raízes reais de uma equação de segundo grau.](figuras/fluxograma-raizes-equacao.png){#fig-fluxograma-raizes-equacao width="60%"}
+![Fluxograma para cálculo e apresentação das raízes reais de uma equação de segundo grau.](/figuras/fluxograma-raizes-equacao.png){#fig-fluxograma-raizes-equacao width="60%"}
 :::
 
 ::: {.content-visible unless-format="pdf"}
-![Fluxograma para cálculo e apresentação das raízes reais de uma equação de segundo grau.](figuras/fluxograma-raizes-equacao.png){#fig-fluxograma-raizes-equacao}
+![Fluxograma para cálculo e apresentação das raízes reais de uma equação de segundo grau.](/figuras/fluxograma-raizes-equacao.png){#fig-fluxograma-raizes-equacao}
 :::
+
 
 
 

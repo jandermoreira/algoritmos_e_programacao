@@ -573,7 +573,7 @@ Nos exemplos dados ao longo deste texto, é possível que funções simples ou a
 
 Os IDEs em geral reconhecem a documentação das funções e auxiliam o programador durante a codificação. Na @fig-ide-popup-funcao há um exemplo de como a documentação é mostrada quando se posiciona o mouse sobre o nome da função `eh_vogal`. Outros auxílios, como verificações dos tipos dos parâmetros também são recursos comuns.
 
-![Auxílio ao programador em IDEs quando as funções são devidamente documentadas. IDE: CLion.](figuras/ide-popup.png){#fig-ide-popup-funcao width="60%"}
+![Auxílio ao programador em IDEs quando as funções são devidamente documentadas. IDE: CLion.](/figuras/ide-popup.png){#fig-ide-popup-funcao width="60%"}
 
 
 

@@ -264,7 +264,7 @@ R -1.2 5.2 2.2 3.1
 
 Neste exemplo, o `3` indica que há três formas. A primeira é o retângulo $R_1$ da @fig-retangulos-e-triangulos; segue-se o triângulo $T$ e a última é o retângulo $R_2$.
 
-![Três formas armazenadas em arquivo segundo seus vértices.](figuras/retangulos-e-triangulos.png){#fig-retangulos-e-triangulos width="60%"}
+![Três formas armazenadas em arquivo segundo seus vértices.](/figuras/retangulos-e-triangulos.png){#fig-retangulos-e-triangulos width="60%"}
 
 
 Uma solução para processar os dados desse arquivo e apresentar as áreas de cada figura é o @alg-retangulos-e-triangulos-com-prefixacao, apresentado com nível alto de abstração.
@@ -662,8 +662,6 @@ Durante a execução, o resultado de `fgets` é checado a cada início do `while
 # A função `rewind`
 
 A palavra _rewind_ tem aqui o sentido de rebobinar e vem do tempo em que os arquivos eram mantidos em fitas magnéticas e, para voltar para o início do arquivo, era necessário retroceder fisicamente o carretel. Para o contexto atual, rebobinar significa apenas retornar a posição corrente para o byte zero, ou seja, o primeiro byte do arquivo.
-
-<!-- ![Gravador de fitas magnéticas. Imagem gerada artificialmente por Dall-E\ 3.](figuras/gravador_de_fita.jpeg){#fig-gravador-de-fita width="50%"} -->
 
 A função `rewind` tem o significado de retornar o arquivo para a primeira posição. Isso significa, por exemplo, que se um arquivo tem que ser processado mais que uma vez, é possível fazer uma varredura até o final e, então, retornar ao início e fazer nova leitura.
 

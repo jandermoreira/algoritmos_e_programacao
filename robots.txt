@@ -1,1 +1,1 @@
-Sitemap: https://jandermoreira.github.io/ap.github.io/sitemap.xml
+Sitemap: https://jandermoreira.github.io/algoritmos_e_programacao/sitemap.xml

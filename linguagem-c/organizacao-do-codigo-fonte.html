@@ -54,7 +54,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -152,7 +172,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../algoritmos/introducao.html"> 
+    <a class="nav-link" href="../algoritmos/index.html"> 
 <span class="menu-text">Algoritmos</span></a>
   </li>  
   <li class="nav-item">
@@ -186,8 +206,8 @@ window.Quarto = {
         </a>
     </div>
   </nav>
-  <div id="quarto-announcement" data-announcement-id="488ded3f584a619e97fbebbe9d888524" class="alert alert-danger hidden"><i class="bi bi-exclamation-octagon quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p><strong>Atenção</strong> - Este site é apenas um protótipo/estudo de conceito. As informações aqui estão incompletas.</p>
+  <div id="quarto-announcement" data-announcement-id="037da44dd49132e8aac6c8da90475abb" class="alert alert-danger hidden"><i class="bi bi-exclamation-octagon quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong>Atenção</strong> - Este site está em construção. As informações ainda estão incompletas!</p>
 </div></div>
 </header>
 <!-- content -->
@@ -196,12 +216,6 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/introducao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introdução</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -220,7 +234,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../linguagem-c/tipos-de-dados.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tipos de dados da linguagem C</span></a>
+ <span class="menu-text">Tipos de dados primitivos</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -232,13 +246,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../linguagem-c/expressoes-aritmeticas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Expressões aritméticas de C</span></a>
+ <span class="menu-text">Expressões aritméticas</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../linguagem-c/expressoes-relacionais-e-logicas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">expressões relacionais e lógicas</span></a>
+ <span class="menu-text">Expressões relacionais e lógicas</span></a>
   </div>
 </li>
       </ul>
@@ -318,12 +332,6 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/arquivos-texto.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Arquivos texto</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../linguagem-c/desvirtuacao-das-repeticoes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Desvirtuação das repetições</span></a>
   </div>
@@ -348,7 +356,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../linguagem-c/manipulacao-de-dados-textuais.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Manipulação de dados textuais em C</span></a>
+ <span class="menu-text">Manipulação de dados textuais</span></a>
   </div>
 </li>
       </ul>
@@ -365,7 +373,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../linguagem-c/funcoes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Funções em C</span></a>
+ <span class="menu-text">Funções</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../linguagem-c/procedimentos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Procedimentos</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -376,20 +390,8 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/enderecamento-de-memoria-e-ponteiros.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Endereçamento de memória e ponteiros nos programas</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/procedimentos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Procedimentos em C</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../linguagem-c/parametros-de-funcoes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Parâmetros das funções na linguagem C</span></a>
+ <span class="menu-text">Parâmetros das funções</span></a>
   </div>
 </li>
       </ul>
@@ -397,12 +399,29 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
- <span class="menu-text">Estruturação de dados</span></a>
+ <span class="menu-text">Acesso à memória</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../linguagem-c/enderecamento-de-memoria-e-ponteiros.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Endereçamento de memória e ponteiros nos programas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">Estruturação de dados</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../linguagem-c/dados-com-struct.html" class="sidebar-item-text sidebar-link">
@@ -415,53 +434,12 @@ window.Quarto = {
  <span class="menu-text">Dados em vetores</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/modularizacao-com-vetores.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Modularização com vetores</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/dados-em-matrizes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dados em matrizes</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/modularizacao-com-matrizes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Modularização com matrizes</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/alocacao-dinamica-de-memoria.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Alocação dinâmica de memória</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
- <span class="menu-text">Manipulação de arquivos binários</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/arquivos-binarios.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Arquivos binários</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
- <span class="menu-text">Recursividade</span></a>
+ <span class="menu-text">Manipulação de arquivos</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -469,25 +447,8 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/recursividade.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">c-recursividade.qmd</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
- <span class="menu-text">Organização avançada do código</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/organizacao-do-codigo-separado.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Organização do código fonte em arquivos separados</span></a>
+  <a href="../linguagem-c/arquivos-texto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Arquivos texto</span></a>
   </div>
 </li>
       </ul>
@@ -533,7 +494,7 @@ window.Quarto = {
 
 
 <span class="math inline">\(\newcommand\Id[1]{\mbox{\textit{#1}}}\)</span>
-<p><span class="citation" data-cites="abelson1996">@abelson1996</span> escreveram uma vez que “programas devem ser escritos para que humanos os leiam e para que, somente como consequência, máquinas os executem”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Em outras palavras, compiladores não ligam para como os programas são escritos, para os nomes das variáveis nem para o bom ou mau gosto do programador. Programas apenas são compilados e executados.</p>
+<p><span class="citation" data-cites="abelson1996">Abelson e Sussman (<a href="#ref-abelson1996" role="doc-biblioref">1996</a>)</span> escreveram uma vez que “programas devem ser escritos para que humanos os leiam e para que, somente como consequência, máquinas os executem”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Em outras palavras, compiladores não ligam para como os programas são escritos, para os nomes das variáveis nem para o bom ou mau gosto do programador. Programas apenas são compilados e executados.</p>
 <section id="documentação" class="level2">
 <h2 class="anchored" data-anchor-id="documentação">Documentação</h2>
 <p>A primeira etapa para se ter um bom código fonte passa longe do código&nbsp;C em si. Ela consiste em ter, no início do código, um comentário com a descrição do conteúdo do arquivo.</p>
@@ -594,7 +555,7 @@ window.Quarto = {
 <section id="organização-visual" class="level2">
 <h2 class="anchored" data-anchor-id="organização-visual">Organização visual</h2>
 <p>O código fonte de um programa é escrito para que outros programadores (ou seja, pessoas) leiam e entendam os comandos e a intenção do programador.</p>
-<p>Segue um programa em C válido. Sua qualidade, entretanto, é discutível e é apenas uma nova versão do código que implementa o <a href="../algoritmos/nocoes.html#alg-pseudocodigo-raizes-equacao">Algoritmo 1</a>.</p>
+<p>Segue um programa em C válido. Sua qualidade, entretanto, é discutível e é apenas uma nova versão do código que implementa o <a href="../algoritmos/equacao-segundo-grau.html#alg-pseudocodigo-raizes-equacao">Algoritmo 1</a>.</p>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">Cálculo e apresentação das raízes reais de uma equação de segundo grau na</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">    forma ax^2 + bx + c = 0</span></span>
@@ -868,10 +829,15 @@ Dica
 <p>É importante lembrar que quando os problemas se tornam mais complexos, o código será mais longo e com mais nuances, assim como terá maior número de variáveis. Nesta situação, mais preciosa essa recomendação se torna.</p>
 
 
+
 </section>
 
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Notas de rodapé</h2>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-abelson1996" class="csl-entry" role="listitem">
+Abelson, Harold, e Gerald Jay Sussman. 1996. <em>Structure and interpretation of computer programs</em>. The MIT Press.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Notas de rodapé</h2>
 
 <ol>
 <li id="fn1"><p>Tradução livre de “<em>programs must be written for people to read, and only incidentally for machines to execute</em>”.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
@@ -972,7 +938,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/jandermoreira\.github\.io\/ap\.github\.io\/");
+      var filterRegex = new RegExp("https:\/\/jandermoreira\.github\.io\/algoritmos_e_programacao\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

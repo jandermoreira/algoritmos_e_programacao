@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>enderecamento-de-memoria-e-ponteiros – Algoritmos &amp; Programação</title>
+<title>Endereçamento de memória e ponteiros nos programas – Algoritmos &amp; Programação</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -152,7 +152,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../algoritmos/introducao.html"> 
+    <a class="nav-link" href="../algoritmos/index.html"> 
 <span class="menu-text">Algoritmos</span></a>
   </li>  
   <li class="nav-item">
@@ -181,13 +181,13 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../linguagem-c/funcoes.html">Modularização e memória</a></li><li class="breadcrumb-item"><a href="../linguagem-c/enderecamento-de-memoria-e-ponteiros.html">Endereçamento de memória e ponteiros nos programas</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../linguagem-c/enderecamento-de-memoria-e-ponteiros.html">Acesso à memória</a></li><li class="breadcrumb-item"><a href="../linguagem-c/enderecamento-de-memoria-e-ponteiros.html">Endereçamento de memória e ponteiros nos programas</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
-  <div id="quarto-announcement" data-announcement-id="488ded3f584a619e97fbebbe9d888524" class="alert alert-danger hidden"><i class="bi bi-exclamation-octagon quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p><strong>Atenção</strong> - Este site é apenas um protótipo/estudo de conceito. As informações aqui estão incompletas.</p>
+  <div id="quarto-announcement" data-announcement-id="037da44dd49132e8aac6c8da90475abb" class="alert alert-danger hidden"><i class="bi bi-exclamation-octagon quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong>Atenção</strong> - Este site está em construção. As informações ainda estão incompletas!</p>
 </div></div>
 </header>
 <!-- content -->
@@ -196,12 +196,6 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/introducao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introdução</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -220,7 +214,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../linguagem-c/tipos-de-dados.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tipos de dados da linguagem C</span></a>
+ <span class="menu-text">Tipos de dados primitivos</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -232,13 +226,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../linguagem-c/expressoes-aritmeticas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Expressões aritméticas de C</span></a>
+ <span class="menu-text">Expressões aritméticas</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../linguagem-c/expressoes-relacionais-e-logicas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">expressões relacionais e lógicas</span></a>
+ <span class="menu-text">Expressões relacionais e lógicas</span></a>
   </div>
 </li>
       </ul>
@@ -318,12 +312,6 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/arquivos-texto.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Arquivos texto</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../linguagem-c/desvirtuacao-das-repeticoes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Desvirtuação das repetições</span></a>
   </div>
@@ -348,7 +336,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../linguagem-c/manipulacao-de-dados-textuais.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Manipulação de dados textuais em C</span></a>
+ <span class="menu-text">Manipulação de dados textuais</span></a>
   </div>
 </li>
       </ul>
@@ -365,7 +353,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../linguagem-c/funcoes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Funções em C</span></a>
+ <span class="menu-text">Funções</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../linguagem-c/procedimentos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Procedimentos</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -376,20 +370,8 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/enderecamento-de-memoria-e-ponteiros.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Endereçamento de memória e ponteiros nos programas</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/procedimentos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Procedimentos em C</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../linguagem-c/parametros-de-funcoes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Parâmetros das funções na linguagem C</span></a>
+ <span class="menu-text">Parâmetros das funções</span></a>
   </div>
 </li>
       </ul>
@@ -397,12 +379,29 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
- <span class="menu-text">Estruturação de dados</span></a>
+ <span class="menu-text">Acesso à memória</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../linguagem-c/enderecamento-de-memoria-e-ponteiros.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Endereçamento de memória e ponteiros nos programas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">Estruturação de dados</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../linguagem-c/dados-com-struct.html" class="sidebar-item-text sidebar-link">
@@ -415,53 +414,12 @@ window.Quarto = {
  <span class="menu-text">Dados em vetores</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/modularizacao-com-vetores.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Modularização com vetores</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/dados-em-matrizes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dados em matrizes</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/modularizacao-com-matrizes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Modularização com matrizes</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/alocacao-dinamica-de-memoria.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Alocação dinâmica de memória</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
- <span class="menu-text">Manipulação de arquivos binários</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/arquivos-binarios.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Arquivos binários</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
- <span class="menu-text">Recursividade</span></a>
+ <span class="menu-text">Manipulação de arquivos</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -469,25 +427,8 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/recursividade.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">c-recursividade.qmd</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
- <span class="menu-text">Organização avançada do código</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/organizacao-do-codigo-separado.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Organização do código fonte em arquivos separados</span></a>
+  <a href="../linguagem-c/arquivos-texto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Arquivos texto</span></a>
   </div>
 </li>
       </ul>
@@ -514,13 +455,14 @@ window.Quarto = {
   <li><a href="#sec-exemplo-varios-ponteiros-para-mesmo-local" id="toc-sec-exemplo-varios-ponteiros-para-mesmo-local" class="nav-link" data-scroll-target="#sec-exemplo-varios-ponteiros-para-mesmo-local">Vários ponteiros para um mesmo local</a></li>
   <li><a href="#copiando-referências" id="toc-copiando-referências" class="nav-link" data-scroll-target="#copiando-referências">Copiando referências</a></li>
   </ul></li>
+  <li><a href="#boas-práticas" id="toc-boas-práticas" class="nav-link" data-scroll-target="#boas-práticas">Boas práticas</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../linguagem-c/funcoes.html">Modularização e memória</a></li><li class="breadcrumb-item"><a href="../linguagem-c/enderecamento-de-memoria-e-ponteiros.html">Endereçamento de memória e ponteiros nos programas</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../linguagem-c/enderecamento-de-memoria-e-ponteiros.html">Acesso à memória</a></li><li class="breadcrumb-item"><a href="../linguagem-c/enderecamento-de-memoria-e-ponteiros.html">Endereçamento de memória e ponteiros nos programas</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Endereçamento de memória e ponteiros nos programas</h1>
 </div>
@@ -542,8 +484,8 @@ window.Quarto = {
 <span class="math inline">\(\newcommand\Id[1]{\mbox{\textit{#1}}}\)</span>
 <p>Este capítulo aborda alguns detalhes sobre como os diversos elementos se relacionam à memória do dispositivo onde um programa é executado. Esse tema pode parecer desconexo do conteúdo de todos os capítulos anteriores, mas os conceitos descritos aqui são muito importantes para capítulos seguintes. Para capítulos anteriores este material complementa informações já apresentadas de forma mais superficial. Nos capítulos seguintes este conteúdo será relevante, pois são tratados mecanismos para modificar, dentro de funções, variáveis declaradas em outros escopos (<strong>?@sec-procedimentos</strong>, <strong>?@sec-passagem-por-referencia</strong>) e também meios para requerer dinamicamente espaços para armazenamento de dados (<strong>?@sec-alocacao-dinamica-de-memoria</strong>).</p>
 <p>Nesta parte do texto apenas os conceitos de armazenamento e uso da memória são abordados. As aplicações desses recursos para resolver problemas práticos da linguagem são abordados em outros lugares.</p>
-<section id="endereçamento-de-memória" class="level2">
-<h2 class="anchored" data-anchor-id="endereçamento-de-memória">Endereçamento de memória</h2>
+<section id="endereçamento-de-memória" class="level1">
+<h1>Endereçamento de memória</h1>
 <p>Quando uma variável é declarada, um espaço na memória é reservado para guardar seu valor. Por exemplo, ao se criar uma variável <code>i</code> do tipo <code>int</code>, alguns bytes da memória precisam ser reservados para guardar o valor da variável.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> i<span class="op">;</span>  <span class="co">// criação de uma variável inteira</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Ao se fazer uma atribuição, como <code>i = 10</code>, os bytes da variável <code>i</code> são modificados para representar o valor inteiro 10. Se uma chamada <code>printf("%d", i)</code> é feita, os bytes da memória reservados para <code>i</code> são consultados e convertidos para um texto (valor decimal, <code>%d</code>) e apresentado na tela.</p>
@@ -576,8 +518,8 @@ window.Quarto = {
 <p>Por exemplo, 7FFE51267D3C<sub>16</sub> (endereço de <code>i</code> no programa) corresponde ao valor decimal 140.730.259.897.660, mas esse valor, por si só, não é relevante. Dado que a variável está no endereço 7FFE51267D3C<sub>16</sub> e possui quatro bytes, os endereços 7FFE51267D3C<sub>16</sub>, 7FFE51267D3D<sub>16</sub>, 7FFE51267D3E<sub>16</sub> e 7FFE51267D3F<sub>16</sub> são usados pela variável. Um raciocínio similar se aplica aos oito bytes da variável <code>d</code>.</p>
 <p>Para os objetivos desta seção, é apenas relevante saber, que cada variável está em algum lugar e que o compilador sabe seu endereço. Desse modo, atribuições triviais como <code>d = -17.2</code> podem ser feitas, pois o compilador sabe o tipo (<code>double</code>), a quantidade de bytes que serão usados (<code>sizeof d</code>) e quais são esses bytes (os oito bytes começando em 7FFE51267D30<sub>16</sub>).</p>
 </section>
-<section id="armazenamento-de-endereços" class="level2">
-<h2 class="anchored" data-anchor-id="armazenamento-de-endereços">Armazenamento de endereços</h2>
+<section id="armazenamento-de-endereços" class="level1">
+<h1>Armazenamento de endereços</h1>
 <p>Endereços de memória podem ser guardados em variáveis, as quais recebem genericamente o nome de ponteiros. Quando um ponteiro guarda um endereço, diz-se que ele guarda uma referência àquele endereço e, portanto, ao seu conteúdo.</p>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"> * Armazenamento de endereços de memória</span></span>
@@ -594,7 +536,7 @@ window.Quarto = {
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
 <span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode terminal cell-output code-with-copy"><code class="sourceCode terminal"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>A variável d usa 8 bytes começando em 0x7ffdd58c8ac8.</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode terminal cell-output code-with-copy"><code class="sourceCode terminal"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>A variável d usa 8 bytes começando em 0x7ffe0fb2c048.</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Este programa cria uma variável chamada <code>endereco_de_d</code>, à qual é atribuído o valor <code>&amp;d</code> (que é o endereço de <code>d</code>). O tipo de uma variável que guarda endereços deve ser sempre um ponteiro e sua declaração usa o <code>*</code> para indicar isso.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> <span class="op">*</span>endereco_de_d<span class="op">;</span>  <span class="co">// variável que guarda um endereço</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Entrando em mais detalhes, a variável é declarada com o tipo <code>double *</code> e isso significa que a variável guarda o endereço de algo que ela sabe que é um <code>double</code>. Na prática, uma declaração de ponteiro como a usada significa que o valor armazenado será o endereço primeiro dos oito bytes que estão guardando um valor do tipo <code>double</code>.</p>
@@ -603,8 +545,8 @@ window.Quarto = {
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="dt">char</span> <span class="op">*</span>pc<span class="op">;</span>  <span class="co">// endereço de um char</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="dt">unsigned</span> <span class="dt">long</span> <span class="dt">int</span> <span class="op">*</span>puli<span class="op">;</span>  <span class="co">// endereço de um unsigned long int</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="ponteiros-nulos" class="level2">
-<h2 class="anchored" data-anchor-id="ponteiros-nulos">Ponteiros nulos</h2>
+<section id="ponteiros-nulos" class="level1">
+<h1>Ponteiros nulos</h1>
 <p>Não custa lembrar que uma variável do tipo ponteiro é como qualquer outra variável e, para ser usada, precisa ter um valor válido atribuído a ela. O programa que segue mostra o conteúdo de um ponteiro para <code>double</code> que não foi iniciado e, portanto, contém lixo.</p>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"> * Uso de um ponteiro sem valor atribuído</span></span>
@@ -626,7 +568,7 @@ window.Quarto = {
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>main.c:8:13: note: ‘ponteiro_para_double’ was declared here</span>
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    8 |     double *ponteiro_para_double;</span>
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>      |             ^~~~~~~~~~~~~~~~~~~~</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb11"><pre class="sourceCode terminal cell-output code-with-copy"><code class="sourceCode terminal"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>0x7ffc2c013888.</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode terminal cell-output code-with-copy"><code class="sourceCode terminal"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>0x7ffc98c94858.</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Porém, há uma diferença entre ter uma variável com valor inválido (nada foi atribuído a ela) e ter uma variável que “não aponta para nada”. Em C, o valor <code>NULL</code> é usado para indicar explicitamente que uma variável não é referência para um endereço real.</p>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"> * Uso de um ponteiro sem valor atribuído</span></span>
@@ -644,8 +586,8 @@ window.Quarto = {
 <p>Na computação em geral, termos como <em>null</em>, <em>nil</em> ou <em>nulo</em> são usados para se referir a um endereço sabidamente inválido. Em C esse valor é expresso por <code>NULL</code> e permite comparações, como <code>if (p != NULL)</code>, por exemplo.</p>
 <p>Para recordar essa situação é possível citar o acesso a arquivos. Uma variável para guardar um arquivo lógico é um ponteiro do tipo <code>FILE *</code>, ou seja, guarda uma referência (endereço) de um objeto do tipo <code>FILE</code>. Quando uma chamada à função <code>fopen</code> não consegue acessar o arquivo, ela retorna <code>NULL</code>, Em outras palavras, <code>fopen</code> retorna o endereço de algo válido em caso de sucesso ou o endereço especial <code>NULL</code> para indicar que o endereço não pode ser usado. Todas as demais funções (<code>fprint</code>, <code>fgets</code>, <code>fclose</code>) apenas usam o endereço válido quando são chamadas.</p>
 </section>
-<section id="manipulação-da-memória-com-uso-de-ponteiros" class="level2">
-<h2 class="anchored" data-anchor-id="manipulação-da-memória-com-uso-de-ponteiros">Manipulação da memória com uso de ponteiros</h2>
+<section id="manipulação-da-memória-com-uso-de-ponteiros" class="level1">
+<h1>Manipulação da memória com uso de ponteiros</h1>
 <p>Uma aplicação importante de ponteiros é a possibilidade de, tendo em mãos um endereço, modificar o que há naquele local. Assim, se um ponteiro contém o endereço de um inteiro, é viável ver e alterar o valor apontado.</p>
 <p>Um exemplo inicial simples é apresentado na sequência, ilustrando como o ponteiro pode ser usado para acessar uma posição de memória.</p>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
@@ -771,8 +713,8 @@ Tabela&nbsp;1: Algumas declarações de ponteiros e os tipos associados ao ident
 <span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>j <span class="op">=</span> <span class="op">*</span>pi<span class="op">;</span>  <span class="co">// copia o valor 10 (de i) para j</span></span>
 <span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="op">*</span>pi <span class="op">=</span> <span class="dv">1</span><span class="op">;</span>  <span class="co">// coloca o valor 1 em i</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="os-ponteiros-têm-tipos" class="level2">
-<h2 class="anchored" data-anchor-id="os-ponteiros-têm-tipos">Os ponteiros têm tipos</h2>
+<section id="os-ponteiros-têm-tipos" class="level1">
+<h1>Os ponteiros têm tipos</h1>
 <p>Os ponteiros são sempre declarados usando um tipo (<code>char</code>, <code>int</code>, <code>double</code> etc.) e especificando um asterisco antes do identificador, conforme os exemplos que seguem.</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> <span class="op">*</span>pi<span class="op">;</span>  <span class="co">// ponteiro para int</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="dt">char</span> <span class="op">*</span>pc<span class="op">;</span>  <span class="co">// ponteiro para char</span></span>
@@ -799,8 +741,8 @@ Tabela&nbsp;1: Algumas declarações de ponteiros e os tipos associados ao ident
 <div class="sourceCode" id="cb24"><pre class="sourceCode terminal cell-output code-with-copy"><code class="sourceCode terminal"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>d = 1.4013e-42.</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Como as representações de <code>float</code> e <code>int</code> são diferentes, a variável <code>f</code> tenta extrair um valor real a partir de um conjunto de bits que, na realidade, representa um inteiro. A conclusão é simples: não funciona.</p>
 </section>
-<section id="sec-ponteiros-para-cadeias-de-caracteres" class="level2">
-<h2 class="anchored" data-anchor-id="sec-ponteiros-para-cadeias-de-caracteres">Ponteiros para cadeias de caracteres</h2>
+<section id="sec-ponteiros-para-cadeias-de-caracteres" class="level1">
+<h1>Ponteiros para cadeias de caracteres</h1>
 <p>Em C, uma cadeia de caracteres é uma sequência de bytes contínuos na memória (os caracteres) seguida por um byte nulo <code>\0</code>. É dessa forma, por exemplo, que a função <code>printf</code>, quando usa o formato <code>%s</code>, interpreta a memória e decide o que apresentar na tela.</p>
 <p>Como está introduzido na <strong>?@sec-dados-textuais</strong>, há cadeias de caracteres constantes e também em variáveis. Em particular, a <strong>?@sec-ponteiros-para-strings-constantes</strong> mostra como usar ponteiros para referenciar as constantes literais existentes em um programa.</p>
 <p>Da mesma forma que é possível ter uma variável do tipo <code>char *</code> apontando para uma constante, também é comum que esse ponteiro seja usado para apontar para uma variável.</p>
@@ -844,11 +786,11 @@ Tabela&nbsp;1: Algumas declarações de ponteiros e os tipos associados ao ident
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>outro_nome <span class="op">=</span> nome<span class="op">;</span>  <span class="co">// não funciona, pois 'nome' é um endereço e não</span></span>
 <span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>                    <span class="co">// o texto "Cervantes"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="exemplos" class="level2">
-<h2 class="anchored" data-anchor-id="exemplos">Exemplos</h2>
+<section id="exemplos" class="level1">
+<h1>Exemplos</h1>
 <p>Nesta seção são apresentados alguns programas relativamente simples e genéricos que usam ponteiros, tendo como objetivo reforçar os conceitos e indicar alguns de seus usos.</p>
-<section id="selecionando-o-menor-valor" class="level3">
-<h3 class="anchored" data-anchor-id="selecionando-o-menor-valor">Selecionando o menor valor</h3>
+<section id="selecionando-o-menor-valor" class="level2">
+<h2 class="anchored" data-anchor-id="selecionando-o-menor-valor">Selecionando o menor valor</h2>
 <p>O exemplo seguinte usa um ponteiro para modificar o valor de uma entre duas variáveis. A variável a ser modificada é sempre a de valor mínimo.</p>
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="co"> * Duplicando o valor mínimo com uso de ponteiro</span></span>
@@ -884,8 +826,8 @@ Tabela&nbsp;1: Algumas declarações de ponteiros e os tipos associados ao ident
 <p>A estrutura <code>if</code> usada poderia ser substituída por uma atribuição com o condicional ternário:</p>
 <div class="sourceCode" id="cb32"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>ponteiro_minimo <span class="op">=</span> <span class="op">(</span>valor1 <span class="op">&lt;</span> valor2<span class="op">)</span> <span class="op">?</span> <span class="op">&amp;</span>valor1 <span class="op">:</span> <span class="op">&amp;</span>valor2<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="sec-exemplo-varios-ponteiros-para-mesmo-local" class="level3">
-<h3 class="anchored" data-anchor-id="sec-exemplo-varios-ponteiros-para-mesmo-local">Vários ponteiros para um mesmo local</h3>
+<section id="sec-exemplo-varios-ponteiros-para-mesmo-local" class="level2">
+<h2 class="anchored" data-anchor-id="sec-exemplo-varios-ponteiros-para-mesmo-local">Vários ponteiros para um mesmo local</h2>
 <p>Assim como nada impede que duas ou mais variáveis <code>double</code> tenham um mesmo valor, também é possível que vários ponteiros armazenem o mesmo endereço. Nesse caso, diz-se que vários ponteiros apontam para o mesmo local.</p>
 <p>O programa seguinte define uma variável <code>c</code> do tipo <code>char</code> e usa três ponteiros para referenciá-la.</p>
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
@@ -922,8 +864,8 @@ Tabela&nbsp;1: Algumas declarações de ponteiros e os tipos associados ao ident
 <span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>c = E; *p1 = E; *p2 = E; *p3 = E.</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Como todas as variáveis (<code>c</code>, <code>*p1</code>, <code>*p2</code> e <code>*p3</code>) estão se referenciando ao mesmo <code>char</code> na memória, esse caractere pode ser modificado por qualquer uma delas.</p>
 </section>
-<section id="copiando-referências" class="level3">
-<h3 class="anchored" data-anchor-id="copiando-referências">Copiando referências</h3>
+<section id="copiando-referências" class="level2">
+<h2 class="anchored" data-anchor-id="copiando-referências">Copiando referências</h2>
 <p>Ao se atribuir o endereço de uma variável a um ponteiro, o valor armazenado é o endereço de memória do primeiro byte dessa variável. Se houver outra variável do tipo ponteiro, esse endereço pode ser copiado para ela com uma atribuição simples. Dessa forma, como no exemplo da <a href="#sec-exemplo-varios-ponteiros-para-mesmo-local" class="quarto-xref">Seção&nbsp;7.2</a>, o resultado é que se tem mais de um ponteiro referenciando uma mesma posição.</p>
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="co"> * Cópia de referência entre ponteiros</span></span>
@@ -946,9 +888,16 @@ Tabela&nbsp;1: Algumas declarações de ponteiros e os tipos associados ao ident
 <div class="sourceCode" id="cb36"><pre class="sourceCode terminal cell-output code-with-copy"><code class="sourceCode terminal"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>c = A; *p1 = A; *p2 = A.</span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>c = X; *p1 = X; *p2 = X.</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Neste programa, <code>p1</code> aponta para <code>c</code> ao receber <code>&amp;c</code>. Para <code>p2</code> é atribuído o valor de <code>p1</code>, o qual, nesse momento, é igual ao <code>&amp;c</code>.</p>
-
-
 </section>
+</section>
+<section id="boas-práticas" class="level1">
+<h1>Boas práticas</h1>
+<ul>
+<li>Garantia de iniciação de ponteiro antes do uso.</li>
+<li>Evitação de acesso a ponteiros nulos.</li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -1042,7 +991,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/jandermoreira\.github\.io\/ap\.github\.io\/");
+      var filterRegex = new RegExp("https:\/\/jandermoreira\.github\.io\/algoritmos_e_programacao\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

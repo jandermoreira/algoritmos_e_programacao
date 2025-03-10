@@ -118,7 +118,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./algoritmos/introducao.html"> 
+    <a class="nav-link" href="./algoritmos/index.html"> 
 <span class="menu-text">Algoritmos</span></a>
   </li>  
   <li class="nav-item">
@@ -142,8 +142,8 @@ window.Quarto = {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <div id="quarto-announcement" data-announcement-id="488ded3f584a619e97fbebbe9d888524" class="alert alert-danger hidden"><i class="bi bi-exclamation-octagon quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p><strong>Atenção</strong> - Este site é apenas um protótipo/estudo de conceito. As informações aqui estão incompletas.</p>
+  <div id="quarto-announcement" data-announcement-id="037da44dd49132e8aac6c8da90475abb" class="alert alert-danger hidden"><i class="bi bi-exclamation-octagon quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong>Atenção</strong> - Este site está em construção. As informações ainda estão incompletas!</p>
 </div></div>
 </header>
 <!-- content -->
@@ -177,6 +177,20 @@ window.Quarto = {
 
 <span class="math inline">\(\newcommand\Id[1]{\mbox{\textit{#1}}}\)</span>
 <p>Este site é dedicado ao ensino para a <strong>construção de algoritmos</strong> e para o básico da <strong>programação na linguagem C</strong>.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Aviso
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Houve uma reformulação da estrutura do site e ainda há ajustes a serem feitos.</p>
+<p>Notadamente, ainda há muitas referências cruzadas entre as páginas que precisam ser corrigidas. Isso será feito com o tempo…</p>
+</div>
+</div>
 
 
 
@@ -271,7 +285,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/jandermoreira\.github\.io\/ap\.github\.io\/");
+      var filterRegex = new RegExp("https:\/\/jandermoreira\.github\.io\/algoritmos_e_programacao\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

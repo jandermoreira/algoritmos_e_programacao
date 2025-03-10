@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>arquivos-binarios – Algoritmos &amp; Programação</title>
+<title>Arquivos binários – Algoritmos &amp; Programação</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -100,7 +100,7 @@ window.Quarto = {
 <link rel="stylesheet" href="../book.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -118,11 +118,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../algoritmos/introducao.html"> 
+    <a class="nav-link" href="../algoritmos/index.html"> 
 <span class="menu-text">Algoritmos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../linguagem-c/index.html" aria-current="page"> 
+    <a class="nav-link" href="../linguagem-c/index.html"> 
 <span class="menu-text">Linguagem C</span></a>
   </li>  
 </ul>
@@ -142,366 +142,74 @@ window.Quarto = {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../linguagem-c/arquivos-binarios.html">Manipulação de arquivos binários</a></li><li class="breadcrumb-item"><a href="../linguagem-c/arquivos-binarios.html">Arquivos binários</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
-  <div id="quarto-announcement" data-announcement-id="488ded3f584a619e97fbebbe9d888524" class="alert alert-danger hidden"><i class="bi bi-exclamation-octagon quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p><strong>Atenção</strong> - Este site é apenas um protótipo/estudo de conceito. As informações aqui estão incompletas.</p>
+  <div id="quarto-announcement" data-announcement-id="037da44dd49132e8aac6c8da90475abb" class="alert alert-danger hidden"><i class="bi bi-exclamation-octagon quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong>Atenção</strong> - Este site está em construção. As informações ainda estão incompletas!</p>
 </div></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/introducao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introdução</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Programação básica</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introdução à linguagem C</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/tipos-de-dados.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tipos de dados da linguagem C</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/variaveis-identificadores-e-leitura.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Variáveis e leituras em C</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/expressoes-aritmeticas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Expressões aritméticas de C</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/expressoes-relacionais-e-logicas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">expressões relacionais e lógicas</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Controle de fluxo simples</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/execucao-condicional-com-if.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Execução condicional com <code>if</code></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/execucao-condicional-com-switch.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Execução condicional com <code>switch</code></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Organização geral do código</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/escopo-basico-de-declaracoes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Escopo básico de declarações</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/organizacao-do-codigo-fonte.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Organização do código fonte</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Controle de repetição do fluxo</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/repeticoes-com-while.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Repetições com <code>while</code></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/repeticoes-com-for.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Repetições com <code>for</code></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/repeticoes-com-do-while.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Repetições com <code>do while</code></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/arquivos-texto.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Arquivos texto</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/desvirtuacao-das-repeticoes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Desvirtuação das repetições</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Cadeias de caracteres</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/dados-textuais.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dados textuais em C</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/manipulacao-de-dados-textuais.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Manipulação de dados textuais em C</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Modularização e memória</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/funcoes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Funções em C</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/regras-de-escopo-com-modularizacao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Regras de escopo com a modularização</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/enderecamento-de-memoria-e-ponteiros.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Endereçamento de memória e ponteiros nos programas</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/procedimentos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Procedimentos em C</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/parametros-de-funcoes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Parâmetros das funções na linguagem C</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
- <span class="menu-text">Estruturação de dados</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/dados-com-struct.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dados com <code>struct</code></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/dados-em-vetores.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dados em vetores</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/modularizacao-com-vetores.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Modularização com vetores</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/dados-em-matrizes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dados em matrizes</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/modularizacao-com-matrizes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Modularização com matrizes</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/alocacao-dinamica-de-memoria.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Alocação dinâmica de memória</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
- <span class="menu-text">Manipulação de arquivos binários</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/arquivos-binarios.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Arquivos binários</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
- <span class="menu-text">Recursividade</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/recursividade.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">c-recursividade.qmd</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
- <span class="menu-text">Organização avançada do código</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/organizacao-do-codigo-separado.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Organização do código fonte em arquivos separados</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Nesta página:</h2>
    
   <ul>
-  <li><a href="#sec-arquivos-binarios" id="toc-sec-arquivos-binarios" class="nav-link active" data-scroll-target="#sec-arquivos-binarios">Arquivos binários</a>
-  <ul class="collapse">
-  <li><a href="#arquivos-binários" id="toc-arquivos-binários" class="nav-link" data-scroll-target="#arquivos-binários">Arquivos binários</a></li>
+  <li><a href="#arquivos-binários" id="toc-arquivos-binários" class="nav-link active" data-scroll-target="#arquivos-binários">Arquivos binários</a></li>
   <li><a href="#acesso-direto-fseek" id="toc-acesso-direto-fseek" class="nav-link" data-scroll-target="#acesso-direto-fseek">Acesso direto (<code>fseek</code>)</a></li>
   <li><a href="#stdint.h" id="toc-stdint.h" class="nav-link" data-scroll-target="#stdint.h"><code>stdint.h</code></a></li>
   <li><a href="#arquivos-de-registros" id="toc-arquivos-de-registros" class="nav-link" data-scroll-target="#arquivos-de-registros">Arquivos de registros</a></li>
-  </ul></li>
+  <li><a href="#boas-práticas" id="toc-boas-práticas" class="nav-link" data-scroll-target="#boas-práticas">Boas práticas</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../linguagem-c/arquivos-binarios.html">Manipulação de arquivos binários</a></li><li class="breadcrumb-item"><a href="../linguagem-c/arquivos-binarios.html">Arquivos binários</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Arquivos binários</h1>
+</div>
 
 
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <span class="math inline">\(\newcommand\Id[1]{\mbox{\textit{#1}}}\)</span>
-<section id="sec-arquivos-binarios" class="level1">
-<h1>Arquivos binários</h1>
 <p>Em construção…</p>
-<section id="arquivos-binários" class="level2">
-<h2 class="anchored" data-anchor-id="arquivos-binários">Arquivos binários</h2>
+<section id="arquivos-binários" class="level1">
+<h1>Arquivos binários</h1>
 </section>
-<section id="acesso-direto-fseek" class="level2">
-<h2 class="anchored" data-anchor-id="acesso-direto-fseek">Acesso direto (<code>fseek</code>)</h2>
+<section id="acesso-direto-fseek" class="level1">
+<h1>Acesso direto (<code>fseek</code>)</h1>
 </section>
-<section id="stdint.h" class="level2">
-<h2 class="anchored" data-anchor-id="stdint.h"><code>stdint.h</code></h2>
+<section id="stdint.h" class="level1">
+<h1><code>stdint.h</code></h1>
 </section>
-<section id="arquivos-de-registros" class="level2">
-<h2 class="anchored" data-anchor-id="arquivos-de-registros">Arquivos de registros</h2>
+<section id="arquivos-de-registros" class="level1">
+<h1>Arquivos de registros</h1>
+</section>
+<section id="boas-práticas" class="level1">
+<h1>Boas práticas</h1>
+<ul>
+<li>Atenção aos parâmetros de <code>fread</code> e <code>fwrite</code>.</li>
+<li>Uso de <code>sizeof</code> para especificar o tamanho do objeto.</li>
+<li>Uso dos valores de retorno da leitura e escrita.</li>
+<li>Atenção para movimentar para a posição correta ao usar <code>fseek</code>.</li>
+<li>Sempre fechar arquivo com <code>fclose</code>.</li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -595,7 +303,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/jandermoreira\.github\.io\/ap\.github\.io\/");
+      var filterRegex = new RegExp("https:\/\/jandermoreira\.github\.io\/algoritmos_e_programacao\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

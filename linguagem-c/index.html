@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>index – Algoritmos &amp; Programação</title>
+<title>Introdução à linguagem C – Algoritmos &amp; Programação</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -54,7 +54,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -152,7 +172,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../algoritmos/introducao.html"> 
+    <a class="nav-link" href="../algoritmos/index.html"> 
 <span class="menu-text">Algoritmos</span></a>
   </li>  
   <li class="nav-item">
@@ -186,8 +206,8 @@ window.Quarto = {
         </a>
     </div>
   </nav>
-  <div id="quarto-announcement" data-announcement-id="488ded3f584a619e97fbebbe9d888524" class="alert alert-danger hidden"><i class="bi bi-exclamation-octagon quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p><strong>Atenção</strong> - Este site é apenas um protótipo/estudo de conceito. As informações aqui estão incompletas.</p>
+  <div id="quarto-announcement" data-announcement-id="037da44dd49132e8aac6c8da90475abb" class="alert alert-danger hidden"><i class="bi bi-exclamation-octagon quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong>Atenção</strong> - Este site está em construção. As informações ainda estão incompletas!</p>
 </div></div>
 </header>
 <!-- content -->
@@ -196,12 +216,6 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/introducao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introdução</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -220,7 +234,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../linguagem-c/tipos-de-dados.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tipos de dados da linguagem C</span></a>
+ <span class="menu-text">Tipos de dados primitivos</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -232,13 +246,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../linguagem-c/expressoes-aritmeticas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Expressões aritméticas de C</span></a>
+ <span class="menu-text">Expressões aritméticas</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../linguagem-c/expressoes-relacionais-e-logicas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">expressões relacionais e lógicas</span></a>
+ <span class="menu-text">Expressões relacionais e lógicas</span></a>
   </div>
 </li>
       </ul>
@@ -318,12 +332,6 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/arquivos-texto.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Arquivos texto</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../linguagem-c/desvirtuacao-das-repeticoes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Desvirtuação das repetições</span></a>
   </div>
@@ -348,7 +356,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../linguagem-c/manipulacao-de-dados-textuais.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Manipulação de dados textuais em C</span></a>
+ <span class="menu-text">Manipulação de dados textuais</span></a>
   </div>
 </li>
       </ul>
@@ -365,7 +373,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../linguagem-c/funcoes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Funções em C</span></a>
+ <span class="menu-text">Funções</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../linguagem-c/procedimentos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Procedimentos</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -376,20 +390,8 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/enderecamento-de-memoria-e-ponteiros.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Endereçamento de memória e ponteiros nos programas</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/procedimentos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Procedimentos em C</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../linguagem-c/parametros-de-funcoes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Parâmetros das funções na linguagem C</span></a>
+ <span class="menu-text">Parâmetros das funções</span></a>
   </div>
 </li>
       </ul>
@@ -397,12 +399,29 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
- <span class="menu-text">Estruturação de dados</span></a>
+ <span class="menu-text">Acesso à memória</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../linguagem-c/enderecamento-de-memoria-e-ponteiros.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Endereçamento de memória e ponteiros nos programas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">Estruturação de dados</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../linguagem-c/dados-com-struct.html" class="sidebar-item-text sidebar-link">
@@ -415,53 +434,12 @@ window.Quarto = {
  <span class="menu-text">Dados em vetores</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/modularizacao-com-vetores.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Modularização com vetores</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/dados-em-matrizes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dados em matrizes</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/modularizacao-com-matrizes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Modularização com matrizes</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/alocacao-dinamica-de-memoria.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Alocação dinâmica de memória</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
- <span class="menu-text">Manipulação de arquivos binários</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/arquivos-binarios.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Arquivos binários</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
- <span class="menu-text">Recursividade</span></a>
+ <span class="menu-text">Manipulação de arquivos</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -469,25 +447,8 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/recursividade.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">c-recursividade.qmd</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
- <span class="menu-text">Organização avançada do código</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linguagem-c/organizacao-do-codigo-separado.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Organização do código fonte em arquivos separados</span></a>
+  <a href="../linguagem-c/arquivos-texto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Arquivos texto</span></a>
   </div>
 </li>
       </ul>
@@ -510,14 +471,15 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#sec-programa-minimo" id="toc-sec-programa-minimo" class="nav-link" data-scroll-target="#sec-programa-minimo">Primeiro programa: um programa mínimo (e inútil)</a></li>
   <li><a href="#segundo-programa-hello-world" id="toc-segundo-programa-hello-world" class="nav-link" data-scroll-target="#segundo-programa-hello-world">Segundo programa: <em>Hello, world!</em></a></li>
-  </ul></li>
   <li><a href="#comandos-simples" id="toc-comandos-simples" class="nav-link" data-scroll-target="#comandos-simples">Comandos simples</a></li>
+  </ul></li>
   <li><a href="#código-fonte-objeto-e-executável" id="toc-código-fonte-objeto-e-executável" class="nav-link" data-scroll-target="#código-fonte-objeto-e-executável">Código fonte, objeto e executável</a>
   <ul class="collapse">
   <li><a href="#compilação-com-o-gcc" id="toc-compilação-com-o-gcc" class="nav-link" data-scroll-target="#compilação-com-o-gcc">Compilação com o <code>gcc</code></a></li>
   <li><a href="#erros-de-sintaxe" id="toc-erros-de-sintaxe" class="nav-link" data-scroll-target="#erros-de-sintaxe">Erros de sintaxe</a></li>
   <li><a href="#erros-de-lógica" id="toc-erros-de-lógica" class="nav-link" data-scroll-target="#erros-de-lógica">Erros de lógica</a></li>
   </ul></li>
+  <li><a href="#boas-práticas" id="toc-boas-práticas" class="nav-link" data-scroll-target="#boas-práticas">Boas práticas</a></li>
   </ul>
 </nav>
     </div>
@@ -544,15 +506,15 @@ window.Quarto = {
 
 
 <span class="math inline">\(\newcommand\Id[1]{\mbox{\textit{#1}}}\)</span>
-<p>Neste capítulo é feita a apresentação da linguagem C, um pouco de suas origens e a evolução de sua especificação. Juntamente a essa introdução, a compilação e os conceitos de código fonte, objeto e executável também são tratados.</p>
-<section id="origens-da-linguagem-c" class="level2">
-<h2 class="anchored" data-anchor-id="origens-da-linguagem-c">Origens da linguagem C</h2>
+<p>Neste tópico é feita a apresentação da linguagem C, um pouco de suas origens e a evolução de sua especificação. Juntamente a essa introdução, a compilação e os conceitos de código fonte, objeto e executável também são tratados.</p>
+<section id="origens-da-linguagem-c" class="level1">
+<h1>Origens da linguagem C</h1>
 <p>A inspiração da linguagem C veio das linguagens BCPL e B, ambas projetadas para a implementação de sistemas operacionais. Muitos elementos de C se originaram dessas linguagens.</p>
 <p>C surgiu como uma linguagem de propósito geral que incorporava os principais mecanismos de controle de fluxo, como condicionais e estruturas de repetição, juntamente com estruturas de dados como arranjos e registros. A linguagem não foi estruturada como tendo um alto nível de abstração e não foca em nenhuma área de aplicação em particular.</p>
 <p>Dennis Ritchie projetou e implementou a linguagem C em um DEC&nbsp;PDP-11, o qual usava o sistema operacional UNIX. Na realidade, tanto o compilador C quanto o próprio sistema operacional foram implementados em C. Esse desenvolvimento ocorreu de 1969 a 1973. Também à época, compiladores C já haviam sido implementados para executar em diversas outras máquinas, como equipamentos IBM, Honeywell e Interdata.</p>
-<p>Este histórico foi baseado em <span class="citation" data-cites="richards1969">@richards1969</span>, <span class="citation" data-cites="johnson1973">@johnson1973</span>, <span class="citation" data-cites="ritchie1978">@ritchie1978</span> e <span class="citation" data-cites="ritchie1993">@ritchie1993</span>.</p>
-<section id="sec-padronizacao-da-linguagem" class="level3">
-<h3 class="anchored" data-anchor-id="sec-padronizacao-da-linguagem">Padronização da linguagem</h3>
+<p>Este histórico foi baseado em <span class="citation" data-cites="richards1969">Richards (<a href="#ref-richards1969" role="doc-biblioref">1969</a>)</span>, <span class="citation" data-cites="johnson1973">Johnson e Kernighan (<a href="#ref-johnson1973" role="doc-biblioref">1973</a>)</span>, <span class="citation" data-cites="ritchie1978">Ritchie et al. (<a href="#ref-ritchie1978" role="doc-biblioref">1978</a>)</span> e <span class="citation" data-cites="ritchie1993">Ritchie (<a href="#ref-ritchie1993" role="doc-biblioref">1993</a>)</span>.</p>
+<section id="sec-padronizacao-da-linguagem" class="level2">
+<h2 class="anchored" data-anchor-id="sec-padronizacao-da-linguagem">Padronização da linguagem</h2>
 <p>Sem uma padronização <em>de facto</em> da linguagem C nos anos seguintes a sua criação, havia uma liberdade grande demais na implementação dos diversos compiladores que apareceram. A especificação conhecida por K&amp;R&nbsp;C era, na ocasião, a única disponível.</p>
 <p>De 1983 a 1989, o American National Standards Institute (ANSI) formou um grupo de trabalho para a padronização da linguagem, estabelecendo, ao final o padrão conhecido por C89 ou ANSI&nbsp;C. Esse mesmo padrão foi reeditado em 1990, com o rótulo C90, porém sem modificações relevantes na especificação.</p>
 <p>Uma extensão foi incorporada à especificação em 1995, com novas definições e adições à biblioteca padrão. Este padrão foi chamado de C95.</p>
@@ -560,15 +522,15 @@ window.Quarto = {
 <p>Em 2011 foi publicada a especificação C11, a qual provê suporte a caracteres Unicode, expressões com tipos genéricos (<code>_Generic</code>) e execução paralela multi-plataforma com <code>threads.h</code>.</p>
 <p>O padrão atual para a linguagem C, no momento da escrita deste texto, é o C17, publicado em 2018. O C17 não acrescenta novos recursos à linguagem, porém corrige falhas na versão C11. A especificação C17 também é referenciada como C18.</p>
 <p>Neste ano de 2023 é esperada a próxima edição do padrão da linguagem&nbsp;C, informalmente designado C23.</p>
-<p>A especificação K&amp;R&nbsp;C foi descrita em <span class="citation" data-cites="ritchie1978">@ritchie1978</span>; as demais especificações estão apropriadamente descritas em <span class="citation" data-cites="cprogramminglanguage">@cprogramminglanguage</span>.</p>
+<p>A especificação K&amp;R&nbsp;C foi descrita em <span class="citation" data-cites="ritchie1978">Ritchie et al. (<a href="#ref-ritchie1978" role="doc-biblioref">1978</a>)</span>; as demais especificações estão apropriadamente descritas em <span class="citation" data-cites="cprogramminglanguage">Wikipedia (<a href="#ref-cprogramminglanguage" role="doc-biblioref">2023</a>)</span>.</p>
 </section>
 </section>
-<section id="programa-básico" class="level2">
-<h2 class="anchored" data-anchor-id="programa-básico">Programa básico</h2>
+<section id="programa-básico" class="level1">
+<h1>Programa básico</h1>
 <p>Programar em C não é tão complexo, mas também não é tão natural. Muitos aspectos básicos da linguagem requereriam, em teoria, um conhecimento mais sólido sobre o que são variáveis, como estas existem na memória e como podem ser manipuladas.</p>
 <p>Em um primeiro momento, estes detalhes serão ignorados, visto que é possível começar a programar e apenas aceitar que algumas coisas são assim mesmo. Para estes detalhes, por enquanto, basta pensar “não sei, só sei que foi assim”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
-<section id="sec-programa-minimo" class="level3">
-<h3 class="anchored" data-anchor-id="sec-programa-minimo">Primeiro programa: um programa mínimo (e inútil)</h3>
+<section id="sec-programa-minimo" class="level2">
+<h2 class="anchored" data-anchor-id="sec-programa-minimo">Primeiro programa: um programa mínimo (e inútil)</h2>
 <p>Para começar diferente, o primeiro programa exemplo não será o <em>Hello, world!</em>, amplamente utilizado na literatura e em tutoriais. Ele será o código mínimo na linguagem que é válido e coerente. Por ser mínimo, porém, não faz nada útil.</p>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span> <span class="op">{</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
@@ -582,8 +544,8 @@ window.Quarto = {
 <p>Neste exemplo, há um único comando dentro de <code>main</code>: <code>return 0;</code>. Este comando indica que, ao ser terminado, o programa devolve ao sistema operacional um valor inteiro, que é um indicador que indica em que condições o programa encerrou sua execução. Por convenção, o valor zero significa que a execução se encerrou sem erros.</p>
 <p>Ao ser compilado e executado, este programa apenas indica ao sistema operacional que terminou sem erros.</p>
 </section>
-<section id="segundo-programa-hello-world" class="level3">
-<h3 class="anchored" data-anchor-id="segundo-programa-hello-world">Segundo programa: <em>Hello, world!</em></h3>
+<section id="segundo-programa-hello-world" class="level2">
+<h2 class="anchored" data-anchor-id="segundo-programa-hello-world">Segundo programa: <em>Hello, world!</em></h2>
 <p>O segundo exemplo expande o código anterior, agora para apresentar uma mensagem na tela. Para isso, ele usa uma função chamada <code>printf</code>, responsável por apresentar uma saída formatada.</p>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -610,7 +572,6 @@ window.Quarto = {
 <div class="sourceCode" id="cb5"><pre class="sourceCode terminal cell-output code-with-copy"><code class="sourceCode terminal"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Hello, world!</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Esta versão acrescenta a documentação do código. Qualquer texto colocado entre <code>/*</code> e <code>*/</code> é um comentário e é ignorado completamente pelo compilador ao analisar o código fonte. Os comentários não são para o compilador, mas para humanos que lerão o código do programa.</p>
 <p>Neste caso específico, o comentário tem a função de documentar o propósito do código. Ele fornece uma descrição do propósito do código e dá informações relevantes. O grau de detalhe depende sempre do contexto; códigos simples podem ter documentação mais simples, enquanto programas que fazem parte de um projeto compartilhado entre vários desenvolvedores deve conter as informações necessárias para que todos da equipe os compreendam.</p>
-</section>
 </section>
 <section id="comandos-simples" class="level2">
 <h2 class="anchored" data-anchor-id="comandos-simples">Comandos simples</h2>
@@ -679,8 +640,9 @@ Curiosidade
 </div>
 </div>
 </section>
-<section id="código-fonte-objeto-e-executável" class="level2">
-<h2 class="anchored" data-anchor-id="código-fonte-objeto-e-executável">Código fonte, objeto e executável</h2>
+</section>
+<section id="código-fonte-objeto-e-executável" class="level1">
+<h1>Código fonte, objeto e executável</h1>
 <p>Todos os programas em C são escritos em arquivos de texto simples, que são os que não dão suporte a negrito e itálico, tipos de fonte ou formatação de parágrafo, entre outros recursos. O código em C segue uma sintaxe bastante específica e os programas escritos são chamados de código fonte.</p>
 <p>Para um programa escrito em C ser executado, primeiramente é necessário que ele seja compilado. O compilador é um programa cuja atribuição principal é analisar o código fonte, interpretando as letras, símbolos e dígitos ali escritos e gerar o código objeto, que é o código compilado. O código objeto é guardado em um arquivo e já não é mais legível por humanos, já que contém as instruções que o processador é capaz de entender e executar.</p>
 <p>O código fonte, depois de compilado, leva a um código objeto que é dependente da máquina. Assim, são produzidos códigos objeto específicos para processadores x86, ARM ou outro. Para que um mesmo programa possa ser executado em plataformas diferentes, é preciso que ele seja compilado para cada plataforma alvo individualmente.</p>
@@ -688,11 +650,12 @@ Curiosidade
 <p>Neste texto, a especificação conhecida como C17 (da ISO) é a adotada para todas as implementações. Os programas são compilador usando o compilador GNU em um sistema operacional Linux, tudo sobre um hardware x86.</p>
 <p>Finalmente, ainda há uma última etapa, na qual o código compilado é colocado em um arquivo que o sistema operacional da vez consegue carregar para a memória e colocá-lo em execução. Este é chamado de código executável e também depende da plataforma.</p>
 <p>Usualmente a etapa do código objeto é escondida de quem usa o compilador e, aparentemente, do código fonte é gerado diretamente o executável. Na prática, esse é o efeito final.</p>
-<section id="compilação-com-o-gcc" class="level3">
-<h3 class="anchored" data-anchor-id="compilação-com-o-gcc">Compilação com o <code>gcc</code></h3>
-<p>Há uma diversidade de compiladores para a linguagem C, além de diversos IDEs<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> com diferentes facilidades para escrever códigos fonte. Há IDEs que podem ser instalados, como Visual Studio Code<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, Code::Blocks<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, Visual Studio<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> ou Eclipse<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>, por exemplo, além das disponíveis <em>online</em>, como GDB<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>, Programiz<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> ou Replit<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>.</p>
+<section id="compilação-com-o-gcc" class="level2">
+<h2 class="anchored" data-anchor-id="compilação-com-o-gcc">Compilação com o <code>gcc</code></h2>
+<p>Há uma diversidade de compiladores para a linguagem C, além de diversos IDEs<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> com diferentes facilidades para escrever códigos fonte. Há IDEs que podem ser instalados, como Visual Studio Code<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, Code::Blocks<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, Visual Studio<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> ou Eclipse<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>, por exemplo, além das disponíveis <em>online</em>, como GDB<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> ou Programiz<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>.</p>
 <!-- Notas de rodapé -->
-<p>Neste livro os programas foram compilados invocando no terminal o compilador GNU GCC<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> na versão mais recente disponível no repositório oficial do Debian.</p>
+<!-- Notas de rodapé - fim -->
+<p>Neste livro os programas foram compilados invocando no terminal o compilador GNU GCC<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> na versão mais recente disponível no repositório oficial do Debian.</p>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode terminal code-with-copy"><code class="sourceCode terminal"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>$ <span class="kw">gcc --version</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>Copyright (C) 2023 Free Software Foundation, Inc.</span>
@@ -731,8 +694,8 @@ Curiosidade
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>Bom dia! Que seu dia seja ótimo!</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="erros-de-sintaxe" class="level3">
-<h3 class="anchored" data-anchor-id="erros-de-sintaxe">Erros de sintaxe</h3>
+<section id="erros-de-sintaxe" class="level2">
+<h2 class="anchored" data-anchor-id="erros-de-sintaxe">Erros de sintaxe</h2>
 <p>Sendo uma linguagem de programação, os comandos são sempre analisados de forma rígida. A falta de um parêntese, um espaço no lugar errado ou uma grafia errada (como <code>prinft</code>, por exemplo) já dá margem para o compilador reclamar que algo está errado e se recusar a gerar o executável. Esses são os erros de sintaxe e é função do compilador encontrá-los.</p>
 <p>O programador deve aprender a ler as mensagens de erro produzidas pelo compilador e interpretá-las, permitindo a remoção dos erros sintáticos.</p>
 <p>Como exemplo, segue uma versão incorreta do programa exemplo. Nela, “acidentalmente” o ponto e vírgula foi esquecido.</p>
@@ -784,17 +747,47 @@ Curiosidade
 <span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>   11 | }</span>
 <span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>      | ~             </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="erros-de-lógica" class="level3">
-<h3 class="anchored" data-anchor-id="erros-de-lógica">Erros de lógica</h3>
+<section id="erros-de-lógica" class="level2">
+<h2 class="anchored" data-anchor-id="erros-de-lógica">Erros de lógica</h2>
 <p>Um programa pode ser compilado e gerar o executável sem erros ou qualquer tipo de aviso que o compilador esteja ajustado para dar. Mas apesar disso, a execução não produz o resultado desejado. Neste caso, mesmo com a sintaxe correta, as instruções contém um erro (uma falha de cálculo, uma comparação equivocada) que invalida o programa. Esse são os erros de lógica e, desta vez, cabe ao programador encontrá-los e corrigi-los.</p>
 <p>A evitação de erros de lógica é considerada ao longo de todo o livro.</p>
+</section>
+</section>
+<section id="boas-práticas" class="level1">
+<h1>Boas práticas</h1>
+<p>A escrita de programas exige que alguns pontos sejam observados:</p>
+<ul>
+<li>Garantia da existência de um ponto de entrada (<code>main</code>).</li>
+<li>Garantia de um valor de retorno apropriado para <code>main</code> por meio do <code>return</code>.</li>
+<li>Elaboração de documentação adequada e completa para o código.</li>
+<li>Teste da execução projetando bem os casos de teste.</li>
+<li>Inclusão apenas dos cabeçalhos necessários no código fonte.</li>
+<li>Banimento de qualquer inclusão de arquivos <code>.c</code>.</li>
+<li>Observância das mensagens de erro e avisos produzidos pelo compilador.</li>
+</ul>
+
 
 
 </section>
-</section>
 
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Notas de rodapé</h2>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-johnson1973" class="csl-entry" role="listitem">
+Johnson, Stephen C, e Brian W Kernighan. 1973. <em>The programming language B</em>. Bell Laboratories Murray Hill, New Jersey. <a href="https://minnie.tuhs.org/Mirrors/Dennis/btut.pdf">https://minnie.tuhs.org/Mirrors/Dennis/btut.pdf</a>.
+</div>
+<div id="ref-richards1969" class="csl-entry" role="listitem">
+Richards, Martin. 1969. <span>“BCPL: A tool for compiler writing and system programming”</span>. Em, 557566. <a href="https://dl.acm.org/doi/pdf/10.1145/1476793.1476880">https://dl.acm.org/doi/pdf/10.1145/1476793.1476880</a>.
+</div>
+<div id="ref-ritchie1993" class="csl-entry" role="listitem">
+Ritchie, Dennis M. 1993. <span>“The development of the C language”</span>. <em>ACM Sigplan Notices</em> 28 (3): 201208. <a href="https://www.bell-labs.com/usr/dmr/www/chist.pdf">https://www.bell-labs.com/usr/dmr/www/chist.pdf</a>.
+</div>
+<div id="ref-ritchie1978" class="csl-entry" role="listitem">
+Ritchie, Dennis M, Stephen C Johnson, ME Lesk, e BW Kernighan. 1978. <span>“The C programming language”</span>. <em>Bell Sys. Tech. J</em> 57 (6): 19912019. <a href="https://www.academia.edu/download/67840358/1978.07_Bell_System_Technical_Journal.pdf#page=85">https://www.academia.edu/download/67840358/1978.07_Bell_System_Technical_Journal.pdf#page=85</a>.
+</div>
+<div id="ref-cprogramminglanguage" class="csl-entry" role="listitem">
+Wikipedia. 2023. <span>“C (programming language)”</span>. <a href="https://en.wikipedia.org/w/index.php?title=C_(programming_language)&amp;oldid=1182945224">https://en.wikipedia.org/w/index.php?title=C_(programming_language)&amp;oldid=1182945224</a>.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Notas de rodapé</h2>
 
 <ol>
 <li id="fn1"><p>Como diria Chicó, em <em>Auto da Compadecida</em>, peça de teatro de Ariano Suassuna também retratada em uma minissérie de televisão.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
@@ -805,8 +798,7 @@ Curiosidade
 <li id="fn6"><p>Eclipse: <a href="https://www.eclipse.org" class="uri">https://www.eclipse.org</a>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn7"><p>GDB Online: <a href="https://www.onlinegdb.com" class="uri">https://www.onlinegdb.com</a>.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn8"><p>Programiz: <a href="https://www.programiz.com" class="uri">https://www.programiz.com</a>.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn9"><p>Replit: <a href="https://replit.com" class="uri">https://replit.com</a>. <!-- Notas de rodapé - fim --><a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn10"><p>Gnu Compiler Collection: <a href="https://gcc.gnu.org" class="uri">https://gcc.gnu.org</a>.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>Gnu Compiler Collection: <a href="https://gcc.gnu.org" class="uri">https://gcc.gnu.org</a>.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -899,7 +891,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/jandermoreira\.github\.io\/ap\.github\.io\/");
+      var filterRegex = new RegExp("https:\/\/jandermoreira\.github\.io\/algoritmos_e_programacao\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – Algoritmos &amp; Programação</title>
+<title>conteudo-linguagem-c – Algoritmos &amp; Programação</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -118,7 +118,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./algoritmos/introducao.html"> 
+    <a class="nav-link" href="./algoritmos/index.html"> 
 <span class="menu-text">Algoritmos</span></a>
   </li>  
   <li class="nav-item">
@@ -128,8 +128,13 @@ window.Quarto = {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="./sobre.html"> 
+<span class="menu-text">Sobre…</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://jandermoreira.github.io"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -137,39 +142,421 @@ window.Quarto = {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <div id="quarto-announcement" data-announcement-id="037da44dd49132e8aac6c8da90475abb" class="alert alert-danger hidden"><i class="bi bi-exclamation-octagon quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong>Atenção</strong> - Este site está em construção. As informações ainda estão incompletas!</p>
+</div></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Nesta página:</h2>
+   
+  <ul>
+  <li><a href="#conteúdo-para-a-linguagem-c" id="toc-conteúdo-para-a-linguagem-c" class="nav-link active" data-scroll-target="#conteúdo-para-a-linguagem-c">Conteúdo para a linguagem C</a>
+  <ul class="collapse">
+  <li><a href="#introdução-à-programação-e-à-linguagem-c" id="toc-introdução-à-programação-e-à-linguagem-c" class="nav-link" data-scroll-target="#introdução-à-programação-e-à-linguagem-c">Introdução à Programação e à Linguagem C</a></li>
+  <li><a href="#tipos-de-dados-primitivos" id="toc-tipos-de-dados-primitivos" class="nav-link" data-scroll-target="#tipos-de-dados-primitivos">Tipos de Dados Primitivos</a></li>
+  <li><a href="#saída" id="toc-saída" class="nav-link" data-scroll-target="#saída">Saída</a></li>
+  <li><a href="#entrada" id="toc-entrada" class="nav-link" data-scroll-target="#entrada">Entrada</a></li>
+  <li><a href="#expressões" id="toc-expressões" class="nav-link" data-scroll-target="#expressões">Expressões</a></li>
+  <li><a href="#estruturas-condicionais" id="toc-estruturas-condicionais" class="nav-link" data-scroll-target="#estruturas-condicionais">Estruturas Condicionais</a></li>
+  <li><a href="#estruturas-de-repetição" id="toc-estruturas-de-repetição" class="nav-link" data-scroll-target="#estruturas-de-repetição">Estruturas de Repetição</a></li>
+  <li><a href="#manipulação-de-strings" id="toc-manipulação-de-strings" class="nav-link" data-scroll-target="#manipulação-de-strings">Manipulação de Strings</a></li>
+  <li><a href="#manipulação-de-arquivos-texto" id="toc-manipulação-de-arquivos-texto" class="nav-link" data-scroll-target="#manipulação-de-arquivos-texto">Manipulação de Arquivos Texto</a></li>
+  <li><a href="#manipulação-de-arquivos-binários" id="toc-manipulação-de-arquivos-binários" class="nav-link" data-scroll-target="#manipulação-de-arquivos-binários">Manipulação de Arquivos Binários</a></li>
+  <li><a href="#modularização" id="toc-modularização" class="nav-link" data-scroll-target="#modularização">Modularização</a></li>
+  <li><a href="#recursividade" id="toc-recursividade" class="nav-link" data-scroll-target="#recursividade">Recursividade</a></li>
+  <li><a href="#registros" id="toc-registros" class="nav-link" data-scroll-target="#registros">Registros</a></li>
+  <li><a href="#vetores" id="toc-vetores" class="nav-link" data-scroll-target="#vetores">Vetores</a></li>
+  <li><a href="#matrizes" id="toc-matrizes" class="nav-link" data-scroll-target="#matrizes">Matrizes</a></li>
+  <li><a href="#endereçamento-de-memória-e-ponteiros" id="toc-endereçamento-de-memória-e-ponteiros" class="nav-link" data-scroll-target="#endereçamento-de-memória-e-ponteiros">Endereçamento de memória e ponteiros</a></li>
+  <li><a href="#alocação-dinâmica" id="toc-alocação-dinâmica" class="nav-link" data-scroll-target="#alocação-dinâmica">Alocação Dinâmica</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">About</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
 
 
 <span class="math inline">\(\newcommand\Id[1]{\mbox{\textit{#1}}}\)</span>
+<section id="conteúdo-para-a-linguagem-c" class="level1">
+<h1>Conteúdo para a linguagem C</h1>
+<section id="introdução-à-programação-e-à-linguagem-c" class="level2">
+<h2 class="anchored" data-anchor-id="introdução-à-programação-e-à-linguagem-c">Introdução à Programação e à Linguagem C</h2>
+<ul>
+<li>Conceito de linguagem estruturada</li>
+<li>Estrutura básica: <code>main()</code></li>
+<li>Inclusão de cabeçalhos <code>.h</code></li>
+<li><code>return 0</code></li>
+<li>Conceitos de código fonte, objeto e executável</li>
+<li>Compilador e o processo de compilação</li>
+<li>Erros lógicos e sintáticos</li>
+<li>Boas práticas
+<ul>
+<li>Garantia da existência de um ponto de entrada (<code>main</code>)</li>
+<li>Garantia de um valor de retorno apropriado para <code>main</code></li>
+<li>Inclusão apenas dos cabeçalhos necessários</li>
+<li>Banimento de inclusão de arquivos <code>.c</code></li>
+<li>Entendimento das mensagens de erro do compilador</li>
+<li>Documentação adequada do código</li>
+<li>Teste do código projetando bem os casos de teste</li>
+</ul></li>
+</ul>
+</section>
+<section id="tipos-de-dados-primitivos" class="level2">
+<h2 class="anchored" data-anchor-id="tipos-de-dados-primitivos">Tipos de Dados Primitivos</h2>
+<ul>
+<li>Tipos de dados básicos: <code>int</code>, <code>double</code>, <code>_Bool/bool</code>, <code>char</code></li>
+<li>Boas práticas
+<ul>
+<li>Consciência das capacidades e limitações de cada tipo</li>
+<li>Emprego coerente do tipo de dados conforme a situação</li>
+</ul></li>
+</ul>
+</section>
+<section id="saída" class="level2">
+<h2 class="anchored" data-anchor-id="saída">Saída</h2>
+<ul>
+<li>Função <code>printf</code></li>
+<li>Especificadores de formato (<code>%d</code>, <code>%s</code> etc.)</li>
+<li>Conceito de tipos de dados (constantes)</li>
+<li>Noções de representação de dados em memória</li>
+<li>Funções <code>puts</code> e <code>putchar</code></li>
+<li>Modificadores de formato (<code>%10s``, ``%010.2f</code>)</li>
+<li>Apresentação do <code>fflush</code></li>
+<li>Boas práticas
+<ul>
+<li>Uso dos especificadores de formato adequados</li>
+<li>Uso dos especificadores de formato para precisão e largura dos campos</li>
+<li>Considerar que o <code>printf</code> é um comando com custo computacional relativamente alto</li>
+<li>Uso de <code>putchar</code> e <code>puts</code> (mais eficientes que <code>printf</code>)</li>
+<li>Uso do <code>fflush</code> apenas quando necessário</li>
+</ul></li>
+</ul>
+</section>
+<section id="entrada" class="level2">
+<h2 class="anchored" data-anchor-id="entrada">Entrada</h2>
+<ul>
+<li>Declarações de variáveis</li>
+<li>Modificadores (<code>short</code>, <code>long</code>, <code>unsigned</code>)</li>
+<li>Operador <code>sizeof</code></li>
+<li>Funções <code>scanf</code>, <code>fgets</code>, <code>sscanf</code></li>
+<li>Boas práticas
+<ul>
+<li>Escolha dos tipos apropriados</li>
+<li>Uso de identificadores significativos</li>
+<li>Uso de <em>case</em> de nomes de forma consistente (<em>camel-case</em>, <em>snake-case</em> etc.)</li>
+<li>Iniciação adequada (sempre iniciar por atribuição ou leitura)</li>
+<li>Evitação de iniciações desnecessárias (iniciar variável logo antes da leitura)</li>
+<li>Uso mínimo de variáveis globais</li>
+</ul></li>
+</ul>
+</section>
+<section id="expressões" class="level2">
+<h2 class="anchored" data-anchor-id="expressões">Expressões</h2>
+<ul>
+<li>Operadores aritméticos (inteiros e reais)</li>
+<li>Ordem de precedência</li>
+<li>Promoção automática de tipo (e.g., <code>int</code> para <code>double</code>)</li>
+<li>Conversões de tipo: <em>typecast</em> e funções (e.g.&nbsp;<code>atoi</code>)</li>
+<li>Operadores relacionais</li>
+<li>Operadores lógicos</li>
+<li>Operador condicional ternário</li>
+<li>Funções matemáticas úteis em <code>math.h</code></li>
+<li>Boas Práticas
+<ul>
+<li>Escolha do melhor tipo para clareza e bom uso da memória</li>
+<li>Uso de <code>unsigned</code> apenas quando necessário</li>
+<li>Preferência por <strong>double</strong> no lugar de <strong>float</strong></li>
+<li>Garantia de variável iniciada antes de seu uso</li>
+<li>Uso de identificadores significativos</li>
+<li>Observância de divisão por zero</li>
+<li>Uso de parênteses para clareza</li>
+<li>Observância de não usar <code>=</code> no lugar de <code>==</code></li>
+<li>Emprego de variáveis lógicas para aumentar a clareza do código</li>
+</ul></li>
+</ul>
+</section>
+<section id="estruturas-condicionais" class="level2">
+<h2 class="anchored" data-anchor-id="estruturas-condicionais">Estruturas Condicionais</h2>
+<ul>
+<li>Contextualização da execução condicional e retomada das expressões lógicas</li>
+<li>Sintaxe de <code>if</code></li>
+<li>Comandos compostos com <code>{</code>&nbsp;…&nbsp;<code>}</code></li>
+<li>Sintaxe de <code>if-else</code></li>
+<li>Sintaxe de <code>if-else if-else</code> e a ordem das condições</li>
+<li>Sintaxe do condicional ternário <code>?&nbsp;:</code></li>
+<li>Comando de seleção com <code>switch</code> e <code>case</code> (<code>break</code> e <code>default</code>) e limitações</li>
+<li>Aninhamento de condicionais</li>
+<li>Comparações envolvendo <strong>double</strong></li>
+<li>Boas práticas
+<ul>
+<li>Evitação de redundância nas condições</li>
+<li>Escrita de código com legibilidade</li>
+<li>Evitação de comparações desnecessárias</li>
+<li>Emprego coerente de declarações locais a comandos compostos (blocos)</li>
+<li>Evitação de “sombreamento” de identificadores (repetição de identificador em escopos diferentes muito próximos)</li>
+</ul></li>
+</ul>
+</section>
+<section id="estruturas-de-repetição" class="level2">
+<h2 class="anchored" data-anchor-id="estruturas-de-repetição">Estruturas de Repetição</h2>
+<ul>
+<li>Repetições <strong>contadas</strong> e <strong>controladas por condição</strong></li>
+<li>Estruturas <code>while</code>, <code>do&nbsp;while</code> e <code>for</code></li>
+<li>Uso de <code>break</code>, <strong>continue</strong> e <strong>goto</strong></li>
+<li>Laços infinitos e comparações com <strong>double</strong></li>
+<li>Comparação entre as estruturas</li>
+<li>Boas práticas
+<ul>
+<li>Escolha da repetição adequada.</li>
+<li>Determinação de uma condição de parada válida e atingível.</li>
+<li>Evitação de laços infinitos.</li>
+<li>Escrita de código legível e bem documentado.</li>
+<li>Uso de identificadores adequados.</li>
+</ul></li>
+</ul>
+</section>
+<section id="manipulação-de-strings" class="level2">
+<h2 class="anchored" data-anchor-id="manipulação-de-strings">Manipulação de Strings</h2>
+<ul>
+<li>Declarações de <em>strings</em> como vetores de caracteres com terminador</li>
+<li>Iniciação de <em>strings</em> (<code>char s[] = ...</code> e <code>char s[10] = ...</code>)</li>
+<li>Cabeçalho <code>string.h</code>
+<ul>
+<li><code>strlen</code></li>
+<li><code>strncpy</code></li>
+<li><code>strncat</code></li>
+<li><code>strcmp</code></li>
+<li><code>strstr</code> (busca por <em>substring</em>)</li>
+<li>Leitura com <code>fgets</code> e <code>scanf</code>&nbsp;+&nbsp;<code>%19s</code></li>
+</ul></li>
+<li>Acesso à <em>string</em> como vetor</li>
+<li>Ponteiros para <em>strings</em></li>
+<li>Alocação dinâmica de <em>strings</em></li>
+<li>Conversões com <code>sscanf</code> e <code>snprintf</code></li>
+<li>Boas práticas
+<ul>
+<li>Banimento do uso de <code>gets</code></li>
+<li>Realização de leitura cuidando do tamanho do vetor</li>
+<li>Acesso dentro dos limites de indexação válidos</li>
+<li>Garantia da existência do terminador <code>\0</code></li>
+<li>Verificação de sucesso em alocações dinâmicas com necessária liberação da memória</li>
+<li>Evitação de <code>strcpy</code> e <code>strcat</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="manipulação-de-arquivos-texto" class="level2">
+<h2 class="anchored" data-anchor-id="manipulação-de-arquivos-texto">Manipulação de Arquivos Texto</h2>
+<ul>
+<li>Conceito de abertura e fechamento de arquivos (<code>fopen</code> e <code>fclose</code>)</li>
+<li>Modos de abertura (<code>r</code>, <code>w</code>, <code>a</code> e variantes com <code>+</code> e <code>b</code>)</li>
+<li>Conceito de posição corrente</li>
+<li>Retorno ao início com <code>rewind</code></li>
+<li>Função <code>fscanf</code> e seu retorno</li>
+<li>Função <code>fprintf</code></li>
+<li>Funções <code>fputs</code> e <code>fputc</code></li>
+<li>Função <code>fgets</code> e <code>fgetc</code></li>
+<li>Conceito de “fim de arquivo”</li>
+<li>Tratamento de erros (retorno de <code>fopen</code>)</li>
+<li>Boas práticas:.
+<ul>
+<li>Atenção ao modo de abertura de arquivo.</li>
+<li>Verificação do sucesso de <code>fopen</code>.</li>
+<li>Uso de <code>perror</code> para mensagens de erro.</li>
+<li>Sempre fechar o arquivo com <code>fclose</code>.</li>
+<li>Uso dos valores de retorno das funções de leitura.</li>
+<li>Preferência ao uso de <code>fgets</code> no lugar de <code>fscanf</code>.</li>
+<li>Usar <code>fflush apenas quando necessário</code>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="manipulação-de-arquivos-binários" class="level2">
+<h2 class="anchored" data-anchor-id="manipulação-de-arquivos-binários">Manipulação de Arquivos Binários</h2>
+<ul>
+<li>Conceito de abertura e fechamento de arquivos (<code>fopen</code> e <code>fclose</code>)</li>
+<li>Conceito de arquivo de registros</li>
+<li>Modos de abertura (<code>r</code>, <code>w</code>, <code>a</code> e variantes com <code>+</code>; uso do especificador <code>b</code>)</li>
+<li>Funções <code>fread</code> e <code>fwrite</code></li>
+<li>Funções <code>ftell</code> e <code>fseek</code></li>
+<li>Atualização de registros</li>
+<li>Problemas de portabilidade</li>
+<li>Boas práticas:
+<ul>
+<li>Atenção aos parâmetros de <code>fread</code> e <code>fwrite</code></li>
+<li>Uso de <code>sizeof</code> para especificar o tamanho do objeto</li>
+<li>Uso dos valores de retorno da leitura e escrita</li>
+<li>Atenção para movimentar para a posição correta ao usar <code>fseek</code></li>
+<li>Sempre fechar arquivo com <code>fclose</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="modularização" class="level2">
+<h2 class="anchored" data-anchor-id="modularização">Modularização</h2>
+<ul>
+<li>Benefícios da modularização
+<ul>
+<li>Reutilização de código</li>
+<li>Facilidade de manutenção</li>
+<li>Legibilidade e organização</li>
+<li>Redução de complexidade</li>
+<li>Separação lógica de funcionalidades</li>
+</ul></li>
+<li>Arquivos: cabeçalho (<code>.h</code>) e implementação (<code>.c</code>)</li>
+<li>Funções e procedimentos</li>
+<li>Parâmetros formais: passagem por valor e referência</li>
+<li>Escopo de declarações</li>
+<li>Endereços e ponteiros</li>
+<li>Compilação e ligação de módulos</li>
+<li>Boas práticas
+<ul>
+<li>Escolha de nomes de arquivos e funções.</li>
+<li>Emprego de diretivas do pré-processador.</li>
+<li>Evitação definições globais desnecessárias.</li>
+<li>Criação de módulos coesos.</li>
+<li>Realização de documentação.</li>
+</ul></li>
+</ul>
+</section>
+<section id="recursividade" class="level2">
+<h2 class="anchored" data-anchor-id="recursividade">Recursividade</h2>
+<ul>
+<li>Conceito de função que chama a si própria</li>
+<li>Identificação de caso base e passo recursivo
+<ul>
+<li>Base: determinação de ponto de parada para as chamadas</li>
+<li>Recursivo: Divisão do problema em problemas menores</li>
+</ul></li>
+<li>Questões de desempenho e eficiência</li>
+<li>Comparação com implementações iterativas</li>
+<li>Limitações (<em>stack overflow</em>)</li>
+<li>Projeto de funções recursivas
+<ul>
+<li>Avaliação do problema e possibilidade de solução recursiva</li>
+<li>Identificação do caso base</li>
+<li>Definição do passo recursivo com garantia de convergência</li>
+</ul></li>
+<li>Noções de memoização</li>
+<li>Noções de recursão de cauda</li>
+<li>Boas práticas:
+<ul>
+<li>Garantir a existência da condição de parada (caso base e convergência)</li>
+<li>Preferência para iteração para cálculos simples</li>
+<li>Controlar o consumo de memória</li>
+<li>Quebrar funções complexas em funções auxiliares</li>
+</ul></li>
+</ul>
+</section>
+<section id="registros" class="level2">
+<h2 class="anchored" data-anchor-id="registros">Registros</h2>
+<ul>
+<li>Aplicações e uso de registros</li>
+<li>Sintaxe básica <code>stuct</code> (declaração e iniciação)</li>
+<li>Acesso a campos (operador <code>.</code>), com atribuição e leitura</li>
+<li>Uso do <code>typedef</code></li>
+<li>Aninhamento de registros</li>
+<li>Acesso a campos com uso de ponteiros (operador <code>-&gt;</code>)</li>
+<li>Registros como parâmetros de funções (valor e referência)</li>
+<li>Registros como valor de retorno de funções</li>
+<li>Alinhamento de memória dentro de <code>struct</code></li>
+<li>Campos que são ponteiros</li>
+<li>Sintaxe e uso de <code>union</code></li>
+<li>Boas práticas
+<ul>
+<li>Uso de identificadores adequados (<em>camel-case</em> para <code>typedef</code>)</li>
+<li>Cuidado com estruturas muito grandes (uso de memória em passagem por valor)</li>
+<li>Evitar uso de <code>struct</code>s globais usando passagem como parâmetro</li>
+</ul></li>
+</ul>
+</section>
+<section id="vetores" class="level2">
+<h2 class="anchored" data-anchor-id="vetores">Vetores</h2>
+<ul>
+<li>Aplicações e uso de vetores</li>
+<li>Sintaxe de declaração e iniciação</li>
+<li>Leitura de dados</li>
+<li>Acesso aos itens e cuidado com limites</li>
+<li>Passagem de vetores como parâmetros de funções</li>
+<li>Uso do <code>const</code> em parâmetros</li>
+<li>Vetores dentro de registros</li>
+<li><em>Strings</em> como vetores de char com terminador</li>
+<li>Alocação dinâmica de vetores</li>
+<li>Boas práticas
+<ul>
+<li>Declaração e iniciação segura</li>
+<li>Cuidado com índices inválidos</li>
+<li>Evitação de vetores globais</li>
+</ul></li>
+</ul>
+</section>
+<section id="matrizes" class="level2">
+<h2 class="anchored" data-anchor-id="matrizes">Matrizes</h2>
+<ul>
+<li>Aplicação e uso de matrizes</li>
+<li>Declaração e iniciação</li>
+<li>Acesso e modificação com índices</li>
+<li>Passagem de matrizes como parâmetros para funções</li>
+<li>Alocação dinâmica de matrizes</li>
+<li>Matrizes multidimensionais
+<ul>
+<li>Identificadores</li>
+<li>Cuidado com limites de índices</li>
+<li>Cuidado com passagem de matrizes para funções</li>
+<li>Evitação de matrizes globais</li>
+</ul></li>
+</ul>
+</section>
+<section id="endereçamento-de-memória-e-ponteiros" class="level2">
+<h2 class="anchored" data-anchor-id="endereçamento-de-memória-e-ponteiros">Endereçamento de memória e ponteiros</h2>
+<ul>
+<li>Noções de ponteiros</li>
+<li>Declaração de ponteiros e seus tipos</li>
+<li>Operadores <code>&amp;</code> (endereço) e <code>*</code> (desreferência)</li>
+<li>Representação da memória em endereços</li>
+<li>Tamanho do ponteiro e do objeto apontado (<code>sizeof</code>)</li>
+<li>Ponteiro nulo (<code>NULL</code>)</li>
+<li>Boas práticas:
+<ul>
+<li>Garantia de iniciação de ponteiro antes do uso</li>
+<li>Evitação de acesso a ponteiros nulos</li>
+</ul></li>
+</ul>
+</section>
+<section id="alocação-dinâmica" class="level2">
+<h2 class="anchored" data-anchor-id="alocação-dinâmica">Alocação Dinâmica</h2>
+<ul>
+<li>Noções de <em>heap</em> como memória disponível</li>
+<li>Funções: <code>malloc</code>, <code>calloc</code>, <code>realloc</code> e <code>free</code> (<code>stdlib.h</code>)</li>
+<li>Uso de <code>malloc</code></li>
+<li>Uso de <code>calloc</code></li>
+<li>Comparação entre <code>malloc</code> e <code>calloc</code></li>
+<li>Uso de <code>realloc</code> e cuidado com movimentação de dados</li>
+<li>Liberação de memória com <code>free</code></li>
+<li>Vazamento de memória</li>
+<li>Ponteiros para blocos desalocados</li>
+<li>Uso do <code>valgrind</code></li>
+<li>Aritmética de ponteiros</li>
+<li>Boas práticas
+<ul>
+<li>Verificação de sucesso na alocação</li>
+<li>Uso mandatório de desalocação</li>
+<li>Cuidado com vazamentos de memória</li>
+<li>Evitação do uso de memória já desalocada</li>
+<li>Verificar sucesso e movimentação de dados no <code>realloc</code></li>
+<li>Cuidado para evitar alocação excessiva (e.g., em repetições)</li>
+<li>Cuidado com a aritmética de ponteiros</li>
+</ul></li>
+</ul>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -262,7 +649,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/jandermoreira\.github\.io\/algoritmos_e_programacao\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

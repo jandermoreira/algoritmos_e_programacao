@@ -1,239 +1,243 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/algoritmos/desenvolvimento-por-refinamentos-sucessivos.html</loc>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/referencias.html</loc>
+    <lastmod>2025-03-07T21:06:23.033Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/algoritmos/cadeias-de-caracteres.html</loc>
     <lastmod>2025-02-17T21:13:41.499Z</lastmod>
   </url>
   <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/algoritmos/nocoes.html</loc>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/algoritmos/equacao-segundo-grau.html</loc>
+    <lastmod>2025-02-17T21:13:41.499Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/algoritmos/manipulacao-de-arquivos-de-registros.html</loc>
     <lastmod>2025-02-17T21:13:41.500Z</lastmod>
   </url>
   <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/algoritmos/equacao-segundo-grau.html</loc>
-    <lastmod>2025-02-17T21:13:41.499Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/algoritmos/desenvolvimento-com-modularizacao.html</loc>
-    <lastmod>2025-02-17T21:13:41.499Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/algoritmos/dados-compostos-registros.html</loc>
-    <lastmod>2025-02-17T21:13:41.499Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.html</loc>
-    <lastmod>2025-02-17T21:13:41.499Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/algoritmos/execucao-condicional.html</loc>
-    <lastmod>2025-02-17T21:13:41.499Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/algoritmos/dados-compostos-matrizes.html</loc>
-    <lastmod>2025-02-17T21:13:41.499Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/algoritmos/formalizacao.html</loc>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/algoritmos/processamento-basico-de-sequencias-de-dados.html</loc>
     <lastmod>2025-02-17T21:13:41.500Z</lastmod>
   </url>
   <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/algoritmos/introducao.html</loc>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/algoritmos/modularizacao.html</loc>
     <lastmod>2025-02-17T21:13:41.500Z</lastmod>
   </url>
   <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/oops.html</loc>
-    <lastmod>2025-02-17T21:13:41.504Z</lastmod>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/algoritmos/desenvolvimento-basico-e-codificacao.html</loc>
+    <lastmod>2025-02-17T21:13:41.499Z</lastmod>
   </url>
   <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/dados-em-vetores.html</loc>
-    <lastmod>2025-02-17T21:13:41.501Z</lastmod>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/algoritmos/testes-de-mesa.html</loc>
+    <lastmod>2025-02-17T21:13:41.500Z</lastmod>
   </url>
   <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/repeticoes-com-do-while.html</loc>
-    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/algoritmos/desenvolvimento-com-condicionais-e-codificacao.html</loc>
+    <lastmod>2025-02-17T21:13:41.499Z</lastmod>
   </url>
   <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/expressoes-relacionais-e-logicas.html</loc>
-    <lastmod>2025-02-17T21:13:41.502Z</lastmod>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/algoritmos/dados-compostos-vetores.html</loc>
+    <lastmod>2025-02-17T21:13:41.499Z</lastmod>
   </url>
   <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/arquivos-binarios.html</loc>
-    <lastmod>2025-02-17T21:13:41.501Z</lastmod>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/index.html</loc>
+    <lastmod>2025-03-08T14:34:09.779Z</lastmod>
   </url>
   <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/execucao-condicional-com-switch.html</loc>
-    <lastmod>2025-02-17T21:13:41.502Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/execucao-condicional-com-if.html</loc>
-    <lastmod>2025-02-17T21:13:41.502Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/repeticoes-com-for.html</loc>
-    <lastmod>2025-02-17T21:13:41.504Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/variaveis-identificadores-e-leitura.html</loc>
-    <lastmod>2025-02-17T21:13:41.504Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/enderecamento-de-memoria-e-ponteiros.html</loc>
-    <lastmod>2025-02-17T21:13:41.502Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/modularizacao-com-vetores.html</loc>
-    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/repeticoes-com-while.html</loc>
-    <lastmod>2025-02-17T21:13:41.504Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/dados-com-struct.html</loc>
-    <lastmod>2025-02-17T21:13:41.501Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/organizacao-do-codigo-separado.html</loc>
-    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/dados-em-matrizes.html</loc>
-    <lastmod>2025-02-17T21:13:41.501Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/arquivos-texto.html</loc>
-    <lastmod>2025-02-17T21:13:41.501Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/desvirtuacao-das-repeticoes.html</loc>
-    <lastmod>2025-02-17T21:13:41.502Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/expressoes-aritmeticas.html</loc>
-    <lastmod>2025-02-17T21:13:41.502Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/escopo-basico-de-declaracoes.html</loc>
-    <lastmod>2025-02-17T21:13:41.502Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/introducao.html</loc>
-    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/alocacao-dinamica-de-memoria.html</loc>
-    <lastmod>2025-02-17T21:13:41.501Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/dados-textuais.html</loc>
-    <lastmod>2025-02-17T21:13:41.501Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/alocacao-dinamica-de-memoria-matrizes.html</loc>
-    <lastmod>2025-02-17T21:13:41.501Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/funcoes.html</loc>
-    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/define.html</loc>
-    <lastmod>2025-02-17T21:13:41.502Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/procedimentos.html</loc>
-    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/modularizacao-com-matrizes.html</loc>
-    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/organizacao-do-codigo-fonte.html</loc>
-    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/tipos-de-dados.html</loc>
-    <lastmod>2025-02-17T21:13:41.504Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/index.html</loc>
-    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/modularizacao-com-struct.html</loc>
-    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/recursividade.html</loc>
-    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/regras-de-escopo-com-modularizacao.html</loc>
-    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/conversoes-de-dados-textuais.html</loc>
-    <lastmod>2025-02-17T21:13:41.501Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/manipulacao-de-dados-textuais.html</loc>
-    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/organizacao-do-codigo-fonte-complemento.html</loc>
-    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/guia-de-estilo.html</loc>
-    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/linguagem-c/parametros-de-funcoes.html</loc>
-    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/sobre.html</loc>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/sobre.html</loc>
     <lastmod>2025-02-17T21:36:22.540Z</lastmod>
   </url>
   <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/index.html</loc>
-    <lastmod>2025-02-17T21:43:06.268Z</lastmod>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/parametros-de-funcoes.html</loc>
+    <lastmod>2025-03-09T17:49:40.261Z</lastmod>
   </url>
   <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/algoritmos/dados-compostos-vetores.html</loc>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/guia-de-estilo.html</loc>
+    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/organizacao-do-codigo-fonte-complemento.html</loc>
+    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/manipulacao-de-dados-textuais.html</loc>
+    <lastmod>2025-03-09T17:39:37.729Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/conversoes-de-dados-textuais.html</loc>
+    <lastmod>2025-02-17T21:13:41.501Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/regras-de-escopo-com-modularizacao.html</loc>
+    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/recursividade.html</loc>
+    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/modularizacao-com-struct.html</loc>
+    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/index.html</loc>
+    <lastmod>2025-03-09T18:17:44.762Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/tipos-de-dados.html</loc>
+    <lastmod>2025-03-09T17:57:16.560Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/organizacao-do-codigo-fonte.html</loc>
+    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/modularizacao-com-matrizes.html</loc>
+    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/procedimentos.html</loc>
+    <lastmod>2025-03-09T17:45:51.585Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/define.html</loc>
+    <lastmod>2025-02-17T21:13:41.502Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/funcoes.html</loc>
+    <lastmod>2025-03-09T17:45:11.816Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/alocacao-dinamica-de-memoria-matrizes.html</loc>
+    <lastmod>2025-02-17T21:13:41.501Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/dados-textuais.html</loc>
+    <lastmod>2025-03-09T17:39:28.193Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/alocacao-dinamica-de-memoria.html</loc>
+    <lastmod>2025-03-09T17:53:35.647Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/introducao.html</loc>
+    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/escopo-basico-de-declaracoes.html</loc>
+    <lastmod>2025-02-17T21:13:41.502Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/expressoes-aritmeticas.html</loc>
+    <lastmod>2025-03-09T17:19:26.468Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/desvirtuacao-das-repeticoes.html</loc>
+    <lastmod>2025-03-09T17:37:53.718Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/arquivos-texto.html</loc>
+    <lastmod>2025-03-09T17:40:56.671Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/dados-em-matrizes.html</loc>
+    <lastmod>2025-02-17T21:13:41.501Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/organizacao-do-codigo-separado.html</loc>
+    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/dados-com-struct.html</loc>
+    <lastmod>2025-03-09T17:56:45.102Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/repeticoes-com-while.html</loc>
+    <lastmod>2025-03-09T17:31:11.400Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/modularizacao-com-vetores.html</loc>
+    <lastmod>2025-02-17T21:13:41.503Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/enderecamento-de-memoria-e-ponteiros.html</loc>
+    <lastmod>2025-03-09T17:51:03.085Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/variaveis-identificadores-e-leitura.html</loc>
+    <lastmod>2025-03-09T17:21:39.023Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/repeticoes-com-for.html</loc>
+    <lastmod>2025-03-09T17:31:51.535Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/execucao-condicional-com-if.html</loc>
+    <lastmod>2025-03-09T17:29:26.868Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/execucao-condicional-com-switch.html</loc>
+    <lastmod>2025-02-17T21:13:41.502Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/arquivos-binarios.html</loc>
+    <lastmod>2025-03-09T17:43:02.611Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/expressoes-relacionais-e-logicas.html</loc>
+    <lastmod>2025-03-09T17:26:10.375Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/repeticoes-com-do-while.html</loc>
+    <lastmod>2025-03-09T17:33:01.894Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/linguagem-c/dados-em-vetores.html</loc>
+    <lastmod>2025-03-09T18:00:47.875Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/oops.html</loc>
+    <lastmod>2025-02-17T21:13:41.504Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/conteudo-linguagem-c.html</loc>
+    <lastmod>2025-03-09T18:04:35.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/algoritmos/formalizacao.html</loc>
+    <lastmod>2025-02-17T21:13:41.500Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/algoritmos/dados-compostos-matrizes.html</loc>
     <lastmod>2025-02-17T21:13:41.499Z</lastmod>
   </url>
   <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/algoritmos/desenvolvimento-com-condicionais-e-codificacao.html</loc>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/algoritmos/execucao-condicional.html</loc>
     <lastmod>2025-02-17T21:13:41.499Z</lastmod>
   </url>
   <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/algoritmos/testes-de-mesa.html</loc>
-    <lastmod>2025-02-17T21:13:41.500Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/algoritmos/desenvolvimento-basico-e-codificacao.html</loc>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.html</loc>
     <lastmod>2025-02-17T21:13:41.499Z</lastmod>
   </url>
   <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/algoritmos/modularizacao.html</loc>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/algoritmos/dados-compostos-registros.html</loc>
+    <lastmod>2025-02-17T21:13:41.499Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/algoritmos/desenvolvimento-com-modularizacao.html</loc>
+    <lastmod>2025-02-17T21:13:41.499Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/algoritmos/index.html</loc>
     <lastmod>2025-02-17T21:13:41.500Z</lastmod>
   </url>
   <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/algoritmos/processamento-basico-de-sequencias-de-dados.html</loc>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/algoritmos/recursividade.html</loc>
     <lastmod>2025-02-17T21:13:41.500Z</lastmod>
   </url>
   <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/algoritmos/manipulacao-de-arquivos-de-registros.html</loc>
-    <lastmod>2025-02-17T21:13:41.500Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/algoritmos/recursividade.html</loc>
-    <lastmod>2025-02-17T21:13:41.500Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jandermoreira.github.io/ap.github.io/algoritmos/cadeias-de-caracteres.html</loc>
+    <loc>https://jandermoreira.github.io/algoritmos_e_programacao/algoritmos/desenvolvimento-por-refinamentos-sucessivos.html</loc>
     <lastmod>2025-02-17T21:13:41.499Z</lastmod>
   </url>
 </urlset>

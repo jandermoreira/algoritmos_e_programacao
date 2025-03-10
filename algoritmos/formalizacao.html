@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -118,7 +138,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../algoritmos/introducao.html" aria-current="page"> 
+    <a class="nav-link active" href="../algoritmos/index.html" aria-current="page"> 
 <span class="menu-text">Algoritmos</span></a>
   </li>  
   <li class="nav-item">
@@ -147,13 +167,13 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../algoritmos/nocoes.html">Representação e uso de algoritmos</a></li><li class="breadcrumb-item"><a href="../algoritmos/formalizacao.html">Formalização dos algoritmos computacionais</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../algoritmos/index.html">Representação e uso de algoritmos</a></li><li class="breadcrumb-item"><a href="../algoritmos/formalizacao.html">Formalização dos algoritmos computacionais</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
-  <div id="quarto-announcement" data-announcement-id="488ded3f584a619e97fbebbe9d888524" class="alert alert-danger hidden"><i class="bi bi-exclamation-octagon quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p><strong>Atenção</strong> - Este site é apenas um protótipo/estudo de conceito. As informações aqui estão incompletas.</p>
+  <div id="quarto-announcement" data-announcement-id="037da44dd49132e8aac6c8da90475abb" class="alert alert-danger hidden"><i class="bi bi-exclamation-octagon quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong>Atenção</strong> - Este site está em construção. As informações ainda estão incompletas!</p>
 </div></div>
 </header>
 <!-- content -->
@@ -162,12 +182,6 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algoritmos/introducao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introdução</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -179,7 +193,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../algoritmos/nocoes.html" class="sidebar-item-text sidebar-link">
+  <a href="../algoritmos/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Noções de algoritmos</span></a>
   </div>
 </li>
@@ -189,155 +203,7 @@ window.Quarto = {
  <span class="menu-text">Formalização dos algoritmos computacionais</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algoritmos/desenvolvimento-basico-e-codificacao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Algoritmos: desenvolvimento básico e codificação</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algoritmos/execucao-condicional.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Algoritmos: execução condicional</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algoritmos/desenvolvimento-com-condicionais-e-codificacao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Algoritmos: desenvolvimento com condicionais e codificação</span></a>
-  </div>
-</li>
       </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Processamento de sequências de dados</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algoritmos/processamento-basico-de-sequencias-de-dados.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Estruturas algorítmicas básicas para processamento de sequências de dados</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Desenvolvimento de algoritmos para processamento de sequências de dados</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Desenvolvimento e organização de algoritmos</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algoritmos/desenvolvimento-por-refinamentos-sucessivos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Algoritmos: desenvolvimento por refinamentos sucessivos</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algoritmos/testes-de-mesa.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Algoritmos: testes de mesa</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algoritmos/modularizacao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Algoritmos: modularização</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algoritmos/desenvolvimento-com-modularizacao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Algoritmos: desenvolvimento com modularização</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Representação de dados estruturados</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algoritmos/cadeias-de-caracteres.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">algoritmos-cadeias-de-caracteres.qmd</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algoritmos/dados-compostos-registros.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Algoritmos: dados compostos (registros)</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algoritmos/dados-compostos-vetores.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Algoritmos: dados compostos (vetores)</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algoritmos/dados-compostos-matrizes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">algoritmos-dados-compostos-matrizes.qmd</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Desenvolvimento com arquivos</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algoritmos/manipulacao-de-arquivos-de-registros.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Algoritmos: Manipulação de arquivos de registros</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Recursividade</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar seção">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../algoritmos/recursividade.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">algoritmos-recursividade.qmd</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
- <span class="menu-text">referencias.qmd</span>
   </li>
     </ul>
     </div>
@@ -377,7 +243,7 @@ window.Quarto = {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../algoritmos/nocoes.html">Representação e uso de algoritmos</a></li><li class="breadcrumb-item"><a href="../algoritmos/formalizacao.html">Formalização dos algoritmos computacionais</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../algoritmos/index.html">Representação e uso de algoritmos</a></li><li class="breadcrumb-item"><a href="../algoritmos/formalizacao.html">Formalização dos algoritmos computacionais</a></li></ol></nav></header>
 
 
 
@@ -401,11 +267,11 @@ window.Quarto = {
 <p>Como um segundo exemplo de pseudocódigo, o <a href="../algoritmos/formalizacao.html#alg-alexandre-levada">Algoritmo 2</a> pode ser considerado.</p>
 <div id="alg-alexandre-levada">
 <figcaption class="figure-caption">
-<p>Algoritmo 2: PNN based LPP, adaptado de <span class="citation" data-cites="levada">@levada</span></p>
+<p>Algoritmo 2: PNN based LPP, adaptado de <span class="citation" data-cites="levada">Levada (<a href="#ref-levada" role="doc-biblioref">2022</a>)</span></p>
 </figcaption>
 <p><img src="../algxpar/pseudocode.6367b4df565054dd74623859564fc45143c835e9.svg" class="img-fluid" alt="Algoritmo 2: PNN based LPP, adaptado de @levada" width="648"></p>
 </div>
-<p>Este algoritmo é uma adaptação do apresentado no artigo de <span class="citation" data-cites="levada">@levada</span> e, para entendê-lo por completo, tanto o texto do artigo deve ser lido quanto o leitor deve ter conhecimento sobre o tema abordado. O objetivo do algoritmo não é o entendimento do procedimento que ele realiza em detalhes, mas observar a sequência de passos para produzir o resultado desejado. Ele ainda envolve a integração da linguagem natural com notação matemática para representar as expressões e matrizes utilizadas. No algoritmo original não há a documentação com a descrição nem as pré e pós-condições, uma vez que ele está inserido na discussão apresentada pelo artigo como um todo.</p>
+<p>Este algoritmo é uma adaptação do apresentado no artigo de <span class="citation" data-cites="levada">Levada (<a href="#ref-levada" role="doc-biblioref">2022</a>)</span> e, para entendê-lo por completo, tanto o texto do artigo deve ser lido quanto o leitor deve ter conhecimento sobre o tema abordado. O objetivo do algoritmo não é o entendimento do procedimento que ele realiza em detalhes, mas observar a sequência de passos para produzir o resultado desejado. Ele ainda envolve a integração da linguagem natural com notação matemática para representar as expressões e matrizes utilizadas. No algoritmo original não há a documentação com a descrição nem as pré e pós-condições, uma vez que ele está inserido na discussão apresentada pelo artigo como um todo.</p>
 <p>O <a href="../algoritmos/formalizacao.html#alg-alexandre-levada">Algoritmo 2</a> não foi escrito para pronta implementação. Ele deixa muitos pontos em aberto, mesmo sendo claro quanto a todos os cálculos que devem ser feitos e em que sequência. Esse é um algoritmo de nível alto de abstração, ou seja, muitos detalhes são omitidos propositalmente em função do público-alvo, que são os leitores do artigo científico. Apresentar todos os detalhes, como o passo a passo da criação dos vetores de distâncias <span class="math inline">\(\vec{d}_i\)</span> ou a própria fórmula usada para a distância somente tornaria o código desnecessariamente complexo, prejudicando a compreensão da estratégia da solução.</p>
 <section id="público-alvo-e-nível-de-abstração" class="level3">
 <h3 class="anchored" data-anchor-id="público-alvo-e-nível-de-abstração">Público-alvo e nível de abstração</h3>
@@ -644,10 +510,15 @@ Nota
 <p><code>temperatura_celsius</code> vs.&nbsp;<span class="math inline">\(t_c\)</span>.</p>
 
 
+
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-levada" class="csl-entry" role="listitem">
+Levada, Alexandre. 2022. <span>“A probabilistic nearest neighbors based locality preserving projections”</span>. <em>SSRN 4267754</em>. <a href="https://ssrn.com/abstract=4267754">https://ssrn.com/abstract=4267754</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -738,7 +609,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/jandermoreira\.github\.io\/ap\.github\.io\/");
+      var filterRegex = new RegExp("https:\/\/jandermoreira\.github\.io\/algoritmos_e_programacao\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -233,11 +267,8 @@ window.Quarto = {
   <li><a href="#obtenção-e-apresentação-de-dados" id="toc-obtenção-e-apresentação-de-dados" class="nav-link" data-scroll-target="#obtenção-e-apresentação-de-dados">Obtenção e apresentação de dados</a></li>
   <li><a href="#execução-condicional" id="toc-execução-condicional" class="nav-link" data-scroll-target="#execução-condicional">Execução condicional</a></li>
   <li><a href="#repetições" id="toc-repetições" class="nav-link" data-scroll-target="#repetições">Repetições</a></li>
-  <li><a href="#modularização" id="toc-modularização" class="nav-link" data-scroll-target="#modularização">Modularização</a></li>
-  <li><a href="#comentários" id="toc-comentários" class="nav-link" data-scroll-target="#comentários">Comentários</a></li>
   </ul></li>
-  <li><a href="#algoritmos-estruturados" id="toc-algoritmos-estruturados" class="nav-link" data-scroll-target="#algoritmos-estruturados">Algoritmos estruturados</a></li>
-  <li><a href="#notação-programática-versus-notação-matemática" id="toc-notação-programática-versus-notação-matemática" class="nav-link" data-scroll-target="#notação-programática-versus-notação-matemática">Notação programática <em>versus</em> notação matemática</a></li>
+  <li><a href="#notação-matemática-times-notação-programática" id="toc-notação-matemática-times-notação-programática" class="nav-link" data-scroll-target="#notação-matemática-times-notação-programática">Notação matemática <span class="math inline">\(\times\)</span> notação programática</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -251,8 +282,8 @@ window.Quarto = {
 <span class="math inline">\(\newcommand\Id[1]{\mbox{\textit{#1}}}\)</span>
 <section id="formalização-dos-algoritmos-computacionais" class="level1">
 <h1>Formalização dos algoritmos computacionais</h1>
-<p>Neste livro as soluções algorítmicas serão apresentadas por meio de pseudocódigo, embora haja uma certa variedade de outras opções de representação.</p>
-<p>A formalização do pseudocódigo a ser adotado neste livro é o foco deste capítulo.</p>
+<p>Neste material as soluções algorítmicas serão apresentadas por meio de pseudocódigo, embora haja uma certa variedade de outras opções de representação.</p>
+<p>A formalização do pseudocódigo a ser adotado neste material é o foco deste capítulo.</p>
 <section id="objetivos-do-pseudocódigo" class="level2">
 <h2 class="anchored" data-anchor-id="objetivos-do-pseudocódigo">Objetivos do pseudocódigo</h2>
 <p>O pseudocódigo pode ser visto como uma mistura de aspectos mais formais, como computação ou notação matemática, com linguagem natural.</p>
@@ -352,12 +383,12 @@ Tabela&nbsp;1: Comparação da soma de matrizes com algoritmos em diferentes ní
 <p>Embora as regras não existam absolutamente, há um convenção geral adotada pela comunidade, ficando um grupo de estruturas e aspectos relativamente consolidados.</p>
 <section id="padronização" class="level3">
 <h3 class="anchored" data-anchor-id="padronização">Padronização</h3>
-<p>Os algoritmos apresentados neste livro seguem um pseudocódigo próprio, baseado no uso geral dos algoritmos escritos pela comunidade de computação. Alguns elementos são mais usuais (condicionais, repetições e funções), outras são menos utilizadas (documentação com pré e pós-condições) e outras não são convencionais (condicional de seleção).</p>
+<p>Os algoritmos apresentados neste material seguem um pseudocódigo próprio, baseado no uso geral dos algoritmos escritos pela comunidade de computação. Alguns elementos são mais usuais (condicionais, repetições e funções), outras são menos utilizadas (documentação com pré e pós-condições) e outras não são convencionais (condicional de seleção).</p>
 <p>A opção por ter tanto os elementos de uso geral e quanto algumas “invovações” vem do caráter didático a que este material se propõe a ter.</p>
 </section>
 <section id="documentação" class="level3">
 <h3 class="anchored" data-anchor-id="documentação">Documentação</h3>
-<p>Todos os algoritmos neste livro conterão um cabeçalho de documentação. Nele são exibidos os seguintes elementos:</p>
+<p>Todos os algoritmos neste material conterão um cabeçalho de documentação. Nele são exibidos os seguintes elementos:</p>
 <ul>
 <li>Descrição;</li>
 <li>Pré-condições;</li>
@@ -486,7 +517,7 @@ Nota
 </figcaption>
 <p><img src="../algxpar/pseudocode.e3dd3e152b54120579839e3a34260997f801d236.svg" class="img-fluid" alt="" width="648"></p>
 </div>
-<p>Esse uso é evitado (com sucesso relativo) neste livro, dando-se preferência para laços com <strong>enquanto</strong> e <strong>repita</strong> quando o número de repetições é desconhecido.</p>
+<p>Esse uso é evitado (com sucesso relativo) neste material, dando-se preferência para laços com <strong>enquanto</strong> e <strong>repita</strong> quando o número de repetições é desconhecido.</p>
 <div>
 <figcaption class="figure-caption">
 </figcaption>
@@ -494,20 +525,109 @@ Nota
 </div>
 </div>
 </div>
-</section>
-<section id="modularização" class="level3">
-<h3 class="anchored" data-anchor-id="modularização">Modularização</h3>
-</section>
-<section id="comentários" class="level3">
-<h3 class="anchored" data-anchor-id="comentários">Comentários</h3>
+<!-- ### Comentários
+
+## Algoritmos estruturados -->
 </section>
 </section>
-<section id="algoritmos-estruturados" class="level2">
-<h2 class="anchored" data-anchor-id="algoritmos-estruturados">Algoritmos estruturados</h2>
-</section>
-<section id="notação-programática-versus-notação-matemática" class="level2">
-<h2 class="anchored" data-anchor-id="notação-programática-versus-notação-matemática">Notação programática <em>versus</em> notação matemática</h2>
-<p><code>temperatura_celsius</code> vs.&nbsp;<span class="math inline">\(t_c\)</span>.</p>
+<section id="notação-matemática-times-notação-programática" class="level2">
+<h2 class="anchored" data-anchor-id="notação-matemática-times-notação-programática">Notação matemática <span class="math inline">\(\times\)</span> notação programática</h2>
+<p>Os algoritmos apresentados em publicações científicas tendem a usar pseudocódigo com uma denotação muito próxima da matemática, ou seja, laçam mão de um formato mais formal, técnico e compacto. Como exemplos é apresentado o <a href="../algoritmos/formalizacao.html#alg-bellman-ford">Algoritmo 7</a>, além do já mencionado <a href="../algoritmos/formalizacao.html#alg-alexandre-levada">Algoritmo 2</a>.</p>
+<div id="alg-bellman-ford">
+<figcaption class="figure-caption">
+<p>Algoritmo 7: Algoritmo de Bellman-Ford (adaptado de <span class="citation" data-cites="cormen2002algoritmos">Cormen et al. (<a href="#ref-cormen2002algoritmos" role="doc-biblioref">2002</a>)</span>).</p>
+</figcaption>
+<p><img src="../algxpar/pseudocode.03060ce72cff5ab01c7712d9653608f0e406c468.svg" class="img-fluid" alt="Algoritmo 7: Algoritmo de Bellman-Ford (adaptado de @cormen2002algoritmos)." width="648"></p>
+</div>
+<p>Esse aspecto mais “matemático” contrasta com as escolhas feitas quando são codificados programas nas mais diversas linguagens de programação. Na sequência é apresentada uma versão (incompleta) do <a href="../algoritmos/formalizacao.html#alg-bellman-ford">Algoritmo 7</a> codificada em Python. Nela, as opções foram por um código bem estruturado e organizado. Por exemplo, <span class="math inline">\(E[G]\)</span>, que é a notação formal para a lista de arestas foi subsituída pela variável <code>lista_arestas</code>, assim como <span class="math inline">\(u\)</span> e <span class="math inline">\(v\)</span> deram lugar aos (vértices) <code>origem</code> e <code>destino</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Inicia as distâncias de todos os vértices como infinito e a origem como 0</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>distancias <span class="op">=</span> [<span class="bu">float</span>(<span class="st">'inf'</span>)] <span class="op">*</span> num_vertices</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>distancias[vertice_inicio] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Relaxa todas as arestas num_vertices-1 vezes</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(num_vertices <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> origem, destino, peso <span class="kw">in</span> lista_arestas:</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (distancias[origem] <span class="op">!=</span> <span class="bu">float</span>(<span class="st">'inf'</span>) <span class="kw">and</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>            distancias[origem] <span class="op">+</span> peso <span class="op">&lt;</span> distancias[destino]):</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>            distancias[destino] <span class="op">=</span> distancias[origem] <span class="op">+</span> peso</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Verifica ciclos de peso negativo</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> origem, destino, peso <span class="kw">in</span> lista_arestas:</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (distancias[origem] <span class="op">!=</span> <span class="bu">float</span>(<span class="st">'inf'</span>) <span class="kw">and</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        distancias[origem] <span class="op">+</span> peso <span class="op">&lt;</span> distancias[destino]):</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> <span class="va">True</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>A resposta para qual seria a melhor representação tem uma resposta simples: depende.</p>
+<p>Nenhuma delas é melhor ou pior que a outra, pois devem ser aplicadas em seus próprios contextos. Para o caso dos grafos orientados do <a href="../algoritmos/formalizacao.html#alg-bellman-ford">Algoritmo 7</a>, o uso de <span class="math inline">\(G\)</span> para o grafo e <span class="math inline">\(u\)</span> e <span class="math inline">\(v\)</span> para arestas é o mais usual e, portanto, óbvio para quem conhece o assunto. Dessa forma, seu uso é apropriado e, também, conveniente.</p>
+<p>Na escrita de programas e, em associação, de algoritmos computacionais, a notação matemática tende a ser substituída por nomes mais significativos, como <code>origem</code> (ou até <code>vertice_origem</code>), por exemplo. Nessa situação, a clareza do código é mais relevante.</p>
+<p>Para exemplificar, o seguinte programa escrito em Fortran pode ser considerado. Sua função é, a partir de um salário inicial e de uma porcentagem de aumento, calcular o salário final resultante.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode fortran code-with-copy"><code class="sourceCode fortranfixed"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">PROGRAM</span> SCalc</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">IMPLICIT</span> <span class="kw">NONE</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">REAL</span> <span class="dt">::</span> S, P, A, NS</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">! Entrada de dados</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">PRINT</span> <span class="kw">*</span>, <span class="st">"Salário:"</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">READ</span> <span class="kw">*</span>, S</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">PRINT</span> <span class="kw">*</span>, <span class="st">"Aumento (%):"</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">READ</span> <span class="kw">*</span>, P</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">! Cálculo</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    A <span class="kw">=</span> S <span class="kw">*</span> (P <span class="kw">/</span> <span class="fl">100.0</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    NS <span class="kw">=</span> S <span class="kw">+</span> A</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">! Exibição do resultado</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">PRINT</span> <span class="kw">*</span>, <span class="st">"Salário atualizado:"</span>, NS</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="kw">END PROGRAM</span> SCalc</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Nesse código, <code>S</code> pode ser facilmente associado ao salário, assim como <code>P</code> à porcentagem. Porém, porque <code>NS</code>? Talvez seja fácil ou talvez não chegar à conclusão de que a opção por <code>NS</code> se deve a Novo Salário. Nos programas, a opção da clareza leva a códigos como o seguinte, que apenas reapresenta o programa anterior usando uma notação mais direta e clara.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode fortran code-with-copy"><code class="sourceCode fortranfixed"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">PROGRAM</span> CalculoSalario</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">IMPLICIT</span> <span class="kw">NONE</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">REAL</span> <span class="dt">::</span> salario, percentual, aumento, novo_salario</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">! Entrada de dados</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">PRINT</span> <span class="kw">*</span>, <span class="st">"Digite o salário atual:"</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">READ</span> <span class="kw">*</span>, salario</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">PRINT</span> <span class="kw">*</span>, <span class="st">"Digite a porcentagem de aumento:"</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">READ</span> <span class="kw">*</span>, percentual</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">! Cálculo do aumento e do novo salário</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    aumento <span class="kw">=</span> salario <span class="kw">*</span> (percentual <span class="kw">/</span> <span class="fl">100.0</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    novo_salario <span class="kw">=</span> salario <span class="kw">+</span> aumento</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">! Exibição do resultado</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">PRINT</span> <span class="kw">*</span>, <span class="st">"O novo salário é:"</span>, novo_salario</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="kw">END PROGRAM</span> CalculoSalario</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Para os algoritmos, portanto, valem os mesmos argumentos. A notação mais matemática pode ser usada em várias situações e a notação mais usualmente empregada em programas, em outras. Por uma questão de clareza, todo o material faz como opção a escolha de uma notação que preza mais pela clareza.</p>
+<p>Em conclusão, os programas em Fortran apresentados seriam implementações do <a href="../algoritmos/formalizacao.html#alg-aumento-de-salario">Algoritmo 8</a>.</p>
+<div id="alg-aumento-de-salario">
+<figcaption class="figure-caption">
+<p>Algoritmo 8: Cálculo do aumento de um salário.</p>
+</figcaption>
+<p><img src="../algxpar/pseudocode.1596af438c7e9a5fbea54ec89362db7d48b96c8e.svg" class="img-fluid" alt="Algoritmo 8: Cálculo do aumento de um salário." width="648"></p>
+</div>
+<p>Para contastratar, o <a href="../algoritmos/formalizacao.html#alg-aumento-de-salario-sintetico">Algoritmo 9</a> seria a versão mais sintética e com menor clareza do <a href="../algoritmos/formalizacao.html#alg-aumento-de-salario">Algoritmo 8</a>. Quase uma versão “criptográfica” do anterior.</p>
+<div id="alg-aumento-de-salario-sintetico">
+<figcaption class="figure-caption">
+<p>Algoritmo 9: Cálculo do aumento de um salário.</p>
+</figcaption>
+<p><img src="../algxpar/pseudocode.e1f4745d5bbdd621fc4656ee2963385c63dbefc1.svg" class="img-fluid" alt="Algoritmo 9: Cálculo do aumento de um salário." width="648"></p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dica
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>O uso de uma notação com nomes mais signficativos, embora parece irrelevante em problemas pequenos, torna-se essencial para soluções mais complexas e, em consequência, com mais instruções.</p>
+<p>Acostumar-se a fazer o melhor logo de início é a melhor alternativa!</p>
+</div>
+</div>
 
 
 
@@ -515,6 +635,9 @@ Nota
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-cormen2002algoritmos" class="csl-entry" role="listitem">
+Cormen, Thomas H, Charles E Leiserson, Ronald L Rivest, e Clifford Stein. 2002. <em>Algoritmos: teoria e prática</em>. <em>Editora Campus</em>. Vol. 2.
+</div>
 <div id="ref-levada" class="csl-entry" role="listitem">
 Levada, Alexandre. 2022. <span>“A probabilistic nearest neighbors based locality preserving projections”</span>. <em>SSRN 4267754</em>. <a href="https://ssrn.com/abstract=4267754">https://ssrn.com/abstract=4267754</a>.
 </div>

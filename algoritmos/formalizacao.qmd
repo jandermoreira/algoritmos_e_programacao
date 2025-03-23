@@ -1,8 +1,8 @@
 # Formalização dos algoritmos computacionais
 
-Neste livro as soluções algorítmicas serão apresentadas por meio de pseudocódigo, embora haja uma certa variedade de outras opções de representação.
+Neste material as soluções algorítmicas serão apresentadas por meio de pseudocódigo, embora haja uma certa variedade de outras opções de representação.
 
-A formalização do pseudocódigo a ser adotado neste livro é o foco deste capítulo.
+A formalização do pseudocódigo a ser adotado neste material é o foco deste capítulo.
 
 
 ## Objetivos do pseudocódigo
@@ -160,13 +160,13 @@ Embora as regras não existam absolutamente, há um convenção geral adotada pe
 
 ### Padronização
 
-Os algoritmos apresentados neste livro seguem um pseudocódigo próprio, baseado no uso geral dos algoritmos escritos pela comunidade de computação. Alguns elementos são mais usuais (condicionais, repetições e funções), outras são menos utilizadas (documentação com pré e pós-condições) e outras não são convencionais (condicional de seleção).
+Os algoritmos apresentados neste material seguem um pseudocódigo próprio, baseado no uso geral dos algoritmos escritos pela comunidade de computação. Alguns elementos são mais usuais (condicionais, repetições e funções), outras são menos utilizadas (documentação com pré e pós-condições) e outras não são convencionais (condicional de seleção).
 
 A opção por ter tanto os elementos de uso geral e quanto algumas "invovações" vem do caráter didático a que este material se propõe a ter.
 
 ### Documentação
 
-Todos os algoritmos neste livro conterão um cabeçalho de documentação. Nele são exibidos os seguintes elementos:
+Todos os algoritmos neste material conterão um cabeçalho de documentação. Nele são exibidos os seguintes elementos:
 
 * Descrição;
 * Pré-condições;
@@ -382,7 +382,7 @@ Repetições com -para- podem ser abertas como no exemplo seguinte.
     \EndFor
 \end{algorithmic}
 ```
-Esse uso é evitado (com sucesso relativo) neste livro, dando-se preferência para laços com -enquanto- e -repita- quando o número de repetições é desconhecido.
+Esse uso é evitado (com sucesso relativo) neste material, dando-se preferência para laços com -enquanto- e -repita- quando o número de repetições é desconhecido.
 
 ```latex {.pseudocode}
 %| pdf-float: false
@@ -396,15 +396,149 @@ Esse uso é evitado (com sucesso relativo) neste livro, dando-se preferência pa
 :::
 
 
+<!-- ### Comentários
 
-### Modularização
-### Comentários
+## Algoritmos estruturados -->
 
+## Notação matemática $\times$ notação programática
 
-## Algoritmos estruturados
-
-## Notação programática _versus_ notação matemática
-
-`temperatura_celsius` vs. $t_c$.
+Os algoritmos apresentados em publicações científicas tendem a usar pseudocódigo com uma denotação muito próxima da matemática, ou seja, laçam mão de um formato mais formal, técnico e compacto. Como exemplos é apresentado o @alg-bellman-ford, além do já mencionado @alg-alexandre-levada.
 
 
+```latex {.pseudocode}
+%| label: #alg-bellman-ford
+%| title: Algoritmo de Bellman-Ford (adaptado de @cormen2002algoritmos).
+\begin{algorithmic}
+    \Description Solução do problema de caminhos mais cursos (Bellman-Ford)
+    \Require Um grafo orientado $G = (V, E)$ com origem $s$  e função peso $w: E\rightarrow\mbox{R}$
+    \Ensure O resultado \True\ se existe um ciclo de peso negativo acessível a partir da origem ou \False\ caso contrário
+    \For{$i \gets 1$ \To $\left| V[G]\right| -1$}
+        \ForEach{aresta $(u, v) \in E[G]$}
+            \Statep{\Call{Relax}{$u$, $v$, $w$}}
+        \EndFor
+    \EndFor
+    \ForEach{aresta $(u, v) \in E[G]$}
+        \If{$d[v] > d[u] + w(u, v)$}
+            \Statep{\Return \False}
+        \EndIf
+    \EndFor
+    \Statep{\Return \True}
+\end{algorithmic}
+```
+
+Esse aspecto mais "matemático" contrasta com as escolhas feitas quando são codificados programas nas mais diversas linguagens de programação. Na sequência é apresentada uma versão (incompleta) do @alg-bellman-ford codificada em Python. Nela, as opções foram por um código bem estruturado e organizado. Por exemplo, $E[G]$, que é a notação formal para a lista de arestas foi subsituída pela variável `lista_arestas`, assim como $u$ e $v$ deram lugar aos (vértices) `origem` e `destino`.
+
+```python
+# Inicia as distâncias de todos os vértices como infinito e a origem como 0
+distancias = [float('inf')] * num_vertices
+distancias[vertice_inicio] = 0
+
+# Relaxa todas as arestas num_vertices-1 vezes
+for _ in range(num_vertices - 1):
+    for origem, destino, peso in lista_arestas:
+        if (distancias[origem] != float('inf') and
+            distancias[origem] + peso < distancias[destino]):
+            distancias[destino] = distancias[origem] + peso
+
+# Verifica ciclos de peso negativo
+for origem, destino, peso in lista_arestas:
+    if (distancias[origem] != float('inf') and
+        distancias[origem] + peso < distancias[destino]):
+        return False
+
+return True
+```
+
+A resposta para qual seria a melhor representação tem uma resposta simples: depende.
+
+Nenhuma delas é melhor ou pior que a outra, pois devem ser aplicadas em seus próprios contextos. Para o caso dos grafos orientados do @alg-bellman-ford, o uso de $G$ para o grafo e $u$ e $v$ para arestas é o mais usual e, portanto, óbvio para quem conhece o assunto. Dessa forma, seu uso é apropriado e, também, conveniente.
+
+Na escrita de programas e, em associação, de algoritmos computacionais, a notação matemática tende a ser substituída por nomes mais significativos, como `origem` (ou até `vertice_origem`), por exemplo. Nessa situação, a clareza do código é mais relevante.
+
+Para exemplificar, o seguinte programa escrito em Fortran pode ser considerado. Sua função é, a partir de um salário inicial e de uma porcentagem de aumento, calcular o salário final resultante. 
+
+```fortran
+PROGRAM SCalc
+    IMPLICIT NONE
+    REAL :: S, P, A, NS
+
+    ! Entrada de dados
+    PRINT *, "Salário:"
+    READ *, S
+
+    PRINT *, "Aumento (%):"
+    READ *, P
+
+    ! Cálculo
+    A = S * (P / 100.0)
+    NS = S + A
+
+    ! Exibição do resultado
+    PRINT *, "Salário atualizado:", NS
+END PROGRAM SCalc
+```
+
+Nesse código, `S` pode ser facilmente associado ao salário, assim como `P` à porcentagem. Porém, porque `NS`? Talvez seja fácil ou talvez não chegar à conclusão de que a opção por `NS` se deve a Novo Salário. Nos programas, a opção da clareza leva a códigos como o seguinte, que apenas reapresenta o programa anterior usando uma notação mais direta e clara.
+
+```fortran
+PROGRAM CalculoSalario
+    IMPLICIT NONE
+    REAL :: salario, percentual, aumento, novo_salario
+
+    ! Entrada de dados
+    PRINT *, "Digite o salário atual:"
+    READ *, salario
+
+    PRINT *, "Digite a porcentagem de aumento:"
+    READ *, percentual
+
+    ! Cálculo do aumento e do novo salário
+    aumento = salario * (percentual / 100.0)
+    novo_salario = salario + aumento
+
+    ! Exibição do resultado
+    PRINT *, "O novo salário é:", novo_salario
+END PROGRAM CalculoSalario
+```
+
+Para os algoritmos, portanto, valem os mesmos argumentos. A notação mais matemática pode ser usada em várias situações e a notação mais usualmente empregada em programas, em outras. Por uma questão de clareza, todo o material faz como opção a escolha de uma notação que preza mais pela clareza.
+
+Em conclusão, os programas em Fortran apresentados seriam implementações do @alg-aumento-de-salario.
+
+
+```latex {.pseudocode}
+%| label: #alg-aumento-de-salario
+%| title: Cálculo do aumento de um salário.
+\begin{algorithmic}
+    \Description Cálculo o aumento de um salário dada uma porcentagem de aumento
+    \Require O valor inicial do salário e a porcentagem de aumento
+    \Ensure A apresentação do novo valor do salário
+    \Statep{Obtenha o \Id{salário} e a \Id{porcentagem}}
+    \Statep{Calcule \Id{aumento} como $\Id{salário} \times \Id{porcentagem}/100$}
+    \Statep{Calcule o \Id{novo\_salário} como $\Id{salário} + \Id{aumento}$}
+    \Statep{Apresente \Id{novo\_salário}}
+\end{algorithmic}
+```
+
+Para contastratar, o @alg-aumento-de-salario-sintetico seria a versão mais sintética e com menor clareza do @alg-aumento-de-salario. Quase uma versão "criptográfica" do anterior.
+
+```latex {.pseudocode}
+%| label: #alg-aumento-de-salario-sintetico
+%| title: Cálculo do aumento de um salário.
+\begin{algorithmic}
+    \Description Cálculo o aumento de um salário dada uma porcentagem de aumento
+    \Require $s, p$
+    \Ensure $s_n$
+    \Statex
+    \Statep{\Read $s, p$}
+    \Statep{$a \gets \dfrac{sp}{100}$}
+    \Statep{$s_n \gets s + a$}
+    \Statep{\Write $s_n$}
+\end{algorithmic}
+```
+
+::: {.callout-tip}
+O uso de uma notação com nomes mais signficativos, embora parece irrelevante em problemas pequenos, torna-se essencial para soluções mais complexas e, em consequência, com mais instruções.
+
+Acostumar-se a fazer o melhor logo de início é a melhor alternativa!
+:::

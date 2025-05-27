@@ -65,16 +65,16 @@ website:
             # - algoritmos/desenvolvimento-basico-e-codificacao.qmd
             # - algoritmos/execucao-condicional.qmd
             # - algoritmos/desenvolvimento-com-condicionais-e-codificacao.qmd
-        # - section: "Processamento de sequências de dados"
-        #   contents:
-        #     - algoritmos/processamento-basico-de-sequencias-de-dados.qmd
-        #     - algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.qmd
-        # - section: "Desenvolvimento e organização de algoritmos"
-        #   contents:
+        - section: "Processamento de sequências de dados"
+          contents:
+            - algoritmos/processamento-basico-de-sequencias-de-dados.qmd
+            - algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.qmd
+        - section: "Desenvolvimento e organização de algoritmos"
+          contents:
         #     - algoritmos/desenvolvimento-por-refinamentos-sucessivos.qmd
         #     - algoritmos/testes-de-mesa.qmd
-        #     - algoritmos/modularizacao.qmd
-        #     - algoritmos/desenvolvimento-com-modularizacao.qmd
+            - algoritmos/modularizacao.qmd
+            - algoritmos/desenvolvimento-com-modularizacao.qmd
         # - section: "Representação de dados estruturados"
         #   contents: 
         #     - algoritmos/cadeias-de-caracteres.qmd

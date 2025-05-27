@@ -1,0 +1,2516 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Problemas propostos – Algoritmos &amp; Programação</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-9e1f2a4632985dffc2c80318c992baf5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-ca7e136d0d5988c87344814d6f3e778b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      page: 25,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0NHDE9GGJP"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-0NHDE9GGJP', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../book.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Algoritmos &amp; Programação</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../algoritmos/index.html"> 
+<span class="menu-text">Algoritmos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../linguagem-c/index.html"> 
+<span class="menu-text">Linguagem C</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../sobre.html"> 
+<span class="menu-text">Sobre…</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://jandermoreira.github.io"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../problemas/index.html">Programação básica</a></li><li class="breadcrumb-item"><a href="../problemas/index.html">Problemas propostos</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+  <div id="quarto-announcement" data-announcement-id="037da44dd49132e8aac6c8da90475abb" class="alert alert-danger hidden"><i class="bi bi-exclamation-octagon quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong>Atenção</strong> - Este site está em construção. As informações ainda estão incompletas!</p>
+</div></div>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Programação básica</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../problemas/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Problemas propostos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../problemas/index.html">Programação básica</a></li><li class="breadcrumb-item"><a href="../problemas/index.html">Problemas propostos</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Problemas propostos</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<span class="math inline">\(\newcommand\Id[1]{\mbox{\textit{#1}}}\)</span>
+
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1748377712951" data-listing-reading-time-sort="1" data-listing-word-count-sort="91">
+<div class="thumbnail">
+<p><a href="../problemas/0006.html" class="no-external"></a></p><a href="../problemas/0006.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0006.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0006.html" class="no-external">Classificação de triângulo quanto aos ângulos internos</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0006.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0006.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Um triângulo, do ponto de vista de seus ângulos internos, pode ser classificado como:</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0006.html" class="no-external"></a></p><a href="../problemas/0006.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1748377371269" data-listing-reading-time-sort="1" data-listing-word-count-sort="70">
+<div class="thumbnail">
+<p><a href="../problemas/0065.html" class="no-external"></a></p><a href="../problemas/0065.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0065.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0065.html" class="no-external">Classificação do consumo de um veículo</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0065.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0065.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Uma revista automobilística utiliza os seguintes critérios para classificar o consumo de um veículo: o consumo até 5 km/l é “ruim”, até 8 km/l é “razoável”, até…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0065.html" class="no-external"></a></p><a href="../problemas/0065.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1748377712955" data-listing-reading-time-sort="1" data-listing-word-count-sort="77">
+<div class="thumbnail">
+<p><a href="../problemas/0024.html" class="no-external"></a></p><a href="../problemas/0024.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0024.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0024.html" class="no-external">Contagem de notas nulas e &gt;= 6</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0024.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0024.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Para entender melhor o desempenho dos alunos em uma disciplina, o professor decidiu levantar duas informações que julga importantes: quantas notas foram iguais a…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0024.html" class="no-external"></a></p><a href="../problemas/0024.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1748377712952" data-listing-reading-time-sort="1" data-listing-word-count-sort="19">
+<div class="thumbnail">
+<p><a href="../problemas/0075.html" class="no-external"></a></p><a href="../problemas/0075.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0075.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0075.html" class="no-external">Contagem de positivos em vetor</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0075.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0075.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva uma função para retornar a quantidade de valores positivos em um vetor de números reais.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0075.html" class="no-external"></a></p><a href="../problemas/0075.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1748377712957" data-listing-reading-time-sort="1" data-listing-word-count-sort="59">
+<div class="thumbnail">
+<p><a href="../problemas/0023.html" class="no-external"></a></p><a href="../problemas/0023.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0023.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0023.html" class="no-external">Contagem de temperaturas negativas</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0023.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0023.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Existe um relatório que contém, no topo da página, a quantidade de medidas de temperatura que foram feitas em um período arbitrário de tempo. Logo em seguida vêm…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0023.html" class="no-external"></a></p><a href="../problemas/0023.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1748377371176" data-listing-reading-time-sort="1" data-listing-word-count-sort="94">
+<div class="thumbnail">
+<p><a href="../problemas/0028.html" class="no-external"></a></p><a href="../problemas/0028.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0028.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0028.html" class="no-external">Contagem do número de vendas (com sentinela)</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0028.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0028.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Uma empresa possui os dados de venda de um mês inteiro em uma lista contendo os valores de cada venda. Como a lista pode ser longa e o final difícil de…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0028.html" class="no-external"></a></p><a href="../problemas/0028.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-listing-file-modified-sort="1748377371202" data-listing-reading-time-sort="1" data-listing-word-count-sort="71">
+<div class="thumbnail">
+<p><a href="../problemas/0034.html" class="no-external"></a></p><a href="../problemas/0034.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0034.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0034.html" class="no-external">Contagem e porcentagem em relatório de gastos</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0034.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0034.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Um relatório de gastos é apresentado mensalmente ao gerente de uma empresa. Nesse relatório constam, logo no início, a quantidade de despesas individuais e…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0034.html" class="no-external"></a></p><a href="../problemas/0034.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-listing-file-modified-sort="1748377371190" data-listing-reading-time-sort="1" data-listing-word-count-sort="113">
+<div class="thumbnail">
+<p><a href="../problemas/0031.html" class="no-external"></a></p><a href="../problemas/0031.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0031.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0031.html" class="no-external">Contagens de vários intervalos (categorias natação)</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0031.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0031.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Em uma competição de natação, as categorias são determinadas segundo a idade dos competidores.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0031.html" class="no-external"></a></p><a href="../problemas/0031.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="8" data-listing-file-modified-sort="1748377371251" data-listing-reading-time-sort="1" data-listing-word-count-sort="22">
+<div class="thumbnail">
+<p><a href="../problemas/0054.html" class="no-external"></a></p><a href="../problemas/0054.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0054.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0054.html" class="no-external">Conversão de conceito para nota</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0054.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0054.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> &nbsp;</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0054.html" class="no-external"></a></p><a href="../problemas/0054.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="9" data-listing-file-modified-sort="1748377371253" data-listing-reading-time-sort="1" data-listing-word-count-sort="50">
+<div class="thumbnail">
+<p><a href="../problemas/0055.html" class="no-external"></a></p><a href="../problemas/0055.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0055.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0055.html" class="no-external">Conversão de nota para conceito</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0055.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0055.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> &nbsp;</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0055.html" class="no-external"></a></p><a href="../problemas/0055.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="10" data-listing-file-modified-sort="1748377371219" data-listing-reading-time-sort="1" data-listing-word-count-sort="138">
+<div class="thumbnail">
+<p><a href="../problemas/0038.html" class="no-external"></a></p><a href="../problemas/0038.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0038.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0038.html" class="no-external">Crescimento simultâneo de aplicações</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0038.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0038.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Adson Biardeyson da Gama e Rafaela Xiomara Corocher são investidores.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0038.html" class="no-external"></a></p><a href="../problemas/0038.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="11" data-listing-file-modified-sort="1748377371224" data-listing-reading-time-sort="1" data-listing-word-count-sort="84">
+<div class="thumbnail">
+<p><a href="../problemas/0039.html" class="no-external"></a></p><a href="../problemas/0039.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0039.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0039.html" class="no-external">Crescimento simultâneo de aplicações 2</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0039.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0039.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Zana Geraldo e Otto de Mattos Oliveira são investidores e há um interesse no progresso de aplicações de cada um deles.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0039.html" class="no-external"></a></p><a href="../problemas/0039.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="12" data-listing-file-modified-sort="1748377712954" data-listing-reading-time-sort="1" data-listing-word-count-sort="64">
+<div class="thumbnail">
+<p><a href="../problemas/0008.html" class="no-external"></a></p><a href="../problemas/0008.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0008.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0008.html" class="no-external">Determinação da categoria de natação segundo idade</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0008.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0008.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Em uma competição de natação, as categorias são determinadas segundo a idade dos competidores.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0008.html" class="no-external"></a></p><a href="../problemas/0008.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="13" data-listing-file-modified-sort="1748377371267" data-listing-reading-time-sort="1" data-listing-word-count-sort="25">
+<div class="thumbnail">
+<p><a href="../problemas/0064.html" class="no-external"></a></p><a href="../problemas/0064.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0064.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0064.html" class="no-external">Diferença porcentual entre salários de 4</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0064.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0064.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Deseja-se saber, dados os salários de quatro pessoas, a diferença porcentual entre os salários mínimo e máximo.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0064.html" class="no-external"></a></p><a href="../problemas/0064.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="14" data-listing-file-modified-sort="1748377712952" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
+<div class="thumbnail">
+<p><a href="../problemas/0010.html" class="no-external"></a></p><a href="../problemas/0010.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0010.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0010.html" class="no-external">Equação ax^2 + bx + c = 0, incluindo solução para primeiro grau</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0010.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0010.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Considere uma equação na seguinte forma: <span class="math inline">\(ax^2 + bx + c = 0\)</span>, sendo que tanto <span class="math inline">\(a\)</span> quanto <span class="math inline">\(b\)</span> podem ser iguais a zero, porém nunca simultaneamente. Assim…<span class="math inline"></span></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0010.html" class="no-external"></a></p><a href="../problemas/0010.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="15" data-listing-file-modified-sort="1748377712939" data-listing-reading-time-sort="2" data-listing-word-count-sort="220">
+<div class="thumbnail">
+<p><a href="../problemas/0004.html" class="no-external"></a></p><a href="../problemas/0004.html" class="no-external">
+<p class="card-img-top"><img src="../algxpar/pseudocode.a9fb3fd1ac0e3e4f5d581303033f84e479a3dc54.svg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="../problemas/0004.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0004.html" class="no-external">Erro em contagem de notas nulas e &lt; 6</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0004.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0004.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Um professor precisa, para uma sequência de notas, verificar quantas são menores que 6 (abaixo da média) e quantas são nulas. Para isso, solicitou a um aluno que…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0004.html" class="no-external"></a></p><a href="../problemas/0004.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="16" data-listing-file-modified-sort="1748377371261" data-listing-reading-time-sort="1" data-listing-word-count-sort="68">
+<div class="thumbnail">
+<p><a href="../problemas/0060.html" class="no-external"></a></p><a href="../problemas/0060.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0060.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0060.html" class="no-external">Existência de triângulo dados os lados</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0060.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0060.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Não são quaisquer segmentos de reta que podem formar um triângulo. Por exemplo, não é possível “fechar” a figura com segmentos de comprimentos 1, 2 e 4. Ou seja…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0060.html" class="no-external"></a></p><a href="../problemas/0060.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="17" data-listing-file-modified-sort="1748377371243" data-listing-reading-time-sort="1" data-listing-word-count-sort="33">
+<div class="thumbnail">
+<p><a href="../problemas/0049.html" class="no-external"></a></p><a href="../problemas/0049.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0049.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0049.html" class="no-external">Função h min s para horas</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0049.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0049.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva uma função que receba três parâmetros, todos inteiros: a quantidade de horas, de minutos e de segundos. A função deve retornar o valor equivalente em…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0049.html" class="no-external"></a></p><a href="../problemas/0049.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="18" data-listing-file-modified-sort="1748377371241" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="../problemas/0048.html" class="no-external"></a></p><a href="../problemas/0048.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0048.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0048.html" class="no-external">Função h min s para segundos</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0048.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0048.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva uma função que receba três parâmetros, todos inteiros: a quantidade de horas, de minutos e de segundos. A função deve retornar o valor equivalente em…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0048.html" class="no-external"></a></p><a href="../problemas/0048.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="19" data-listing-file-modified-sort="1748377371280" data-listing-reading-time-sort="1" data-listing-word-count-sort="30">
+<div class="thumbnail">
+<p><a href="../problemas/0072.html" class="no-external"></a></p><a href="../problemas/0072.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0072.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0072.html" class="no-external">Função lógica ‘é divisível’</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0072.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0072.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva uma função que, dados dois valores inteiros <span class="math inline">\(n\)</span> e <span class="math inline">\(k\)</span>, retorne <span class="smallcaps">Verdadeiro</span> ou <span class="smallcaps">Falso</span> conforme <span class="math inline">\(n\)</span> seja divisível por <span class="math inline">\(k\)</span>.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0072.html" class="no-external"></a></p><a href="../problemas/0072.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="20" data-listing-file-modified-sort="1748377712958" data-listing-reading-time-sort="1" data-listing-word-count-sort="27">
+<div class="thumbnail">
+<p><a href="../problemas/0051.html" class="no-external"></a></p><a href="../problemas/0051.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0051.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0051.html" class="no-external">Função lógica ‘é par’</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0051.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0051.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva uma função que, dado um valor inteiro qualquer, retorne se ele é par ou não.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0051.html" class="no-external"></a></p><a href="../problemas/0051.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="21" data-listing-file-modified-sort="1748377712957" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<div class="thumbnail">
+<p><a href="../problemas/0043.html" class="no-external"></a></p><a href="../problemas/0043.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0043.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0043.html" class="no-external">Função máximo de 2</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0043.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0043.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva uma função para, dados dois valores numéricos, retornar o valor máximo entre eles.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0043.html" class="no-external"></a></p><a href="../problemas/0043.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="22" data-listing-file-modified-sort="1748377712956" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<div class="thumbnail">
+<p><a href="../problemas/0044.html" class="no-external"></a></p><a href="../problemas/0044.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0044.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0044.html" class="no-external">Função máximo de 3</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0044.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0044.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva uma função para, dados três valores numéricos, retornar o valor máximo entre eles.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0044.html" class="no-external"></a></p><a href="../problemas/0044.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="23" data-listing-file-modified-sort="1748377371255" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<div class="thumbnail">
+<p><a href="../problemas/0056.html" class="no-external"></a></p><a href="../problemas/0056.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0056.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0056.html" class="no-external">Função número de divisores</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0056.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0056.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva uma função que retorne o número de divisores de um número natural, incluindo ele próprio.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0056.html" class="no-external"></a></p><a href="../problemas/0056.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="24" data-listing-file-modified-sort="1748377371278" data-listing-reading-time-sort="1" data-listing-word-count-sort="38">
+<div class="thumbnail">
+<p><a href="../problemas/0071.html" class="no-external"></a></p><a href="../problemas/0071.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0071.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0071.html" class="no-external">Função número de raízes reais distintas</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0071.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0071.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Considere uma equação do segundo grau na forma <span class="math inline">\({ax^2 + bx + c = 0}\)</span>.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0071.html" class="no-external"></a></p><a href="../problemas/0071.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="25" data-listing-file-modified-sort="1748377371236" data-listing-reading-time-sort="1" data-listing-word-count-sort="59">
+<div class="thumbnail">
+<p><a href="../problemas/0045.html" class="no-external"></a></p><a href="../problemas/0045.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0045.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0045.html" class="no-external">Função número perfeito</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0045.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0045.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva uma função para, dado um valor inteiro positivo, retornar <span class="smallcaps">Verdadeiro</span> se o valor for um número perfeito ou <span class="smallcaps">Falso</span> caso contrário.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0045.html" class="no-external"></a></p><a href="../problemas/0045.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="26" data-listing-file-modified-sort="1748377371274" data-listing-reading-time-sort="1" data-listing-word-count-sort="36">
+<div class="thumbnail">
+<p><a href="../problemas/0068.html" class="no-external"></a></p><a href="../problemas/0068.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0068.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0068.html" class="no-external">Função potência e^x</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0068.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0068.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Considere a seguinte soma:</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0068.html" class="no-external"></a></p><a href="../problemas/0068.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="27" data-listing-file-modified-sort="1748377371257" data-listing-reading-time-sort="2" data-listing-word-count-sort="288">
+<div class="thumbnail">
+<p><a href="../problemas/0057.html" class="no-external"></a></p><a href="../problemas/0057.html" class="no-external">
+<p class="card-img-top"><img data-src="../algxpar/pseudocode.5b2fab17dc208988d90f28f7b3bd736a079a3dd9.svg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="../problemas/0057.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0057.html" class="no-external">Função potência x^k</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0057.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0057.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Considere a função abaixo, na qual <span class="math inline">\(v\)</span> é um número real e <span class="math inline">\(k\)</span> é um inteiro:</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0057.html" class="no-external"></a></p><a href="../problemas/0057.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="28" data-listing-file-modified-sort="1748377371240" data-listing-reading-time-sort="1" data-listing-word-count-sort="21">
+<div class="thumbnail">
+<p><a href="../problemas/0047.html" class="no-external"></a></p><a href="../problemas/0047.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0047.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0047.html" class="no-external">Função volume de esfera dado o diâmetro</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0047.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0047.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva uma função para, dado diâmetro de uma esfera, retornar seu volume.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0047.html" class="no-external"></a></p><a href="../problemas/0047.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="29" data-listing-file-modified-sort="1748377712956" data-listing-reading-time-sort="1" data-listing-word-count-sort="23">
+<div class="thumbnail">
+<p><a href="../problemas/0046.html" class="no-external"></a></p><a href="../problemas/0046.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0046.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0046.html" class="no-external">Função volume de esfera dado o raio</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0046.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0046.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva uma função para, dado raio de uma esfera, retornar seu volume.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0046.html" class="no-external"></a></p><a href="../problemas/0046.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="30" data-listing-file-modified-sort="1748377371277" data-listing-reading-time-sort="1" data-listing-word-count-sort="94">
+<div class="thumbnail">
+<p><a href="../problemas/0070.html" class="no-external"></a></p><a href="../problemas/0070.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0070.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0070.html" class="no-external">Geração de palíndromo numérico</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0070.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0070.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> O palíndromo de um número é aquele que possui o mesmo valor, mesmo invertendo a ordem de seus dígitos. Assim, 373 é um palíndromo. Também são exemplos: 1001…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0070.html" class="no-external"></a></p><a href="../problemas/0070.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="31" data-listing-file-modified-sort="1748377712954" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
+<div class="thumbnail">
+<p><a href="../problemas/0007.html" class="no-external"></a></p><a href="../problemas/0007.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0007.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0007.html" class="no-external">Igualdade de números racionais em representação fracionária</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0007.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0007.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Um número racional <span class="math inline">\(q \in \mathbb{Q}\)</span> é um valor que pode ser escrito na forma <span class="math inline">\(a/b\)</span>, sendo <span class="math inline">\(a \in \mathbb{Z}\)</span> e <span class="math inline">\(b \in \mathbb{Z}^*\)</span>.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0007.html" class="no-external"></a></p><a href="../problemas/0007.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="32" data-listing-file-modified-sort="1748377712953" data-listing-reading-time-sort="1" data-listing-word-count-sort="18">
+<div class="thumbnail">
+<p><a href="../problemas/0082.html" class="no-external"></a></p><a href="../problemas/0082.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0082.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0082.html" class="no-external">Inserção simples em vetor</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0082.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0082.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva um procedimento que adicione um novo valor a um vetor, colocando-o na última posição.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0082.html" class="no-external"></a></p><a href="../problemas/0082.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="33" data-listing-file-modified-sort="1748377712956" data-listing-reading-time-sort="1" data-listing-word-count-sort="35">
+<div class="thumbnail">
+<p><a href="../problemas/0021.html" class="no-external"></a></p><a href="../problemas/0021.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0021.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0021.html" class="no-external">Maior altura em um grupo fixo</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0021.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0021.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Em uma competição os participantes são organizados equipes, cada uma sempre com 20&nbsp;indivíduos.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0021.html" class="no-external"></a></p><a href="../problemas/0021.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="34" data-listing-file-modified-sort="1748377371094" data-listing-reading-time-sort="1" data-listing-word-count-sort="66">
+<div class="thumbnail">
+<p><a href="../problemas/0009.html" class="no-external"></a></p><a href="../problemas/0009.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0009.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0009.html" class="no-external">Mediana entre 3</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0009.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0009.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Em alguns processos químicos determinadas medidas são colhidas três vezes, pois podem variar consideravelmente em um curto espaço de tempo. Para cada coleta, é…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0009.html" class="no-external"></a></p><a href="../problemas/0009.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="35" data-listing-file-modified-sort="1748377371295" data-listing-reading-time-sort="1" data-listing-word-count-sort="33">
+<div class="thumbnail">
+<p><a href="../problemas/0078.html" class="no-external"></a></p><a href="../problemas/0078.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0078.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0078.html" class="no-external">Movimentação do máximo para o fim do vetor</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0078.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0078.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva um procedimento mover o valor máximo um vetor de números reais para que ocupe a última posição, preservando todos os valores originais. Considere que o…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0078.html" class="no-external"></a></p><a href="../problemas/0078.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="36" data-listing-file-modified-sort="1748377712957" data-listing-reading-time-sort="1" data-listing-word-count-sort="35">
+<div class="thumbnail">
+<p><a href="../problemas/0077.html" class="no-external"></a></p><a href="../problemas/0077.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0077.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0077.html" class="no-external">Movimentação do mínimo para início do vetor</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0077.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0077.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva um procedimento mover o valor mínimo um vetor de números reais para que ocupe a primeira posição, preservando todos os valores originais. Considere que o…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0077.html" class="no-external"></a></p><a href="../problemas/0077.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="37" data-listing-file-modified-sort="1748377712958" data-listing-reading-time-sort="1" data-listing-word-count-sort="50">
+<div class="thumbnail">
+<p><a href="../problemas/0042.html" class="no-external"></a></p><a href="../problemas/0042.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0042.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0042.html" class="no-external">Máximo e contagem simultâneas (idades)</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0042.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0042.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Existe um grupo de voluntários para um estudo clínico, perfazendo 30&nbsp;pessoas. Para cada uma delas foram coletadas diversas informações, entre elas a idade.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0042.html" class="no-external"></a></p><a href="../problemas/0042.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="38" data-listing-file-modified-sort="1748377371063" data-listing-reading-time-sort="1" data-listing-word-count-sort="50">
+<div class="thumbnail">
+<p><a href="../problemas/0002.html" class="no-external"></a></p><a href="../problemas/0002.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0002.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0002.html" class="no-external">Média com aprovação</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0002.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0002.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva um algoritmo completo para, a partir de notas de duas provas, apresentar a média e a indicação de aprovação (aprovado ou reprovado).</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0002.html" class="no-external"></a></p><a href="../problemas/0002.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="39" data-listing-file-modified-sort="1748377371194" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
+<div class="thumbnail">
+<p><a href="../problemas/0032.html" class="no-external"></a></p><a href="../problemas/0032.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0032.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0032.html" class="no-external">Média de medidas de pressão</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0032.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0032.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Um sistema monitora a pressão de uma caldeira registrando uma medida a cada cinco minutos. Como o sistema funciona continuamente, os dados são registrados…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0032.html" class="no-external"></a></p><a href="../problemas/0032.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="40" data-listing-file-modified-sort="1748377371270" data-listing-reading-time-sort="1" data-listing-word-count-sort="68">
+<div class="thumbnail">
+<p><a href="../problemas/0066.html" class="no-external"></a></p><a href="../problemas/0066.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0066.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0066.html" class="no-external">Média ponderada</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0066.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0066.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Um aluno precisa saber seu desempenho em uma prova de admissão. Para ser considerado aprovado, sua pontuação média tem que ser superior a 70 pontos. A prova…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0066.html" class="no-external"></a></p><a href="../problemas/0066.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="41" data-listing-file-modified-sort="1748377371162" data-listing-reading-time-sort="2" data-listing-word-count-sort="348">
+<div class="thumbnail">
+<p><a href="../problemas/0025.html" class="no-external"></a></p><a href="../problemas/0025.html" class="no-external">
+<p class="card-img-top"><img data-src="../algxpar/pseudocode.bbc8227be7906e56907f47e1ef97a262f83a8133.svg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="../problemas/0025.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0025.html" class="no-external">Mínimo e máximo simultâneos e excludentes</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0025.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0025.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Considere o seguinte problema:</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0025.html" class="no-external"></a></p><a href="../problemas/0025.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="42" data-listing-file-modified-sort="1748377712956" data-listing-reading-time-sort="1" data-listing-word-count-sort="20">
+<div class="thumbnail">
+<p><a href="../problemas/0022.html" class="no-external"></a></p><a href="../problemas/0022.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0022.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0022.html" class="no-external">Mínimo em uma sequência de reais</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0022.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0022.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva um algoritmo que determine o valor mínimo em uma sequência (não vazia) de valores reais qualquer.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0022.html" class="no-external"></a></p><a href="../problemas/0022.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="43" data-listing-file-modified-sort="1748377371067" data-listing-reading-time-sort="1" data-listing-word-count-sort="137">
+<div class="thumbnail">
+<p><a href="../problemas/0003.html" class="no-external"></a></p><a href="../problemas/0003.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0003.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0003.html" class="no-external">Ou exclusivo</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0003.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0003.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Existe na computação uma operação lógica chamada <strong>ou exclusivo</strong>. Ela é uma operação que, dados dois operadores, retorna verdadeiro se apenas um deles for verdadeiro.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0003.html" class="no-external"></a></p><a href="../problemas/0003.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="44" data-listing-file-modified-sort="1748377371048" data-listing-reading-time-sort="1" data-listing-word-count-sort="164">
+<div class="thumbnail">
+<p><a href="../problemas/0001.html" class="no-external"></a></p><a href="../problemas/0001.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0001.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0001.html" class="no-external">Pontuação em jogo de auditório</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0001.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0001.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Há dois participantes em uma competição de perguntas e respostas, que acumulam pontos ao longo de diversas fases visando um prêmio em dinheiro dado ao vencedor…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0001.html" class="no-external"></a></p><a href="../problemas/0001.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="45" data-listing-file-modified-sort="1748377371199" data-listing-reading-time-sort="1" data-listing-word-count-sort="60">
+<div class="thumbnail">
+<p><a href="../problemas/0033.html" class="no-external"></a></p><a href="../problemas/0033.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0033.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0033.html" class="no-external">Porcentagem de cada resposta de uma pesquisa de opinião</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0033.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0033.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> É preciso processar o resultado de uma pesquisa de opinião para a qual era possível escolher entre sim, não e não sei.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0033.html" class="no-external"></a></p><a href="../problemas/0033.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="46" data-listing-file-modified-sort="1748377371207" data-listing-reading-time-sort="1" data-listing-word-count-sort="134">
+<div class="thumbnail">
+<p><a href="../problemas/0035.html" class="no-external"></a></p><a href="../problemas/0035.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0035.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0035.html" class="no-external">Porcentagens e médias na população</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0035.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0035.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> A Universidade promoveu um um show de música folclórica em seu Anfiteatro principal, o qual tem capacidade para 400&nbsp;pessoas. Os ingressos foram grátis e…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0035.html" class="no-external"></a></p><a href="../problemas/0035.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="47" data-listing-file-modified-sort="1748377712951" data-listing-reading-time-sort="1" data-listing-word-count-sort="60">
+<div class="thumbnail">
+<p><a href="../problemas/0080.html" class="no-external"></a></p><a href="../problemas/0080.html" class="no-external">
+<p class="card-img-top"><img data-src="../algxpar/pseudocode.67967b4c8d58bcc37fede954ba889fc8ba14f3ef.svg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="../problemas/0080.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0080.html" class="no-external">Preenchimento de vetor com divisores</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0080.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0080.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva um procedimento que modifique um vetor de inteiros para que contenha, em ordem, todos os divisores de um valor dado.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0080.html" class="no-external"></a></p><a href="../problemas/0080.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="48" data-listing-file-modified-sort="1748377371250" data-listing-reading-time-sort="1" data-listing-word-count-sort="33">
+<div class="thumbnail">
+<p><a href="../problemas/0053.html" class="no-external"></a></p><a href="../problemas/0053.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0053.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0053.html" class="no-external">Problema conversões notas x conceitos</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0053.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0053.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> &nbsp;</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0053.html" class="no-external"></a></p><a href="../problemas/0053.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="49" data-listing-file-modified-sort="1748377712954" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
+<div class="thumbnail">
+<p><a href="../problemas/0073.html" class="no-external"></a></p><a href="../problemas/0073.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0073.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0073.html" class="no-external">Procedimento troca de valores</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0073.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0073.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva um procedimento para realizar a troca de valores de duas variáveis.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0073.html" class="no-external"></a></p><a href="../problemas/0073.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="50" data-listing-file-modified-sort="1748377712956" data-listing-reading-time-sort="1" data-listing-word-count-sort="24">
+<div class="thumbnail">
+<p><a href="../problemas/0074.html" class="no-external"></a></p><a href="../problemas/0074.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0074.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0074.html" class="no-external">Procedimento troca de valores</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0074.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0074.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva um procedimento para realizar a troca de valores de duas variáveis de forma que sempre fiquem em ordem não decrescente.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0074.html" class="no-external"></a></p><a href="../problemas/0074.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="51" data-listing-file-modified-sort="1748377712954" data-listing-reading-time-sort="1" data-listing-word-count-sort="52">
+<div class="thumbnail">
+<p><a href="../problemas/0050.html" class="no-external"></a></p><a href="../problemas/0050.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0050.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0050.html" class="no-external">Projeto função - combinação de n, p a p</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0050.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0050.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> O número de combinações de <span class="math inline">\(n\)</span> elementos em grupos contendo <span class="math inline">\(p\)</span> elementos cada um é expresso</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0050.html" class="no-external"></a></p><a href="../problemas/0050.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="52" data-listing-file-modified-sort="1748377712957" data-listing-reading-time-sort="1" data-listing-word-count-sort="53">
+<div class="thumbnail">
+<p><a href="../problemas/0052.html" class="no-external"></a></p><a href="../problemas/0052.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0052.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0052.html" class="no-external">Projeto função - conversões notas x conceitos</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0052.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0052.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> &nbsp;</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0052.html" class="no-external"></a></p><a href="../problemas/0052.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="53" data-listing-file-modified-sort="1748377712952" data-listing-reading-time-sort="1" data-listing-word-count-sort="81">
+<div class="thumbnail">
+<p><a href="../problemas/0012.html" class="no-external"></a></p><a href="../problemas/0012.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0012.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0012.html" class="no-external">Qual usar? Repetição definida (Pressão em caldeira)</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0012.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0012.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Considere o problema:</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0012.html" class="no-external"></a></p><a href="../problemas/0012.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="54" data-listing-file-modified-sort="1748377371139" data-listing-reading-time-sort="1" data-listing-word-count-sort="97">
+<div class="thumbnail">
+<p><a href="../problemas/0019.html" class="no-external"></a></p><a href="../problemas/0019.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0019.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0019.html" class="no-external">Qual usar? Repetição definida conhecida (Estudo clínico)</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0019.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0019.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Considere o problema:</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0019.html" class="no-external"></a></p><a href="../problemas/0019.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="55" data-listing-file-modified-sort="1748377712950" data-listing-reading-time-sort="1" data-listing-word-count-sort="83">
+<div class="thumbnail">
+<p><a href="../problemas/0017.html" class="no-external"></a></p><a href="../problemas/0017.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0017.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0017.html" class="no-external">Qual usar? Repetição definida conhecida (Média de temperaturas)</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0017.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0017.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Considere o problema:</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0017.html" class="no-external"></a></p><a href="../problemas/0017.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="56" data-listing-file-modified-sort="1748377371126" data-listing-reading-time-sort="1" data-listing-word-count-sort="80">
+<div class="thumbnail">
+<p><a href="../problemas/0016.html" class="no-external"></a></p><a href="../problemas/0016.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0016.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0016.html" class="no-external">Qual usar? Repetição definida prefixada (Relatório)</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0016.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0016.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Considere o problema:</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0016.html" class="no-external"></a></p><a href="../problemas/0016.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="57" data-listing-file-modified-sort="1748377371135" data-listing-reading-time-sort="1" data-listing-word-count-sort="96">
+<div class="thumbnail">
+<p><a href="../problemas/0018.html" class="no-external"></a></p><a href="../problemas/0018.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0018.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0018.html" class="no-external">Qual usar? Repetição definida prefixada (Área de polígono)</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0018.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0018.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Considere o problema:</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0018.html" class="no-external"></a></p><a href="../problemas/0018.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="58" data-listing-file-modified-sort="1748377712950" data-listing-reading-time-sort="1" data-listing-word-count-sort="68">
+<div class="thumbnail">
+<p><a href="../problemas/0014.html" class="no-external"></a></p><a href="../problemas/0014.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0014.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0014.html" class="no-external">Qual usar? Repetição indefinida até fim dos dados (Pesquisa de opinião)</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0014.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0014.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Considere o problema:</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0014.html" class="no-external"></a></p><a href="../problemas/0014.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="59" data-listing-file-modified-sort="1748377371121" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
+<div class="thumbnail">
+<p><a href="../problemas/0015.html" class="no-external"></a></p><a href="../problemas/0015.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0015.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0015.html" class="no-external">Qual usar? Repetição indefinida com sentinela (Atendimento chat)</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0015.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0015.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Considere o problema:</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0015.html" class="no-external"></a></p><a href="../problemas/0015.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="60" data-listing-file-modified-sort="1748377712950" data-listing-reading-time-sort="1" data-listing-word-count-sort="177">
+<div class="thumbnail">
+<p><a href="../problemas/0013.html" class="no-external"></a></p><a href="../problemas/0013.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0013.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0013.html" class="no-external">Qual usar? Repetição indefinida com sentinela (Pesagem de gado)</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0013.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0013.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Considere o problema:</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0013.html" class="no-external"></a></p><a href="../problemas/0013.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="61" data-listing-file-modified-sort="1748377712956" data-listing-reading-time-sort="1" data-listing-word-count-sort="94">
+<div class="thumbnail">
+<p><a href="../problemas/0011.html" class="no-external"></a></p><a href="../problemas/0011.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0011.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0011.html" class="no-external">Qual usar? Repetição indefinida com sentinela (Processo seletivo)</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0011.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0011.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Considere o problema:</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0011.html" class="no-external"></a></p><a href="../problemas/0011.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="62" data-listing-file-modified-sort="1748377371144" data-listing-reading-time-sort="1" data-listing-word-count-sort="107">
+<div class="thumbnail">
+<p><a href="../problemas/0020.html" class="no-external"></a></p><a href="../problemas/0020.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0020.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0020.html" class="no-external">Qual usar? Repetição indefinida com sentinela (Transmissão em rede)</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0020.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0020.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Considere o problema:</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0020.html" class="no-external"></a></p><a href="../problemas/0020.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="63" data-listing-file-modified-sort="1748377371265" data-listing-reading-time-sort="1" data-listing-word-count-sort="48">
+<div class="thumbnail">
+<p><a href="../problemas/0063.html" class="no-external"></a></p><a href="../problemas/0063.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0063.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0063.html" class="no-external">Seleção de mais velho e mais novo</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0063.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0063.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Para duas pessoas é preciso comparar suas idades.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0063.html" class="no-external"></a></p><a href="../problemas/0063.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="64" data-listing-file-modified-sort="1748377371275" data-listing-reading-time-sort="1" data-listing-word-count-sort="79">
+<div class="thumbnail">
+<p><a href="../problemas/0069.html" class="no-external"></a></p><a href="../problemas/0069.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0069.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0069.html" class="no-external">Separação de inteiro em potências de 10</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0069.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0069.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Um número inteiro é comumente escrito na base 10. Assim, o número <span class="math inline">\(2601\)</span> pode ser entendido como <span class="math inline">\({1 \times 10^0} + {0 \times 10^1} + {6 \times 10^2} + {2…</span></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0069.html" class="no-external"></a></p><a href="../problemas/0069.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="65" data-listing-file-modified-sort="1748377371272" data-listing-reading-time-sort="1" data-listing-word-count-sort="62">
+<div class="thumbnail">
+<p><a href="../problemas/0067.html" class="no-external"></a></p><a href="../problemas/0067.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0067.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0067.html" class="no-external">Solução de pares de equações lineares simultâneas (2 variáveis)</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0067.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0067.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Considere o sistema de equações simultâneas <span class="math inline">\(a_1x + b_1y = c_1\)</span> e <span class="math inline">\(a_2x + b_2y = c_2\)</span>.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0067.html" class="no-external"></a></p><a href="../problemas/0067.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="66" data-listing-file-modified-sort="1748377712954" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
+<div class="thumbnail">
+<p><a href="../problemas/0040.html" class="no-external"></a></p><a href="../problemas/0040.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0040.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0040.html" class="no-external">Soma de 1 + 2 + 3 … + n</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0040.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0040.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva um algoritmo que faça, passo a passo, a soma <span class="math inline">\({\sum_{i=1}^n i}\)</span>.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0040.html" class="no-external"></a></p><a href="../problemas/0040.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="67" data-listing-file-modified-sort="1748377712952" data-listing-reading-time-sort="1" data-listing-word-count-sort="65">
+<div class="thumbnail">
+<p><a href="../problemas/0026.html" class="no-external"></a></p><a href="../problemas/0026.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0026.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0026.html" class="no-external">Soma de pontos em quantidade fixa</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0026.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0026.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Em uma competição, cada equipe de atletas é composta sempre por 20&nbsp;participantes. Uma das premiações da competição considera o total de pontos obtido pela…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0026.html" class="no-external"></a></p><a href="../problemas/0026.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="68" data-listing-file-modified-sort="1748377371181" data-listing-reading-time-sort="1" data-listing-word-count-sort="80">
+<div class="thumbnail">
+<p><a href="../problemas/0029.html" class="no-external"></a></p><a href="../problemas/0029.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0029.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0029.html" class="no-external">Soma de precipitações (quantidade conhecida)</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0029.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0029.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Um sistema automático de uma estação meteorológica coleta uma medida de precipitação, ou volume de chuva, (em mm) a cada cinco minutos, iniciando às 0h e…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0029.html" class="no-external"></a></p><a href="../problemas/0029.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="69" data-listing-file-modified-sort="1748377371172" data-listing-reading-time-sort="1" data-listing-word-count-sort="86">
+<div class="thumbnail">
+<p><a href="../problemas/0027.html" class="no-external"></a></p><a href="../problemas/0027.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0027.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0027.html" class="no-external">Soma de vendas com sentinela</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0027.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0027.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Uma empresa possui os dados de venda de um mês inteiro em uma lista contendo os valores de cada venda. Como a lista pode ser longa e o final difícil de…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0027.html" class="no-external"></a></p><a href="../problemas/0027.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="70" data-listing-file-modified-sort="1748377712958" data-listing-reading-time-sort="1" data-listing-word-count-sort="23">
+<div class="thumbnail">
+<p><a href="../problemas/0036.html" class="no-external"></a></p><a href="../problemas/0036.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0036.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0036.html" class="no-external">Soma dos divisores</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0036.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0036.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva um algoritmo para, a partir de um valor em <span class="math inline">\(\mathbb{Z}^*\)</span>, apresentar todos seus divisores e a soma destes divisores.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0036.html" class="no-external"></a></p><a href="../problemas/0036.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="71" data-listing-file-modified-sort="1748377371216" data-listing-reading-time-sort="1" data-listing-word-count-sort="193">
+<div class="thumbnail">
+<p><a href="../problemas/0037.html" class="no-external"></a></p><a href="../problemas/0037.html" class="no-external">
+<p class="card-img-top"><img data-src="../algxpar/pseudocode.7e7ff7921c68c5bdcceda7a4a52b6195574575b4.svg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="../problemas/0037.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0037.html" class="no-external">Soma dos divisores</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0037.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0037.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Considere o seguinte problema:</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0037.html" class="no-external"></a></p><a href="../problemas/0037.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="72" data-listing-file-modified-sort="1748377371260" data-listing-reading-time-sort="1" data-listing-word-count-sort="42">
+<div class="thumbnail">
+<p><a href="../problemas/0059.html" class="no-external"></a></p><a href="../problemas/0059.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0059.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0059.html" class="no-external">Triângulo escaleno?</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0059.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0059.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Triângulos retângulos são, de longe, mais comuns em problemas de trigonometria que os escalenos. Estes não são, porém, menos relevantes realmente.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0059.html" class="no-external"></a></p><a href="../problemas/0059.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="73" data-listing-file-modified-sort="1748377371258" data-listing-reading-time-sort="1" data-listing-word-count-sort="30">
+<div class="thumbnail">
+<p><a href="../problemas/0058.html" class="no-external"></a></p><a href="../problemas/0058.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0058.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0058.html" class="no-external">Triângulo retângulo?</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0058.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0058.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Triângulos retângulos são uma constante em problemas de trigonometria.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0058.html" class="no-external"></a></p><a href="../problemas/0058.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="74" data-listing-file-modified-sort="1748377712954" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
+<div class="thumbnail">
+<p><a href="../problemas/0005.html" class="no-external"></a></p><a href="../problemas/0005.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0005.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0005.html" class="no-external">Validade de data sem bissexto</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0005.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0005.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Nas mais diversas aplicações, datas são dados considerados essenciais.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0005.html" class="no-external"></a></p><a href="../problemas/0005.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="75" data-listing-file-modified-sort="1748377371296" data-listing-reading-time-sort="1" data-listing-word-count-sort="70">
+<div class="thumbnail">
+<p><a href="../problemas/0079.html" class="no-external"></a></p><a href="../problemas/0079.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0079.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0079.html" class="no-external">Valor do meio no vetor</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0079.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0079.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva uma função para retornar o valor do item que está “no meio” de um vetor de números reais. Caso o vetor contenha número par de elementos, o “meio” será o…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0079.html" class="no-external"></a></p><a href="../problemas/0079.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="76" data-listing-file-modified-sort="1748377712956" data-listing-reading-time-sort="1" data-listing-word-count-sort="121">
+<div class="thumbnail">
+<p><a href="../problemas/0030.html" class="no-external"></a></p><a href="../problemas/0030.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0030.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0030.html" class="no-external">Valor máximo de multa e identificação do motorista</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0030.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0030.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Preocupados com o aumento das ocorrências de trânsito, uma cidade do interior solicitou uma listagem contendo, para cada motorista (identificado pelo número de…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0030.html" class="no-external"></a></p><a href="../problemas/0030.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="77" data-listing-file-modified-sort="1748377712950" data-listing-reading-time-sort="1" data-listing-word-count-sort="25">
+<div class="thumbnail">
+<p><a href="../problemas/0076.html" class="no-external"></a></p><a href="../problemas/0076.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0076.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0076.html" class="no-external">Valor mínimo em vetor</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0076.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0076.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva uma função para retornar o valor mínimo um vetor de números reais. Considere que o comprimento mínimo do vetor seja 1.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0076.html" class="no-external"></a></p><a href="../problemas/0076.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="78" data-listing-file-modified-sort="1748377712954" data-listing-reading-time-sort="1" data-listing-word-count-sort="25">
+<div class="thumbnail">
+<p><a href="../problemas/0081.html" class="no-external"></a></p><a href="../problemas/0081.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0081.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0081.html" class="no-external">Vetor contém elemento</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0081.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0081.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva uma função que verifique se um dado valor está ou não em um vetor. O comprimento do vetor pode ser nulo</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0081.html" class="no-external"></a></p><a href="../problemas/0081.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="79" data-listing-file-modified-sort="1748377712954" data-listing-reading-time-sort="1" data-listing-word-count-sort="113">
+<div class="thumbnail">
+<p><a href="../problemas/0083.html" class="no-external"></a></p><a href="../problemas/0083.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0083.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0083.html" class="no-external">kNN dadas as distâncias</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0083.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0083.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Um sistema de navegação baseado em GPS, em parte de seus cálculos internos, usa critérios de distância para sugerir locais ao usuário. Assim, dada a localização…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0083.html" class="no-external"></a></p><a href="../problemas/0083.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="80" data-listing-file-modified-sort="1748377712954" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<div class="thumbnail">
+<p><a href="../problemas/0041.html" class="no-external"></a></p><a href="../problemas/0041.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0041.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0041.html" class="no-external">n!</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0041.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0041.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva um algoritmo que, dado um valor <span class="math inline">\(n \in \mathbb{Z}^+\)</span>, calcule e apresente <span class="math inline">\(n!\)</span>.</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0041.html" class="no-external"></a></p><a href="../problemas/0041.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="81" data-listing-file-modified-sort="1748377371263" data-listing-reading-time-sort="1" data-listing-word-count-sort="30">
+<div class="thumbnail">
+<p><a href="../problemas/0061.html" class="no-external"></a></p><a href="../problemas/0061.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0061.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0061.html" class="no-external">Área de possível triângulo a partir dos lados</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0061.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0061.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Escreva um algoritmo para, a partir dos comprimentos de três segmentos de reta, apresentar a área do triângulo formado, se ele existir, ou uma mensagem de…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0061.html" class="no-external"></a></p><a href="../problemas/0061.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="82" data-listing-file-modified-sort="1748377371264" data-listing-reading-time-sort="1" data-listing-word-count-sort="90">
+<div class="thumbnail">
+<p><a href="../problemas/0062.html" class="no-external"></a></p><a href="../problemas/0062.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../problemas/0062.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../problemas/0062.html" class="no-external">Área de possível triângulo a partir dos lados</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../problemas/0062.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../problemas/0062.html" class="no-external"><span class="theorem-title"><strong>Exercício 1</strong></span> Em um torneio de jogos, cada partida têm a duração máxima de 2h (o que indica empate se não houver ganhador até este período). É preciso saber a duração de um…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../problemas/0062.html" class="no-external"></a></p><a href="../problemas/0062.html" class="no-external">
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+Sem itens correspondentes
+</div>
+<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
+</div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiada");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiada");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/jandermoreira\.github\.io\/algoritmos_e_programacao\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

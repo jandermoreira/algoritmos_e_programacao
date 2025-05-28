@@ -44,7 +44,7 @@ website:
       - text: Linguagem C
         href: linguagem-c/index.qmd
       - text: Problemas propostos
-        href: problemas/index.qmd
+        href: problemas-algoritmos/index.qmd
     right:
       - sobre.qmd
       - icon: github
@@ -166,10 +166,10 @@ website:
       background: light
       collapse-level: 2
       contents: 
-        - problemas/index.qmd  #título real: introducao aos problemas
+        - problemas-algoritmos/index.qmd  #título real: introducao aos problemas
         - section: "Condicionais"
           contents:
-            - problemas/condicionais-basicos.qmd
+            - problemas-algoritmos/condicionais-basicos.qmd
 
 
 format:

@@ -1,0 +1,24 @@
+---
+title: "Propostas de algoritmos"
+listing: 
+    contents: "????.qmd"
+    type: table
+    sort: identifier
+    page-size: 12
+    sort-ui: true
+    filter-ui: true
+    categories: true
+    fields: [identifier, title, categories]
+    field-display-names:
+        identifier: "ID"
+---
+
+Nesta seção são apresentadas propostas de desenvolvimento e entendimento sobre algoritmos.
+
+## Organização por temas
+
+As propostas de exercícios podem ser consultadas por temas, usando o menu. Desta forma, é possível focar em situações específicas do desenvolvimento, como trabalhar somente com condicionais ou focar em repetições somente com -enquanto-, por exemplo.
+
+## Listagem geral
+
+Uma listagem geral de todas as propostas disponíveis pode ser consultada na tabela. Nela, é possível filtrar por uma das categorias ou fazer busca por texto.

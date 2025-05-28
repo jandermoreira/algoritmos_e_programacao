@@ -33,6 +33,8 @@ website:
     type: danger
     position: below-navbar
 
+  google-analytics: "G-0NHDE9GGJP"
+
   title: "Algoritmos & Programação"
   navbar:
     # logo: figuras/cap.png
@@ -41,6 +43,8 @@ website:
         href: algoritmos/index.qmd
       - text: Linguagem C
         href: linguagem-c/index.qmd
+      - text: Problemas propostos
+        href: problemas/index.qmd
     right:
       - sobre.qmd
       - icon: github
@@ -156,6 +160,16 @@ website:
         # - section: "Organização avançada do código"
         #   contents:
         #   - linguagem-c/organizacao-do-codigo-separado.qmd
+
+    - id: problemas
+      style: "docked"
+      background: light
+      collapse-level: 2
+      contents: 
+        - problemas/index.qmd  #título real: introducao aos problemas
+        - section: "Condicionais"
+          contents:
+            - problemas/condicionais-basicos.qmd
 
 
 format:

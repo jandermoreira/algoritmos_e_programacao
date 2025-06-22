@@ -1,5 +1,8 @@
 ---
 title: "Propostas de algoritmos"
+categories: false
+toc: true
+number-depth: 0
 listing: 
     contents: "????.qmd"
     type: table

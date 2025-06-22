@@ -1,8 +1,0 @@
----
-title: n!
----
-::: {#exr-0041}
-Escreva um algoritmo que, dado um valor $n \in \mathbb{Z}^+$, calcule e apresente $n!$.
-
-<!-- @sol-0041 -->
-:::

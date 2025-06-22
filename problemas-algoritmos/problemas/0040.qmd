@@ -1,0 +1,14 @@
+---
+title: "Soma de 1 + 2 + 3 ... + n"
+identifier: "0040"
+categories:
+    - "Básico"
+    - "Repetição"
+    - "Somatório"
+---
+
+::: {.callout}
+Escreva um algoritmo que faça, passo a passo, a soma ${\sum_{i=1}^n i}$.
+
+<!-- @rem-0040 -->
+:::

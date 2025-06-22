@@ -1,8 +1,0 @@
----
-title: Contagem de positivos em vetor
----
-::: {#exr-0075}
-Escreva uma função para retornar a quantidade de valores positivos em um vetor de números reais.
-
-<!-- @sol-0075 -->
-:::

@@ -1,0 +1,13 @@
+---
+title: Solução de pares de equações lineares simultâneas (2 variáveis)
+identifier: "0067"
+categories:
+    - "Básico"
+---
+::: {#exr-0067}
+Considere o sistema de equações simultâneas $a_1x + b_1y = c_1$ e $a_2x + b_2y = c_2$.
+
+Escreva um algoritmo para, a partir dos valores dos diversos coeficientes, apresentar os valores de $x$ e $y$ que satisfazem simultaneamente as duas equações.
+
+Desconsidere a possibilidade do sistema de equações não ter solução, ou seja, assuma que os valores dos coeficientes sempre produzirão um sistema válido.
+:::

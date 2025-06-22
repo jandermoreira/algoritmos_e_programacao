@@ -2,10 +2,10 @@ project:
   type: website
   execute-dir: project
 
-filters: 
-  - algxpar-quarto
-  - cap-filters.lua
-  - runenv.lua
+# filters: 
+#   - algxpar-quarto
+#   - cap-filters.lua
+#   - runenv.lua
 
 algxpar:
   algorithm-title: "Algoritmo"
@@ -24,7 +24,6 @@ biblio-style: abnt
 syntax-definitions: 
   - terminal.xml
 
-
 website:
   announcement: 
     icon: exclamation-octagon
@@ -33,7 +32,8 @@ website:
     type: danger
     position: below-navbar
 
-  google-analytics: "G-0NHDE9GGJP"
+  # google-analytics: "G-0NHDE9GGJP"
+  bread-crumbs: true
 
   title: "Algoritmos & Programação"
   navbar:
@@ -43,8 +43,10 @@ website:
         href: algoritmos/index.qmd
       - text: Linguagem C
         href: linguagem-c/index.qmd
-      - text: Problemas propostos
-        href: problemas-algoritmos/index.qmd
+      - text: Problemas
+        menu:
+          - text: Algoritmos
+            href: problemas-algoritmos/index.qmd
     right:
       - sobre.qmd
       - icon: github
@@ -105,7 +107,7 @@ website:
           - linguagem-c/expressoes-aritmeticas.qmd
           - linguagem-c/expressoes-relacionais-e-logicas.qmd
 
-        - section: "Controle de fluxo simples"
+        - section: "Controle de fluxo"
           contents:
           - linguagem-c/execucao-condicional-com-if.qmd
           - linguagem-c/execucao-condicional-com-switch.qmd
@@ -167,15 +169,43 @@ website:
       collapse-level: 2
       contents: 
         - problemas-algoritmos/index.qmd  #título real: introducao aos problemas
-        - section: "Condicionais"
+        - section: "Abordagem de problemas"
           contents:
-            - problemas-algoritmos/condicionais-basicos.qmd
+            - problemas-algoritmos/entendimento-problema.qmd
+        - section: "Sequenciais"
+          contents:
+            - problemas-algoritmos/problemas-basicos.qmd
+            - problemas-algoritmos/problemas-resultado-logico.qmd
+            - respostas-problemas-basicos.qmd
+        - section: "Condicionais"
+          contents: 
+            - problemas-algoritmos/problemas-condicionais-basicos.qmd
+            - problemas-algoritmos/problemas-condicionais-complementares.qmd
+            - respostas-condicionais.qmd
+        - section: "Repetições"
+          contents:
+            - problemas-algoritmos/problemas-repeticoes-identificacao.qmd
+            - problemas-algoritmos/problemas-repeticoes-basicos.qmd
+            - problemas-algoritmos/problemas-repeticoes-complementares.qmd
+            - problemas-algoritmos/problemas-repeticoes-progressoes.qmd
+            - respostas-repeticoes.qmd
+        - section: "Modularização"
+          contents:
+            - problemas-algoritmos/problemas-funcoes-basicos.qmd
+            - problemas-algoritmos/problemas-funcoes-projeto.qmd
+            - problemas-algoritmos/problemas-modularizacao-gerais.qmd
+            - problemas-algoritmos/problemas-procedimentos-basicos.qmd
+            - respostas-modularizacao.qmd
+        - section: "Vetores e matrizes"
+          contents:
+            - problemas-algoritmos/problemas-vetores.qmd
+            - respostas-vetores-e-matrizes.qmd
 
 
 format:
   html:
-    theme: yeti  # materia yeti zephyr
-    css: book.css
+    theme: zephir  # materia yeti zephyr yeti
+    # css: book.css
     toc: true
     fontsize: 12pt
     number-depth: 3

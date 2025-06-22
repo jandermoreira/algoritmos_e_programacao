@@ -1,0 +1,9 @@
+---
+title: Função h min s para segundos
+identifier: "0048"
+categories:
+    - "Básico"
+---
+::: {#exr-0048}
+Escreva uma função que receba três parâmetros, todos inteiros: a quantidade de horas, de minutos e de segundos. A função deve retornar o valor equivalente em segundos.
+:::

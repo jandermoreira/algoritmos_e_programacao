@@ -2,10 +2,11 @@ project:
   type: website
   execute-dir: project
 
-# filters: 
-#   - algxpar-quarto
-#   - cap-filters.lua
-#   - runenv.lua
+filters: 
+  - algxpar-quarto
+  - exercicio.lua
+  - cap-filters.lua
+  - runenv.lua
 
 algxpar:
   algorithm-title: "Algoritmo"

@@ -4,7 +4,8 @@ identifier: "0008"
 categories:
     - "Básico"
 ---
-::: {#exr-0008}
+
+::: {.exercicio}
 Em uma competição de natação, as categorias são determinadas segundo a idade dos competidores.
 
 Categorias:

@@ -1,15 +1,13 @@
 ---
 title: Pontuação em jogo de auditório
 identifier: "0001"
-categories:
-    - "Básico"
-identifier: "0001"
 categories: 
     - "Básico"
     - "Condicional"
 ---
 
-::: {#exr-0001}
+
+::: {.exercicio}
 Há dois participantes em uma competição de perguntas e respostas, que acumulam pontos ao longo de diversas fases visando um prêmio em dinheiro dado ao vencedor no final.
 
 Em das fases, o apresentador mostra aos competidores uma pergunta juntamente com com cinco respostas, cabendo a eles escolher a resposta correta. Ao mesmo tempo, cada aposta uma certa quantidade de seus pontos, que depende de sua estratégia e confiança na resposta.

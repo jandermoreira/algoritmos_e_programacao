@@ -4,7 +4,8 @@ identifier: "0073"
 categories:
     - "Básico"
 ---
-::: {#exr-0073}
+
+::: {.exercicio}
 Escreva um procedimento para realizar a troca de valores de duas variáveis.
 
 <!-- @sol-0073 -->

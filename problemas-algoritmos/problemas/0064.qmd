@@ -4,7 +4,8 @@ identifier: "0064"
 categories:
     - "Básico"
 ---
-::: {#exr-0064}
+
+::: {.exercicio}
 Deseja-se saber, dados os salários de quatro pessoas, a diferença porcentual entre os salários mínimo e máximo.
 
 Escreva um algoritmo para apresentar a informação solicitada.

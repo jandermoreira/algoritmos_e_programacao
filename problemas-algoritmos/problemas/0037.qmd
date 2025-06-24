@@ -4,7 +4,8 @@ identifier: "0037"
 categories:
     - "Básico"
 ---
-::: {#exr-0037}
+
+::: {.exercicio}
 Considere o seguinte problema:
 
 > Escreva um algoritmo para processar uma sequência indefinida e não vazia de valores inteiros (todos positivos) e determinar o valor máximo. A sequência é terminada por um valor sentinela igual a -1.
@@ -32,5 +33,5 @@ Para esse problema, foi apresentado o seguinte algoritmo:
 
 Essa solução, porém, contém um erro de lógica. Identifique-o e proponha a correção.
 
-@rem-0037
+
 :::

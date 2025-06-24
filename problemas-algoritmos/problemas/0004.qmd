@@ -4,7 +4,8 @@ identifier: "0004"
 categories:
     - "Básico"
 ---
-::: {#exr-0004}
+
+::: {.exercicio}
 Um professor precisa, para uma sequência de notas, verificar quantas são menores que 6 (abaixo da média) e quantas são nulas. Para isso, solicitou a um aluno que propusesse um algoritmo para resolver o problema e o resultado é apresentado a seguir.
 
 ```latex {.pseudocode}
@@ -30,6 +31,4 @@ Um professor precisa, para uma sequência de notas, verificar quantas são menor
 A solução, porém, tem um erro de lógica que a leva a produzir um resultado final incorreto.
 
 Identifique o erro e proponha uma solução.
-
-<!-- @sol-0004 -->
 :::

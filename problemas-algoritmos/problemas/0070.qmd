@@ -4,7 +4,8 @@ identifier: "0070"
 categories:
     - "Básico"
 ---
-::: {#exr-0070}
+
+::: {.exercicio}
 O palíndromo de um número é aquele que possui o mesmo valor, mesmo invertendo a ordem de seus dígitos. Assim, 373 é um palíndromo. Também são exemplos: 1001, 395593 e 1230321.
 
 Escreva um algoritmo que, a partir de um valor inteiro positivo qualquer, gere um palíndromo por espelhamento, o qual deve ser armazenado em uma variável também numérica. Indique claramente os cálculos feitos.

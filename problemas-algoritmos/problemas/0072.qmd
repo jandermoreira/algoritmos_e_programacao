@@ -4,7 +4,8 @@ identifier: "0072"
 categories:
     - "Básico"
 ---
-::: {#exr-0072}
+
+::: {.exercicio}
 Escreva uma função que, dados dois valores inteiros $n$ e $k$, retorne +Verdadeiro+ ou +Falso+ conforme $n$ seja divisível por $k$.
 
 Use a divisão modular ($\bmod$) para indicar o cálculo.

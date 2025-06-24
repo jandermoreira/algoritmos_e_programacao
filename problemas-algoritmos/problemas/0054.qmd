@@ -4,7 +4,8 @@ identifier: "0054"
 categories:
     - "Básico"
 ---
-::: {#exr-0054}
+
+::: {.exercicio}
 <!-- {{< include problemas-algoritmos/comum-notas-e-conceitos.qmd >}} -->
 
 Escreva um algoritmo para, neste contexto, apresentar o valor numérico de um conceito dado como entrada.

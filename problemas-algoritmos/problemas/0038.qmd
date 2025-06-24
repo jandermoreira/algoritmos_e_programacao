@@ -4,7 +4,8 @@ identifier: "0038"
 categories:
     - "Básico"
 ---
-::: {#exr-0038}
+
+::: {.exercicio}
 Adson Biardeyson da Gama e Rafaela Xiomara Corocher são investidores.
 
 Adson tem uma aplicação com valor atual de R$12.000,00. Essa aplicação rende 1,2% de juros ao mês.

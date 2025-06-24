@@ -4,7 +4,8 @@ identifier: "0053"
 categories:
     - "Básico"
 ---
-::: {#exr-0053}
+
+::: {.exercicio}
 <!-- {{< include problemas-algoritmos/comum-notas-e-conceitos.qmd >}} -->
 
 Na instituição descrita, é preciso calcular a média de três conceitos de um dado aluno, apresentando o conceito final resultante. Escreva um algoritmo para resolver esse problema.

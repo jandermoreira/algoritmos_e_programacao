@@ -4,7 +4,8 @@ identifier: "0045"
 categories:
     - "Básico"
 ---
-::: {#exr-0045}
+
+::: {.exercicio}
 Escreva uma função para, dado um valor inteiro positivo, retornar +Verdadeiro+ se o valor for um número perfeito ou +Falso+ caso contrário.
 
 Um número perfeito é todo $n \in \mathbb{Z}^{+*}$ que seja igual à soma de seus divisores (exceto pelo próprio $n$). Por exemplo, ${28 = 1 + 2 + 4 + 7 + 14}$, sendo um número perfeito.

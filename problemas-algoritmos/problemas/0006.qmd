@@ -3,11 +3,9 @@ title: Classificação de triângulo quanto aos ângulos internos
 identifier: "0006"
 categories:
     - "Básico"
-problema: "0006"
 ---
 
-#
-
+::: {.exercicio}
 Um triângulo, do ponto de vista de seus ângulos internos, pode ser classificado como:
 
 * acutângulo, quando todos seus ângulos forem menores que 90º;
@@ -16,4 +14,4 @@ Um triângulo, do ponto de vista de seus ângulos internos, pode ser classificad
 
 
 Escreva um algoritmo completo que, dados dois ângulos internos válidos de um triângulo, determine e apresente sua classificação quanto ao ângulo. Lembre-se que a soma dos ângulos internos de um triângulo é sempre 180º, de forma que dois ângulos são suficientes para definir o triângulo.
-
+:::

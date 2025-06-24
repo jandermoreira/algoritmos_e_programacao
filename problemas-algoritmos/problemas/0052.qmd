@@ -4,7 +4,8 @@ identifier: "0052"
 categories:
     - "Básico"
 ---
-::: {#exr-0052}
+
+::: {.exercicio}
 <!-- {{< include problemas-algoritmos/comum-notas-e-conceitos.qmd >}} -->
 
 Considere o seguinte problema:

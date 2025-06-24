@@ -4,7 +4,8 @@ identifier: "0033"
 categories:
     - "Básico"
 ---
-::: {#exr-0033}
+
+::: {.exercicio}
 É preciso processar o resultado de uma pesquisa de opinião para a qual era possível escolher entre sim, não e não sei.
 
 Escreva um algoritmo para processar uma sequência de respostas (com mínimo de uma resposta) e determinar as porcentagens de cada categoria.

@@ -4,7 +4,8 @@ identifier: "0059"
 categories:
     - "Básico"
 ---
-::: {#exr-0059}
+
+::: {.exercicio}
 Triângulos retângulos são, de longe, mais comuns em problemas de trigonometria que os escalenos. Estes não são, porém, menos relevantes realmente.
 
 Escreva um algoritmo para, a partir dos comprimentos dos lados de um triângulo válido, apresentar se ele é ou não escaleno.

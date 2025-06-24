@@ -4,7 +4,8 @@ identifier: "0057"
 categories:
     - "Básico"
 ---
-::: {#exr-0057}
+
+::: {.exercicio}
 Considere a função abaixo, na qual $v$ é um número real e $k$ é um inteiro:
 
 ```latex {.pseudocode}

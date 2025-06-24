@@ -4,7 +4,8 @@ identifier: "0017"
 categories:
     - "Básico"
 ---
-::: {#exr-0017}
+
+::: {.exercicio}
 Considere o problema:
 
 > Deseja-se saber a média das temperaturas anotadas durante um mês inteiro. Estão disponíveis, logo de início, o mês (1 a 12) e o ano da coleta de dados, depois dos quais segue o valor de cada temperatura diária. Escreva um algoritmo para, dados o mês e ano, além do valor de cada temperatura (uma por dia), apresentar a média requerida.

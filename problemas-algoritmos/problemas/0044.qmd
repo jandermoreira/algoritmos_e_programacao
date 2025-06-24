@@ -4,7 +4,8 @@ identifier: "0044"
 categories:
     - "Básico"
 ---
-::: {#exr-0044}
+
+::: {.exercicio}
 Escreva uma função para, dados três valores numéricos, retornar o valor máximo entre eles.
 
 <!-- @sol-0044 -->

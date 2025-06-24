@@ -4,6 +4,7 @@ identifier: "0061"
 categories:
     - "Básico"
 ---
-::: {#exr-0061}
+
+::: {.exercicio}
 Escreva um algoritmo para, a partir dos comprimentos de três segmentos de reta, apresentar a área do triângulo formado, se ele existir, ou uma mensagem de inexistência caso contrário.
 :::

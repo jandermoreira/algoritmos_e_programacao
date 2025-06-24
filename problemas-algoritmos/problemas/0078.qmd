@@ -4,6 +4,7 @@ identifier: "0078"
 categories:
     - "Básico"
 ---
-::: {#exr-0078}
+
+::: {.exercicio}
 Escreva um procedimento mover o valor máximo um vetor de números reais para que ocupe a última posição, preservando todos os valores originais. Considere que o comprimento mínimo do vetor seja 1.
 :::

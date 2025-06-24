@@ -4,7 +4,8 @@ identifier: "0024"
 categories:
     - "Básico"
 ---
-::: {#exr-0024}
+
+::: {.exercicio}
 Para entender melhor o desempenho dos alunos em uma disciplina, o professor decidiu levantar duas informações que julga importantes: quantas notas foram iguais a zero e quantos alunos obtiveram média (ou seja, nota maior ou igual a 6,0).
 
 Escreva um algoritmo para processar uma sequência de notas, todas de 0,0 a 10,0, e apresentar:

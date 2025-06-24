@@ -4,7 +4,8 @@ identifier: "0063"
 categories:
     - "Básico"
 ---
-::: {#exr-0063}
+
+::: {.exercicio}
 Para duas pessoas é preciso comparar suas idades.
 
 Escreva um algoritmo que, dados os nomes e idades em anos de cada um, apresente o nome do mais velho. Caso tenha a mesma idade, ambos os nomes devem ser apresentados. Adicionalmente, diferença das idades deve ser apresentada (sempre positiva!).

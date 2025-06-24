@@ -4,7 +4,8 @@ identifier: "0074"
 categories:
     - "Básico"
 ---
-::: {#exr-0074}
+
+::: {.exercicio}
 Escreva um procedimento para realizar a troca de valores de duas variáveis de forma que sempre fiquem em ordem não decrescente.
 
 <!-- @sol-0074 -->

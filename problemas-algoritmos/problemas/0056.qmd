@@ -4,8 +4,9 @@ identifier: "0056"
 categories:
     - "Básico"
 ---
-::: {#exr-0056}
+
+::: {.exercicio}
 Escreva uma função que retorne o número de divisores de um número natural, incluindo ele próprio.
 
-@rem-0056
+
 :::

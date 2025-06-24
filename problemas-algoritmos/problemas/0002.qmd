@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {#exr-0002}
+::: {.exercicio}
 Escreva um algoritmo completo para, a partir de notas de duas provas, apresentar a média e a indicação de aprovação (aprovado ou reprovado).
 
 A média é ponderada, tendo peso 4 para a primeira nota e 6 para a segunda.

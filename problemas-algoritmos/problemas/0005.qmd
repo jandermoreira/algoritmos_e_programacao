@@ -5,7 +5,8 @@ categories:
     - "Básico"
 problema: "0005"
 ---
-::: {#exr-0005}
+
+::: {.exercicio}
 Nas mais diversas aplicações, datas são dados considerados essenciais.
 
 Dados os valores para dia, mês e ano, é preciso determinar se uma data é válida.

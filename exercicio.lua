@@ -56,7 +56,6 @@ local function exercise_filter(title, identifier)
             end
 
             local blocos_extra = {}
-
             if file_exists(prefixo .. identifier .. "c.qmd") then
                 table.insert(
                     blocos_extra,
@@ -68,7 +67,6 @@ local function exercise_filter(title, identifier)
                     })
                 )
             end
-
             if file_exists(prefixo .. identifier .. "r.qmd") then
                 table.insert(
                     blocos_extra,
@@ -81,7 +79,7 @@ local function exercise_filter(title, identifier)
                 )
             end
 
-            local header = pandoc.Div(
+            local cabecalho = pandoc.Div(
                 pandoc.Header(
                     1,
                     pandoc.Inlines({
@@ -94,7 +92,7 @@ local function exercise_filter(title, identifier)
             )
 
             return {
-                header,
+                cabecalho,
                 div,
                 table.unpack(blocos_extra)
             }

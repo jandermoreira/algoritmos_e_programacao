@@ -1,10 +1,12 @@
 
 
 <!-- Projeto função: combinação de n, p a p -->
-{{< include problemas/0050.qmd >}}
+``` {.include file="problemas/0050.qmd"}
+```
 
 <!-- Projeto função: conversões notas x conceitos -->
-{{< include problemas/0052.qmd >}}
+``` {.include file="problemas/0052.qmd"}
+```
 
 ---
 title: Projeto de funções

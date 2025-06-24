@@ -4,3 +4,6 @@ title: "Repetições complementares"
 categories: false
 toc: false
 ---
+
+``` {.include file="problemas/0040.qmd"}
+```

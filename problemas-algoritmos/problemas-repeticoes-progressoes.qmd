@@ -1,11 +1,14 @@
 <!-- Soma de 1 + 2 + 3 ... + n -->
-{{< include problemas/0040.qmd >}}
+``` {.include file="problemas/0040.qmd"}
+```
 
 <!-- n! -->
-{{< include problemas/0041.qmd >}}
+``` {.include file="problemas/0041.qmd"}
+```
 
 <!-- Função potência e^x -->
-{{< include problemas/0068.qmd >}}
+``` {.include file="problemas/0068.qmd"}
+```
 
 ---
 title: "Progressões numéricas"

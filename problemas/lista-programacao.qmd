@@ -1,0 +1,19 @@
+---
+title: "Propostas de programação"
+categories: false
+toc: true
+number-depth: 0
+listing: 
+    contents: "????p.qmd"
+    type: table
+    sort: identifier
+    page-size: 12
+    sort-ui: true
+    filter-ui: true
+    categories: true
+    fields: [identifier, title, categories]
+    field-display-names:
+        identifier: "ID"
+---
+
+Uma listagem geral de todas as propostas disponíveis pode ser consultada na tabela. Nela, é possível filtrar por uma das categorias ou fazer busca por texto.

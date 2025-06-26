@@ -1,8 +1,10 @@
-# Estruturas algorítmicas básicas para processamento de sequências de dados {#sec-estruturas-algoritmicas-para-processamento-de-sequencias}
+---
+title: Estruturas algorítmicas básicas para processamento de sequências de dados 
+---
 
 Este capítulo considera o processamento de sequências de dados, o que significa repetir ações sobre cada dado individualmente. Em decorrência, também aborda outras ações que sejam repetitivas.
 
-## Sequências de dados
+# Sequências de dados
 
 Uma sequência de dados ocorre quando, por exemplo, quando há uma coleção relativamente grande de dados a serem considerados por um algoritmo.
 
@@ -225,7 +227,7 @@ A alteração desse algoritmo para processar, por exemplo, uma sequência de 100
 
 
 
-## Caracterização das sequências {#sec-caracterizacao-das-sequencias-de-dados}
+# Caracterização das sequências {#sec-caracterizacao-das-sequencias-de-dados}
 
 Nos problemas computacionais, as sequências se apresentam de algumas formas bem características. Conquanto não sendo as únicas apresentações com que sequências podem assumir, estas são as mais comuns:
 
@@ -252,7 +254,7 @@ Dado o universo de dados existentes, estas possibilidades não contemplam, é cl
 
 
 
-## Fluxo de execução com repetições
+# Fluxo de execução com repetições
 
 Nos algoritmos escritos com pseudocódigo há três estruturas clássicas para indicar a repetição, embora não sejam as únicas. Elas são representadas por -enquanto-, -repita- e -para-.
 
@@ -260,7 +262,7 @@ Quando as repetições são indefinidas quanto ao número de vezes, as estrutura
 
 
 
-### Fluxo com -enquanto-
+## Fluxo com -enquanto-
 
 O -enquanto- é uma estrutura que indica uma repetição. Ela se apresenta como apresentado na sequência.
 
@@ -325,7 +327,7 @@ O uso do sentinela de dados também é viável de ter sua lógica organizada com
 A estratégia é fazer, antes da repetição, uma primeira leitura, que pode ser um valor válido ou o próprio sentinela (quando sequência de números está vazia). Antes de somar esse valor, é feita a comparação com o sentinela. Sendo o valor zero, nenhuma repetição é efetuada e a soma zero é o resultado apresentado. Caso seja um valor válido, ele é somado e, antes de nova verificação, o próximo valor da sequência de entrada é obtido, fechando um ciclo.
 
 
-### Fluxo com -repita-
+## Fluxo com -repita-
 
 A estrutura -repita- também se aplica a repetições indefinidas. Sua estrutura é como se apresenta a seguir.
 
@@ -398,7 +400,7 @@ Nessa solução, a cada repetição é obtido um valor da entrada e a soma é fe
 
 
 
-### Fluxo com -para-
+## Fluxo com -para-
 
 O -para- é indicado para repetições definidas, ou seja, para aquelas em que a quantidade de repetições é conhecida de antemão. A seguir é apresenta a estrutura do -para-.
 
@@ -462,7 +464,7 @@ Como exemplo, a repetição seguinte pode ser considerada.
 Nela, se ${\Id{final} > \Id{inicial}}$, a repetição vai de [inicial]{id} até [final]{id}, de 1 em 1, em um total de ${\Id{final} - \Id{inicial} + 1}$ vezes. Caso [inicial]{id}$\,=\,$[final]{id}, as instruções internas são executadas uma única vez. Finalmente, se ${\Id{inicial} > \Id{final}}$, não há nenhuma execução.
 
 
-#### Repetições regressivas
+### Repetições regressivas
 
 As repetições com -para- são, em princípio, crescentes. Para especificar uma repetição decrescente é necessário que ela se torne evidente e não requeira interpretações que podem variar entre diferentes pessoas.
 
@@ -488,7 +490,7 @@ Neste livro há duas formas de indicar "contagens regressivas": explicitamente n
 ```
 
 
-#### Repetições com passo diferente de 1
+### Repetições com passo diferente de 1
 
 Conforme apresentado nos demais exemplos deste capítulo, assume-se por padrão que os incrementos (ou decrementos com -regressivo-até-) seja sempre unitários. Ainda assim é possível indicar iterações com passos diferentes.
 
@@ -524,4 +526,8 @@ Embora incomuns[^para-com-reais], repetições com -para- que usem valores reais
     \EndFor
 \end{algorithmic}
 ```
+
+# Problemas propostos
+
+## [Problemas básicos](problemas-repeticoes-basicos.qmd)
 

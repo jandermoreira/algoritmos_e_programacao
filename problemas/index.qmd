@@ -1,0 +1,50 @@
+---
+title: "Propostas de problemas"
+categories: false
+toc: true
+number-depth: 0
+listing: 
+    - id: algoritmos
+      contents: "????a.qmd"
+      type: table
+      sort: identifier
+      page-size: 12
+      sort-ui: true
+      filter-ui: true
+      categories: true
+      fields: [identifier, title, categories]
+      field-display-names:
+          identifier: "ID"
+    - id: programacao
+      contents: "????p.qmd"
+      type: table
+      sort: identifier
+      page-size: 12
+      sort-ui: true
+      filter-ui: true
+      categories: true
+      fields: [identifier, title, categories]
+      field-display-names:
+          identifier: "ID"
+---
+
+:::: {.columns}
+
+::: {.column width="45%"}
+## Algoritmos
+::: {#algoritmos}
+:::
+:::
+
+::: {.column width="5%"}
+:::
+
+
+::: {.column width="45%"}
+## Programação
+::: {#programacao}
+:::
+:::
+
+
+::::

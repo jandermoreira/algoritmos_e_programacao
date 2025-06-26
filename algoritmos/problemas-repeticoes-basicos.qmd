@@ -1,19 +1,25 @@
+---
+title: "Repetições básicas"
+categories: false
+toc: false
+---
+
 ## Mínimos e máximos
 
 <!-- Maior altura em um grupo fixo -->
-``` {.include file="problemas/0021.qmd"}
+``` {.include file="../problemas/0021.qmd"}
 ``` 
 
 <!-- Mínimo em uma sequência de reais -->
-``` {.include file="problemas/0022.qmd"}
+``` {.include file="../problemas/0022.qmd"}
 ``` 
 
 <!-- Mínimo e máximo simultâneos e excludentes -->
-``` {.include file="problemas/0025.qmd"}
+``` {.include file="../problemas/0025.qmd"}
 ``` 
 
 <!-- Valor máximo de multa e identificação do motorista -->
-``` {.include file="problemas/0030.qmd"}
+``` {.include file="../problemas/0030.qmd"}
 ```
 
 
@@ -21,19 +27,19 @@
 ## Contagens
 
 <!-- Contagem de temperaturas negativas -->
-``` {.include file="problemas/0023.qmd"}
+``` {.include file="../problemas/0023.qmd"}
 ```
 
 <!-- Contagem de notas nulas e >= 6 -->
-``` {.include file="problemas/0024.qmd"}
+``` {.include file="../problemas/0024.qmd"}
 ```
 
 <!-- Erro em contagem de notas nulas e < 6 -->
-``` {.include file="problemas/0004.qmd"}
+``` {.include file="../problemas/0004.qmd"}
 ```
 
 <!-- Contagem do número de vendas (com sentinela) -->
-``` {.include file="problemas/0028.qmd"}
+``` {.include file="../problemas/0028.qmd"}
 ```
 
 
@@ -41,19 +47,14 @@
 ## Somas
 
 <!-- Soma de pontos em quantidade fixa -->
-``` {.include file="problemas/0026.qmd"}
+``` {.include file="../problemas/0026.qmd"}
 ```
 
 <!-- Soma de vendas com sentinela -->
-``` {.include file="problemas/0027.qmd"}
+``` {.include file="../problemas/0027.qmd"}
 ```
 
 <!-- Soma de precipitações (quantidade conhecida) -->
-``` {.include file="problemas/0029.qmd"}
+``` {.include file="../problemas/0029.qmd"}
 ```
 
----
-title: "Repetições básicas"
-categories: false
-toc: false
----

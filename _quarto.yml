@@ -3,10 +3,10 @@ project:
   execute-dir: project
 
 filters: 
-  - algxpar-quarto
   - exercicio.lua
   - cap-filters.lua
   - runenv.lua
+  - algxpar-quarto
 
 algxpar:
   algorithm-title: "Algoritmo"
@@ -44,10 +44,10 @@ website:
         href: algoritmos/index.qmd
       - text: Linguagem C
         href: linguagem-c/index.qmd
-      - text: Problemas
-        menu:
-          - text: Algoritmos
-            href: problemas-algoritmos/index.qmd
+      # - text: Problemas
+      #   menu:
+      #     - text: Algoritmos
+      #       href: problemas-algoritmos/index.qmd
     right:
       - sobre.qmd
       - icon: github
@@ -164,43 +164,43 @@ website:
         #   contents:
         #   - linguagem-c/organizacao-do-codigo-separado.qmd
 
-    - id: problemas
-      style: "docked"
-      background: light
-      collapse-level: 2
-      contents: 
-        - problemas-algoritmos/index.qmd  #título real: introducao aos problemas
-        - section: "Abordagem de problemas"
-          contents:
-            - problemas-algoritmos/entendimento-problema.qmd
-        - section: "Sequenciais"
-          contents:
-            - problemas-algoritmos/problemas-basicos.qmd
-            - problemas-algoritmos/problemas-resultado-logico.qmd
-            - respostas-problemas-basicos.qmd
-        - section: "Condicionais"
-          contents: 
-            - problemas-algoritmos/problemas-condicionais-basicos.qmd
-            - problemas-algoritmos/problemas-condicionais-complementares.qmd
-            - respostas-condicionais.qmd
-        - section: "Repetições"
-          contents:
-            - problemas-algoritmos/problemas-repeticoes-identificacao.qmd
-            - problemas-algoritmos/problemas-repeticoes-basicos.qmd
-            - problemas-algoritmos/problemas-repeticoes-complementares.qmd
-            - problemas-algoritmos/problemas-repeticoes-progressoes.qmd
-            - respostas-repeticoes.qmd
-        - section: "Modularização"
-          contents:
-            - problemas-algoritmos/problemas-funcoes-basicos.qmd
-            - problemas-algoritmos/problemas-funcoes-projeto.qmd
-            - problemas-algoritmos/problemas-modularizacao-gerais.qmd
-            - problemas-algoritmos/problemas-procedimentos-basicos.qmd
-            - respostas-modularizacao.qmd
-        - section: "Vetores e matrizes"
-          contents:
-            - problemas-algoritmos/problemas-vetores.qmd
-            - respostas-vetores-e-matrizes.qmd
+    # - id: problemas
+    #   style: "docked"
+    #   background: light
+    #   collapse-level: 2
+    #   contents: 
+    #     - problemas-algoritmos/index.qmd  #título real: introducao aos problemas
+    #     - section: "Abordagem de problemas"
+    #       contents:
+    #         - problemas-algoritmos/entendimento-problema.qmd
+    #     - section: "Sequenciais"
+    #       contents:
+    #         - problemas-algoritmos/problemas-basicos.qmd
+    #         - problemas-algoritmos/problemas-resultado-logico.qmd
+    #         - respostas-problemas-basicos.qmd
+    #     - section: "Condicionais"
+    #       contents: 
+    #         - problemas-algoritmos/problemas-condicionais-basicos.qmd
+    #         - problemas-algoritmos/problemas-condicionais-complementares.qmd
+    #         - respostas-condicionais.qmd
+    #     - section: "Repetições"
+    #       contents:
+    #         - problemas-algoritmos/problemas-repeticoes-identificacao.qmd
+    #         - problemas-algoritmos/problemas-repeticoes-basicos.qmd
+    #         - problemas-algoritmos/problemas-repeticoes-complementares.qmd
+    #         - problemas-algoritmos/problemas-repeticoes-progressoes.qmd
+    #         - respostas-repeticoes.qmd
+    #     - section: "Modularização"
+    #       contents:
+    #         - problemas-algoritmos/problemas-funcoes-basicos.qmd
+    #         - problemas-algoritmos/problemas-funcoes-projeto.qmd
+    #         - problemas-algoritmos/problemas-modularizacao-gerais.qmd
+    #         - problemas-algoritmos/problemas-procedimentos-basicos.qmd
+    #         - respostas-modularizacao.qmd
+    #     - section: "Vetores e matrizes"
+    #       contents:
+    #         - problemas-algoritmos/problemas-vetores.qmd
+    #         - respostas-vetores-e-matrizes.qmd
 
 
 format:

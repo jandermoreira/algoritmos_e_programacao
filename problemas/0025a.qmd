@@ -3,6 +3,8 @@ title: Mínimo e máximo simultâneos e excludentes
 identifier: "0025"
 categories:
     - "Básico"
+# filters:
+#     - algxpar-quarto
 ---
 
 ::: {.exercicio}

@@ -1,9 +1,11 @@
-
+# Ambientes e caches
 /.venv/
-/_site/
-
 /.quarto/
-
 /.luarc.json
 
+# Arquivos gerados
+/_site/
 /algxpar
+
+# Segredos
+.env

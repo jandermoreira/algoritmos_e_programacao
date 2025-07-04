@@ -6,10 +6,10 @@ const { GoogleGenerativeAI } = require('@google/generative-ai');
 const path = require('path');
 const cors = require('cors');
 
-const app = express();
 const port = 3000;
 
 // Configurações do servidor
+const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname)));
@@ -36,7 +36,7 @@ app.post('/api/gemini-proxy', async (req, res) => {
         
         // Inicializa o Gemini AI
         const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-        const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
         
         // Envia a solicitação para o Gemini
         const result = await model.generateContent(prompt);

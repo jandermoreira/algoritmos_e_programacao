@@ -8,7 +8,7 @@ Este capítulo apresenta uma visão inicial das constantes textuais da linguagem
 
 # Revisitando as constantes textuais
 
-No @sec-tipos-de-dados foram apresentados os principais tipos de dados da linguagem\ C, incluindo os dados textuais, mas ainda é preciso complementar as informações sobre os tipos literais.
+Em [Representação de dados](tipos-de-dados.html#representacao-de-dados) foram apresentados os principais tipos de dados da linguagem\ C, incluindo os dados textuais, mas ainda é preciso complementar as informações sobre os tipos literais.
 
 A linguagem C apresenta duas notações para especificar valores textuais. A primeira é para caracteres únicos, como uma letra ou um símbolo de pontuação, e é expressa usando aspas simples, como `'A'` ou `'@'`, por exemplo.
 

@@ -3,64 +3,64 @@
 
 <!-- IDENTIFICAÇÃO DE TIPO DE REPETIÇÃO -->
 <!-- Qual usar? Repetição indefinida com sentinela (Processo seletivo) -->
-``` {.include file="problemas/0011r.qmd"}
+``` {.include file="../problemas/0011r.qmd"}
 ```
 
 <!-- Qual usar? Repetição definida (Pressão em caldeira) -->
-``` {.include file="problemas/0012r.qmd"}
+``` {.include file="../problemas/0012r.qmd"}
 ```
 
 <!-- Qual usar? Repetição indefinida com sentinela (Pesagem de gado) -->
-``` {.include file="problemas/0013r.qmd"}
+``` {.include file="../problemas/0013r.qmd"}
 ```
 
 <!-- Qual usar? Repetição indefinida até fim dos dados (Pesquisa de opinião) -->
-``` {.include file="problemas/0014r.qmd"}
+``` {.include file="../problemas/0014r.qmd"}
 ```
 
 <!-- Qual usar? Repetição definida conhecida (Média de temperaturas) -->
-``` {.include file="problemas/0017r.qmd"}
+``` {.include file="../problemas/0017r.qmd"}
 ```
 
 
 
 <!-- MÍNIMOS E MÁXIMOS -->
 <!-- Maior altura em um grupo fixo -->
-``` {.include file="problemas/0021r.qmd"}
+``` {.include file="../problemas/0021r.qmd"}
 ```
 
 <!-- Mínimo em uma sequência de reais -->
-``` {.include file="problemas/0022r.qmd"}
+``` {.include file="../problemas/0022r.qmd"}
 ``` 
 
 <!-- Valor máximo de multa e identificação do motorista -->
-``` {.include file="problemas/0030r.qmd"}
+``` {.include file="../problemas/0030r.qmd"}
 ```
 
 
 
 <!-- CONTAGENS -->
 <!-- Contagem de temperaturas negativas -->
-``` {.include file="problemas/0023r.qmd"}
+``` {.include file="../problemas/0023r.qmd"}
 ```
 
 <!-- Contagem de notas nulas e >= 6 -->
-``` {.include file="problemas/0024r.qmd"}
+``` {.include file="../problemas/0024r.qmd"}
 ```
 
 <!-- Erro em contagem de notas nulas e < 6 -->
-``` {.include file="problemas/0004r.qmd"}
+``` {.include file="../problemas/0004r.qmd"}
 ```
 
 
 
 <!-- SOMAS -->
 <!-- Soma de pontos em quantidade fixa -->
-``` {.include file="problemas/0026r.qmd"}
+``` {.include file="../problemas/0026r.qmd"}
 ```
 
 <!-- Soma de temperaturas (quantidade conhecida) -->
-``` {.include file="problemas/0029c.qmd"}
+``` {.include file="../problemas/0029c.qmd"}
 ```
 
 
@@ -70,21 +70,21 @@
 
 <!-- PROBLEMAS VARIADOS -->
 <!-- Porcentagens e médias na população  -->
-``` {.include file="problemas/0035c.qmd"}
+``` {.include file="../problemas/0035c.qmd"}
 ```
 
 <!-- Soma dos divisores -->
-``` {.include file="problemas/0036r.qmd"}
+``` {.include file="../problemas/0036r.qmd"}
 ```
-``` {.include file="problemas/0036c.qmd"}
+``` {.include file="../problemas/0036c.qmd"}
 ```
 
 <!-- Erro em determinação do maior (inteiros positivos)  -->
-``` {.include file="problemas/0037c.qmd"}
+``` {.include file="../problemas/0037c.qmd"}
 ```
 
 <!-- Máximo e contagem simultâneas (idades) -->
-``` {.include file="problemas/0042r.qmd"}
+``` {.include file="../problemas/0042r.qmd"}
 ```
 
 
@@ -92,17 +92,17 @@
 
 <!-- PROGRESSÕES NUMÉRICAS -->
 <!-- Soma de 1 + 2 + 3 ... + n -->
-``` {.include file="problemas/0040r.qmd"}
+``` {.include file="../problemas/0040r.qmd"}
 ```
-``` {.include file="problemas/0040c.qmd"}
+``` {.include file="../problemas/0040c.qmd"}
 ```
 
 <!-- n! -->
-``` {.include file="problemas/0041r.qmd"}
+``` {.include file="../problemas/0041r.qmd"}
 ```
 
 <!-- Função potência e^x -->
-``` {.include file="problemas/0068c.qmd"}
+``` {.include file="../problemas/0068c.qmd"}
 ```
 
 

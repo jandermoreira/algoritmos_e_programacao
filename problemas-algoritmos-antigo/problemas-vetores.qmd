@@ -3,35 +3,35 @@ Todos os problemas consideram sempre vetores com indexação iniciada em zero. A
 ## Problemas diretos
 
 <!-- Contagem de positivos em vetor -->
-``` {.include file="problemas/0075.qmd"}
+``` {.include file="../problemas/0075a.qmd"}
 ```
 
 <!-- Valor mínimo em vetor -->
-``` {.include file="problemas/0076.qmd"}
+``` {.include file="../problemas/0076a.qmd"}
 ```
 
 <!-- Valor do meio no vetor -->
-``` {.include file="problemas/0079.qmd"}
+``` {.include file="../problemas/0079a.qmd"}
 ```
 
 <!-- Movimentação do mínimo para início do vetor -->
-``` {.include file="problemas/0077.qmd"}
+``` {.include file="../problemas/0077a.qmd"}
 ```
 
 <!-- Movimentação do máximo para o fim do vetor -->
-``` {.include file="problemas/0078.qmd"}
+``` {.include file="../problemas/0078a.qmd"}
 ```
 
 <!-- Preenchimento de vetor com divisores -->
-``` {.include file="problemas/0080.qmd"}
+``` {.include file="../problemas/0080a.qmd"}
 ```
 
 <!-- Vetor contém elemento -->
-``` {.include file="problemas/0081.qmd"}
+``` {.include file="../problemas/0081a.qmd"}
 ```
 
 <!-- Inserção simples em vetor -->
-``` {.include file="problemas/0082.qmd"}
+``` {.include file="../problemas/0082a.qmd"}
 ```
 
 
@@ -40,7 +40,7 @@ Todos os problemas consideram sempre vetores com indexação iniciada em zero. A
 ## Problemas contextualizados
 
 <!-- kNN dadas as distâncias -->
-``` {.include file="problemas/0083.qmd"}
+``` {.include file="../problemas/0083a.qmd"}
 ```
 
 ---

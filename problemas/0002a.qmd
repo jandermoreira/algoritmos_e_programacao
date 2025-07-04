@@ -3,12 +3,11 @@ title: Média com aprovação
 identifier: "0002"
 categories:
     - "Básico"
+    - "Bloom: Entender"
 ---
 
 ::: {.exercicio}
-Escreva um algoritmo completo para, a partir de notas de duas provas, apresentar a média e a indicação de aprovação (aprovado ou reprovado).
-
-A média é ponderada, tendo peso 4 para a primeira nota e 6 para a segunda.
+Escreva um algoritmo completo para, a partir de notas de duas provas, apresentar a média e a indicação de aprovação (aprovado ou reprovado). A média é ponderada e tem peso 4 para a primeira nota e 6 para a segunda.
 
 A condição de aprovação é ter média maior ou igual a 6,0.
 :::

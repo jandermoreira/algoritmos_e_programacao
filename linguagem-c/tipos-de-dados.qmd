@@ -7,7 +7,7 @@ Qualquer linguagem de programação, dentre as milhares existentes, têm como pr
 A ilustração dos tipos de dados, suas limitações e principais características envolvem, adicionamente, a apresentação da função `printf`, responsável por apresentar os dados do programa para o usuário.
 
 
-# Representação de dados {#sec-representacao-de-dados}
+# Representação de dados {#representacao-de-dados}
 
 Em computação, as informações são estruturadas em bits. A forma mais básica de circuitos eletrônicos representarem algo é pela ausência ou presença de corrente elétrica. Assim, um bit é uma parte do circuito que indica "desligado" ou "ligado", "sem corrente elétrica" ou "com corrente elétrica", "ausente" ou "presente" ou, simplificadamente, "zero" ou "um". O uso dos valores binários 0 e 1 é a forma tradicional de se representar um bit.
 

@@ -1,40 +1,40 @@
 <!-- Função volume de esfera dado o raio -->
-``` {.include file="problemas/0046.qmd"}
+``` {.include file="../problemas/0046a.qmd"}
 ```
 
 <!-- Função volume de esfera dado o diâmetro -->
-``` {.include file="problemas/0047.qmd"}
+``` {.include file="../problemas/0047a.qmd"}
 ```
 <!-- Função máximo de 2 -->
-``` {.include file="problemas/0043.qmd"}
+``` {.include file="../problemas/0043a.qmd"}
 ```
 
 <!-- Função máximo de 3 -->
-``` {.include file="problemas/0044.qmd"}
+``` {.include file="../problemas/0044a.qmd"}
 ```
 
 <!-- Função número perfeito -->
-``` {.include file="problemas/0045.qmd"}
+``` {.include file="../problemas/0045a.qmd"}
 ```
 
 <!-- Função h min s para segundos -->
-``` {.include file="problemas/0048.qmd"}
+``` {.include file="../problemas/0048a.qmd"}
 ```
 
 <!-- Função h min s para segundos -->
-``` {.include file="problemas/0049.qmd"}
+``` {.include file="../problemas/0049a.qmd"}
 ```
 
 <!-- Função lógica 'é par' -->
-``` {.include file="problemas/0051.qmd"}
+``` {.include file="../problemas/0051a.qmd"}
 ```
 
 <!-- Função número de divisores -->
-``` {.include file="problemas/0056.qmd"}
+``` {.include file="../problemas/0056a.qmd"}
 ```
 
 <!-- Função lógica 'é divisível' -->
-``` {.include file="problemas/0072.qmd"}
+``` {.include file="../problemas/0072a.qmd"}
 ```
 
 ---

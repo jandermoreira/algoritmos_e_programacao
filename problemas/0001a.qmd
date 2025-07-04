@@ -4,6 +4,7 @@ identifier: "0001"
 categories: 
     - "Básico"
     - "Condicional"
+    - "Bloom: Aplicar"
 ---
 
 

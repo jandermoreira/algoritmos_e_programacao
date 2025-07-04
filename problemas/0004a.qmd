@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio avalia="false"}
 Um professor precisa, para uma sequência de notas, verificar quantas são menores que 6 (abaixo da média) e quantas são nulas. Para isso, solicitou a um aluno que propusesse um algoritmo para resolver o problema e o resultado é apresentado a seguir.
 
 ```latex {.pseudocode}

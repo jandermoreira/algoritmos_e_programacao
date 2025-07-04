@@ -1,0 +1,10 @@
+---
+title: "Média de dois valores"
+identifier: "0083"
+categories:
+    - "Básico"
+---
+
+::: {.exercicio}
+Escreva um algoritmo para, a partir de dois valores reais quaisquer, apresente sua média.
+:::

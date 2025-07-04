@@ -1,15 +1,14 @@
-
-
-<!-- Projeto função: combinação de n, p a p -->
-``` {.include file="problemas/0050.qmd"}
-```
-
-<!-- Projeto função: conversões notas x conceitos -->
-``` {.include file="problemas/0052.qmd"}
-```
-
 ---
-title: Projeto de funções
+title: "Projeto de funções"
 categories: false
 toc: false
 ---
+
+
+<!-- Projeto função: combinação de n, p a p -->
+``` {.include file="../problemas/0050a.qmd"}
+```
+
+<!-- Projeto função: conversões notas x conceitos -->
+``` {.include file="../problemas/0052a.qmd"}
+```

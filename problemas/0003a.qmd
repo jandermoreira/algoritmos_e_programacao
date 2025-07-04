@@ -3,6 +3,7 @@ title: Ou exclusivo
 identifier: "0003"
 categories:
     - "Básico"
+    - "Bloom: Aplicar"
 ---
 
 ::: {.exercicio}

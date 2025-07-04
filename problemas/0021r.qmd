@@ -1,12 +1,12 @@
 ---
 title: "Maior altura em um grupo fixo"
-identifier: "0021"
-categories:
-    - "Básico"
+# identifier: "0021"
+# categories:
+#     - "Básico"
 toc: false
 ---
 
-::: {.exercicio}
+<!-- ::: {.exercicio} -->
 Como soluções para este problema são apresentados dois algoritmos.
 
 O primeiro algoritmo considera o fato de que as possíveis alturas dos participantes da equipe são, necessariamente, maiores que zero. Desta forma, inicia a verificação iniciando uma variável $h_{\Id{máx}}$ com zero. Inevitavelmente, ao verificar a primeira altura da sequência, ela será maior que esse valor inicial e $h_{\Id{máx}}$ será atualizado.
@@ -49,4 +49,4 @@ O algoritmo seguinte usa a mesma estrutura geral. Porém, ao invés de "forçar"
     \Statep{Apresente o valor de $h_{\Id{máx}}$}
 \end{algorithmic}
 ```
-:::
+<!-- ::: -->

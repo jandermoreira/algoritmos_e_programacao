@@ -5,5 +5,5 @@ categories: false
 toc: false
 ---
 
-``` {.include file="problemas/0040.qmd"}
+``` {.include file="../problemas/0040a.qmd"}
 ```

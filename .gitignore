@@ -2,6 +2,7 @@
 /.venv/
 /.quarto/
 /.luarc.json
+/server/node_modules/
 
 # Arquivos gerados
 /_site/

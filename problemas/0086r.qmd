@@ -1,0 +1,11 @@
+---
+title: "Total da conta do café"
+---
+
+```latex {.pseudocode}
+\begin{algorithmic}
+  \Description Calcula o valor total de uma conta de café com base no preço de três itens consumidos.
+  \Require os preços da bebida, do salgado e da sobremesa
+  \Ensure apresentação do valor total da conta
+\end{algorithmic}
+```

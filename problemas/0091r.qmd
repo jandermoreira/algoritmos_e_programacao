@@ -1,0 +1,11 @@
+---
+title: "Arrecadação de um Evento com Descontos"
+---
+
+```latex {.pseudocode}
+\begin{algorithmic}
+  \Description Cálculo da arrecadação considerando ingressos pagos e número de voluntários
+  \Require número total de pessoas, número de voluntários e valor do ingresso
+  \Ensure apresentação do valor arrecadado
+\end{algorithmic}
+```

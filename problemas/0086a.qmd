@@ -1,0 +1,13 @@
+---
+title: "Total da conta do café"
+identifier: "0086"
+categories: 
+    - "Básico"
+    - "Sequencial"
+---
+
+::: {.exercicio avalia="false"}
+Em um pequeno café, o cliente realiza um pedido simples contendo três itens: uma bebida, um salgado e uma sobremesa. Os preços são informados na hora do pedido. Seu objetivo é calcular e mostrar o valor total a ser pago pelo cliente.
+
+Escreva a documentação relativa ao algoritmo que resolve esse problema.
+:::

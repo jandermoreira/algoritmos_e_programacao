@@ -1,0 +1,13 @@
+---
+title: "Conversão de Minutos em Horas"
+identifier: "0089"
+categories: 
+    - "Básico"
+    - "Sequencial"
+---
+
+::: {.exercicio avalia="false"}
+Um sistema de controle de tempo precisa converter uma duração em minutos para horas, apresentando o resultado.
+
+Escreva a documentação relativa ao algoritmo que resolve esse problema.
+:::

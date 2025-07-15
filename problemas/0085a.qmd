@@ -1,0 +1,14 @@
+---
+title: "Troco para padaria"
+identifier: "0085"
+categories: 
+    - "Básico"
+    - "Sequencial"
+---
+
+
+::: {.exercicio avalia="false"}
+Uma padaria precisa calcular o troco que deve ser dado ao cliente após a compra. Assim, dados o valor da compra e o valor pago pelo cliente, é preciso calcular e apresentar o valor do troco devido.
+
+Escreva a documentação relativa ao algoritmo que resolve esse problema.
+:::

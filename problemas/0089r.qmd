@@ -1,0 +1,11 @@
+---
+title: "Conversão de Minutos em Horas"
+---
+
+```latex {.pseudocode}
+\begin{algorithmic}
+  \Description Conversão de tempo em minutos para horas
+  \Require valor da duração em minutos
+  \Ensure apresentação do tempo equivalente em horas
+\end{algorithmic}
+```

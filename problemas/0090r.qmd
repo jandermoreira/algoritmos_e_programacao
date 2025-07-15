@@ -1,0 +1,11 @@
+---
+title: "Valor Total de Ingressos de Cinema"
+---
+
+```latex {.pseudocode}
+\begin{algorithmic}
+  \Description Soma dos valores de três ingressos de cinema
+  \Require os preços dos três ingressos
+  \Ensure apresentação do valor total a ser pago
+\end{algorithmic}
+```

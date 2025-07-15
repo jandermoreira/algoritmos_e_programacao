@@ -1,0 +1,13 @@
+---
+title: "Valor Total de Ingressos de Cinema"
+identifier: "0090"
+categories: 
+    - "Básico"
+    - "Sequencial"
+---
+
+::: {.exercicio avalia="false"}
+Um atendente de cinema precisa calcular o total a ser pago por um cliente que comprou três ingressos para sessões diferentes, cada uma com preço individual. O sistema deve receber o valor de cada ingresso e apresentar o total da compra.
+
+Escreva a documentação relativa ao algoritmo que resolve esse problema.
+:::

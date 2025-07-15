@@ -1,0 +1,11 @@
+---
+title: "Estimativa de Consumo de Energia Solar"
+---
+
+```latex {.pseudocode}
+\begin{algorithmic}
+  \Description Estimativa mensal de geração de energia solar com base em dados do painel e da região
+  \Require potência do painel em kW, número médio de horas de sol por dia e número de dias de operação no mês
+  \Ensure apresentação da energia total gerada no mês em kWh
+\end{algorithmic}
+```

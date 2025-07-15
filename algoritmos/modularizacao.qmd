@@ -1,12 +1,118 @@
-# Algoritmos: modularização
+---
+title: "Modularização"
+---
 
-## Funções e valor de retorno
 
-## Procedimentos
+## 1. Conceito de Modularização
+A modularização é a técnica de dividir um algoritmo complexo em partes menores chamadas **módulos** ou **subalgoritmos**. Essa divisão facilita a compreensão, manutenção e reutilização do código. Cada módulo é responsável por uma tarefa específica e pode ser desenvolvido, testado e reutilizado independentemente.
 
-## Parâmetros formais
+**Vantagens:**
+- Facilita a leitura e compreensão dos algoritmos.
+- Permite o reaproveitamento de código.
+- Facilita a detecção e correção de erros.
+- Melhora a organização e estrutura do algoritmo.
 
-## Parâmetros por valor ou por referência
+## 2. Tipos de Módulos
+- **Procedimentos**: São módulos que executam uma ação, mas **não retornam valor**. Por exemplo, exibir uma mensagem na tela.
+- **Funções**: São módulos que executam uma ação e **retornam um valor**. Por exemplo, calcular a média de dois números.
+- **Módulo principal**: É o ponto de entrada do algoritmo, onde a execução começa.
+- **Módulos auxiliares**: São invocados pelo módulo principal ou por outros módulos para realizar tarefas específicas.
 
-## Exemplos e exercícios
+## 3. Parâmetros
+Os parâmetros são valores que um módulo recebe para realizar sua tarefa. Eles permitem que um mesmo módulo seja reutilizado com diferentes dados.
 
+- **Parâmetros de entrada**: Valores fornecidos ao módulo.
+- **Parâmetros de saída**: Valores que o módulo modifica e devolve ao chamador.
+- **Por valor**: O módulo recebe uma cópia do valor (modificações não afetam o valor original).
+- **Por referência**: O módulo recebe o endereço da variável original (modificações afetam o valor original).
+
+## 4. Escopo de Variáveis
+O escopo determina onde uma variável pode ser acessada.
+
+- **Variáveis locais**: Declaradas dentro de um módulo, só existem durante sua execução.
+- **Variáveis globais**: Declaradas fora dos módulos, podem ser acessadas por todos eles.
+- **Visibilidade**: Determina onde uma variável pode ser usada.
+- **Tempo de vida**: Intervalo em que a variável existe na memória.
+
+## 5. Passagem de Parâmetros
+A forma como os dados são passados para os módulos influencia o comportamento do algoritmo.
+
+- **Por valor**: O módulo trabalha com uma cópia dos dados. Exemplo: `Procedimento ExibirMensagem(texto)`.
+- **Por referência**: O módulo trabalha diretamente com a variável original. Exemplo: `Procedimento Incrementar(var x)`.
+
+## 6. Estrutura de um Módulo
+Um módulo deve ter uma estrutura clara e bem definida:
+
+```
+Função CalcularSoma(a, b)
+    Início
+        retorno <- a + b
+    Fim
+```
+
+- **Nome**: Identificador claro e descritivo.
+- **Parâmetros**: Lista dos dados que o módulo recebe.
+- **Corpo**: Conjunto de instruções que executa a tarefa.
+- **Retorno**: (em funções) Valor devolvido ao chamador.
+
+## 7. Chamadas de Módulos
+Um módulo pode ser chamado em qualquer ponto do algoritmo, passando os valores apropriados.
+
+- **Chamada simples**: `Resultado <- CalcularSoma(3, 5)`
+- **Chamada aninhada**: `MostrarResultado(CalcularMedia(Notas))`
+- **Ordem de execução**: A chamada transfere o controle para o módulo, que executa e retorna.
+
+## 8. Organização Hierárquica
+A estrutura modular pode ser representada em forma de árvore, com o módulo principal no topo.
+
+- **Top-down**: Inicia com uma visão geral e depois detalha os módulos.
+- **Divisão funcional**: Cada módulo trata de uma função específica.
+
+Exemplo de hierarquia:
+```
+Programa Principal
+├── LerDados
+├── ProcessarDados
+│   ├── CalcularMedia
+│   └── VerificarAprovacao
+└── ExibirResultado
+```
+
+## 9. Coesão e Acoplamento
+- **Coesão**: Grau em que as tarefas de um módulo estão relacionadas entre si. Alta coesão é desejável.
+- **Acoplamento**: Grau de dependência entre os módulos. Baixo acoplamento é desejável.
+
+**Boa prática:** Criar módulos altamente coesos e fracamente acoplados.
+
+## 10. Exemplos em Pseudocódigo
+
+### Exemplo de Função:
+```
+Função CalcularArea(base, altura)
+    Início
+        retorno <- base * altura / 2
+    Fim
+```
+
+### Exemplo de Procedimento:
+```
+Procedimento ExibirMensagem(mensagem)
+    Início
+        Escreva(mensagem)
+    Fim
+```
+
+### Uso no Programa Principal:
+```
+Início
+    area <- CalcularArea(10, 5)
+    ExibirMensagem("Área calculada: " + area)
+Fim
+```
+
+## 11. Boas Práticas na Modularização
+- Escolher **nomes significativos** para módulos e variáveis.
+- Garantir que cada módulo tenha **uma única responsabilidade**.
+- **Evitar duplicação** de código usando subalgoritmos reutilizáveis.
+- Manter módulos com **tamanho adequado**: nem muito grandes, nem muito pequenos.
+- Usar **comentários** para esclarecer objetivos quando necessário.

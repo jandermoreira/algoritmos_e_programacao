@@ -1,0 +1,231 @@
+---
+title: "Avaliação de repetições"
+---
+
+
+# PADRÕES DE INEFICIÊNCIA COMUNS EM ALGORITMOS
+===========================================
+
+1. LOOPS DESNECESSÁRIOS
+-----------------------
+
+Problema:
+Usar loops para operações que poderiam ser resolvidas com cálculos diretos.
+
+Exemplo Ineficiente:
+
+```
+PARA i DE 1 ATÉ 100 FAÇA:
+    SE i = x ENTÃO:
+        encontrado = VERDADEIRO
+    FIM SE
+FIM PARA
+
+```
+
+Solução Eficiente:
+
+```
+SE x >= 1 E x <= 100 ENTÃO:
+    encontrado = VERDADEIRO
+FIM SE
+
+```
+
+2. CONDICIONAIS REDUNDANTES
+-------------------------
+
+Problema:
+Verificações condicionais repetitivas dentro de loops.
+
+Exemplo Ineficiente:
+
+```
+PARA i DE 1 ATÉ n FAÇA:
+    SE i = 1 ENTÃO:
+        min = valor
+    SENÃO:
+        SE valor < min ENTÃO:
+            min = valor
+        FIM SE
+    FIM SE
+FIM PARA
+
+```
+
+Solução Eficiente:
+
+```
+min = primeiro_valor
+PARA i DE 2 ATÉ n FAÇA:
+    SE valor < min ENTÃO:
+        min = valor
+    FIM SE
+FIM PARA
+
+```
+
+3. LIMITES DE LOOP INEFICIENTES
+------------------------------
+
+Problema:
+Iterar até limites maiores que o necessário.
+
+Exemplo Ineficiente (teste de primalidade):
+
+```
+PARA i DE 2 ATÉ n-1 FAÇA:
+    SE n % i = 0 ENTÃO:
+        retorne FALSO
+    FIM SE
+FIM PARA
+
+```
+
+Solução Eficiente:
+
+```
+PARA i DE 2 ATÉ raiz_quadrada(n) FAÇA:
+    SE n % i = 0 ENTÃO:
+        retorne FALSO
+    FIM SE
+FIM PARA
+
+```
+
+4. CÁLCULOS REPETIDOS
+--------------------
+
+Problema:
+Recalcular valores constantes dentro de loops.
+
+Exemplo Ineficiente:
+
+```
+PARA i DE 1 ATÉ n FAÇA:
+    valor = calcular_função_complexa(x)
+    total = total + valor
+FIM PARA
+
+```
+
+Solução Eficiente:
+
+```
+valor_constante = calcular_função_complexa(x)
+PARA i DE 1 ATÉ n FAÇA:
+    total = total + valor_constante
+FIM PARA
+
+```
+
+5. IGNORAR PROPRIEDADES MATEMÁTICAS
+-----------------------------------
+
+Problema:
+Não aproveitar padrões matemáticos para otimização.
+
+Exemplo Ineficiente (soma de pares):
+
+```
+PARA i DE 1 ATÉ 100 FAÇA:
+    SE i % 2 = 0 ENTÃO:
+        soma = soma + i
+    FIM SE
+FIM PARA
+
+```
+
+Solução Eficiente:
+
+```
+PARA i DE 2 ATÉ 100 PASSO 2 FAÇA:
+    soma = soma + i
+FIM PARA
+
+```
+
+
+# Exemplos
+
+Isso é bom? O que pode melhorar?
+
+```
+Algoritmo EncontrarPontoMaisProximoDaOrigemEm1000pontos
+
+Definição:
+    dist(p) := √(pₓ² + pᵧ²)  ▷ onde p = (pₓ, pᵧ) ∈ ℝ²
+
+Execução:
+    Para k ← 1 até 1000 faça:
+        Ler ponto_atual do dispositivo de entrada
+        
+        Se k = 1 então:
+            ponto_min ← ponto_atual
+            dist_min ← dist(ponto_atual)
+        Senão:
+            dist_atual ← dist(ponto_atual)
+            Se dist_atual < dist_min então:
+                ponto_min ← ponto_atual
+                dist_min ← dist_atual
+            Fim se
+        Fim se
+    Fim para
+
+    Escrever "Ponto mínimo: " ponto_min
+    Escrever "Distância mínima: " dist_min
+Fim
+```
+
+```
+Algoritmo SomaPares
+    soma ← 0
+    Para i ← 1 até 100 faça:
+        Se i % 2 = 0 então:  ▷ Verificação em TODOS os números
+            soma ← soma + i
+        Fim se
+    Fim para
+    Escrever "Soma: ", soma
+Fim
+```
+
+```
+Algoritmo Primo
+    n ← 97  ▷ Exemplo
+    primo ← VERDADEIRO
+    Para i ← 2 até n-1 faça:  ▷ basta sqrt(n)
+        Se n % i = 0 então:
+            primo ← FALSO
+        Fim se
+    Fim para
+    Escrever "É primo? ", primo
+Fim
+```
+
+# Divisores
+
+Escreve em ordem:
+
+```
+Algoritmo Divisores
+    n ← 100
+    Para i ← 1 até n faça:  ▷ Loop até n (ineficiente para n grande)
+        Se n % i = 0 então:
+            Escrever i
+        Fim se
+    Fim para
+Fim
+```
+
+Alteração: escreve em pares (fora de ordem)
+
+```
+Para i ← 1 até √n faça:
+    Se n % i = 0 então:
+        Escrever i
+        Se i ≠ n/i então:
+            Escrever n/i  ▷ Divisor complementar
+        Fim se
+    Fim se
+Fim para
+```

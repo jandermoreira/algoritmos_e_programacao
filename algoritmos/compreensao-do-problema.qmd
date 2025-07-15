@@ -1,0 +1,147 @@
+---
+title: "Compreensão do problema"
+---
+
+Um dos pontos principais na elaboração de um algoritmo é que ele resolva um dado problema que foi apresentado. O erro na interpretação da descrição da situação a ser resolvida leva, invariavelmente, à proposição de uma solução equivocada.
+
+Nesta seção são discutidos os problemas e o direcionamento de suas interpretações.
+
+# Abordagem do problema
+
+Para poder propor uma solução algorítmica para um problema proposto, é preciso primeiramente entender e ter clareza do que o problema propõe.
+
+A proposição seguinte pode ser considerada.
+
+> Uma padaria precisa calcular o troco que deve ser dado ao cliente após a compra. Assim, dados o valor da compra e o valor pago pelo cliente, é preciso calcular e apresentar o valor do troco devido. Escreva um algoritmo para resolver este problema.
+
+Para analisar esse problema simples, é preciso caracterizar as pré-condições que ele requer, ou seja, quais os dados disponíveis e como eles se apresentam. Neste caso, há dois valores disponíveis como dados de entrada: o valor da compra e o valor pago pelo cliente. Embora não esteja explícito no texto, é possível deduzir que as entradas são valores monetários (em Reais, por exemplo) e correspondem a valores numéricos tipicamente com duas casas decimais.
+
+Também é preciso ter claro o resultado que é desejado pela solução. Para este problema há um único valor esperado: o troco (valor igualmente monetário).
+
+Entender com clareza as pré-condições e as pós-condições é uma etapa crítica para começar a escrever uma solução. Disso decorre a elaboração da documentação, conforme segue.
+
+```latex {.pseudocode}
+\begin{algorithmic}
+    \Description Calcular o troco a ser devolvido ao cliente em uma transação de compra na padaria, considerando o valor total da compra e o valor entregue pelo cliente.
+    \Require O valor da compra e o valor pago pelo cliente
+    \Ensure O valor do troco
+\end{algorithmic}
+```
+
+## Problemas com proposições simples
+
+Em listas de exercícios, alguns problemas são apresentados de forma direta, com proposições claras e, em geral, simples. O entendimento desses problemas costuma ser fácil.
+
+Segue um exemplo.
+
+> Um sistema de caixa soma o preço de três produtos. Escreva um algoritmo para, a partir dos preços dos três itens e calcular e apresentar o total da compra.
+
+Neste caso, os requisitos são os três valores dos preços (valores reais) e se deve garantir a saída do valor total (também real).
+
+```latex {.pseudocode}
+\begin{algorithmic}
+    \Description Calcula o total da compra de três produtos diferentes em um sistema de autoatendimento.
+    \Require Os preços individuais de três produtos.
+    \Ensure O valor total da compra.
+\end{algorithmic}
+```
+
+Segue outra proposição simples, para a qual a identificação das pré-condições e pós-condições é clara.
+
+> Um aplicativo de bem-estar quer mostrar quantos dias uma pessoa já viveu até a data atual, usando a idade em anos como base. É preciso de um algoritmo que apresente esta estimativa.
+
+```latex {.pseudocode}
+\begin{algorithmic}
+    \Description Estima o número de dias de vida com base na idade em anos
+    \Require A idade da pessoa em anos completos
+    \Ensure O número aproximado de dias de vida
+\end{algorithmic}
+```
+
+
+## Problemas com proposições longas
+
+Em problemas com descrições menos diretas é, em geral, um pouco mais difícil identificar com precisão as entradas e saídas. Seguem alguns exemplos.
+
+Proposição:
+
+> Em uma ferramenta de design de interiores, o usuário precisa informar as medidas de um tapete para que o sistema calcule sua área e sugira opções de compra compatíveis. Escreva um algoritmo para calcular a área a partir das dimensões fornecidas em metros.
+
+Esse problema insere alguns elementos de distração, como a sugestão de opções de compra. Isso, porém, é parte do contexto e não faz parte do algoritmo que deve ser elaborado. Em seguida é apresentada a documentação do pseudocódigo esperado.
+
+```latex {.pseudocode}
+\begin{algorithmic}
+    \Description Calcula a área de um tapete com base em sua largura e comprimento
+    \Require A largura e o comprimento do tapete em metros
+    \Ensure A área total em metros quadrados
+\end{algorithmic}
+```
+
+Proposição:
+
+> Após um jantar em grupo, os amigos decidiram incluir uma "gorjeta coletiva" ao valor da conta e dividi-la igualmente entre todos. Um deles propôs usar um aplicativo simples para fazer esse cálculo automaticamente e evitar confusões. Implemente um algoritmo que apresente a lógica desse aplicativo.
+
+Para este problema, segue a documentação. Deve-se notar que o número de pessoas é uma das pré-condições e ela não está claramente posta no problema.
+
+```latex {.pseudocode}
+\begin{algorithmic}
+    \Description Calcula o valor individual da conta somando uma gorjeta ao total antes da divisão
+    \Require O valor total da conta, o valor da gorjeta e o número de pessoas
+    \Ensure O valor a ser pago por cada pessoa
+\end{algorithmic}
+```
+
+Proposição:
+
+> João está reformando sua sala e precisa saber quantos litros de tinta comprar para pintar uma parede. Ele dispõe as dimensões da parede e o rendimento da tinta (em metros quadrados por litro), mas precisa de ajuda para calcular o total necessário. Escreva um algoritmo que faça esse cálculo, sendo que o resultado pode ser fracionário.
+
+A documentação é apresentada na sequência.
+
+```latex {.pseudocode}
+\begin{algorithmic}
+    \Description Calcula a quantidade de tinta necessária para cobrir uma parede
+    \Require A altura e a largura da parede, e o rendimento da tinta em metros quadrados por litro
+    \Ensure A quantidade de tinta necessária em litros
+\end{algorithmic}
+```
+
+## Problemas que contém dados fixos
+
+Proposta:
+
+> Durante uma atividade em um museu de ciências, os visitantes podem descobrir quanto pesariam em diferentes planetas do Sistema Solar e, juntamente, aprendem que o peso é dado em Newtons e não em quilogramas. Um dos cálculos mostra o peso de uma pessoa em Júpiter. Escreva um algoritmo para calcular o peso de alguém em Júpiter dado seu peso na Terra, ambos em Newtons. A gravidade na Terra é cerca de 9,81 m/s² e a de Júpiter é aproximadamente 24,79 m/s².
+
+Para esse tipo de problema é comum, para iniciantes, identificar os valores de aceleração da gravidade como valores de entrada quando, na realidade, são apenas valores constantes que devem ser usados diretamente. Assim, a documentação fica como se segue.
+
+```latex {.pseudocode}
+\begin{algorithmic}
+    \Description Converte o peso de uma pessoa na Terra para o peso equivalente em Júpiter
+    \Require O peso de uma pessoa na Terra em Newtons
+    \Ensure O peso correspondente em Júpiter também em Newtons
+\end{algorithmic}
+```
+
+Proposta:
+
+> Um laboratório realiza medições de temperatura em reatores químicos. A cada nova medição, o sistema deve verificar se a temperatura ultrapassa o limite crítico de 200°C. Se isso acontecer, deve exibir um alerta, senão apresenta uma mensagem de normalidade. O sistema deve repetir essa verificação para 10 medições consecutivas. Escreva um algoritmo para resolver esse problema.
+
+Para este problema, o número de repetições é fixo e, portanto, não faz parte das entradas. Segue a documentação.
+
+```latex {.pseudocode}
+\begin{algorithmic}
+    \Description Verifica uma série de 10 temperaturas e emite alerta se alguma ultrapassar o limite crítico
+    \Require Dez valores de temperatura em graus Celsius
+    \Ensure Para cada valor, indicar se está dentro do limite ou se houve excesso
+\end{algorithmic}
+```
+
+
+
+# Exemplos de problemas com interpretações incorretas
+
+dado um valor monetário em Reais (sem os centavos), determinar a quantidade mínima de notas e moedas de R$1,00 que o represente. **mostrar a quantidade de cada nota???**
+
+
+# Propostas de problemas
+
+## [Problemas simples](problemas-entendimento-problema-simples.qmd)

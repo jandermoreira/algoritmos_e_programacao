@@ -1,0 +1,74 @@
+---
+title: "Coesão e acoplamento"
+---
+
+
+
+# Coesão e Acoplamento em Modularização de Algoritmos
+
+## 🔹 Coesão – "Cada módulo com um propósito bem definido"
+
+### O que é?
+Coesão mede o **grau em que as tarefas dentro de um módulo estão relacionadas entre si**. Um módulo tem **alta coesão** quando todas as suas instruções contribuem para uma única tarefa clara e específica.
+
+### ✅ Exemplo de Alta Coesão:
+```pseudocódigo
+Função CalcularMedia(n1, n2)
+    Início
+        retorno <- (n1 + n2) / 2
+    Fim
+```
+
+### 🚫 Exemplo de Baixa Coesão:
+```pseudocódigo
+Procedimento ProcessarAluno()
+    Início
+        LerDados()
+        CalcularMedia()
+        EnviarEmail()
+        GravarNoBanco()
+    Fim
+```
+> O módulo mistura tarefas distintas: leitura, cálculo, comunicação e persistência.
+
+---
+
+## 🔹 Acoplamento – "Quanto os módulos dependem uns dos outros"
+
+### O que é?
+Acoplamento mede **o grau de dependência entre os módulos**. Idealmente, os módulos devem ter **baixo acoplamento**, ou seja, interagir o mínimo necessário e de forma bem definida.
+
+### ✅ Exemplo de Baixo Acoplamento:
+```pseudocódigo
+Função CalcularMedia(n1, n2)
+    Início
+        retorno <- (n1 + n2) / 2
+    Fim
+```
+
+```pseudocódigo
+Procedimento MostrarResultado(media)
+    Início
+        Escreva("A média é: ", media)
+    Fim
+```
+
+### 🚫 Exemplo de Alto Acoplamento:
+```pseudocódigo
+Procedimento MostrarResultado()
+    Início
+        Escreva("A média é: ", mediaGlobal)
+    Fim
+```
+> O procedimento depende de uma variável global externa, tornando-o fortemente acoplado a outro módulo.
+
+---
+
+## ✅ Boas Práticas
+
+| Objetivo                      | Boa Prática                                                        |
+|------------------------------|---------------------------------------------------------------------|
+| **Alta coesão**              | Faça módulos que executam apenas **uma tarefa clara**               |
+| **Baixo acoplamento**        | Evite variáveis globais, use **parâmetros de entrada e retorno**   |
+| **Fácil manutenção**         | Módulos devem poder ser modificados sem afetar outros              |
+| **Reaproveitamento**         | Módulos genéricos e independentes são mais reutilizáveis           |

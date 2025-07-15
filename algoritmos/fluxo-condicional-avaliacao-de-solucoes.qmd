@@ -1,0 +1,166 @@
+---
+title: "Avaliação de condicionais"
+---
+
+Abaixo estão padrões comuns de erros e ineficiências em estruturas condicionais, apresentados de forma independente de linguagem e focados em pseudocódigo.
+
+---
+
+## 1. Condições Redundantes
+**Erro:** Verificar a mesma condição ou uma condição que já foi descartada anteriormente.
+
+```pseudocódigo
+se x > 10 então
+    faça algo
+senão se x > 10 então
+    faça outra coisa  // Redundante: já foi descartado
+```
+
+---
+
+## 2. Condições Sempre Verdadeiras ou Falsas
+**Erro:** Condições que são logicamente inúteis.
+
+```pseudocódigo
+se verdadeiro então
+    faça algo  // Executado sempre, desnecessário
+```
+
+```pseudocódigo
+se x > 5 ou x <= 5 então
+    faça algo  // Sempre verdadeiro, a condição é inútil
+```
+
+---
+
+## 3. Encadeamento Excessivo de `se-senão` (deep nesting)
+**Ineficiente:** Muitos níveis de decisão tornam o código difícil de ler e manter.
+
+```pseudocódigo
+se condição1 então
+    se condição2 então
+        se condição3 então
+            faça algo  // Difícil de ler
+```
+
+**Melhoria:**
+```pseudocódigo
+se não condição1 então
+    saia
+se não condição2 então
+    saia
+se condição3 então
+    faça algo
+```
+
+---
+
+## 4. Condições Invertidas ou Confusas
+**Erro:** Tornar o código difícil de entender por causa da lógica negativa.
+
+```pseudocódigo
+se não (x > 10) então
+    faça A
+senão
+    faça B
+```
+
+**Melhoria:**
+```pseudocódigo
+se x <= 10 então
+    faça A
+senão
+    faça B
+```
+
+---
+
+## 5. Comparação Desnecessária com Valores Literais
+**Erro:** Comparar valores booleanos com `verdadeiro` ou `falso`.
+
+```pseudocódigo
+se (x == verdadeiro) então
+    faça algo
+```
+
+**Melhoria:**
+```pseudocódigo
+se x então
+    faça algo
+```
+
+---
+
+## 6. Código Repetido em Blocos Condicionais
+**Erro:** Repetir as mesmas instruções em vários ramos.
+
+```pseudocódigo
+se x > 10 então
+    log("x é grande")
+    faça A
+senão
+    log("x é grande")
+    faça B
+```
+
+**Melhoria:**
+```pseudocódigo
+log("x é grande")
+se x > 10 então
+    faça A
+senão
+    faça B
+```
+
+---
+
+## 7. Condições Sobrepostas (overlapping)
+**Erro:** Ramas que nunca são executados porque a lógica anterior já cobre os casos.
+
+```pseudocódigo
+se x > 10 então
+    faça A
+senão se x > 5 então
+    faça B
+senão se x > 8 então
+    faça C  // Nunca será executado!
+```
+
+---
+
+## 8. Uso Indevido de `senão` sem `se` claro
+**Erro:** Ambiguidade ou lógica errada quando `senão` depende de outro `se` mal posicionado.
+
+---
+
+## 9. Falta de Caso Padrão (`senão`)
+**Erro:** Ignorar casos não tratados.
+
+```pseudocódigo
+se x == 1 então
+    faça A
+se x == 2 então
+    faça B
+// E se x == 3?
+```
+
+**Melhoria:**
+```pseudocódigo
+se x == 1 então
+    faça A
+senão se x == 2 então
+    faça B
+senão
+    trate o caso padrão
+```
+
+---
+
+## 10. Lógica Complexa Não Separada em Funções
+**Erro:** Toda a lógica de decisão em um só bloco, sem abstrações.
+
+**Melhoria:** Use funções ou sub-rotinas para melhorar a legibilidade:
+```pseudocódigo
+se cliente_é_vip(x) então
+    aplicar_desconto(x)
+```

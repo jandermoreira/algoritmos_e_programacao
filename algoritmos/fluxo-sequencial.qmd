@@ -1,0 +1,41 @@
+---
+title: "Fluxo sequencial e manipulação de dados"
+---
+
+<!-- 
+* Execução sequencial simples
+* Estratégias de manipulação de dados
+* Cálculos "computacionais": restos, pares, divisores etc. 
+ -->
+
+A experiência com a escrita de algoritmos se inicia com problemas simples, os quais usualmente seguem um processamento simples e sequencial, como ilustrado na @fig-processamento-sequencial-simples.
+
+:::{#fig-processamento-sequencial-simples}
+```latex {.pseudocode}
+\Large
+\noindent
+\begin{tikzpicture}[every node/.style = {minimum height = 1.5em, draw}]
+    \node (entrada) {Entrada};
+    \node at (4, 0) (processamento) {Processamento};
+    \node at (8, 0) (saida) {Saída};
+
+    \draw[-latex] (entrada) -- (processamento);
+    \draw[-latex] (processamento) -- (saida);
+\end{tikzpicture}
+```
+Processamento sequencial simples.
+
+:::
+<!-- fig -->
+
+# Resolução linear de problemas
+
+* Leitura + processamento + saída
+
+* leitura + processamento + saída + outro processamento + outra saída
+
+# Estratégias de manipulação de dados
+
+Cálculos diretos, como determinar a área de um retângulo dadas sua base e altura são facilmente escritos no pseudocódigo. Alguns outros cálculos, porém, não são tão óbvios. Este seria o caso de, por exemplo, dado um valor monetário em Reais (sem os centavos), determinar a quantidade mínima de notas e moedas de R$1,00 que o represente.
+
+# Problemas propostos

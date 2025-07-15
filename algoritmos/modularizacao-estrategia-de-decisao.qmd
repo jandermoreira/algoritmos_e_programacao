@@ -1,0 +1,53 @@
+---
+title: "Abordagem de problema e decisão de modularização"
+---
+
+## 1. Compreender o Problema
+
+- Leia atentamente o enunciado.
+- Identifique entradas, saídas e condições.
+- Certifique-se de entender o objetivo principal e possíveis restrições.
+
+## 2. Analisar o Problema Globalmente
+
+- Pense no problema como um todo.
+- Identifique as grandes etapas necessárias para a solução.
+- Tente visualizar o fluxo principal do processo.
+
+## 3. Dividir em Subproblemas (Decomposição)
+
+- Quebre o problema em partes menores, mais simples de resolver.
+- Cada parte deve representar uma tarefa ou responsabilidade específica.
+- Assegure-se de que essas partes sejam independentes ou com pouca dependência (baixo acoplamento).
+
+## 4. Detalhar os Subproblemas (Refinamento Sucessivo)
+
+- Divida cada subproblema em tarefas ainda menores até que fiquem simples o suficiente para implementação direta.
+- Defina claramente entradas, saídas e efeitos de cada módulo.
+
+## 5. Identificar Interfaces entre Módulos
+
+- Determine quais dados e informações cada módulo deverá receber e retornar.
+- Use parâmetros e valores de retorno para comunicação clara e eficiente.
+
+## 6. Avaliar Coesão e Acoplamento
+
+- Módulos devem ter alta coesão (realizar uma única função ou responsabilidade).
+- Evite módulos com múltiplas funções distintas.
+- Minimize dependências entre módulos (baixo acoplamento).
+
+## 7. Documentar a Modularização
+
+- Descreva a função de cada módulo.
+- Liste entradas, saídas e regras importantes.
+- Facilite manutenção e futuras modificações.
+
+## 8. Revisar e Ajustar
+
+- Verifique se a modularização facilita a compreensão e a manutenção.
+- Ajuste a decomposição para melhorar clareza, desempenho e reutilização.
+
+---
+
+**Resumo:**  
+A modularização é um processo iterativo que começa com a compreensão do problema, seguido pela decomposição em partes menores, definição das interfaces, avaliação da qualidade dos módulos e documentação. Uma boa modularização resulta em código mais claro, organizado, reutilizável e fácil de manter.

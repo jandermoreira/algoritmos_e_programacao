@@ -1,4 +1,6 @@
-# Algoritmos: desenvolvimento por refinamentos sucessivos
+---
+title: "Refinamentos sucessivos"
+---
 
 ## Níveis de abstração
 
@@ -6,5 +8,89 @@
 
 ## Refinamentos sucessivos (_top-down_)
 
-## Exemplos
 
+----
+
+# Como Abordar um Problema Usando Refinamentos Sucessivos
+
+## 1. Compreender o Problema
+
+- Leia o enunciado com atenção.
+- Identifique os dados de entrada e saída.
+- Compreenda o que se deseja calcular, construir ou resolver.
+
+## 2. Formular uma Solução Abstrata
+
+- Escreva uma ideia geral da solução, sem se preocupar com detalhes técnicos.
+- Use frases como “ler dados”, “processar informações”, “mostrar resultado”.
+- Essa versão deve ser simples e de alto nível.
+
+## 3. Refino Progressivo
+
+- Escolha uma das etapas da solução abstrata.
+- Detalhe como ela será feita, substituindo frases genéricas por ações mais específicas.
+- Continue refinando até cada etapa ser suficientemente clara para ser codificada.
+
+## 4. Utilizar Estruturas de Controle
+
+- Ao detalhar, pense nas estruturas necessárias: laços, condicionais, contadores, acumuladores, etc.
+- Cada novo nível de refinamento deve deixar o algoritmo mais próximo do pseudocódigo final.
+
+## 5. Parar Quando as Ações Forem Atômicas
+
+- Um passo é considerado atômico quando não pode ser mais decomposto sem entrar no nível da codificação.
+- Se todas as ações estiverem claras e diretas, a decomposição está completa.
+
+## 6. Verificar Clareza e Correção
+
+- Analise se os refinamentos cobrem todas as partes do problema.
+- Revise a lógica geral para garantir que o algoritmo alcança o objetivo corretamente.
+
+---
+
+**Resumo:**  
+A abordagem por refinamentos sucessivos consiste em partir de uma ideia geral e ir detalhando progressivamente a solução até que todas as ações estejam claras e prontas para codificação. Essa técnica mantém o foco na lógica do problema, sem exigir modularização explícita.
+
+
+----
+
+# ✅ Boas Práticas para Refinamentos Sucessivos
+
+### 1. **Comece pelo geral**
+- Inicie com uma visão de alto nível da solução.
+- Use frases amplas como “processar dados”, “calcular resultado”, “exibir saída”.
+
+### 2. **Refine passo a passo**
+- Refine uma ação de cada vez.
+- A cada nível, substitua uma ação genérica por ações mais específicas.
+
+### 3. **Use uma linguagem clara e simples**
+- Mantenha a linguagem próxima da linguagem natural ou pseudocódigo.
+- Evite detalhes de implementação (como variáveis ou sintaxe específica) nos primeiros níveis.
+
+### 4. **Evite pular níveis**
+- Não salte diretamente para o nível de código.
+- Garanta que cada passo seja compreensível antes de refinar mais.
+
+### 5. **Verifique a completude**
+- Todos os casos e etapas devem estar cobertos ao final dos refinamentos.
+- Certifique-se de que o algoritmo resolve o problema proposto.
+
+### 6. **Use identação e organização visual**
+- Organize os níveis com boa identação para facilitar a leitura.
+- Se possível, numere os níveis (Nível 0, 1, 2…) para acompanhar a profundidade.
+
+### 7. **Priorize ações atômicas**
+- Refine até que cada passo seja simples o suficiente para ser implementado diretamente.
+- Evite manter ações complexas sem decomposição.
+
+### 8. **Valide cada nível**
+- Em cada etapa, pergunte: “Está claro o que deve ser feito aqui?”
+- Se a resposta for “não”, refine mais.
+
+### 9. **Evite repetir lógica**
+- Se um mesmo trecho lógico aparece em várias partes, avalie se ele pode ser descrito de forma comum ou reaproveitada.
+
+### 10. **Finalize com pseudocódigo claro**
+- O último nível de refinamento deve ser pseudocódigo direto e estruturado.
+- Use comandos como `Leia`, `Se`, `Enquanto`, `Escreva` etc.

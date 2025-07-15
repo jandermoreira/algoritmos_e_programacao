@@ -1,0 +1,150 @@
+---
+title: "Objetivos dos algoritmos e níveis de abstração"
+---
+
+Os algoritmos podem ser escritos de formas diferentes, dependendo dos objetivos que leveram a sua elaboração. Assim, o objetivo de um algoritmo pode ser prover uma solução para que seja implementada em uma linguagem de programação e o de outro, apresentar uma estratégia que deve ser seguida para obter-se um resultado de interesse.
+
+# Objetivos do pseudocódigo
+
+O pseudocódigo pode ser visto como uma mistura de aspectos mais formais, como computação ou notação matemática, com linguagem natural.
+
+Como um primeiro exemplo é apresentado o @alg-estimativa-altura-predio, que considera uma forma de se obter indiretamente a altura de um prédio dados os comprimentos das sombras do prédio de de uma pessoa, juntamente com a altura dessa pessoa. Este tipo de algoritmo pode ser facilmente implementado em C.
+
+```latex {.pseudocode}
+ %| label: #alg-estimativa-altura-predio
+ %| title: Estimativa da altura de um prédio em função de sobras projetadas.
+\begin{algorithmic}
+    \Description Estimativa da altura de um prédio baseada no comprimento da sombra do prédio e no comprimento da sombra de uma pessoa utilizando semelhança de triângulos.
+    \Require O comprimento da sombra do prédio, o comprimento da sombra da pessoa e a altura da pessoa -- todos em metros e maiores que zero
+    \Ensure A altura estimada do prédio, em metros
+    \Statex{}
+    \Statep{Obtenha os valores de \Id{sombra\_prédio}, \Id{sombra\_pessoa} e \Id{altura\_pessoa}}
+    \Statep{Calcule \Id{altura\_prédio} como $\dfrac{\Id{sombra\_prédio} \times \Id{altura\_pessoa}}{\Id{sombra\_pessoa}}$}
+    \Statep{Apresente a estimativa \Id{altura\_prédio}}
+\end{algorithmic}
+```
+
+Este é um típico problema e programa solicitado em listas de exercícios de cursos de programação. O algoritmo apresenta uma solução praticamente pronta para a implementação do programa, incluindo sugestões para os nomes das variáveis e até induzindo os comandos que serão usados. A escrita do @alg-estimativa-altura-predio foi feita considerando que o algoritmo seria lido por um programador com, minimamente, as capacidades básicas de codificação.
+
+Como um segundo exemplo de pseudocódigo, o @alg-alexandre-levada pode ser considerado.
+
+```latex {.pseudocode}
+%| label: #alg-alexandre-levada
+%| title: PNN based LPP, adaptado de @levada
+\begin{algorithmic}
+    \Description Algoritmo PNN-LPP para redução de dimensionalidade baseado em aprendizado não supervisionado métrico
+    \Require A matriz de dados $X$, o número de vizinhos $K$, a dimensão do espaço de saída $d$ e a variância do \emph{kernel} gaussiano $t$
+    \Ensure Retorna a matriz de dados com dimensionalidade reduzida $Y$
+    \Statex{}
+    %\Function{PNN-LPP}{$X$, $K$, $d$, $t$}
+        \Statep{Obtenha a matriz de dados $X$, o número de vizinhos $K$, a dimensão do espaço $d$ e a variância $t$}
+        \Statep{Para cada amostra $\vec{x}_i$ do conjunto de dados, calcule as distâncias para todas as demais amostras $\vec{x}_j$, armazenando-as no vetor $\vec{d}_i$}
+        \Statep{Ordene as distâncias em ordem crescente}
+        \Statep{Calcule os pesos das arestas usando $s_{ij} = \dfrac{d_{ik+1}-d_{ij}}{d_{ik+1}-d_{i1}}$}
+        \Statep{Use um \emph{kernel} gaussiano para definir a matriz de adjacência $W$. \[ W_{ij} = \exp\left\{ -\dfrac{s_{ij}}{t} \right\}\quad\mbox{\ if\ } v_j \in N(v_i) \]}
+        \Statep{Calcule a matriz diagonal $D$ com os graus $d_i$, para $i = 1, 2, \ldots, n$.}
+        \Statep{Calcule a matriz laplaciana $L = D - W$}
+        \Statep{Selecione $d$ autovetores inferiores da matriz $(XDX^T)^{-1}XLX^T$ para construir a matriz de projeção $A$.}
+        \Statep{Faça a projeção dos dados usando a matriz $A$, obtendo $Y = A^TX$}
+        \Statep{Retorne como resultado a matriz $Y$}
+    %\EndFunction
+\end{algorithmic}
+```
+
+Este algoritmo é uma adaptação do apresentado no artigo de @levada e, para entendê-lo por completo, tanto o texto do artigo deve ser lido quanto o leitor deve ter conhecimento sobre o tema abordado. O objetivo do algoritmo não é o entendimento do procedimento que ele realiza em detalhes, mas observar a sequência de passos para produzir o resultado desejado. Ele ainda envolve a integração da linguagem natural com notação matemática para representar as expressões e matrizes utilizadas. No algoritmo original não há a documentação com a descrição nem as pré e pós-condições, uma vez que ele está inserido na discussão apresentada pelo artigo como um todo.
+
+O @alg-alexandre-levada não foi escrito para pronta implementação. Ele deixa muitos pontos em aberto, mesmo sendo claro quanto a todos os cálculos que devem ser feitos e em que sequência. Esse é um algoritmo de nível alto de abstração, ou seja, muitos detalhes são omitidos propositalmente em função do público-alvo, que são os leitores do artigo científico. Apresentar todos os detalhes, como o passo a passo da criação dos vetores de distâncias $\vec{d}_i$ ou a própria fórmula usada para a distância somente tornaria o código desnecessariamente complexo, prejudicando a compreensão da estratégia da solução.
+
+# Nível de abstração e o público alvo
+
+Quando um algoritmo vai ser escrito, é preciso ter claro qual é o público-alvo que ele pretende atingir. As instruções, portanto, assumem uma forma baseada no conhecimento prévio de quem vai interpretá-las. Essa decisão implica na escolha do nível de abstração que será empregado.
+
+Um algoritmo escrito com nível de abstração baixo é aquele mais próximo do programa que será implementado. Ele costuma apresentar as variáveis e comandos de forma mais explícita. Quando o nível de abstração sobe, os detalhes de implementação são substituídos por descrições mais genéricas.
+
+Supondo que o problema a ser resolvido seja a soma de duas matrizes de mesma dimensão, são apresentados algoritmos em níveis de abstração diferentes, todos corretos e abordando exatamente a mesma solução. O @alg-soma-matrizes-nivel-alto possui um nível de abstração bastante alto, seguido pelo @alg-soma-matrizes-nivel-medio, o qual apresenta mais detalhes e pode ser considerado de nível médio; por sua vez, o @alg-soma-matrizes-nivel-mais-baixo e o @alg-soma-matrizes-nivel-baixo já possuem nível baixo e se aproximam mais de uma possível implementação em um programa.
+
+
+```pseudocode {label="#alg-soma-matrizes-nivel-alto" title="Soma de duas matrizes de mesma dimensão (nível alto)."}
+\begin{algorithmic}
+    \Description Cálculo da soma de duas matrizes de dimensões compatíveis
+    \Require Duas matrizes $A$ e $B$
+    \Ensure A soma $A + B$
+    \Statex{}
+    \Statep{Obtenha as matrizes $A$ e $B$}
+    \Statep{Calcule $S$ como $A + B$}
+    \Statep{Apresente a matriz $S$}
+\end{algorithmic}
+```
+
+```pseudocode {label="#alg-soma-matrizes-nivel-medio" title="Soma de duas matrizes de mesma dimensão (nível médio)."}
+\begin{algorithmic}
+    \Description Cálculo da soma de duas matrizes de dimensões compatíveis
+    \Require Os valores de duas matrizes $A$ e $B$
+    \Ensure Os valores de $S = A + B$
+    \Statex{}
+    \Statep{Obtenha cada valor $a_{ij}$ de $A$}
+    \Statep{Obtenha cada valor $b_{ij}$ de $B$}
+    \Statep{Calcule a matriz soma $S$ de forma que todo $s_{ij}$ seja calculado como $a_{ij} + b_{ij}$}
+    \Statep{Apresente cada $s_{ij}$ de $S$}
+\end{algorithmic}
+```
+
+```pseudocode {label="#alg-soma-matrizes-nivel-mais-baixo" title="Soma de duas matrizes de mesma dimensão (nível mais baixo)."}
+\begin{algorithmic}
+    \Description Cálculo da soma de duas matrizes de dimensões compatíveis
+    \Require As dimensões das matrizes $A$ e $B$ seguida por todos os valores de $a_{ij}$ e $b_{ij}$
+    \Ensure Os valores $s_{ij}$ de $S = A + B$
+    \Statex{}
+    \Statep{Obtenha o número de linhas, \Id{número\_linhas}, e colunas, \Id{número\_colunas}, das matrizes}
+    \Statep{Para cada linha $i$, ${i = 1, 2, \ldots, \Id{número\_linhas}}$, e cada coluna $j$, ${j = 1, 2, \ldots, \Id{número\_colunas}}$, obtenha o valor para $\Id{matriz\_a}_{ij}$ de \Id{matriz\_a}}
+    \Statep{Para cada linha $i$, ${i = 1, 2, \ldots, \Id{número\_linhas}}$, e cada coluna $j$, ${j = 1, 2, \ldots, \Id{número\_colunas}}$, obtenha o valor para $\Id{matriz\_b}_{ij}$ de \Id{matriz\_b}}
+    \Statep{Calcule \Id{matriz\_soma}, fazendo ${\Id{matriz\_soma}_{ij} = \Id{matriz\_a}_{ij} + \Id{matriz\_b}_{ij}}$, para cada linha $i$, ${i = 1, 2, \ldots, \Id{número\_linhas}}$, e cada coluna $j$, ${j = 1, 2, \ldots, \Id{número\_colunas}}$}
+    \Statep{Para cada linha $i$, ${i = 1, 2, \ldots, \Id{número\_linhas}}$, e cada coluna $j$, ${j = 1, 2, \ldots, \Id{número\_colunas}}$, apresente $\Id{matriz\_soma}_{ij}$}
+\end{algorithmic}
+```
+
+```pseudocode {label="#alg-soma-matrizes-nivel-baixo" title="Soma de duas matrizes de mesma dimensão (nível baixo)."}
+\begin{algorithmic}
+    \Description Cálculo da soma de duas matrizes de dimensões compatíveis
+    \Require As dimensões das matrizes $A$ e $B$ seguida por todos os valores de $a_{ij}$ e $b_{ij}$
+    \Ensure Os valores $s_{ij}$ de $S = A + B$
+    \Statex{}
+    \Statep{Obtenha o número de linhas, \Id{número\_linhas}, e colunas, \Id{número\_colunas}, das matrizes}
+    \ForEach{linha $i$, ${i = 1, 2, \ldots, \Id{número\_linhas}}$}
+        \ForEach{coluna $j$, ${j = 1, 2, \ldots, \Id{número\_colunas}}$}
+            \Statep{Obtenha o valor para $\Id{matriz\_a}_{ij}$ de \Id{matriz\_a}}
+        \EndFor
+    \EndFor
+    \ForEach{linha $i$, ${i = 1, 2, \ldots, \Id{número\_linhas}}$}
+        \ForEach{coluna $j$, ${j = 1, 2, \ldots, \Id{número\_colunas}}$}
+            \Statep{Obtenha o valor para $\Id{matriz\_b}_{ij}$ de \Id{matriz\_b}}
+        \EndFor
+    \EndFor
+    \ForEach{linha $i$, ${i = 1, 2, \ldots, \Id{número\_linhas}}$}
+        \ForEach{coluna $j$, ${j = 1, 2, \ldots, \Id{número\_colunas}}$}
+            \Statep{Calcule $\Id{matriz\_soma}_{ij}$ como ${\Id{matriz\_a}_{ij} + \Id{matriz\_b}_{ij}}$}
+        \EndFor
+    \EndFor
+    \ForEach{linha $i$, ${i = 1, 2, \ldots, \Id{número\_linhas}}$}
+        \ForEach{coluna $j$, ${j = 1, 2, \ldots, \Id{número\_colunas}}$}
+            \Statep{Apresente $\Id{matriz\_soma}_{ij}$}
+        \EndFor
+    \EndFor
+
+\end{algorithmic}
+```
+
+Os algoritmos são apresentados em quatro níveis de abstração diferentes. A @tbl-comparacao-niveis-abstracao sumariza uma comparação desses algoritmos.
+
+
+| Algoritmo                           |   Nível    | Comentário |
+| :---------------------------------: | :--------: | :--------- |
+| @alg-soma-matrizes-nivel-alto       |    Alto    | Pressupõe o conhecimento de matrizes e suas operações; detalhes como as dimensões são omitidos.        |
+| @alg-soma-matrizes-nivel-medio      |   Médio    | Ainda considera o conhecimento sobre matrizes; há mais detalhes de como os dados são obtidos e como o cálculo da soma é feito.         |
+| @alg-soma-matrizes-nivel-mais-baixo | Mais baixo | A necessidade de conhecer matrizes é mínima, bastando assumir cada elemento como uma variável separada; introduz a necessidade das dimensões para controle da somas; mantém uma linguagem mais natural.        |
+| @alg-soma-matrizes-nivel-baixo      |   Baixo    | Não há praticamente necessidade de entender o que é uma matriz; uma estruturação de pseudocódigo é adicionada; cada ação é hiperdetalhada; a linguagem natural é mínima.        |
+
+: Comparação da soma de matrizes com algoritmos em diferentes níveis de abstração. {#tbl-comparacao-niveis-abstracao}
+
+
+Da mesma forma que o nível de abstração depende do público-alvo, também inexiste a necessidade de que um mesmo algoritmo mantenha o nível de abstração constante para todas suas partes. Desse modo, pontos menos importantes, ou seja, que não são o foco do algoritmo, podem ter nível mais alto enquanto outras partes podem ser mais detalhadas, deixando o nível mais baixo para explicitar pontos relevantes da solução.

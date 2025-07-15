@@ -1,8 +1,10 @@
-# Noções de algoritmos {#sec-nocoes-de-algoritmos}
+---
+title: "Noções de algoritmos"
+---
 
 
 
-Um algoritmo é uma descrição de passos que, se seguidos, levam à solução de um determinado problema e, genericamente falando, quaisquer instruções, orientações ou coisa similar podem ser classificadas como um algoritmo.
+Um algoritmo é uma descrição de passos que, se seguidos, levam à solução de um determinado problema e, genericamente falando, quaisquer instruções, orientações ou coisas similares podem ser classificadas como um algoritmo.
 
 A partir dessa óptica, há uma infinidade de algoritmos. Quando se trata de computação e mais especificamente de programação, há um subconjunto dos algoritmos com características mais particulares. Este capítulo trata da contextualização dos algoritmos computacionais.
 
@@ -21,8 +23,6 @@ Todos esses algoritmos possuem três elementos principais:
 * A sequência de passos que devem ser seguidos;
 * A situação final.
 
-`\index{pré-condição}`{=latex}
-`\index{pós-condição}`{=latex}
 A situação inicial são as pré-condições, ou seja, o que tem haver antes da execução dos passos para que todas as ações possam ser seguidas de forma adequada. Os passos determinam as ações que devem ser executadas e uma ordem coerente para que aconteçam. As pós-condições caracterizam a situação final, ou seja, a completude do que o algoritmo se propôs a resolver.
 
 Na @tbl-exemplos-condicoes-algoritmos são apresentados esses elementos para dois exemplos específicos, ilustrando-os de forma simplificada.
@@ -37,7 +37,6 @@ Na @tbl-exemplos-condicoes-algoritmos são apresentados esses elementos para doi
 : Exemplos ilustrando os elementos (pré-condições, passos, pós-condições) para dois problemas específicos. {#tbl-exemplos-condicoes-algoritmos}
 
 ::: {.callout title="Algoritmo"}
-`\index{algoritmo}`{=latex}
 Um algoritmo pode ser definido como uma sequência finita de passos que levam de uma situação inicial (pré-condições) a uma situação final (pós-condições) de forma bem definida. A partir desse conceito, é esperado que, a partir do mesmo estado inicial e seguidos os mesmos passos, o estado final seja atingido.
 :::
 
@@ -59,12 +58,9 @@ Existe uma classe particular de algoritmos para os quais há um maior rigor nos 
 Caso um sistema computacional, ou seja, um programa, deva realizar a mesma tarefa, ele tem que ter bem definidas todas as etapas. As pré-condições, por exemplo, definiriam que o valor deveria ser um número real, os passos indicariam o cálculo da conversão e qual seria a expressão usada e, finalmente, o resultado produzido como pós-condição estaria bem definido.
 
 ::: {.callout title="Algoritmos computacionais"}
-`\index{algoritmos!computacionais}`{=latex}
 Um algoritmo computacional é aquele que define com clareza todas pré-condições e estabelece também claramente as pós-condições. Também define os passos de forma inequívoca e direta, sem margens para interpretações ou variações. Seu objetivo é ser executado em um sistema computacional.
 :::
 
-
-::::::::: {.content-visible unless-profile="programacao"}
 
 ## As várias formas de representar algoritmos
 
@@ -103,8 +99,6 @@ Duas representações distintas para uma mesma tarefa: representação por figur
 
 
 Para o caso dos algoritmos computacionais há duas formas mais usuais para representar a sequência de passos que resolvem um dado problema: fluxogramas e pseudocódigo. Naturalmente, há alternativas menos empregadas.
-
-:::::::::
 
 ### Fluxogramas
 

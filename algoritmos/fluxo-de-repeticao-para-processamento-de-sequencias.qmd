@@ -1,8 +1,10 @@
-# Desenvolvimento de algoritmos para processamento de sequências de dados {#seq-desenvolvimento-de-algoritmos-para-processamento-de-sequencias}
+---
+title: "Processamento de sequências de dados"
+---
 
-Este capítulo estende a discussão do @sec-estruturas-algoritmicas-para-processamento-de-sequencias quanto ao uso das estruturas de controle execução repetitiva, apresentando problemas práticos e indicando ações de uso frequente, como contagens e somas, por exemplo.
+Este material explora as [estruturas de repetição](formalizacao.html#repetições) quanto ao uso da execução repetitiva, apresentando problemas práticos e indicando ações de uso frequente, como contagens e somas, por exemplo.
 
-O contexto principal abordado é o do processamento de sequências de dados, como as caracterizadas na seção @sec-caracterizacao-das-sequencias-de-dados, abordando coleções de dados disponíveis como entrada para algoritmo.
+O contexto principal abordado é o do processamento de [sequências de dados](processamento-basico-de-sequencias-de-dados.html#caracterizacao-das-sequencias-de-dados) abordando coleções de dados disponíveis como entrada para algoritmo.
 
 ## Ações simples: contagens e somas
 

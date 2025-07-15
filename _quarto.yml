@@ -3,7 +3,7 @@ project:
   execute-dir: project
 
 filters: 
-  - exercicio.lua
+  # - exercicio.lua
   - cap-filters.lua
   - runenv.lua
   - algxpar-quarto
@@ -69,18 +69,33 @@ website:
           contents:
             - algoritmos/index.qmd
             - algoritmos/formalizacao.qmd
-            # - algoritmos/desenvolvimento-basico-e-codificacao.qmd
-            # - algoritmos/execucao-condicional.qmd
-            # - algoritmos/desenvolvimento-com-condicionais-e-codificacao.qmd
-        - section: "Processamento de sequências de dados"
+            - algoritmos/objetivos-e-niveis-de-abstracao.qmd
+            - algoritmos/compreensao-do-problema.qmd
+        - section: "Processamento básico"
           contents:
-            - algoritmos/processamento-basico-de-sequencias-de-dados.qmd
-            - algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.qmd
+            - algoritmos/fluxo-sequencial.qmd
+            - section: "Fluxo condicional"
+              contents:
+                - algoritmos/fluxo-condicional-estruturas.qmd
+                - algoritmos/fluxo-condicional-utilizacao.qmd
+                - algoritmos/fluxo-condicional-avaliacao-de-solucoes.qmd
+            - section: "Fluxo repetitivo"
+              contents:
+                - algoritmos/fluxo-de-repeticao-estruturas.qmd
+                - algoritmos/fluxo-de-repeticao-para-calculos-iterativos.qmd
+                - algoritmos/fluxo-de-repeticao-para-processamento-de-sequencias.qmd
+                - algoritmos/fluxo-de-repeticao-avaliacao-de-solucoes.qmd
+        - section: "Estratégias de desenvolvimento"
+          contents:
+            - algoritmos/desenvolvimento-por-refinamentos-sucessivos.qmd
+            - algoritmos/testes-de-mesa.qmd
+        - section: "Modularização"
+          contents:
+            - algoritmos/modularizacao.qmd
+            - algoritmos/modularizacao-coesao-e-acoplamento.qmd
+            - algoritmos/modularizacao-estrategia-de-decisao.qmd
         - section: "Desenvolvimento e organização de algoritmos"
           contents:
-        #     - algoritmos/desenvolvimento-por-refinamentos-sucessivos.qmd
-        #     - algoritmos/testes-de-mesa.qmd
-            - algoritmos/modularizacao.qmd
             - algoritmos/desenvolvimento-com-modularizacao.qmd
         # - section: "Representação de dados estruturados"
         #   contents: 

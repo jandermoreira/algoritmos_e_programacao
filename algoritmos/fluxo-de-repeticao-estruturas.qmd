@@ -1,5 +1,5 @@
 ---
-title: Estruturas algorítmicas básicas para processamento de sequências de dados 
+title: "Estruturas de repetição"
 ---
 
 Este capítulo considera o processamento de sequências de dados, o que significa repetir ações sobre cada dado individualmente. Em decorrência, também aborda outras ações que sejam repetitivas.
@@ -227,7 +227,7 @@ A alteração desse algoritmo para processar, por exemplo, uma sequência de 100
 
 
 
-# Caracterização das sequências {#sec-caracterizacao-das-sequencias-de-dados}
+# Caracterização das sequências {#caracterizacao-das-sequencias-de-dados}
 
 Nos problemas computacionais, as sequências se apresentam de algumas formas bem características. Conquanto não sendo as únicas apresentações com que sequências podem assumir, estas são as mais comuns:
 

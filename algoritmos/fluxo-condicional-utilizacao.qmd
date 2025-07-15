@@ -1,0 +1,8 @@
+---
+title: "Utilização do fluxo condicional"
+---
+
+* Estratégias
+* Operações lógicas
+* Variáveis lógicas
+* Exemplos

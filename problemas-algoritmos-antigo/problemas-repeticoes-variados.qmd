@@ -1,55 +1,55 @@
 # Problemas variados com repetições e condicionais {#sec-problemas-repeticoes-variados}
 
 <!-- Contagens de vários intervalos (categorias natação) -->
-``` {.include file="../problemas/0031a.qmd"}
+``` {.include file="../questoes/0031a.qmd"}
 ```
 
 <!-- Média de medidas de pressão  -->
-``` {.include file="../problemas/0032a.qmd"}
+``` {.include file="../questoes/0032a.qmd"}
 ```
 
 <!-- Porcentagem de cada resposta de uma pesquisa de opinião  -->
-``` {.include file="../problemas/0033a.qmd"}
+``` {.include file="../questoes/0033a.qmd"}
 ```
 
 <!-- Contagem e porcentagem em relatório de gastos  -->
-``` {.include file="../problemas/0034a.qmd"}
+``` {.include file="../questoes/0034a.qmd"}
 ```
 
 <!-- Porcentagens e médias na população  -->
-``` {.include file="../problemas/0035a.qmd"}
+``` {.include file="../questoes/0035a.qmd"}
 ```
 
 <!-- Soma dos divisores  -->
-``` {.include file="../problemas/0036a.qmd"}
+``` {.include file="../questoes/0036a.qmd"}
 ```
 
 <!-- Erro em determinação do maior (inteiros positivos)  -->
-``` {.include file="../problemas/0037a.qmd"}
+``` {.include file="../questoes/0037a.qmd"}
 ```
 
 <!-- Crescimento simultâneo de aplicações -->
-``` {.include file="../problemas/0038a.qmd"}
+``` {.include file="../questoes/0038a.qmd"}
 ```
 
 <!-- Crescimento simultâneo de aplicações 2-->
-``` {.include file="../problemas/0039a.qmd"}
+``` {.include file="../questoes/0039a.qmd"}
 ```
 
 <!-- Máximo e contagem simultâneas (idades) -->
-``` {.include file="../problemas/0042a.qmd"}
+``` {.include file="../questoes/0042a.qmd"}
 ```
 
 <!-- Conversões sucessivas de conceito para nota -->
-``` {.include file="../problemas/0055a.qmd"}
+``` {.include file="../questoes/0055a.qmd"}
 ```
 
 <!-- Separação de inteiro em potências de 10  -->
-``` {.include file="../problemas/0069a.qmd"}
+``` {.include file="../questoes/0069a.qmd"}
 ```
 
 <!-- Geração de palíndromo numérico  -->
-``` {.include file="../problemas/0070a.qmd"}
+``` {.include file="../questoes/0070a.qmd"}
 ```
 ---
 title: "../problemas-repeticoes-variados.qmd"

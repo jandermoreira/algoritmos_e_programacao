@@ -266,10 +266,9 @@ local function exercise_filter(title, identifier, text, use_ai)
             if title == "" then
                 link_exercicio = pandoc.Str("#" .. identifier)
             else
-                prefixo = "../problemas/"
+                prefixo = "../questoes/"
                 sufixo = " #" .. identifier
                 if (file_exists(prefixo .. identifier .. "a.qmd")) then
-                    debug(">> A")
                     link_exercicio = pandoc.Link(
                         "#" .. identifier,
                         prefixo .. identifier .. "a.html"
@@ -360,14 +359,19 @@ local function include_filter()
 
             content = strip_yaml(content)
             doc = pandoc.read(content, "markdown")
+
             local use_ai = not block.attributes.avalia or block.attributes.avalia == "true"
-            if use_ai then
-                debug(">> YYY")
-            else
-                debug(">> N")
-            end
-            doc = doc:walk(exercise_filter(meta.title, meta.identifier,
-                pandoc.utils.stringify(block.contents)), use_ai)
+            -- if use_ai then
+            --     debug(">> YYY")
+            -- else
+            --     debug(">> N")
+            -- end
+            doc = doc:walk(exercise_filter(
+                meta.title, 
+                meta.identifier,
+                pandoc.utils.stringify(content), 
+                use_ai
+            ))
 
             return doc.blocks
         else
@@ -382,10 +386,10 @@ end
 local function doc_filter(doc)
     local meta = get_meta(doc.meta)
     doc = doc:walk(include_filter())
-    if meta.identifier ~= "#????" then
-        local description = pandoc.utils.stringify(doc.blocks[1].content)
-        doc = doc:walk(exercise_filter("", meta.identifier, description))
-    end
+    -- if meta.identifier ~= "#????" then
+    --     local description = pandoc.utils.stringify(doc.blocks[1].content)
+    --     doc = doc:walk(exercise_filter("", meta.identifier, description))
+    -- end
     return doc
 end
 

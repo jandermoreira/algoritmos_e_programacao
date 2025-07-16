@@ -2,27 +2,27 @@
 
 <!-- FUNÇÕES SIMPLES -->
 <!-- Função volume de esfera dado o raio -->
-``` {.include file="../problemas/0046r.qmd"}
+``` {.include file="../questoes/0046r.qmd"}
 ```
 
 <!-- Função volume de esfera dado o diâmetro -->
-``` {.include file="../problemas/0047c.qmd"}
+``` {.include file="../questoes/0047c.qmd"}
 ```
 
 <!-- Função máximo de 2 -->
-``` {.include file="../problemas/0043r.qmd"}
+``` {.include file="../questoes/0043r.qmd"}
 ```
 
 <!-- Função máximo de 3 -->
-``` {.include file="../problemas/0044r.qmd"}
+``` {.include file="../questoes/0044r.qmd"}
 ```
 
 <!-- Função lógica 'é par' -->
-``` {.include file="../problemas/0051r.qmd"}
+``` {.include file="../questoes/0051r.qmd"}
 ```
 
 <!-- Função número de divisores -->
-``` {.include file="../problemas/0056c.qmd"}
+``` {.include file="../questoes/0056c.qmd"}
 ```
 
 
@@ -30,22 +30,22 @@
 
 <!-- PROJETO DE FUNÇÕES -->
 <!-- Projeto função: combinação de n, p a p -->
-``` {.include file="../problemas/0050r.qmd"}
+``` {.include file="../questoes/0050r.qmd"}
 ```
 
 <!-- Projeto função: conversões notas x conceitos -->
-``` {.include file="../problemas/0052r.qmd"}
+``` {.include file="../questoes/0052r.qmd"}
 ```
 
 
 
 <!-- PROCEDIMENTOS SIMPLES -->
 <!-- Troca de valores -->
-``` {.include file="../problemas/0073r.qmd"}
+``` {.include file="../questoes/0073r.qmd"}
 ```
 
 <!-- Troca de valores -->
-``` {.include file="../problemas/0074r.qmd"}
+``` {.include file="../questoes/0074r.qmd"}
 ```
 ---
 title: "respostas-modularizacao.qmd"

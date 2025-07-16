@@ -1,9 +1,9 @@
 <!-- Troca de valores -->
-``` {.include file="../problemas/0073a.qmd"}
+``` {.include file="../questoes/0073a.qmd"}
 ```
 
 <!-- Troca de valores para ordenar -->
-``` {.include file="../problemas/0074a.qmd"}
+``` {.include file="../questoes/0074a.qmd"}
 ```
 ---
 title: "Procedimentos básicos"

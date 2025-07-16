@@ -7,21 +7,21 @@ toc: false
 Os problemas propostos objetivam a compreensão do enunciado e a identificação do que é efetivamente solicitado para que um algoritmo seja escrito.
 
 <!-- Troco para padaria -->
-``` {.include file="../problemas/0085a.qmd"}
+``` {.include file="../questoes/0085a.qmd"}
 ```
 
 <!-- Total da conta do café -->
-`` {.include file="../problemas/0086a.qmd"}
+``` {.include file="../questoes/0086a.qmd"}
 ```
 
 <!-- Média de três notas -->
-``` {.include file="../problemas/0087a.qmd"}
+``` {.include file="../questoes/0087a.qmd"}
 ```
 
 <!-- Soma da distância -->
-``` {.include file="../problemas/0088a.qmd"}
+``` {.include file="../questoes/0088a.qmd"}
 ```
 
 <!-- Conversão de Minutos em Horas -->
-``` {.include file="../problemas/0089a.qmd"}
+``` {.include file="../questoes/0089a.qmd"}
 ```

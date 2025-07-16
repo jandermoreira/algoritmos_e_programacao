@@ -529,5 +529,5 @@ Embora incomuns[^para-com-reais], repetições com -para- que usem valores reais
 
 # Problemas propostos
 
-## [Problemas básicos](problemas-repeticoes-basicos.qmd)
+## [Problemas básicos](questoes-repeticoes-basicos.qmd)
 

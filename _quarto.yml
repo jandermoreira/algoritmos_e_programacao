@@ -3,7 +3,7 @@ project:
   execute-dir: project
 
 filters: 
-  # - exercicio.lua
+  - exercicio.lua
   - cap-filters.lua
   - runenv.lua
   - algxpar-quarto
@@ -201,7 +201,7 @@ website:
     #     - section: "Repetições"
     #       contents:
     #         - problemas-algoritmos/problemas-repeticoes-identificacao.qmd
-    #         - problemas-algoritmos/problemas-repeticoes-basicos.qmd
+    #         - problemas-algoritmos/questoes-repeticoes-basicos.qmd
     #         - problemas-algoritmos/problemas-repeticoes-complementares.qmd
     #         - problemas-algoritmos/problemas-repeticoes-progressoes.qmd
     #         - respostas-repeticoes.qmd

@@ -1,13 +1,13 @@
 <!-- Soma de 1 + 2 + 3 ... + n -->
-``` {.include file="../problemas/0040a.qmd"}
+``` {.include file="../questoes/0040a.qmd"}
 ```
 
 <!-- n! -->
-``` {.include file="../problemas/0041a.qmd"}
+``` {.include file="../questoes/0041a.qmd"}
 ```
 
 <!-- Função potência e^x -->
-``` {.include file="../problemas/0068a.qmd"}
+``` {.include file="../questoes/0068a.qmd"}
 ```
 
 ---

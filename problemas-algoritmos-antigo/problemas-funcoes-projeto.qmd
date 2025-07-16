@@ -6,9 +6,9 @@ toc: false
 
 
 <!-- Projeto função: combinação de n, p a p -->
-``` {.include file="../problemas/0050a.qmd"}
+``` {.include file="../questoes/0050a.qmd"}
 ```
 
 <!-- Projeto função: conversões notas x conceitos -->
-``` {.include file="../problemas/0052a.qmd"}
+``` {.include file="../questoes/0052a.qmd"}
 ```

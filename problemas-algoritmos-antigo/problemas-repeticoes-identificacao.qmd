@@ -5,41 +5,41 @@ toc: false
 ---
 
 <!-- Qual usar? Repetição indefinida com sentinela (Processo seletivo) -->
-``` {.include file="../problemas/0011a.qmd"}
+``` {.include file="../questoes/0011a.qmd"}
 ```
 
 <!-- Qual usar? Repetição definida (Pressão em caldeira) -->
-``` {.include file="../problemas/0012a.qmd"}
+``` {.include file="../questoes/0012a.qmd"}
 ```
 
 <!-- Qual usar? Repetição indefinida com sentinela (Pesagem de gado) -->
-``` {.include file="../problemas/0013a.qmd"}
+``` {.include file="../questoes/0013a.qmd"}
 ```
 
 <!-- Qual usar? Repetição indefinida até fim dos dados (Pesquisa de opinião) -->
-``` {.include file="../problemas/0014a.qmd"}
+``` {.include file="../questoes/0014a.qmd"}
 ```
 
 <!-- Qual usar? Repetição indefinida com sentinela (Atendimento chat) -->
-``` {.include file="../problemas/0015a.qmd"}
+``` {.include file="../questoes/0015a.qmd"}
 ```
 
 <!-- Qual usar? Repetição definida prefixada (Relatório) -->
-``` {.include file="../problemas/0016a.qmd"}
+``` {.include file="../questoes/0016a.qmd"}
 ```
 
 <!-- Qual usar? Repetição definida conhecida (Média de temperaturas) -->
-``` {.include file="../problemas/0017a.qmd"}
+``` {.include file="../questoes/0017a.qmd"}
 ```
 
 <!-- Qual usar? Repetição definida prefixada (Área de polígono) -->
-``` {.include file="../problemas/0018a.qmd"}
+``` {.include file="../questoes/0018a.qmd"}
 ```
 
 <!-- Qual usar? Repetição definida conhecida (Estudo clínico) -->
-``` {.include file="../problemas/0019a.qmd"}
+``` {.include file="../questoes/0019a.qmd"}
 ```
 
 <!-- Qual usar? Repetição indefinida com sentinela (Transmissão em rede) -->
-``` {.include file="../problemas/0020a.qmd"}
+``` {.include file="../questoes/0020a.qmd"}
 ```

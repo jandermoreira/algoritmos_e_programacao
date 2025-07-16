@@ -1,41 +1,41 @@
 <!-- Triângulo retângulo? -->
-``` {.include file="../problemas/0058a.qmd"}
+``` {.include file="../questoes/0058a.qmd"}
 ```
 
 <!-- Triângulo escaleno? -->
-``` {.include file="../problemas/0059a.qmd"}
+``` {.include file="../questoes/0059a.qmd"}
 ```
 
 <!-- Existência de triângulo dados os lados -->
-``` {.include file="../problemas/0060a.qmd"}
+``` {.include file="../questoes/0060a.qmd"}
 ```
 
 <!-- Área de possível triângulo a partir dos lados -->
-``` {.include file="../problemas/0061a.qmd"}
+``` {.include file="../questoes/0061a.qmd"}
 ```
 
 <!-- Tempo entre dois horários, podendo passar a meia noite -->
-``` {.include file="../problemas/0062a.qmd"}
+``` {.include file="../questoes/0062a.qmd"}
 ```
 
 <!-- Seleção de mais velho e mais novo -->
-``` {.include file="../problemas/0063a.qmd"}
+``` {.include file="../questoes/0063a.qmd"}
 ```
 
 <!-- Diferença porcentual entre salários de 4 -->
-``` {.include file="../problemas/0064a.qmd"}
+``` {.include file="../questoes/0064a.qmd"}
 ```
 
 <!-- Média ponderada -->
-``` {.include file="../problemas/0066a.qmd"}
+``` {.include file="../questoes/0066a.qmd"}
 ```
 
 <!-- Classificação do consumo de um veículo -->
-``` {.include file="../problemas/0065a.qmd"}
+``` {.include file="../questoes/0065a.qmd"}
 ```
 
 <!-- Solução de pares de equações lineares simultâneas (2 variáveis) -->
-``` {.include file="../problemas/0067a.qmd"}
+``` {.include file="../questoes/0067a.qmd"}
 ```
 
 ---

@@ -1,13 +1,13 @@
 <!-- Conversões notas x conceitos -->
-``` {.include file="../problemas/0053a.qmd"}
+``` {.include file="../questoes/0053a.qmd"}
 ```
 
 <!-- Função potência x^k -->
-``` {.include file="../problemas/0057a.qmd"}
+``` {.include file="../questoes/0057a.qmd"}
 ```
 
 <!-- Função número de raízes reais distintas -->
-``` {.include file="../problemas/0071a.qmd"}
+``` {.include file="../questoes/0071a.qmd"}
 ```
 
 ---

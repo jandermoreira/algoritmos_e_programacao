@@ -144,4 +144,4 @@ dado um valor monetário em Reais (sem os centavos), determinar a quantidade mí
 
 # Propostas de problemas
 
-## [Problemas simples](problemas-entendimento-problema-simples.qmd)
+## [Problemas simples](questoes-entendimento-problema-simples.qmd)

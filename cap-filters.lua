@@ -108,5 +108,5 @@ return {
     { Str = keyword },
     { Str = module },
     { Str = id },
-    { Link = links_in_new_window }
+    -- { Link = links_in_new_window }
 }

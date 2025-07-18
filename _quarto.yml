@@ -44,11 +44,9 @@ website:
         href: algoritmos/index.qmd
       - text: Linguagem C
         href: linguagem-c/index.qmd
-      # - text: Problemas
-      #   menu:
-      #     - text: Algoritmos
-      #       href: problemas-algoritmos/index.qmd
     right:
+      - text: Questões
+        href: questoes/index.qmd
       - sobre.qmd
       - icon: github
         href: https://jandermoreira.github.io

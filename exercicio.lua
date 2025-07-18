@@ -3,8 +3,9 @@
 local debug = quarto.log.output
 
 
-local html_injetado = [[
-<h6>Avalie sua resposta</h6>
+local html_avalia_algoritmo = [[
+<hr>
+<h5>Avalie sua resposta</h5>
 <div class="disclaimer">
     <p>Esta avaliação é feita por IA e está sujeita a muitas limitações.</p>
     <p>As consultas usam uma chave gratuita e, portanto, há restrições quanto à quantidade de consultas.<br>Tenha
@@ -234,7 +235,7 @@ local function file_exists(path)
 end
 
 
-local function get_meta(meta)
+local function obtenha_metadados(meta)
     local identifier
     local title
     if meta["title"] then
@@ -245,7 +246,7 @@ local function get_meta(meta)
     if meta["identifier"] then
         identifier = pandoc.utils.stringify(meta["identifier"])
     else
-        identifier = "#????"
+        identifier = "????"
     end
     return { title = title, identifier = identifier }
 end
@@ -257,82 +258,93 @@ local function run_shell(command)
     return result:gsub("\n", "") -- Remove a quebra de linha no final
 end
 
-local function exercise_filter(title, identifier, text, use_ai)
+local function exercise_filter(title, identifier)
     local function run_exercise_filter(div)
         if div.attr.classes:includes("exercicio") then
-            local prefixo = ""
-            local sufixo = ""
-            local link_exercicio
-            if title == "" then
-                link_exercicio = pandoc.Str("#" .. identifier)
+            local is_in_list = title ~= ""
+            local question_number
+            if is_in_list then
+                prefix = "../questoes/"
+                question_number = pandoc.Superscript(" #" .. identifier)
             else
-                prefixo = "../questoes/"
-                sufixo = " #" .. identifier
-                if (file_exists(prefixo .. identifier .. "a.qmd")) then
+                prefix = ""
+                question_number = pandoc.Strong(" #" .. identifier)
+            end
+
+            local link_exercicio = pandoc.Str("")
+            if is_in_list and div.attr.classes:includes("avalia-algoritmo") then
+                if (file_exists(prefix .. identifier .. "a.qmd")) then
                     link_exercicio = pandoc.Link(
-                        "#" .. identifier,
-                        prefixo .. identifier .. "a.html"
+                        pandoc.Image(pandoc.Inlines {}, "../icones/pergunta.png",
+                            "", { height = "20px" }),
+                        prefix .. identifier .. "a.html",
+                        "Avalie sua resposta"
                     )
                 else
-                    if (file_exists(prefixo .. identifier .. "p.qmd")) then
+                    if (file_exists(prefix .. identifier .. "p.qmd")) then
                         link_exercicio = pandoc.Link(
-                            "#" .. identifier,
-                            prefixo .. identifier .. "p.html"
+                            pandoc.Image(pandoc.Inlines {}, "../icones/pergunta.png",
+                                "", { height = "20px" }),
+                            prefix .. identifier .. "p.html",
+                            "Avalie sua resposta"
                         )
-                    else
-                        link_exercicio = "#" .. identifier
                     end
                 end
             end
 
-            local blocos_extra = {}
-            if title == "" then
-                if file_exists(prefixo .. identifier .. "c.qmd") then
-                    table.insert(
-                        blocos_extra,
-                        pandoc.Para({
-                            pandoc.Link(
-                                pandoc.Inlines { pandoc.Str("Comentário" .. sufixo) },
-                                prefixo .. identifier .. "c.html"
-                            )
-                        })
-                    )
-                end
-                if file_exists(prefixo .. identifier .. "r.qmd") then
-                    table.insert(
-                        blocos_extra,
-                        pandoc.Para({
-                            pandoc.Link(
-                                pandoc.Inlines { pandoc.Str("Solução" .. sufixo) },
-                                prefixo .. identifier .. "r.html"
-                            )
-                        })
-                    )
-                end
-                if use_ai then
-                    text = pandoc.utils.stringify(div.content)
-                    if not div.attributes.avalia or div.attributes.avalia == "true" then
-                        table.insert(blocos_extra, pandoc.RawBlock("html", html_injetado:format(text)))
-                    end
-                end
+            local link_comentario = pandoc.Str("")
+            if file_exists(prefix .. identifier .. "c.qmd") then
+                link_comentario = pandoc.Link(
+                    pandoc.Image("", "../icones/comentario.png",
+                        "", { height = "20px" }),
+                    prefix .. identifier .. "c.html",
+                    "Comentário ou dica"
+                )
+            end
+
+            local link_resposta = pandoc.Str("")
+            if file_exists(prefix .. identifier .. "r.qmd") then
+                link_resposta = pandoc.Link(
+                    pandoc.Image("", "../icones/resposta.png",
+                        "", { height = "20px" }),
+                    prefix .. identifier .. "r.html",
+                    "Possível solução"
+                )
+            end
+
+            local blocos_extras = {}
+            if not is_in_list and div.attr.classes:includes("avalia-algoritmo") then
+                local texto_da_questao = pandoc.utils.stringify(div.content)
+                table.insert(
+                    blocos_extras,
+                    pandoc.RawBlock("html", html_avalia_algoritmo:format(texto_da_questao))
+                )
             end
 
             local cabecalho = pandoc.Div(
-                pandoc.Header(
-                    1,
-                    pandoc.Inlines({
-                        pandoc.Str(title .. " ["),
-                        link_exercicio,
-                        pandoc.Str("]")
-                    }),
-                    pandoc.Attr("", { "h4" })
-                )
+                {
+                    pandoc.HorizontalRule(),
+                    pandoc.Header(
+                        1,
+                        pandoc.Inlines({
+                            title,
+                            question_number,
+                            link_exercicio and pandoc.Space() or "",
+                            link_exercicio,
+                            link_resposta and pandoc.Space() or "",
+                            link_resposta,
+                            link_comentario and pandoc.Space() or "",
+                            link_comentario
+                        }),
+                        pandoc.Attr("", { "h4" })
+                    )
+                }
             )
 
             return {
                 cabecalho,
                 div,
-                table.unpack(blocos_extra)
+                table.unpack(blocos_extras)
             }
         else
             return div
@@ -345,38 +357,31 @@ end
 
 local function include_filter()
     function run_include_filter(block)
-        if block.classes:includes("include") and block.attributes.file then
-            local f = io.open(block.attributes.file, "r")
-            if not f then
-                io.stderr:write("Não consegui abrir ", block.attributes.file, "\n")
-                return { pandoc.Para("Falha: " .. block.attributes.file .. " não encontrado.") }
-            end
-            local content = f:read("*all")
-            f:close()
-
-            local doc = pandoc.read(content, "markdown")
-            local meta = get_meta(doc.meta)
-
-            content = strip_yaml(content)
-            doc = pandoc.read(content, "markdown")
-
-            local use_ai = not block.attributes.avalia or block.attributes.avalia == "true"
-            -- if use_ai then
-            --     debug(">> YYY")
-            -- else
-            --     debug(">> N")
-            -- end
-            doc = doc:walk(exercise_filter(
-                meta.title, 
-                meta.identifier,
-                pandoc.utils.stringify(content), 
-                use_ai
-            ))
-
-            return doc.blocks
-        else
+        if not block.classes:includes("include") or not block.attributes.file then
             return block
         end
+
+        local f = io.open(block.attributes.file, "r")
+        if not f then
+            io.stderr:write("Não consegui abrir ", block.attributes.file, "\n")
+            return { pandoc.Para("Falha: " .. block.attributes.file .. " não encontrado.") }
+        end
+        local content = f:read("*all")
+        f:close()
+
+        local doc_incluido = pandoc.read(content, "markdown")
+        local meta_info = obtenha_metadados(doc_incluido.meta)
+
+        content = strip_yaml(content)
+        doc_incluido = pandoc.read(content, "markdown")
+
+        doc_incluido = doc_incluido:walk(exercise_filter(
+            meta_info.title,
+            meta_info.identifier,
+            pandoc.utils.stringify(content)
+        ))
+
+        return doc_incluido.blocks
     end
 
     return { CodeBlock = run_include_filter }
@@ -384,12 +389,14 @@ end
 
 
 local function doc_filter(doc)
-    local meta = get_meta(doc.meta)
     doc = doc:walk(include_filter())
-    -- if meta.identifier ~= "#????" then
-    --     local description = pandoc.utils.stringify(doc.blocks[1].content)
-    --     doc = doc:walk(exercise_filter("", meta.identifier, description))
-    -- end
+
+    -- processa se doc for questão (e.g. 0001a.qmd)
+    local meta_info = obtenha_metadados(doc.meta)
+    if meta_info.identifier ~= "????" then
+        doc = doc:walk(exercise_filter("", meta_info.identifier))
+    end
+
     return doc
 end
 

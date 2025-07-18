@@ -211,7 +211,7 @@ Ao executar o programa, como a saída produzida é ISO-8859, ela tem que ser con
 <!-- runenv -->
 
 
-Nos programas exemplificados neste texto, simplesmente são evitados os casos em que um `char` armazenará um caractere Unicode com mais que um byte, pois todas as codificações de caractere usam UTF-8. Para efetivamente usar caracteres de múltiplos bytes, C disponibiliza uma série de funções em `wchar.c`, as quais lidam com os "caracteres largos" (_wide characters_). Porém, o uso dessas funções não é tratado neste livro.
+Nos programas exemplificados neste texto, simplesmente são evitados os casos em que um `char` armazenará um caractere Unicode com mais que um byte, pois todas as codificações de caractere usam UTF-8. Para efetivamente usar caracteres de múltiplos bytes, C disponibiliza uma série de funções em `wchar.c`, as quais lidam com os "caracteres largos" (_wide characters_). Porém, o uso dessas funções não é tratado neste material.
 
 # Acesso às cadeias de caracteres constantes {#sec-ponteiros-para-strings-constantes}
 

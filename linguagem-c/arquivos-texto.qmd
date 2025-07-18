@@ -380,7 +380,7 @@ A função de associação entre o programa e o arquivo real é a `fopen`. Ela s
 
 O nome do arquivo é uma cadeia de caracteres que pode ser somente o nome do arquivo, como `"figuras.txt"`, por exemplo. Nesse caso, o arquivo físico é considerado em relação ao diretório corrente. O nome pode indicar também o caminho: `"../figuras.txt"` indica o arquivo no diretório pai (isto é, um acima do atual) e `"/home/user/dados/figuras.txt"` dá o caminho absoluto e independe do diretório corrente[^diretorios-windows].
 
-[^diretorios-windows]: No Linux, usado como plataforma para este livro, o separador de diretórios é a barra `/`. O mesmo ocorre para o MacOS. Em sistemas Windows, os caminhos usam a barra reversa `\` e, como essa barra tem significado especial em C, é preciso indicar o caminho com o escape `\\`: `"..\\figuras.txt"` ou `C:\\User\\Documentos\\Dados\\figuras.txt`.
+[^diretorios-windows]: No Linux, usado como plataforma para este material, o separador de diretórios é a barra `/`. O mesmo ocorre para o MacOS. Em sistemas Windows, os caminhos usam a barra reversa `\` e, como essa barra tem significado especial em C, é preciso indicar o caminho com o escape `\\`: `"..\\figuras.txt"` ou `C:\\User\\Documentos\\Dados\\figuras.txt`.
 
 Em relação aos modos, como `"w"` ou `"r"` usados nos exemplos, a @tbl-modos-arquivo-texto sumariza como funcionam.
 

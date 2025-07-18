@@ -1,0 +1,22 @@
+---
+# title: "Questões: Noções de algoritmos"
+# categories: false
+# toc: false
+---
+
+
+<!-- Formas de representação de algoritmos -->
+```{.include file="../questoes/0093a.qmd"}
+```
+
+<!-- Importância das pré-condições e pós-condições -->
+```{.include file="../questoes/0094a.qmd"}
+```
+
+<!-- Fazendo café -->
+```{.include file="../questoes/0095a.qmd"}
+```
+
+<!-- Amplitude térmica -->
+```{.include file="../questoes/0096a.qmd"}
+```

@@ -59,7 +59,7 @@ As funções em C podem mapear os mais diferentes tipos de dados para outros tan
 
 # Declaração e implementação das funções
 
-Todo programa em C contém pelo menos uma função. Desde o primeiro código apresentado nesse livro (o programa que não faz nada, na @sec-programa-minimo), fica patente que todo executável gerado a partir de um código em C precisa de `main`, e `main` é uma função. Como usado em todos os programas até o momento, a função principal tem domínio vazio (indicado por `void`) e seu contradomínio é o tipo `int`.
+Todo programa em C contém pelo menos uma função. Desde o primeiro código apresentado nesse material (o programa que não faz nada, na @sec-programa-minimo), fica patente que todo executável gerado a partir de um código em C precisa de `main`, e `main` é uma função. Como usado em todos os programas até o momento, a função principal tem domínio vazio (indicado por `void`) e seu contradomínio é o tipo `int`.
 
 ```c
 int main(void) {
@@ -351,7 +351,7 @@ Entre as desvantagens para essa modalidade, pode-se listar:
 * b -->
 
 
-Como regra geral, este livro adota o uso das declarações de função com protótipos e cuja implementação fica posterior à função `main` quando estiverem no mesmo arquivo.
+Como regra geral, este material adota o uso das declarações de função com protótipos e cuja implementação fica posterior à função `main` quando estiverem no mesmo arquivo.
 
 ::: {.callout-note title="Curiosidade"}
 É interessante notar que, embora a implementação da função `eh_vogal` tenha sido feita no mesmo arquivo em que estava a função `main`, ela poderia estar em outro arquivo.
@@ -541,7 +541,7 @@ Nessa função, o parâmetro `a` é do tipo `double`. Porém `b` e `c` não poss
 
 ## Documentação {#sec-documentacao-funcoes}
 
-Neste livro as funções são documentadas usando um padrão de formato aceito pelo Doxygen[^site-doxygen], que é uma ferramenta para gerar documentação para grandes projetos. No caso dos programas e funções apresentados como exemplos ao longo do texto, o termo "grande projeto", entretanto, não se aplica, nem tampouco é necessária uma ferramenta para gerar a documentação. Apesar disso, o formato escolhido para a documentação é simples e atende às necessidades.
+Neste material as funções são documentadas usando um padrão de formato aceito pelo Doxygen[^site-doxygen], que é uma ferramenta para gerar documentação para grandes projetos. No caso dos programas e funções apresentados como exemplos ao longo do texto, o termo "grande projeto", entretanto, não se aplica, nem tampouco é necessária uma ferramenta para gerar a documentação. Apesar disso, o formato escolhido para a documentação é simples e atende às necessidades.
 
 [^site-doxygen]: Doxygen: <https://www.doxygen.nl>.
 

@@ -126,7 +126,7 @@ int main(void) {
 
 É necessário que todos os fechamentos de bloco sejam, de alguma forma, alinhados a sua abertura. Esse alinhamento é essencial para localizar, por exemplo, um `}` que foi esquecido.
 
-Nos programas apresentados neste livro, os blocos de comandos compostos são sempre iniciados na linha da estrutura que o utiliza, como um `if`, por exemplo.
+Nos programas apresentados neste material, os blocos de comandos compostos são sempre iniciados na linha da estrutura que o utiliza, como um `if`, por exemplo.
 
 ```c
 if(a > 0) {

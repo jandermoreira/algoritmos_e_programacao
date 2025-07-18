@@ -3,7 +3,6 @@ title: "Noções de algoritmos"
 ---
 
 
-
 Um algoritmo é uma descrição de passos que, se seguidos, levam à solução de um determinado problema e, genericamente falando, quaisquer instruções, orientações ou coisas similares podem ser classificadas como um algoritmo.
 
 A partir dessa óptica, há uma infinidade de algoritmos. Quando se trata de computação e mais especificamente de programação, há um subconjunto dos algoritmos com características mais particulares. Este capítulo trata da contextualização dos algoritmos computacionais.
@@ -136,9 +135,9 @@ Os fluxogramas são mais fáceis de serem entendidos, mesmo que por pessoas que 
 
 Por sua vez, o pseudocódigo é menos abstrato, dado que utiliza uma mistura de linguagem natural com conceitos computacionais para descrever os passos do algoritmo. Em decorrência, faz uso de uma estrutura e uma sintaxe com certa rigidez, uma vez que as instruções para cada ação devem ser exatas, sem ambiguidades ou margem para interpretações diferentes. Os pseudocódigos são descrições estruturadas de algoritmos, possuindo indicações de fluxo bastante rígidas.
 
-Um ponto importante dos pseudocódigos é seu uso frequente em livros e artigos científicos, representando soluções precisas para os problemas estudados.
+Um ponto importante dos pseudocódigos é seu uso frequente em materials e artigos científicos, representando soluções precisas para os problemas estudados.
 
-Este livro faz uso do pseudocódigo para a descrição dos algoritmos, uma vez que a precisão na descrição das soluções é importante.
+Este material faz uso do pseudocódigo para a descrição dos algoritmos, uma vez que a precisão na descrição das soluções é importante.
 
 -   ambiguidades
 -   estruturação
@@ -292,5 +291,27 @@ O principal conceito por trás dos algoritmos é ter uma solução mais abstrata
 
 
 ::: {.content-visible when-profile="programacao"}
-Este livro não aborda o desenvolvimento de algoritmos, porém faz uso deles quando necessário, dada a inteção de deixar clara uma solução antes de apresentar sua implementação em C. Esta estratégia visa auxiliar o programador menos experiente ou com menor familiaridade com a linguagem a identificar o que fazem as instruções do programa.
+Este material não aborda o desenvolvimento de algoritmos, porém faz uso deles quando necessário, dada a inteção de deixar clara uma solução antes de apresentar sua implementação em C. Esta estratégia visa auxiliar o programador menos experiente ou com menor familiaridade com a linguagem a identificar o que fazem as instruções do programa.
 :::
+
+
+
+# Revisão
+
+A verificação da compreensão dos conceitos apresentados pode ser feita tentando responder a algumas questões.
+
+<!-- Formas de representação de algoritmos -->
+```{.include file="../questoes/0093a.qmd"}
+```
+
+<!-- Importância das pré-condições e pós-condições -->
+```{.include file="../questoes/0094a.qmd"}
+```
+
+<!-- Fazendo café -->
+```{.include file="../questoes/0095a.qmd"}
+```
+
+<!-- Amplitude térmica -->
+```{.include file="../questoes/0096a.qmd"}
+```

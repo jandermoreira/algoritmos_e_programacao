@@ -354,7 +354,7 @@ Nesta seção alguns exemplos interessantes são apresentados.
 
 ## "Já usei passagem por referência muitas vezes"
 
-Ao longo dos inúmeros exemplos usados neste livro, a passagem por referência já vinha sendo utilizada. Por exemplo, na leitura de um valor real, a conversão é feita pelo `sscanf`, que pode ter o formato seguinte.
+Ao longo dos inúmeros exemplos usados neste material, a passagem por referência já vinha sendo utilizada. Por exemplo, na leitura de um valor real, a conversão é feita pelo `sscanf`, que pode ter o formato seguinte.
 
 ```c
 sscanf(entrada, "%lf", &valor);

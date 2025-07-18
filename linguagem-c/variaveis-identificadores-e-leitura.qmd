@@ -106,7 +106,7 @@ A escolha dos identificadores é responsabilidade do programador.
 
 ## Estilo
 
-Nos programas apresentados neste livro, todos os identificadores de variáveis e de funções são escritos em _snake case_, que é um estilo de escrita. No _snake case_, todas as letras usadas são minúsculas e, quando um identificador é composto de duas ou mais palavras, é usada a sublinha para separá-las.
+Nos programas apresentados neste material, todos os identificadores de variáveis e de funções são escritos em _snake case_, que é um estilo de escrita. No _snake case_, todas as letras usadas são minúsculas e, quando um identificador é composto de duas ou mais palavras, é usada a sublinha para separá-las.
 
 Essa regra é seguida mesmo quando os nomes possuem sua combinação de maiúsculas e minúsculas característicos. Desta forma, o armazenamento do CPF usará uma variável `cpf`, um cálculo envolvendo o pH usará `ph` ou a temperatura em Fahrenheit usará `fahrenheit`.
 
@@ -158,7 +158,7 @@ Há uma tendência natural (e bem comum) de associar as variáveis dos programas
 Se um programador precisar explicar, de alguma forma, o que uma variável contém, é porque o identificador dela foi mal escolhido.
 :::
 
-Ao longo do livro, os programas usam variáveis com nomes significativos. Muitas vezes os nomes são longos, o que pode levar o programador a ter preguiça de digitá-los. Felizmente, os IDEs modernos possuem recursos de auto-completar as digitações, que eliminam essa dificuldade.
+Ao longo do material, os programas usam variáveis com nomes significativos. Muitas vezes os nomes são longos, o que pode levar o programador a ter preguiça de digitá-los. Felizmente, os IDEs modernos possuem recursos de auto-completar as digitações, que eliminam essa dificuldade.
 
 Um problema de identificadores muito longos é que as linhas de código também ficam muito longas. Abreviações nos nomes podem ser empregadas, porém de forma criteriosa. Se `temperatura` é uma escolha clara para guardar um valor de temperatura, `temp` também pode ser. Porém `temp` é uma abreviação comum para um valor temporário e, em um contexto de temperaturas, não deve ser empregado. 
 

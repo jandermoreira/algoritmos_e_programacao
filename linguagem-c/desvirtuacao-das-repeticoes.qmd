@@ -283,7 +283,7 @@ Com o nome adequado, uma variável lógica somente acrescenta significado ao có
 
 Para os programadores que evitam novas variáveis para economizar memória (preocupação legítima!), sempre se deve também considerar a clareza do código. Além disso, uma variável `bool` em uma máquina com 8GiB de memória principal consome 0,0000002% do total disponível[^ressalva-bool].
 
-[^ressalva-bool]: O cálculo considera que `sizeof (bool)` é um byte, valor usado pelo compilador durante a escrita desse livro.
+[^ressalva-bool]: O cálculo considera que `sizeof (bool)` é um byte, valor usado pelo compilador durante a escrita desse material.
 
 
 # Boas práticas

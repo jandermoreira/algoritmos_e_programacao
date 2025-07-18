@@ -445,7 +445,7 @@ A versão mais comum para um -para- é com o uso de um iterador (normalmente uma
 \end{algorithmic}
 ```
 
-O uso do -for- é considerado sempre crescente[^ressalva-sempre]. Assim, uma repetição de 1 até 1 é feita apenas uma vez e para de 0 até -10 não há nenhuma repetição. Neste livro, portanto, essa é a interpretação consistentemente seguida.
+O uso do -for- é considerado sempre crescente[^ressalva-sempre]. Assim, uma repetição de 1 até 1 é feita apenas uma vez e para de 0 até -10 não há nenhuma repetição. Neste material, portanto, essa é a interpretação consistentemente seguida.
 
 [^ressalva-sempre]: Na realidade, nem sempre, mas é a forma de interpretação mais segura, a não ser que haja uma ressalva junto com o algoritmo.
 
@@ -468,7 +468,7 @@ Nela, se ${\Id{final} > \Id{inicial}}$, a repetição vai de [inicial]{id} até 
 
 As repetições com -para- são, em princípio, crescentes. Para especificar uma repetição decrescente é necessário que ela se torne evidente e não requeira interpretações que podem variar entre diferentes pessoas.
 
-Neste livro há duas formas de indicar "contagens regressivas": explicitamente na instrução ou alterando o passo com que a variável de controle da repetição é atualizado.
+Neste material há duas formas de indicar "contagens regressivas": explicitamente na instrução ou alterando o passo com que a variável de controle da repetição é atualizado.
 
 
 ```latex {.pseudocode}

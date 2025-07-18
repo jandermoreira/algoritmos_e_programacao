@@ -80,7 +80,7 @@ Accelerator: None
 
 O conteúdo e o nível de detalhe de cada comentário depende do programador, das regras da empresa em que trabalha ou da equipe envolvida, entre outros muitos fatores.
 
-Neste livro, os programas são sempre precedidos por um comentário contendo:
+Neste material, os programas são sempre precedidos por um comentário contendo:
 
 * O propósito do programa;
 * As pré e pós-condições a que o código atende.
@@ -176,7 +176,7 @@ O erro acima foi causado apenas por um `}` inserido no lugar errado. Todas as ou
 
 Em suma, os programas são para as pessoas lerem.
 
-No @sec-guia-de-estilo são apresentadas as orientações de escrita seguidas neste livro, mas as seções seguintes introduzem os pontos iniciais, justificando suas importâncias.
+No @sec-guia-de-estilo são apresentadas as orientações de escrita seguidas neste material, mas as seções seguintes introduzem os pontos iniciais, justificando suas importâncias.
 
 
 A escrita de um bom programa em C recai, necessariamente, na organização visual do código, ou seja, pela disposição espacial dos comandos, instruções e pontuações ao longo do código.

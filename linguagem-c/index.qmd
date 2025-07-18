@@ -212,7 +212,7 @@ Há uma diversidade de compiladores para a linguagem C, além de diversos IDEs[^
 
 <!-- Notas de rodapé - fim -->
 
-Neste livro os programas foram compilados invocando no terminal o compilador GNU GCC[^site-gcc] na versão mais recente disponível no repositório oficial do Debian.
+Neste material os programas foram compilados invocando no terminal o compilador GNU GCC[^site-gcc] na versão mais recente disponível no repositório oficial do Debian.
 
 [^site-gcc]: Gnu Compiler Collection: <https://gcc.gnu.org>.
 
@@ -317,7 +317,7 @@ int main(void) {
 
 Um programa pode ser compilado e gerar o executável sem erros ou qualquer tipo de aviso que o compilador esteja ajustado para dar. Mas apesar disso, a execução não produz o resultado desejado. Neste caso, mesmo com a sintaxe correta, as instruções contém um erro (uma falha de cálculo, uma comparação equivocada) que invalida o programa. Esse são os erros de lógica e, desta vez, cabe ao programador encontrá-los e corrigi-los.
 
-A evitação de erros de lógica é considerada ao longo de todo o livro.
+A evitação de erros de lógica é considerada ao longo de todo o material.
 
 
 

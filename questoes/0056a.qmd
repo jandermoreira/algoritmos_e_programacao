@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Escreva uma função que retorne o número de divisores de um número natural, incluindo ele próprio.
 
 

@@ -1,6 +1,6 @@
-<!-- Erro em contagem de notas nulas e < 6 -->
-::: {#sol-0004}
-@exr-0004
+---
+title: "Erro em contagem de notas nulas e menores que 6"
+---
 
 A solução apresentada não funciona porque as verificações de "menor que 6,0" e "igual a 0" não são mutuamente exclusivas. Uma nota igual a zero tem que contar nas duas categorias. Ainda assim, o código somente faz a comparação de notas nulas caso a verificação de "menor que 6,0" tenha falhado, pois é usado um -senão-se- na estruturação.
 
@@ -28,4 +28,3 @@ Como as duas condições devem ser verificadas separadamente, uma solução é o
 ```
 
 Desta forma uma nota igual a zero provocaria o incremento dos dois contadores.
-:::

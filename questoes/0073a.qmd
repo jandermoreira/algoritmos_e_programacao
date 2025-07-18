@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Escreva um procedimento para realizar a troca de valores de duas variáveis.
 
 <!-- @sol-0073 -->

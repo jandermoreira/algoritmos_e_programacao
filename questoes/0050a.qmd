@@ -10,7 +10,7 @@ sidebar:
 ---
 
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 O número de combinações de $n$ elementos em grupos contendo $p$ elementos cada um é expresso
 
 $$ C_p^n = \dfrac{n!}{p!(n-p)!}. $$

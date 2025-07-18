@@ -6,7 +6,7 @@ categories:
     - "Sequencial"
 ---
 
-::: {.exercicio avalia="false"}
+::: {.exercicio}
 Um engenheiro está projetando um sistema residencial de energia solar. Para uma estimativa simplificada de geração, ele considera três variáveis fornecidas pelo fabricante e pela localização da residência: a potência do painel solar (em kW), o número de horas médias de sol por dia e o número de dias de operação no mês. O cálculo da energia total gerada no mês é feito pela multiplicação direta desses três valores.
 
 Com base nesse cenário técnico, escreva apenas a documentação do algoritmo que apresenta a estimativa mensal de energia gerada por um sistema fotovoltaico residencial.

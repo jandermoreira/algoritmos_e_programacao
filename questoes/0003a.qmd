@@ -6,7 +6,7 @@ categories:
     - "Bloom: Aplicar"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Existe na computação uma operação lógica chamada **ou exclusivo**. Ela é uma operação que, dados dois operadores, retorna verdadeiro se apenas um deles for verdadeiro.
 
 | operando 1 | operando 2 | ou exclusivo |

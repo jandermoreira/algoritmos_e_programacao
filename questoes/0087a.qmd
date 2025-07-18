@@ -6,7 +6,7 @@ categories:
     - "Sequencial"
 ---
 
-::: {.exercicio avalia="false"}
+::: {.exercicio}
 Você precisa calcular a média simples de desempenho de um aluno com base em três notas fornecidas. O objetivo é apresentar esse resultado final.
 
 Escreva a documentação relativa ao algoritmo que resolve esse problema.

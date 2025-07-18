@@ -6,7 +6,7 @@ categories:
     - "Sequencial"
 ---
 
-::: {.exercicio avalia="false"}
+::: {.exercicio}
 Um sistema de controle de tempo precisa converter uma duração em minutos para horas, apresentando o resultado.
 
 Escreva a documentação relativa ao algoritmo que resolve esse problema.

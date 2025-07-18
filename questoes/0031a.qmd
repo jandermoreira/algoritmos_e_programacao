@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Em uma competição de natação, as categorias são determinadas segundo a idade dos competidores.
 
 Categorias:

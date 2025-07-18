@@ -1,0 +1,10 @@
+---
+title: "Importância das pré-condições e pós-condições"
+identifier: "0094"
+categories: 
+    - "Noções de algoritmos"
+---
+
+::: {.exercicio}
+Descreva a importância das pré-condições e pós-condições em um algoritmo.
+:::

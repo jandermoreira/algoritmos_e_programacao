@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Deseja-se saber, dados os salários de quatro pessoas, a diferença porcentual entre os salários mínimo e máximo.
 
 Escreva um algoritmo para apresentar a informação solicitada.

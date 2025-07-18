@@ -5,6 +5,6 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Escreva um procedimento mover o valor máximo um vetor de números reais para que ocupe a última posição, preservando todos os valores originais. Considere que o comprimento mínimo do vetor seja 1.
 :::

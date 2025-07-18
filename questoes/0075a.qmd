@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Escreva uma função para retornar a quantidade de valores positivos em um vetor de números reais.
 
 <!-- @sol-0075 -->

@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Escreva uma função que, dado um valor inteiro qualquer, retorne se ele é par ou não.
 
 Use a divisão modular ($\bmod$) para indicar o cálculo.

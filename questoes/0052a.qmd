@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 <!-- {{< include problemas-algoritmos/comum-notas-e-conceitos.qmd >}} -->
 
 Considere o seguinte problema:

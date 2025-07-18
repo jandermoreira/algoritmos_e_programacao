@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Existe um grupo de voluntários para um estudo clínico, perfazendo 30\ pessoas. Para cada uma delas foram coletadas diversas informações, entre elas a idade.
 
 Escreva um algoritmo que, a partir da sequência das 30\ idades, apresente a idade máxima e a quantidade de pessoas que possuem esta idade.

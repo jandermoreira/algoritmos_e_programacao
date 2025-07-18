@@ -6,7 +6,7 @@ categories:
 ---
 <!-- Média ponderada -->
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Um aluno precisa saber seu desempenho em uma prova de admissão. Para ser considerado aprovado, sua pontuação média tem que ser superior a 70 pontos. A prova possui quatro fases, cada uma com um peso individual e pontuação máxima de 100 pontos.
 
 Escreva um algoritmo que, a partir das quatro pontuações e respectivos pesos, apresente a média e se houve ou não aprovação na prova.

@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Escreva um algoritmo que determine o valor mínimo em uma sequência (não vazia) de valores reais qualquer.
 
 <!-- @sol-0022 -->

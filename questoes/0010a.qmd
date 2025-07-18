@@ -7,7 +7,7 @@ categories:
     - "Condicional"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Considere uma equação na seguinte forma: $ax^2 + bx + c = 0$, sendo que tanto $a$ quanto $b$ podem ser iguais a zero, porém nunca simultaneamente. Assim, sempre haverá um termo com $x$.
 
 Dessa forma a equação pode tanto ser uma equação do segundo grau ($a \neq 0$) ou do primeiro grau ($a = 0$).

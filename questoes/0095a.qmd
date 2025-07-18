@@ -1,0 +1,12 @@
+---
+title: "Fazendo café!"
+identifier: "0095"
+categories: 
+    - "Noções de algoritmos"
+---
+
+::: {.exercicio}
+Considere a tarefa: **fazer café**.
+
+Elabore as pre e pós-condições (sem os passos!) para esse problema.
+:::

@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Considere o sistema de equações simultâneas $a_1x + b_1y = c_1$ e $a_2x + b_2y = c_2$.
 
 Escreva um algoritmo para, a partir dos valores dos diversos coeficientes, apresentar os valores de $x$ e $y$ que satisfazem simultaneamente as duas equações.

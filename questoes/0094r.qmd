@@ -1,0 +1,41 @@
+---
+title: "Importância das pré-condições e pós-condições"
+---
+
+As **pré-condições** são os requisitos que devem estar satisfeitos **antes** da execução dos comandos do algoritmo. Com elas:
+
+* Erros são evitados, pois indica as condições válidas para o algoritmo executar
+* Limitam o escopo, mostrando em que condições o algoritmo funciona e produz resultados coerentes e corretos
+
+As **pós-condições** são os **resultados** ou **estados** que devem ser verdadeiros após a execução do algoritmo. Sua importância:
+
+* Indicam o que o algoritmo deve entregar (resultado na tela ou a criação de um arquivo)
+* Permitem verificar se o resultado do algoritmo está correto
+* Ajudam a dar clareza ao propósito do algoritmo
+
+Assim, pré e pós-condições funcionam como um _contrato do algoritmo_:
+
+* Pré-condições dizem: "Se você me der X, eu posso trabalhar."
+* Pós-condições afirmam: "Se eu recebi X corretamente, garanto que devolvo Y."
+
+Sem elas, algoritmos podem falhar silenciosamente ou produzir resultados incoerentes, especialmente em contextos computacionais, onde precisão é fundamental.
+
+::: {.callout-note title="Exemplo"}
+Um algoritmo pode ter as seguintes pré-condições (-Requer-) e pós-condições (-Assegura-):
+
+```latex {.pseudocode}
+\begin{algorithmic}
+    \Require três notas de provas de 0,0 a 10,0
+    \Ensure apresentação da média das três provas
+\end{algorithmic}
+```
+
+Isso diz que o algoritmo precisa de exatamente três notas (valores reais de 0,0 a 10,0) e, portanto:
+
+* não funcionará para outras quantidades (duas, quatro ou 10)
+* não garante resultado correto para outros intervalos de notas (0 a 100, por exemplo)
+* não funcionará para notas não numéricas (como conceitos A, B ou C)
+
+Também diz que a média das três notas será apresentada como único resultado (tipicamente na tela) se as pré-condições forem atendidas. Implicitamente garante que o resultado estará entre 0,0 e 10,0, como é de se esperar para as notas.
+
+:::

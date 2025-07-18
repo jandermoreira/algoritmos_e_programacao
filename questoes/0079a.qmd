@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Escreva uma função para retornar o valor do item que está "no meio" de um vetor de números reais. Caso o vetor contenha número par de elementos, o "meio" será o último valor da primeira metade. Considere que o comprimento mínimo do vetor seja 1.
 
 Como exemplos, considere os seguintes comprimentos de um vetor $v$:

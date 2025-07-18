@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Escreva uma função que verifique se um dado valor está ou não em um vetor. O comprimento do vetor pode ser nulo
 
 <!-- @sol-0081 -->

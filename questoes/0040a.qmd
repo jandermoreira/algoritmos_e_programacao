@@ -7,7 +7,7 @@ categories:
     - "Somatório"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Escreva um algoritmo que faça, passo a passo, a soma ${\sum_{i=1}^n i}$.
 :::
 

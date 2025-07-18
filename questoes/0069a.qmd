@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Um número inteiro é comumente escrito na base 10. Assim, o número $2601$ pode ser entendido como  ${1 \times 10^0} + {0 \times 10^1} + {6 \times 10^2} + {2 \times 10^3}$.
 
 Escreva um algoritmo que decomponha qualquer valor inteiro positivo em suas potências de\ 10 (começando pelas unidades; $10^0$). A solução deve deixar claros os cálculos usados para separar o valor em suas partes relevantes.

@@ -1,0 +1,12 @@
+---
+title: "Formas de representar algoritmos"
+---
+
+Algoritmos podem ser representados de várias formas. 
+
+As mais comuns são:
+
+* pseudocódigo
+* fluxograma
+
+Outras formas, mais abstratas, podem envolver [árvores de decisão](https://pt.wikipedia.org/wiki/%C3%81rvore_de_decis%C3%A3o){target="_blank"} e [diagramas de transição de estados](https://pt.wikipedia.org/wiki/Diagrama_de_transi%C3%A7%C3%A3o_de_estados){target="_blank"}, por exemplo.

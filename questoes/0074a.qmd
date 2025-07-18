@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Escreva um procedimento para realizar a troca de valores de duas variáveis de forma que sempre fiquem em ordem não decrescente.
 
 <!-- @sol-0074 -->

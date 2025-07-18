@@ -6,7 +6,7 @@ categories:
 problema: "0005"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Nas mais diversas aplicações, datas são dados considerados essenciais.
 
 Dados os valores para dia, mês e ano, é preciso determinar se uma data é válida.

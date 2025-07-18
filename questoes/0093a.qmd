@@ -1,0 +1,12 @@
+---
+title: "Formas de representar algoritmos"
+identifier: "0093"
+categories: 
+    - "Noções de algoritmos"
+---
+
+::: {.exercicio}
+Algoritmos computacionais podem ser representados de várias formas.
+
+Cite duas delas.
+:::

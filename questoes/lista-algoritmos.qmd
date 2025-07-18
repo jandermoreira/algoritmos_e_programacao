@@ -17,3 +17,4 @@ listing:
 ---
 
 Uma listagem geral de todas as propostas disponíveis pode ser consultada na tabela. Nela, é possível filtrar por uma das categorias ou fazer busca por texto.
+

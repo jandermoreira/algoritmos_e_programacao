@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 <!-- {{< include problemas-algoritmos/comum-notas-e-conceitos.qmd >}} -->
 
 É necessário que um professor obtenha a média numérica de uma turma com 30\ alunos, sendo que as informações disponíveis são os conceitos de cada um deles. 

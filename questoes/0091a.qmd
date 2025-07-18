@@ -6,7 +6,7 @@ categories:
     - "Sequencial"
 ---
 
-::: {.exercicio avalia="false"}
+::: {.exercicio}
 Durante um evento beneficente, foram vendidos ingressos a um preço fixo. Contudo, parte das pessoas entrou gratuitamente por serem voluntárias, e portanto não pagaram. Você precisa calcular quanto foi arrecadado apenas com os ingressos pagos.
 
 O sistema deve receber a quantidade total de pessoas presentes, a quantidade de voluntários (que não pagaram) e o valor de cada ingresso. A saída deve apresentar o valor arrecadado com os ingressos pagos.

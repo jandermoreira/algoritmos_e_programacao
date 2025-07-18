@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Considere a função abaixo, na qual $v$ é um número real e $k$ é um inteiro:
 
 ```latex {.pseudocode}

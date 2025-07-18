@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Escreva um algoritmo para, a partir de um valor em $\mathbb{Z}^*$, apresentar todos seus divisores e a soma destes divisores.
 
 <!-- @sol-0036 -->

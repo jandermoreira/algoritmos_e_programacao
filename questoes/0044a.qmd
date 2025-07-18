@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Escreva uma função para, dados três valores numéricos, retornar o valor máximo entre eles.
 
 <!-- @sol-0044 -->

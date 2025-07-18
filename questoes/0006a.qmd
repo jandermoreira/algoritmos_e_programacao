@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Um triângulo, do ponto de vista de seus ângulos internos, pode ser classificado como:
 
 * acutângulo, quando todos seus ângulos forem menores que 90º;

@@ -1,0 +1,62 @@
+---
+title: "Fazendo café!"
+---
+
+A tarefa de fazer café corresponde a um problema extremamente aberto. Assim, estabelecer o que um algoritmo precisa para completar seu objetivo pode variar significativamente.
+
+Seguem exemplos de possíveis pre e pós-condições que atendem a **problemas diferentes**, porém todos "fazendo café".
+
+::: {.callout-note title="Fazer café"}
+```latex {.pseudocode}
+\begin{algorithmic}
+    \Require pó de café, água, fogão
+    \Ensure café
+\end{algorithmic}
+```
+:::
+
+::: {.callout-note title="Fazer café"}
+```latex {.pseudocode}
+\begin{algorithmic}
+    \Require pó de café, água em ebulição
+    \Ensure café
+\end{algorithmic}
+```
+:::
+
+::: {.callout-note title="Fazer café"}
+```latex {.pseudocode}
+\begin{algorithmic}
+    \Require pó de café, água, fogão, colher, filtro de papel, suporte para filtro, garrafa térmica
+    \Ensure uma garrafa térmica com café
+\end{algorithmic}
+```
+:::
+
+::: {.callout-note title="Fazer café"}
+```latex {.pseudocode}
+\begin{algorithmic}
+    \Require café em grãos, moedor de café, água, fogão, fósforo, colher, filtro de papel ou pano, suporte apropriado para o filtro, garrafa térmica, lixo para descartes
+    \Ensure uma garrafa térmica com café na mesa da cozinha
+\end{algorithmic}
+```
+:::
+
+::: {.callout-note title="Fazer café"}
+```latex {.pseudocode}
+\begin{algorithmic}
+    \Require pó de café, água, ebulidor elétrico, filtro e suporte, garrafa térmica
+    \Ensure uma garrafa térmica com café
+\end{algorithmic}
+```
+:::
+
+
+::: {.callout-note title="Fazer café"}
+```latex {.pseudocode}
+\begin{algorithmic}
+    \Require uma cápsula de café, uma máquina de capsulas e uma xícara
+    \Ensure uma xícara com café
+\end{algorithmic}
+```
+:::

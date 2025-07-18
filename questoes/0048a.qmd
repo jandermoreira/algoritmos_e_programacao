@@ -5,6 +5,6 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Escreva uma função que receba três parâmetros, todos inteiros: a quantidade de horas, de minutos e de segundos. A função deve retornar o valor equivalente em segundos.
 :::

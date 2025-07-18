@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Triângulos retângulos são uma constante em problemas de trigonometria.
 
 Escreva um algoritmo para, a partir dos comprimentos dos lados de um triângulo válido, apresentar se ele é ou não retângulo.

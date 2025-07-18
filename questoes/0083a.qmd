@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Um sistema de navegação baseado em GPS, em parte de seus cálculos internos, usa critérios de distância para sugerir locais ao usuário. Assim, dada a localização do usuário, ele pode apresentar as padarias mais próximas.
 
 Considere que uma lista de distâncias (cada uma sendo a distância de um ponto de interesse à posição do usuário) foi gerada pelo sistema. O comprimento dessa ser nulo (i.e., não há pontos de interesse próximos o suficiente).

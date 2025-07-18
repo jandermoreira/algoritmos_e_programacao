@@ -1,0 +1,21 @@
+---
+title: "Amplitude térmica"
+identifier: "0096"
+categories: 
+    - "Noções de algoritmos"
+---
+
+::: {.exercicio}
+As pre e pós-condições que são apresentadas quando se escreve um pseudocódigo ajudam a verificar se os resultados produzidos pelas instruções estão corretos.
+
+Para a especificação seguinte, dê exemplos de possíveis entradas válidas e da saída que elas produzirão.
+
+Lembre-se que a amplitude términa é a diferença entre a máxima e a mínima em conjunto de temperaturas.
+
+```latex {.pseudocode}
+\begin{algorithmic}
+    \Require cinco registros de temperatura (ºC)
+    \Ensure apresentação da amplitude térmica
+\end{algorithmic}
+```
+:::

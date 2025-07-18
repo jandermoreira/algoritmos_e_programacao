@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Considere o seguinte problema:
 
 > Escreva um algoritmo para processar uma sequência indefinida e não vazia de valores inteiros (todos positivos) e determinar o valor máximo. A sequência é terminada por um valor sentinela igual a -1.

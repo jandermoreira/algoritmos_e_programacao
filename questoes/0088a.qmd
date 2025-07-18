@@ -6,7 +6,7 @@ categories:
     - "Sequencial"
 ---
 
-::: {.exercicio avalia="false"}
+::: {.exercicio}
 Durante uma caminhada, uma pessoa percorre três trechos diferentes em sequência. Cada trecho tem sua distância informada separadamente. Você deve somar essas distâncias para saber o total percorrido.
 
 Escreva a documentação relativa ao algoritmo que resolve esse problema.

@@ -1,5 +1,5 @@
 ---
-title: "Propostas de problemas"
+title: "Propostas de questões e problemas"
 categories: false
 toc: true
 number-depth: 0
@@ -28,10 +28,12 @@ listing:
           identifier: "ID"
 ---
 
+Nesta seção encontram-se as diversas questões apresentadas ao longo do material.
+
 :::: {.columns}
 
 ::: {.column width="45%"}
-## Algoritmos
+## [Algoritmos](lista-algoritmos.qmd)
 ::: {#algoritmos}
 :::
 :::
@@ -41,7 +43,7 @@ listing:
 
 
 ::: {.column width="45%"}
-## Programação
+## [Programação](lista-programacao.qmd)
 ::: {#programacao}
 :::
 :::

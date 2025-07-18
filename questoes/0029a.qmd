@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Um sistema automático de uma estação meteorológica coleta uma medida de precipitação, ou volume de chuva, (em mm) a cada cinco minutos, iniciando às 0h e finalizando às 23h55min. Esses valores são armazenados na ordem de coleta.
 
 Para os analistas, são importantes os volumes de água acumulados nos seguintes períodos:

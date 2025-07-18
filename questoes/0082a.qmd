@@ -5,7 +5,7 @@ categories:
     - "Básico"
 ---
 
-::: {.exercicio}
+::: {.exercicio .avalia-algoritmo}
 Escreva um procedimento que adicione um novo valor a um vetor, colocando-o na última posição.
 
 <!-- @sol-0082 -->

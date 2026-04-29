@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<meta name="generator" content="quarto-1.6.43">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>index – Algoritmos &amp; Programação</title>
+<title>Noções de algoritmos – Algoritmos &amp; Programação</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,10 +69,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-9e1f2a4632985dffc2c80318c992baf5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-673ef696772ae3f5d735fbdc0f05a12f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ca7e136d0d5988c87344814d6f3e778b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-1dd8d82aecac727982dd00c96d3bebf9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -100,15 +100,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Procurar"
   }
 }</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0NHDE9GGJP"></script>
-
-<script type="text/javascript">
-
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-0NHDE9GGJP', { 'anonymize_ip': true});
-</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -140,7 +131,6 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../book.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -168,8 +158,16 @@ window.Quarto = {
     <a class="nav-link" href="../linguagem-c/index.html"> 
 <span class="menu-text">Linguagem C</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../questoes/index.html"> 
+<span class="menu-text">Problemas</span></a>
+  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../questoes/index.html"> 
+<span class="menu-text">Questões</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../sobre.html"> 
 <span class="menu-text">Sobre…</span></a>
@@ -226,12 +224,24 @@ window.Quarto = {
  <span class="menu-text">Formalização dos algoritmos computacionais</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/objetivos-e-niveis-de-abstracao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Objetivos dos algoritmos e níveis de abstração</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/compreensao-do-problema.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Compreensão do problema</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Processamento de sequências de dados</span></a>
+ <span class="menu-text">Processamento básico</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -239,33 +249,137 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../algoritmos/processamento-basico-de-sequencias-de-dados.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Estruturas algorítmicas básicas para processamento de sequências de dados</span></a>
+  <a href="../algoritmos/fluxo-sequencial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fluxo sequencial e manipulação de dados</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Fluxo condicional</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/fluxo-condicional-estruturas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estruturas condicionais</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Desenvolvimento de algoritmos para processamento de sequências de dados</span></a>
+  <a href="../algoritmos/fluxo-condicional-utilizacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Utilização do fluxo condicional</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/fluxo-condicional-avaliacao-de-solucoes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Avaliação de condicionais</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Fluxo repetitivo</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/fluxo-de-repeticao-estruturas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estruturas de repetição</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/fluxo-de-repeticao-para-calculos-iterativos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cálculos iterativos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/fluxo-de-repeticao-para-processamento-de-sequencias.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Processamento de sequências de dados</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/fluxo-de-repeticao-avaliacao-de-solucoes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Avaliação de repetições</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Estratégias de desenvolvimento</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/desenvolvimento-por-refinamentos-sucessivos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Refinamentos sucessivos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/testes-de-mesa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: testes de mesa</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Desenvolvimento e organização de algoritmos</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Modularização</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../algoritmos/modularizacao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Algoritmos: modularização</span></a>
+ <span class="menu-text">Modularização</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/modularizacao-coesao-e-acoplamento.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coesão e acoplamento</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/modularizacao-estrategia-de-decisao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Abordagem de problema e decisão de modularização</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Desenvolvimento e organização de algoritmos</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../algoritmos/desenvolvimento-com-modularizacao.html" class="sidebar-item-text sidebar-link">
@@ -284,9 +398,7 @@ window.Quarto = {
     <h2 id="toc-title">Nesta página:</h2>
    
   <ul>
-  <li><a href="#sec-nocoes-de-algoritmos" id="toc-sec-nocoes-de-algoritmos" class="nav-link active" data-scroll-target="#sec-nocoes-de-algoritmos">Noções de algoritmos</a>
-  <ul class="collapse">
-  <li><a href="#características-gerais-dos-algoritmos" id="toc-características-gerais-dos-algoritmos" class="nav-link" data-scroll-target="#características-gerais-dos-algoritmos">Características gerais dos algoritmos</a></li>
+  <li><a href="#características-gerais-dos-algoritmos" id="toc-características-gerais-dos-algoritmos" class="nav-link active" data-scroll-target="#características-gerais-dos-algoritmos">Características gerais dos algoritmos</a></li>
   <li><a href="#algoritmos-computacionais" id="toc-algoritmos-computacionais" class="nav-link" data-scroll-target="#algoritmos-computacionais">Algoritmos computacionais</a></li>
   <li><a href="#as-várias-formas-de-representar-algoritmos" id="toc-as-várias-formas-de-representar-algoritmos" class="nav-link" data-scroll-target="#as-várias-formas-de-representar-algoritmos">As várias formas de representar algoritmos</a>
   <ul class="collapse">
@@ -295,20 +407,34 @@ window.Quarto = {
   <li><a href="#fluxogramas-ou-pseudocódigo" id="toc-fluxogramas-ou-pseudocódigo" class="nav-link" data-scroll-target="#fluxogramas-ou-pseudocódigo">Fluxogramas ou pseudocódigo?</a></li>
   </ul></li>
   <li><a href="#algoritmos-e-programas" id="toc-algoritmos-e-programas" class="nav-link" data-scroll-target="#algoritmos-e-programas">Algoritmos e programas</a></li>
-  </ul></li>
+  <li><a href="#revisão" id="toc-revisão" class="nav-link" data-scroll-target="#revisão">Revisão</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../algoritmos/index.html">Representação e uso de algoritmos</a></li><li class="breadcrumb-item"><a href="../algoritmos/index.html">Noções de algoritmos</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../algoritmos/index.html">Representação e uso de algoritmos</a></li><li class="breadcrumb-item"><a href="../algoritmos/index.html">Noções de algoritmos</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Noções de algoritmos</h1>
+</div>
 
 
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <span class="math inline">\(\newcommand\Id[1]{\mbox{\textit{#1}}}\)</span>
-<section id="sec-nocoes-de-algoritmos" class="level1">
-<h1>Noções de algoritmos</h1>
-<p>Um algoritmo é uma descrição de passos que, se seguidos, levam à solução de um determinado problema e, genericamente falando, quaisquer instruções, orientações ou coisa similar podem ser classificadas como um algoritmo.</p>
+<p>Um algoritmo é uma descrição de passos que, se seguidos, levam à solução de um determinado problema e, genericamente falando, quaisquer instruções, orientações ou coisas similares podem ser classificadas como um algoritmo.</p>
 <p>A partir dessa óptica, há uma infinidade de algoritmos. Quando se trata de computação e mais especificamente de programação, há um subconjunto dos algoritmos com características mais particulares. Este capítulo trata da contextualização dos algoritmos computacionais.</p>
 <section id="características-gerais-dos-algoritmos" class="level2">
 <h2 class="anchored" data-anchor-id="características-gerais-dos-algoritmos">Características gerais dos algoritmos</h2>
@@ -321,7 +447,7 @@ window.Quarto = {
 <li>A sequência de passos que devem ser seguidos;</li>
 <li>A situação final.</li>
 </ul>
-<p> A situação inicial são as pré-condições, ou seja, o que tem haver antes da execução dos passos para que todas as ações possam ser seguidas de forma adequada. Os passos determinam as ações que devem ser executadas e uma ordem coerente para que aconteçam. As pós-condições caracterizam a situação final, ou seja, a completude do que o algoritmo se propôs a resolver.</p>
+<p>A situação inicial são as pré-condições, ou seja, o que tem haver antes da execução dos passos para que todas as ações possam ser seguidas de forma adequada. Os passos determinam as ações que devem ser executadas e uma ordem coerente para que aconteçam. As pós-condições caracterizam a situação final, ou seja, a completude do que o algoritmo se propôs a resolver.</p>
 <p>Na <a href="#tbl-exemplos-condicoes-algoritmos" class="quarto-xref">Tabela&nbsp;1</a> são apresentados esses elementos para dois exemplos específicos, ilustrando-os de forma simplificada.</p>
 <div id="tbl-exemplos-condicoes-algoritmos" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -373,7 +499,7 @@ Algoritmo
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p> Um algoritmo pode ser definido como uma sequência finita de passos que levam de uma situação inicial (pré-condições) a uma situação final (pós-condições) de forma bem definida. A partir desse conceito, é esperado que, a partir do mesmo estado inicial e seguidos os mesmos passos, o estado final seja atingido.</p>
+<p>Um algoritmo pode ser definido como uma sequência finita de passos que levam de uma situação inicial (pré-condições) a uma situação final (pós-condições) de forma bem definida. A partir desse conceito, é esperado que, a partir do mesmo estado inicial e seguidos os mesmos passos, o estado final seja atingido.</p>
 </div>
 </div>
 <p>Esta definição não se aplica, em particular, à receita do pão indicada na <a href="#tbl-exemplos-condicoes-algoritmos" class="quarto-xref">Tabela&nbsp;1</a>. O resultado tende a variar consideravelmente dependendo de uma variedade de situações não mencionadas, como o tipo e a qualidade da farinha, a temperatura ambiente que influencia no crescimento da massa e o forno usado, que pode aquecer mais ou menos que outro forno, por exemplo. Para se garantir um resultado sempre “igual”, todas essas variáveis deveriam entrar nas pré-condições. Felizmente, essas variações são toleradas no resultado final da receita, sendo até esperadas tais diferenças. As pré-condições e pós-condições podem, dependendo do caso, ter graus de especificidade variados.</p>
@@ -396,7 +522,7 @@ Algoritmos computacionais
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p> Um algoritmo computacional é aquele que define com clareza todas pré-condições e estabelece também claramente as pós-condições. Também define os passos de forma inequívoca e direta, sem margens para interpretações ou variações. Seu objetivo é ser executado em um sistema computacional.</p>
+<p>Um algoritmo computacional é aquele que define com clareza todas pré-condições e estabelece também claramente as pós-condições. Também define os passos de forma inequívoca e direta, sem margens para interpretações ou variações. Seu objetivo é ser executado em um sistema computacional.</p>
 </div>
 </div>
 </section>
@@ -469,8 +595,8 @@ Figura&nbsp;2: Fluxograma para cálculo e apresentação das raízes reais de um
 <p>Embora não sejam as únicas formas de representar algoritmos, fluxogramas e pseudocódigo são as mais usuais. A questão natural é qual deles escolher.</p>
 <p>Os fluxogramas são mais fáceis de serem entendidos, mesmo que por pessoas que não sejam da área de computação, pois apresentam com clareza suficiente fluxo de ações do algoritmo. Quando o nível de complexidade do problema aumenta, porém, os fluxogramas começam a ficar muito densos (muitas caixas e muitas conexões), prejudicando o entendimento. A manutenção dos fluxogramas também é um fator que demanda esforço, mesmo com ferramentas que auxiliem em sua construção. Em geral, fluxogramas possuem nível de abstração elevado, ou seja, simplificam e generalizam conceitos complexos.</p>
 <p>Por sua vez, o pseudocódigo é menos abstrato, dado que utiliza uma mistura de linguagem natural com conceitos computacionais para descrever os passos do algoritmo. Em decorrência, faz uso de uma estrutura e uma sintaxe com certa rigidez, uma vez que as instruções para cada ação devem ser exatas, sem ambiguidades ou margem para interpretações diferentes. Os pseudocódigos são descrições estruturadas de algoritmos, possuindo indicações de fluxo bastante rígidas.</p>
-<p>Um ponto importante dos pseudocódigos é seu uso frequente em livros e artigos científicos, representando soluções precisas para os problemas estudados.</p>
-<p>Este livro faz uso do pseudocódigo para a descrição dos algoritmos, uma vez que a precisão na descrição das soluções é importante.</p>
+<p>Um ponto importante dos pseudocódigos é seu uso frequente em materials e artigos científicos, representando soluções precisas para os problemas estudados.</p>
+<p>Este material faz uso do pseudocódigo para a descrição dos algoritmos, uma vez que a precisão na descrição das soluções é importante.</p>
 <ul>
 <li>ambiguidades</li>
 <li>estruturação</li>
@@ -582,9 +708,61 @@ Figura&nbsp;2: Fluxograma para cálculo e apresentação das raízes reais de um
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span><span class="op">(</span><span class="va">fahrenheit</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Existe, claramente, uma distância entre a solução (algoritmo) e sua implementação (código da linguagem).</p>
 <p>O principal conceito por trás dos algoritmos é ter uma solução mais abstrata, a qual não se restringe aos detalhes que cada linguagem impõe e, entretanto, apresenta uma solução simples de entender e objetiva quanto a como o problema abordado é resolvido.</p>
-
-
 </section>
+<section id="revisão" class="level1">
+<h1>Revisão</h1>
+<p>A verificação da compreensão dos conceitos apresentados pode ser feita tentando responder a algumas questões.</p>
+<!-- Formas de representação de algoritmos -->
+<div>
+<hr>
+<section class="level1 h4">
+<h1 class="h4">Formas de representar algoritmos<sup> #0093</sup> <a href="../questoes/0093r.html" title="Possível solução"><img src="../icones/resposta.png" height="20"></a> </h1>
+</section>
+</div>
+<div class="exercicio">
+<p>Algoritmos computacionais podem ser representados de várias formas.</p>
+<p>Cite duas delas.</p>
+</div>
+<!-- Importância das pré-condições e pós-condições -->
+<div>
+<hr>
+<section class="level1 h4">
+<h1 class="h4">Importância das pré-condições e pós-condições<sup> #0094</sup> <a href="../questoes/0094r.html" title="Possível solução"><img src="../icones/resposta.png" height="20"></a> </h1>
+</section>
+</div>
+<div class="exercicio">
+<p>Descreva a importância das pré-condições e pós-condições em um algoritmo.</p>
+</div>
+<!-- Fazendo café -->
+<div>
+<hr>
+<section class="level1 h4">
+<h1 class="h4">Fazendo café!<sup> #0095</sup> <a href="../questoes/0095c.html" title="Comentário ou dica"><img src="../icones/comentario.png" height="20"></a></h1>
+</section>
+</div>
+<div class="exercicio">
+<p>Considere a tarefa: <strong>fazer café</strong>.</p>
+<p>Elabore as pre e pós-condições (sem os passos!) para esse problema.</p>
+</div>
+<!-- Amplitude térmica -->
+<div>
+<hr>
+<section class="level1 h4">
+<h1 class="h4">Amplitude térmica<sup> #0096</sup> </h1>
+</section>
+</div>
+<div class="exercicio">
+<p>As pre e pós-condições que são apresentadas quando se escreve um pseudocódigo ajudam a verificar se os resultados produzidos pelas instruções estão corretos.</p>
+<p>Para a especificação seguinte, dê exemplos de possíveis entradas válidas e da saída que elas produzirão.</p>
+<p>Lembre-se que a amplitude términa é a diferença entre a máxima e a mínima em conjunto de temperaturas.</p>
+<div>
+<figcaption class="figure-caption">
+</figcaption>
+<p><img src="../algxpar/pseudocode.d93497f179ec660c740dd4361f03ff0421798939.svg" class="img-fluid" alt="" width="648"></p>
+</div>
+</div>
+
+
 </section>
 
 

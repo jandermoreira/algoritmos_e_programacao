@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<meta name="generator" content="quarto-1.6.43">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>formalizacao – Algoritmos &amp; Programação</title>
+<title>Formalização dos algoritmos computacionais – Algoritmos &amp; Programação</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -89,10 +89,10 @@ div.csl-indent {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-9e1f2a4632985dffc2c80318c992baf5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-673ef696772ae3f5d735fbdc0f05a12f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ca7e136d0d5988c87344814d6f3e778b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-1dd8d82aecac727982dd00c96d3bebf9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -120,15 +120,6 @@ div.csl-indent {
     "search-label": "Procurar"
   }
 }</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0NHDE9GGJP"></script>
-
-<script type="text/javascript">
-
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-0NHDE9GGJP', { 'anonymize_ip': true});
-</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -160,7 +151,6 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../book.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -188,8 +178,16 @@ window.Quarto = {
     <a class="nav-link" href="../linguagem-c/index.html"> 
 <span class="menu-text">Linguagem C</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../questoes/index.html"> 
+<span class="menu-text">Problemas</span></a>
+  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../questoes/index.html"> 
+<span class="menu-text">Questões</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../sobre.html"> 
 <span class="menu-text">Sobre…</span></a>
@@ -246,12 +244,24 @@ window.Quarto = {
  <span class="menu-text">Formalização dos algoritmos computacionais</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/objetivos-e-niveis-de-abstracao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Objetivos dos algoritmos e níveis de abstração</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/compreensao-do-problema.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Compreensão do problema</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Processamento de sequências de dados</span></a>
+ <span class="menu-text">Processamento básico</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -259,33 +269,137 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../algoritmos/processamento-basico-de-sequencias-de-dados.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Estruturas algorítmicas básicas para processamento de sequências de dados</span></a>
+  <a href="../algoritmos/fluxo-sequencial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fluxo sequencial e manipulação de dados</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Fluxo condicional</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/fluxo-condicional-estruturas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estruturas condicionais</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Desenvolvimento de algoritmos para processamento de sequências de dados</span></a>
+  <a href="../algoritmos/fluxo-condicional-utilizacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Utilização do fluxo condicional</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/fluxo-condicional-avaliacao-de-solucoes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Avaliação de condicionais</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Fluxo repetitivo</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/fluxo-de-repeticao-estruturas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estruturas de repetição</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/fluxo-de-repeticao-para-calculos-iterativos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cálculos iterativos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/fluxo-de-repeticao-para-processamento-de-sequencias.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Processamento de sequências de dados</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/fluxo-de-repeticao-avaliacao-de-solucoes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Avaliação de repetições</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Estratégias de desenvolvimento</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/desenvolvimento-por-refinamentos-sucessivos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Refinamentos sucessivos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/testes-de-mesa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: testes de mesa</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Desenvolvimento e organização de algoritmos</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Modularização</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../algoritmos/modularizacao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Algoritmos: modularização</span></a>
+ <span class="menu-text">Modularização</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/modularizacao-coesao-e-acoplamento.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coesão e acoplamento</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/modularizacao-estrategia-de-decisao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Abordagem de problema e decisão de modularização</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Desenvolvimento e organização de algoritmos</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../algoritmos/desenvolvimento-com-modularizacao.html" class="sidebar-item-text sidebar-link">
@@ -304,15 +418,8 @@ window.Quarto = {
     <h2 id="toc-title">Nesta página:</h2>
    
   <ul>
-  <li><a href="#formalização-dos-algoritmos-computacionais" id="toc-formalização-dos-algoritmos-computacionais" class="nav-link active" data-scroll-target="#formalização-dos-algoritmos-computacionais">Formalização dos algoritmos computacionais</a>
+  <li><a href="#formalização" id="toc-formalização" class="nav-link active" data-scroll-target="#formalização">Formalização</a>
   <ul class="collapse">
-  <li><a href="#objetivos-do-pseudocódigo" id="toc-objetivos-do-pseudocódigo" class="nav-link" data-scroll-target="#objetivos-do-pseudocódigo">Objetivos do pseudocódigo</a>
-  <ul class="collapse">
-  <li><a href="#público-alvo-e-nível-de-abstração" id="toc-público-alvo-e-nível-de-abstração" class="nav-link" data-scroll-target="#público-alvo-e-nível-de-abstração">Público-alvo e nível de abstração</a></li>
-  </ul></li>
-  <li><a href="#formalização-do-pseudocódigo" id="toc-formalização-do-pseudocódigo" class="nav-link" data-scroll-target="#formalização-do-pseudocódigo">Formalização do pseudocódigo</a>
-  <ul class="collapse">
-  <li><a href="#padronização" id="toc-padronização" class="nav-link" data-scroll-target="#padronização">Padronização</a></li>
   <li><a href="#documentação" id="toc-documentação" class="nav-link" data-scroll-target="#documentação">Documentação</a></li>
   <li><a href="#declaração-e-uso-de-variáveis" id="toc-declaração-e-uso-de-variáveis" class="nav-link" data-scroll-target="#declaração-e-uso-de-variáveis">Declaração e uso de variáveis</a></li>
   </ul></li>
@@ -324,125 +431,42 @@ window.Quarto = {
   <li><a href="#repetições" id="toc-repetições" class="nav-link" data-scroll-target="#repetições">Repetições</a></li>
   </ul></li>
   <li><a href="#notação-matemática-times-notação-programática" id="toc-notação-matemática-times-notação-programática" class="nav-link" data-scroll-target="#notação-matemática-times-notação-programática">Notação matemática <span class="math inline">\(\times\)</span> notação programática</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../algoritmos/index.html">Representação e uso de algoritmos</a></li><li class="breadcrumb-item"><a href="../algoritmos/formalizacao.html">Formalização dos algoritmos computacionais</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../algoritmos/index.html">Representação e uso de algoritmos</a></li><li class="breadcrumb-item"><a href="../algoritmos/formalizacao.html">Formalização dos algoritmos computacionais</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Formalização dos algoritmos computacionais</h1>
+</div>
 
 
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <span class="math inline">\(\newcommand\Id[1]{\mbox{\textit{#1}}}\)</span>
-<section id="formalização-dos-algoritmos-computacionais" class="level1">
-<h1>Formalização dos algoritmos computacionais</h1>
 <p>Neste material as soluções algorítmicas serão apresentadas por meio de pseudocódigo, embora haja uma certa variedade de outras opções de representação.</p>
-<p>A formalização do pseudocódigo a ser adotado neste material é o foco deste capítulo.</p>
-<section id="objetivos-do-pseudocódigo" class="level2">
-<h2 class="anchored" data-anchor-id="objetivos-do-pseudocódigo">Objetivos do pseudocódigo</h2>
-<p>O pseudocódigo pode ser visto como uma mistura de aspectos mais formais, como computação ou notação matemática, com linguagem natural.</p>
-<p>Como um primeiro exemplo é apresentado o <a href="../algoritmos/formalizacao.html#alg-estimativa-altura-predio">Algoritmo 1</a>, que considera uma forma de se obter indiretamente a altura de um prédio dados os comprimentos das sombras do prédio de de uma pessoa, juntamente com a altura dessa pessoa. Este tipo de algoritmo pode ser facilmente implementado em C.</p>
-<div id="alg-estimativa-altura-predio">
-<figcaption class="figure-caption">
-<p>Algoritmo 1: Estimativa da altura de um prédio em função de sobras projetadas.</p>
-</figcaption>
-<p><img src="../algxpar/pseudocode.e0775d007745a1cf09bbb1b59d7be205e68ffb29.svg" class="img-fluid" alt="Algoritmo 1: Estimativa da altura de um prédio em função de sobras projetadas." width="648"></p>
-</div>
-<p>Este é um típico problema e programa solicitado em listas de exercícios de cursos de programação. O algoritmo apresenta uma solução praticamente pronta para a implementação do programa, incluindo sugestões para os nomes das variáveis e até induzindo os comandos que serão usados. A escrita do <a href="../algoritmos/formalizacao.html#alg-estimativa-altura-predio">Algoritmo 1</a> foi feita considerando que o algoritmo seria lido por um programador com, minimamente, as capacidades básicas de codificação.</p>
-<p>Como um segundo exemplo de pseudocódigo, o <a href="../algoritmos/formalizacao.html#alg-alexandre-levada">Algoritmo 2</a> pode ser considerado.</p>
-<div id="alg-alexandre-levada">
-<figcaption class="figure-caption">
-<p>Algoritmo 2: PNN based LPP, adaptado de <span class="citation" data-cites="levada">Levada (<a href="#ref-levada" role="doc-biblioref">2022</a>)</span></p>
-</figcaption>
-<p><img src="../algxpar/pseudocode.6367b4df565054dd74623859564fc45143c835e9.svg" class="img-fluid" alt="Algoritmo 2: PNN based LPP, adaptado de @levada" width="648"></p>
-</div>
-<p>Este algoritmo é uma adaptação do apresentado no artigo de <span class="citation" data-cites="levada">Levada (<a href="#ref-levada" role="doc-biblioref">2022</a>)</span> e, para entendê-lo por completo, tanto o texto do artigo deve ser lido quanto o leitor deve ter conhecimento sobre o tema abordado. O objetivo do algoritmo não é o entendimento do procedimento que ele realiza em detalhes, mas observar a sequência de passos para produzir o resultado desejado. Ele ainda envolve a integração da linguagem natural com notação matemática para representar as expressões e matrizes utilizadas. No algoritmo original não há a documentação com a descrição nem as pré e pós-condições, uma vez que ele está inserido na discussão apresentada pelo artigo como um todo.</p>
-<p>O <a href="../algoritmos/formalizacao.html#alg-alexandre-levada">Algoritmo 2</a> não foi escrito para pronta implementação. Ele deixa muitos pontos em aberto, mesmo sendo claro quanto a todos os cálculos que devem ser feitos e em que sequência. Esse é um algoritmo de nível alto de abstração, ou seja, muitos detalhes são omitidos propositalmente em função do público-alvo, que são os leitores do artigo científico. Apresentar todos os detalhes, como o passo a passo da criação dos vetores de distâncias <span class="math inline">\(\vec{d}_i\)</span> ou a própria fórmula usada para a distância somente tornaria o código desnecessariamente complexo, prejudicando a compreensão da estratégia da solução.</p>
-<section id="público-alvo-e-nível-de-abstração" class="level3">
-<h3 class="anchored" data-anchor-id="público-alvo-e-nível-de-abstração">Público-alvo e nível de abstração</h3>
-<p>Quando um algoritmo vai ser escrito, é preciso ter claro qual é o público-alvo que ele pretende atingir. As instruções, portanto, assumem uma forma baseada no conhecimento prévio de quem vai interpretá-las. Essa decisão implica na escolha do nível de abstração que será empregado.</p>
-<p>Um algoritmo escrito com nível de abstração baixo é aquele mais próximo do programa que será implementado. Ele costuma apresentar as variáveis e comandos de forma mais explícita. Quando o nível de abstração sobe, os detalhes de implementação são substituídos por descrições mais genéricas.</p>
-<p>Supondo que o problema a ser resolvido seja a soma de duas matrizes de mesma dimensão, são apresentados algoritmos em níveis de abstração diferentes, todos corretos e abordando exatamente a mesma solução. O <a href="../algoritmos/formalizacao.html#alg-soma-matrizes-nivel-alto">Algoritmo 3</a> possui um nível de abstração bastante alto, seguido pelo <a href="../algoritmos/formalizacao.html#alg-soma-matrizes-nivel-medio">Algoritmo 4</a>, o qual apresenta mais detalhes e pode ser considerado de nível médio; por sua vez, o <a href="../algoritmos/formalizacao.html#alg-soma-matrizes-nivel-mais-baixo">Algoritmo 5</a> e o <a href="../algoritmos/formalizacao.html#alg-soma-matrizes-nivel-baixo">Algoritmo 6</a> já possuem nível baixo e se aproximam mais de uma possível implementação em um programa.</p>
-<div id="alg-soma-matrizes-nivel-alto">
-<figcaption class="figure-caption">
-<p>Algoritmo 3: Soma de duas matrizes de mesma dimensão (nível alto).</p>
-</figcaption>
-<p><img src="../algxpar/pseudocode.5d9feff925aa7d42dfb63f61907b56f59066269d.svg" class="img-fluid" alt="Algoritmo 3: Soma de duas matrizes de mesma dimensão (nível alto)." width="648"></p>
-</div>
-<div id="alg-soma-matrizes-nivel-medio">
-<figcaption class="figure-caption">
-<p>Algoritmo 4: Soma de duas matrizes de mesma dimensão (nível médio).</p>
-</figcaption>
-<p><img src="../algxpar/pseudocode.a5ee95efe6c7ff20ca3121a2d69e91f51adda0d3.svg" class="img-fluid" alt="Algoritmo 4: Soma de duas matrizes de mesma dimensão (nível médio)." width="648"></p>
-</div>
-<div id="alg-soma-matrizes-nivel-mais-baixo">
-<figcaption class="figure-caption">
-<p>Algoritmo 5: Soma de duas matrizes de mesma dimensão (nível mais baixo).</p>
-</figcaption>
-<p><img src="../algxpar/pseudocode.bd3fce43ba4738c63713a3b0b6e466a9ba69d626.svg" class="img-fluid" alt="Algoritmo 5: Soma de duas matrizes de mesma dimensão (nível mais baixo)." width="648"></p>
-</div>
-<div id="alg-soma-matrizes-nivel-baixo">
-<figcaption class="figure-caption">
-<p>Algoritmo 6: Soma de duas matrizes de mesma dimensão (nível baixo).</p>
-</figcaption>
-<p><img src="../algxpar/pseudocode.9403516c07f89f707eb3abd49a4c60353a2e90c2.svg" class="img-fluid" alt="Algoritmo 6: Soma de duas matrizes de mesma dimensão (nível baixo)." width="648"></p>
-</div>
-<p>Os algoritmos são apresentados em quatro níveis de abstração diferentes. A <a href="#tbl-comparacao-niveis-abstracao" class="quarto-xref">Tabela&nbsp;1</a> sumariza uma comparação desses algoritmos.</p>
-<div id="tbl-comparacao-niveis-abstracao" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-comparacao-niveis-abstracao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Tabela&nbsp;1: Comparação da soma de matrizes com algoritmos em diferentes níveis de abstração.
-</figcaption>
-<div aria-describedby="tbl-comparacao-niveis-abstracao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: center;">Algoritmo</th>
-<th style="text-align: center;">Nível</th>
-<th style="text-align: left;">Comentário</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><a href="../algoritmos/formalizacao.html#alg-soma-matrizes-nivel-alto">Algoritmo 3</a></td>
-<td style="text-align: center;">Alto</td>
-<td style="text-align: left;">Pressupõe o conhecimento de matrizes e suas operações; detalhes como as dimensões são omitidos.</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><a href="../algoritmos/formalizacao.html#alg-soma-matrizes-nivel-medio">Algoritmo 4</a></td>
-<td style="text-align: center;">Médio</td>
-<td style="text-align: left;">Ainda considera o conhecimento sobre matrizes; há mais detalhes de como os dados são obtidos e como o cálculo da soma é feito.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><a href="../algoritmos/formalizacao.html#alg-soma-matrizes-nivel-mais-baixo">Algoritmo 5</a></td>
-<td style="text-align: center;">Mais baixo</td>
-<td style="text-align: left;">A necessidade de conhecer matrizes é mínima, bastando assumir cada elemento como uma variável separada; introduz a necessidade das dimensões para controle da somas; mantém uma linguagem mais natural.</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><a href="../algoritmos/formalizacao.html#alg-soma-matrizes-nivel-baixo">Algoritmo 6</a></td>
-<td style="text-align: center;">Baixo</td>
-<td style="text-align: left;">Não há praticamente necessidade de entender o que é uma matriz; uma estruturação de pseudocódigo é adicionada; cada ação é hiperdetalhada; a linguagem natural é mínima.</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-<p>Da mesma forma que o nível de abstração depende do público-alvo, também inexiste a necessidade de que um mesmo algoritmo mantenha o nível de abstração constante para todas suas partes. Desse modo, pontos menos importantes, ou seja, que não são o foco do algoritmo, podem ter nível mais alto enquanto outras partes podem ser mais detalhadas, deixando o nível mais baixo para explicitar pontos relevantes da solução.</p>
-</section>
-</section>
-<section id="formalização-do-pseudocódigo" class="level2">
-<h2 class="anchored" data-anchor-id="formalização-do-pseudocódigo">Formalização do pseudocódigo</h2>
+<p>A formalização do pseudocódigo a ser adotado neste material é o foco desta seção.</p>
+<section id="formalização" class="level1">
+<h1>Formalização</h1>
 <p>Não existem regras para a escrita de pseudocódigo. Nada é necessariamente fixo, nem existem estruturas imutáveis que possam ser empregadas. O principal ponto é a representação clara do algoritmo para o leitor.</p>
-<p>Embora as regras não existam absolutamente, há um convenção geral adotada pela comunidade, ficando um grupo de estruturas e aspectos relativamente consolidados.</p>
-<section id="padronização" class="level3">
-<h3 class="anchored" data-anchor-id="padronização">Padronização</h3>
-<p>Os algoritmos apresentados neste material seguem um pseudocódigo próprio, baseado no uso geral dos algoritmos escritos pela comunidade de computação. Alguns elementos são mais usuais (condicionais, repetições e funções), outras são menos utilizadas (documentação com pré e pós-condições) e outras não são convencionais (condicional de seleção).</p>
+<p>Embora as regras não existam absolutamente, há uma convenção geral adotada pela comunidade, ficando um grupo de estruturas e aspectos bem consolidados.</p>
+<p>Os algoritmos apresentados neste material seguem um pseudocódigo próprio, baseado no uso geral dos algoritmos escritos pela comunidade de computação. Alguns elementos são mais usuais (condicionais, repetições e funções), outras são menos utilizadas (documentação com as pré-condições e pós-condições) e outras não são tão convencionais (condicional de seleção).</p>
 <p>A opção por ter tanto os elementos de uso geral e quanto algumas “invovações” vem do caráter didático a que este material se propõe a ter.</p>
-</section>
-<section id="documentação" class="level3">
-<h3 class="anchored" data-anchor-id="documentação">Documentação</h3>
+<section id="documentação" class="level2">
+<h2 class="anchored" data-anchor-id="documentação">Documentação</h2>
 <p>Todos os algoritmos neste material conterão um cabeçalho de documentação. Nele são exibidos os seguintes elementos:</p>
 <ul>
 <li>Descrição;</li>
@@ -450,19 +474,19 @@ Tabela&nbsp;1: Comparação da soma de matrizes com algoritmos em diferentes ní
 <li>Pós-condições.</li>
 </ul>
 <p>A descrição é a caracterização do problema que o algoritmo resolve e tem a extensão necessária para apresentar com clareza o problema. Em particular, a descrição não apresenta como o problema é resolvido, pois isso é a parte das instruções.</p>
-<p>As pré-condições e pós-condições reportam de forma tão precisa quanto possível, o que o algoritmo precisa e em que condições esses dados devem estar e também o que ele produz, dando detalhes para que não haja problemas em interpretar o que o algoritmo produz como resultado. Estes dois elementos são apresentados no <strong>?@sec-nocoes-de-algoritmos</strong>.</p>
+<p>As pré-condições e pós-condições reportam de forma tão precisa quanto possível, o que o algoritmo precisa e em que condições esses dados devem estar e também o que ele produz, dando detalhes para que não haja problemas em interpretar o que o algoritmo produz como resultado.</p>
 </section>
-<section id="declaração-e-uso-de-variáveis" class="level3">
-<h3 class="anchored" data-anchor-id="declaração-e-uso-de-variáveis">Declaração e uso de variáveis</h3>
+<section id="declaração-e-uso-de-variáveis" class="level2">
+<h2 class="anchored" data-anchor-id="declaração-e-uso-de-variáveis">Declaração e uso de variáveis</h2>
 <p>Embora ocorram em alguns algoritmos, as declarações de variáveis não são empregadas nas soluções apresentadas. A ideia de declaração introduz um detalhamento desnecessário no pseudocódigo, pois levaria à necessidade de especificar tipos de dados e impor, eventualmente, limitações e particularidades a eles. Manteve-se, assim, um nível mais alto de abstração para as variáveis.</p>
 <p>Os identificadores são expressos de forma relativamente livre, usando <em>snake case</em> e notação matemática. As atribuições usam </p>
 </section>
 </section>
-<section id="elementos-estruturais" class="level2">
-<h2 class="anchored" data-anchor-id="elementos-estruturais">Elementos estruturais</h2>
+<section id="elementos-estruturais" class="level1">
+<h1>Elementos estruturais</h1>
 <p>Seguindo uma convenção geral, o pseudocódigo adotado segue padrões comuns a artigos científicos e muitos outros materiais disponíveis. Em particular, a formalização adotada no texto segue alguns elementos de estruturação importantes.</p>
-<section id="execução-sequencial" class="level3">
-<h3 class="anchored" data-anchor-id="execução-sequencial">Execução sequencial</h3>
+<section id="execução-sequencial" class="level2">
+<h2 class="anchored" data-anchor-id="execução-sequencial">Execução sequencial</h2>
 <p>Cada instrução do algoritmo é escrita em sua própria linha, estabelecendo uma execução sequencial das instruções. Uma nova instrução somente será executada depois da anterior ter sido completamente finalizada.</p>
 <div>
 <figcaption class="figure-caption">
@@ -472,8 +496,8 @@ Tabela&nbsp;1: Comparação da soma de matrizes com algoritmos em diferentes ní
 <p>Muitas vezes a inversão na ordem não impacta no resultado, mas uma ordem incorreta implica em uma solução incorreta.</p>
 <p>Como o algoritmo é uma sequência de ordens que devem ser seguidas à risca, o modo verbal usado será sempre o imperativo.</p>
 </section>
-<section id="obtenção-e-apresentação-de-dados" class="level3">
-<h3 class="anchored" data-anchor-id="obtenção-e-apresentação-de-dados">Obtenção e apresentação de dados</h3>
+<section id="obtenção-e-apresentação-de-dados" class="level2">
+<h2 class="anchored" data-anchor-id="obtenção-e-apresentação-de-dados">Obtenção e apresentação de dados</h2>
 <p>Nos algoritmos, os dados necessários devem ser “entrados” de forma a produzir “saídas”. Por uma associação livre e direta, as entradas são as informações que um usuário digitaria para o programa utilizar, enquanto as saídas são os resultados apresentados no terminal.</p>
 <p>Neste texto, as entradas estarão associadas principalmente ao verbo <em>obter</em>, enquanto a saída usa o verbo <em>apresentar</em>. Por associação às linguagens de programação, também é comum o uso dos verbos <em>ler</em> e <em>escrever</em>, respectivamente.</p>
 <p>Na sequência é apresentada uma entrada e uma saída de dados.</p>
@@ -489,8 +513,8 @@ Tabela&nbsp;1: Comparação da soma de matrizes com algoritmos em diferentes ní
 <p><img src="../algxpar/pseudocode.79e80dbddaaa0ad61b205682d96015039f3568d6.svg" class="img-fluid" alt="" width="648"></p>
 </div>
 </section>
-<section id="execução-condicional" class="level3">
-<h3 class="anchored" data-anchor-id="execução-condicional">Execução condicional</h3>
+<section id="execução-condicional" class="level2">
+<h2 class="anchored" data-anchor-id="execução-condicional">Execução condicional</h2>
 <p>A execução condicional assume a forma tradicional da estrutura <strong>se</strong>, na qual a lista de instruções indicada somente deve ser executada quando a condição verificada for verdadeira.</p>
 <div>
 <figcaption class="figure-caption">
@@ -529,8 +553,8 @@ Tabela&nbsp;1: Comparação da soma de matrizes com algoritmos em diferentes ní
 <p>A omissão do <strong>caso contrário</strong> representa a situação em que, não havendo coincidência com nenhuma das opções, nenhuma ação é realizada.</p>
 <p>Qualquer seleção pode ser escrita com a estrutura condicional <strong>se</strong>.</p>
 </section>
-<section id="repetições" class="level3">
-<h3 class="anchored" data-anchor-id="repetições">Repetições</h3>
+<section id="repetições" class="level2">
+<h2 class="anchored" data-anchor-id="repetições">Repetições</h2>
 <p>Instruções executadas repetidamente são representadas pelas repetições com <strong>enquanto</strong>, <strong>repita</strong> e <strong>para</strong>.</p>
 <p>A estrutura <strong>enquanto</strong> utiliza o teste de continuidade da repetição no início, permitindo zero ou mais repetições. Para a condição é esperado uma expressão que resulte em verdadeiro ou falso.</p>
 <div>
@@ -580,21 +604,21 @@ Nota
 </div>
 </div>
 </div>
-<!-- ### Comentários
+<!-- ## Comentários
 
-## Algoritmos estruturados -->
+# Algoritmos estruturados -->
 </section>
 </section>
-<section id="notação-matemática-times-notação-programática" class="level2">
-<h2 class="anchored" data-anchor-id="notação-matemática-times-notação-programática">Notação matemática <span class="math inline">\(\times\)</span> notação programática</h2>
-<p>Os algoritmos apresentados em publicações científicas tendem a usar pseudocódigo com uma denotação muito próxima da matemática, ou seja, laçam mão de um formato mais formal, técnico e compacto. Como exemplos é apresentado o <a href="../algoritmos/formalizacao.html#alg-bellman-ford">Algoritmo 7</a>, além do já mencionado <a href="../algoritmos/formalizacao.html#alg-alexandre-levada">Algoritmo 2</a>.</p>
+<section id="notação-matemática-times-notação-programática" class="level1">
+<h1>Notação matemática <span class="math inline">\(\times\)</span> notação programática</h1>
+<p>Os algoritmos apresentados em publicações científicas tendem a usar pseudocódigo com uma denotação muito próxima da matemática, ou seja, laçam mão de um formato mais formal, técnico e compacto. Como exemplos é apresentado o <a href="../algoritmos/formalizacao.html#alg-bellman-ford">Algoritmo 1</a>, além do já mencionado <a href="../algoritmos/objetivos-e-niveis-de-abstracao.html#alg-alexandre-levada">Algoritmo 2</a>.</p>
 <div id="alg-bellman-ford">
 <figcaption class="figure-caption">
-<p>Algoritmo 7: Algoritmo de Bellman-Ford (adaptado de <span class="citation" data-cites="cormen2002algoritmos">Cormen et al. (<a href="#ref-cormen2002algoritmos" role="doc-biblioref">2002</a>)</span>).</p>
+<p>Algoritmo 1: Algoritmo de Bellman-Ford (adaptado de <span class="citation" data-cites="cormen2002algoritmos">Cormen et al. (<a href="#ref-cormen2002algoritmos" role="doc-biblioref">2002</a>)</span>).</p>
 </figcaption>
-<p><img src="../algxpar/pseudocode.03060ce72cff5ab01c7712d9653608f0e406c468.svg" class="img-fluid" alt="Algoritmo 7: Algoritmo de Bellman-Ford (adaptado de @cormen2002algoritmos)." width="648"></p>
+<p><img src="../algxpar/pseudocode.03060ce72cff5ab01c7712d9653608f0e406c468.svg" class="img-fluid" alt="Algoritmo 1: Algoritmo de Bellman-Ford (adaptado de @cormen2002algoritmos)." width="648"></p>
 </div>
-<p>Esse aspecto mais “matemático” contrasta com as escolhas feitas quando são codificados programas nas mais diversas linguagens de programação. Na sequência é apresentada uma versão (incompleta) do <a href="../algoritmos/formalizacao.html#alg-bellman-ford">Algoritmo 7</a> codificada em Python. Nela, as opções foram por um código bem estruturado e organizado. Por exemplo, <span class="math inline">\(E[G]\)</span>, que é a notação formal para a lista de arestas foi subsituída pela variável <code>lista_arestas</code>, assim como <span class="math inline">\(u\)</span> e <span class="math inline">\(v\)</span> deram lugar aos (vértices) <code>origem</code> e <code>destino</code>.</p>
+<p>Esse aspecto mais “matemático” contrasta com as escolhas feitas quando são codificados programas nas mais diversas linguagens de programação. Na sequência é apresentada uma versão (incompleta) do <a href="../algoritmos/formalizacao.html#alg-bellman-ford">Algoritmo 1</a> codificada em Python. Nela, as opções foram por um código bem estruturado e organizado. Por exemplo, <span class="math inline">\(E[G]\)</span>, que é a notação formal para a lista de arestas foi subsituída pela variável <code>lista_arestas</code>, assim como <span class="math inline">\(u\)</span> e <span class="math inline">\(v\)</span> deram lugar aos (vértices) <code>origem</code> e <code>destino</code>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Inicia as distâncias de todos os vértices como infinito e a origem como 0</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>distancias <span class="op">=</span> [<span class="bu">float</span>(<span class="st">'inf'</span>)] <span class="op">*</span> num_vertices</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>distancias[vertice_inicio] <span class="op">=</span> <span class="dv">0</span></span>
@@ -614,7 +638,7 @@ Nota
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> <span class="va">True</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>A resposta para qual seria a melhor representação tem uma resposta simples: depende.</p>
-<p>Nenhuma delas é melhor ou pior que a outra, pois devem ser aplicadas em seus próprios contextos. Para o caso dos grafos orientados do <a href="../algoritmos/formalizacao.html#alg-bellman-ford">Algoritmo 7</a>, o uso de <span class="math inline">\(G\)</span> para o grafo e <span class="math inline">\(u\)</span> e <span class="math inline">\(v\)</span> para arestas é o mais usual e, portanto, óbvio para quem conhece o assunto. Dessa forma, seu uso é apropriado e, também, conveniente.</p>
+<p>Nenhuma delas é melhor ou pior que a outra, pois devem ser aplicadas em seus próprios contextos. Para o caso dos grafos orientados do <a href="../algoritmos/formalizacao.html#alg-bellman-ford">Algoritmo 1</a>, o uso de <span class="math inline">\(G\)</span> para o grafo e <span class="math inline">\(u\)</span> e <span class="math inline">\(v\)</span> para arestas é o mais usual e, portanto, óbvio para quem conhece o assunto. Dessa forma, seu uso é apropriado e, também, conveniente.</p>
 <p>Na escrita de programas e, em associação, de algoritmos computacionais, a notação matemática tende a ser substituída por nomes mais significativos, como <code>origem</code> (ou até <code>vertice_origem</code>), por exemplo. Nessa situação, a clareza do código é mais relevante.</p>
 <p>Para exemplificar, o seguinte programa escrito em Fortran pode ser considerado. Sua função é, a partir de um salário inicial e de uma porcentagem de aumento, calcular o salário final resultante.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode fortran code-with-copy"><code class="sourceCode fortranfixed"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">PROGRAM</span> SCalc</span>
@@ -655,19 +679,19 @@ Nota
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">PRINT</span> <span class="kw">*</span>, <span class="st">"O novo salário é:"</span>, novo_salario</span>
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="kw">END PROGRAM</span> CalculoSalario</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Para os algoritmos, portanto, valem os mesmos argumentos. A notação mais matemática pode ser usada em várias situações e a notação mais usualmente empregada em programas, em outras. Por uma questão de clareza, todo o material faz como opção a escolha de uma notação que preza mais pela clareza.</p>
-<p>Em conclusão, os programas em Fortran apresentados seriam implementações do <a href="../algoritmos/formalizacao.html#alg-aumento-de-salario">Algoritmo 8</a>.</p>
+<p>Em conclusão, os programas em Fortran apresentados seriam implementações do <a href="../algoritmos/formalizacao.html#alg-aumento-de-salario">Algoritmo 2</a>.</p>
 <div id="alg-aumento-de-salario">
 <figcaption class="figure-caption">
-<p>Algoritmo 8: Cálculo do aumento de um salário.</p>
+<p>Algoritmo 2: Cálculo do aumento de um salário.</p>
 </figcaption>
-<p><img src="../algxpar/pseudocode.1596af438c7e9a5fbea54ec89362db7d48b96c8e.svg" class="img-fluid" alt="Algoritmo 8: Cálculo do aumento de um salário." width="648"></p>
+<p><img src="../algxpar/pseudocode.1596af438c7e9a5fbea54ec89362db7d48b96c8e.svg" class="img-fluid" alt="Algoritmo 2: Cálculo do aumento de um salário." width="648"></p>
 </div>
-<p>Para contastratar, o <a href="../algoritmos/formalizacao.html#alg-aumento-de-salario-sintetico">Algoritmo 9</a> seria a versão mais sintética e com menor clareza do <a href="../algoritmos/formalizacao.html#alg-aumento-de-salario">Algoritmo 8</a>. Quase uma versão “criptográfica” do anterior.</p>
+<p>Para contastratar, o <a href="../algoritmos/formalizacao.html#alg-aumento-de-salario-sintetico">Algoritmo 3</a> seria a versão mais sintética e com menor clareza do <a href="../algoritmos/formalizacao.html#alg-aumento-de-salario">Algoritmo 2</a>. Quase uma versão “criptográfica” do anterior.</p>
 <div id="alg-aumento-de-salario-sintetico">
 <figcaption class="figure-caption">
-<p>Algoritmo 9: Cálculo do aumento de um salário.</p>
+<p>Algoritmo 3: Cálculo do aumento de um salário.</p>
 </figcaption>
-<p><img src="../algxpar/pseudocode.e1f4745d5bbdd621fc4656ee2963385c63dbefc1.svg" class="img-fluid" alt="Algoritmo 9: Cálculo do aumento de um salário." width="648"></p>
+<p><img src="../algxpar/pseudocode.e1f4745d5bbdd621fc4656ee2963385c63dbefc1.svg" class="img-fluid" alt="Algoritmo 3: Cálculo do aumento de um salário." width="648"></p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -679,7 +703,7 @@ Dica
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>O uso de uma notação com nomes mais signficativos, embora parece irrelevante em problemas pequenos, torna-se essencial para soluções mais complexas e, em consequência, com mais instruções.</p>
+<p>O uso de uma notação com nomes mais signficativos, embora pareça irrelevante em problemas pequenos, torna-se essencial para soluções mais complexas e, em consequência, com mais instruções.</p>
 <p>Acostumar-se a fazer o melhor logo de início é a melhor alternativa!</p>
 </div>
 </div>
@@ -687,14 +711,10 @@ Dica
 
 
 </section>
-</section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-cormen2002algoritmos" class="csl-entry" role="listitem">
 Cormen, Thomas H, Charles E Leiserson, Ronald L Rivest, e Clifford Stein. 2002. <em>Algoritmos: teoria e prática</em>. <em>Editora Campus</em>. Vol. 2.
-</div>
-<div id="ref-levada" class="csl-entry" role="listitem">
-Levada, Alexandre. 2022. <span>“A probabilistic nearest neighbors based locality preserving projections”</span>. <em>SSRN 4267754</em>. <a href="https://ssrn.com/abstract=4267754">https://ssrn.com/abstract=4267754</a>.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

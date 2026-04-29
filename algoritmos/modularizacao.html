@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<meta name="generator" content="quarto-1.6.43">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>modularizacao – Algoritmos &amp; Programação</title>
+<title>Modularização – Algoritmos &amp; Programação</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-9e1f2a4632985dffc2c80318c992baf5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-673ef696772ae3f5d735fbdc0f05a12f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ca7e136d0d5988c87344814d6f3e778b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-1dd8d82aecac727982dd00c96d3bebf9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -66,15 +66,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Procurar"
   }
 }</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0NHDE9GGJP"></script>
-
-<script type="text/javascript">
-
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-0NHDE9GGJP', { 'anonymize_ip': true});
-</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -106,7 +97,6 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../book.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -134,8 +124,16 @@ window.Quarto = {
     <a class="nav-link" href="../linguagem-c/index.html"> 
 <span class="menu-text">Linguagem C</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../questoes/index.html"> 
+<span class="menu-text">Problemas</span></a>
+  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../questoes/index.html"> 
+<span class="menu-text">Questões</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../sobre.html"> 
 <span class="menu-text">Sobre…</span></a>
@@ -156,7 +154,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../algoritmos/modularizacao.html">Desenvolvimento e organização de algoritmos</a></li><li class="breadcrumb-item"><a href="../algoritmos/modularizacao.html">Algoritmos: modularização</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../algoritmos/modularizacao.html">Modularização</a></li><li class="breadcrumb-item"><a href="../algoritmos/modularizacao.html">Modularização</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -192,12 +190,24 @@ window.Quarto = {
  <span class="menu-text">Formalização dos algoritmos computacionais</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/objetivos-e-niveis-de-abstracao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Objetivos dos algoritmos e níveis de abstração</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/compreensao-do-problema.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Compreensão do problema</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Processamento de sequências de dados</span></a>
+ <span class="menu-text">Processamento básico</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -205,33 +215,137 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../algoritmos/processamento-basico-de-sequencias-de-dados.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Estruturas algorítmicas básicas para processamento de sequências de dados</span></a>
+  <a href="../algoritmos/fluxo-sequencial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fluxo sequencial e manipulação de dados</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Fluxo condicional</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/fluxo-condicional-estruturas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estruturas condicionais</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../algoritmos/desenvolvimento-de-algoritmos-para-processamento-de-sequencias.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Desenvolvimento de algoritmos para processamento de sequências de dados</span></a>
+  <a href="../algoritmos/fluxo-condicional-utilizacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Utilização do fluxo condicional</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/fluxo-condicional-avaliacao-de-solucoes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Avaliação de condicionais</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Fluxo repetitivo</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/fluxo-de-repeticao-estruturas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Estruturas de repetição</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/fluxo-de-repeticao-para-calculos-iterativos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cálculos iterativos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/fluxo-de-repeticao-para-processamento-de-sequencias.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Processamento de sequências de dados</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/fluxo-de-repeticao-avaliacao-de-solucoes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Avaliação de repetições</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Estratégias de desenvolvimento</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/desenvolvimento-por-refinamentos-sucessivos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Refinamentos sucessivos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/testes-de-mesa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algoritmos: testes de mesa</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Desenvolvimento e organização de algoritmos</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Modularização</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../algoritmos/modularizacao.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Algoritmos: modularização</span></a>
+ <span class="menu-text">Modularização</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/modularizacao-coesao-e-acoplamento.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coesão e acoplamento</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algoritmos/modularizacao-estrategia-de-decisao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Abordagem de problema e decisão de modularização</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Desenvolvimento e organização de algoritmos</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../algoritmos/desenvolvimento-com-modularizacao.html" class="sidebar-item-text sidebar-link">
@@ -250,43 +364,171 @@ window.Quarto = {
     <h2 id="toc-title">Nesta página:</h2>
    
   <ul>
-  <li><a href="#algoritmos-modularização" id="toc-algoritmos-modularização" class="nav-link active" data-scroll-target="#algoritmos-modularização">Algoritmos: modularização</a>
+  <li><a href="#conceito-de-modularização" id="toc-conceito-de-modularização" class="nav-link active" data-scroll-target="#conceito-de-modularização">1. Conceito de Modularização</a></li>
+  <li><a href="#tipos-de-módulos" id="toc-tipos-de-módulos" class="nav-link" data-scroll-target="#tipos-de-módulos">2. Tipos de Módulos</a></li>
+  <li><a href="#parâmetros" id="toc-parâmetros" class="nav-link" data-scroll-target="#parâmetros">3. Parâmetros</a></li>
+  <li><a href="#escopo-de-variáveis" id="toc-escopo-de-variáveis" class="nav-link" data-scroll-target="#escopo-de-variáveis">4. Escopo de Variáveis</a></li>
+  <li><a href="#passagem-de-parâmetros" id="toc-passagem-de-parâmetros" class="nav-link" data-scroll-target="#passagem-de-parâmetros">5. Passagem de Parâmetros</a></li>
+  <li><a href="#estrutura-de-um-módulo" id="toc-estrutura-de-um-módulo" class="nav-link" data-scroll-target="#estrutura-de-um-módulo">6. Estrutura de um Módulo</a></li>
+  <li><a href="#chamadas-de-módulos" id="toc-chamadas-de-módulos" class="nav-link" data-scroll-target="#chamadas-de-módulos">7. Chamadas de Módulos</a></li>
+  <li><a href="#organização-hierárquica" id="toc-organização-hierárquica" class="nav-link" data-scroll-target="#organização-hierárquica">8. Organização Hierárquica</a></li>
+  <li><a href="#coesão-e-acoplamento" id="toc-coesão-e-acoplamento" class="nav-link" data-scroll-target="#coesão-e-acoplamento">9. Coesão e Acoplamento</a></li>
+  <li><a href="#exemplos-em-pseudocódigo" id="toc-exemplos-em-pseudocódigo" class="nav-link" data-scroll-target="#exemplos-em-pseudocódigo">10. Exemplos em Pseudocódigo</a>
   <ul class="collapse">
-  <li><a href="#funções-e-valor-de-retorno" id="toc-funções-e-valor-de-retorno" class="nav-link" data-scroll-target="#funções-e-valor-de-retorno">Funções e valor de retorno</a></li>
-  <li><a href="#procedimentos" id="toc-procedimentos" class="nav-link" data-scroll-target="#procedimentos">Procedimentos</a></li>
-  <li><a href="#parâmetros-formais" id="toc-parâmetros-formais" class="nav-link" data-scroll-target="#parâmetros-formais">Parâmetros formais</a></li>
-  <li><a href="#parâmetros-por-valor-ou-por-referência" id="toc-parâmetros-por-valor-ou-por-referência" class="nav-link" data-scroll-target="#parâmetros-por-valor-ou-por-referência">Parâmetros por valor ou por referência</a></li>
-  <li><a href="#exemplos-e-exercícios" id="toc-exemplos-e-exercícios" class="nav-link" data-scroll-target="#exemplos-e-exercícios">Exemplos e exercícios</a></li>
+  <li><a href="#exemplo-de-função" id="toc-exemplo-de-função" class="nav-link" data-scroll-target="#exemplo-de-função">Exemplo de Função:</a></li>
+  <li><a href="#exemplo-de-procedimento" id="toc-exemplo-de-procedimento" class="nav-link" data-scroll-target="#exemplo-de-procedimento">Exemplo de Procedimento:</a></li>
+  <li><a href="#uso-no-programa-principal" id="toc-uso-no-programa-principal" class="nav-link" data-scroll-target="#uso-no-programa-principal">Uso no Programa Principal:</a></li>
   </ul></li>
+  <li><a href="#boas-práticas-na-modularização" id="toc-boas-práticas-na-modularização" class="nav-link" data-scroll-target="#boas-práticas-na-modularização">11. Boas Práticas na Modularização</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../algoritmos/modularizacao.html">Desenvolvimento e organização de algoritmos</a></li><li class="breadcrumb-item"><a href="../algoritmos/modularizacao.html">Algoritmos: modularização</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../algoritmos/modularizacao.html">Modularização</a></li><li class="breadcrumb-item"><a href="../algoritmos/modularizacao.html">Modularização</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Modularização</h1>
+</div>
 
 
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <span class="math inline">\(\newcommand\Id[1]{\mbox{\textit{#1}}}\)</span>
-<section id="algoritmos-modularização" class="level1">
-<h1>Algoritmos: modularização</h1>
-<section id="funções-e-valor-de-retorno" class="level2">
-<h2 class="anchored" data-anchor-id="funções-e-valor-de-retorno">Funções e valor de retorno</h2>
+<section id="conceito-de-modularização" class="level2">
+<h2 class="anchored" data-anchor-id="conceito-de-modularização">1. Conceito de Modularização</h2>
+<p>A modularização é a técnica de dividir um algoritmo complexo em partes menores chamadas <strong>módulos</strong> ou <strong>subalgoritmos</strong>. Essa divisão facilita a compreensão, manutenção e reutilização do código. Cada módulo é responsável por uma tarefa específica e pode ser desenvolvido, testado e reutilizado independentemente.</p>
+<p><strong>Vantagens:</strong> - Facilita a leitura e compreensão dos algoritmos. - Permite o reaproveitamento de código. - Facilita a detecção e correção de erros. - Melhora a organização e estrutura do algoritmo.</p>
 </section>
-<section id="procedimentos" class="level2">
-<h2 class="anchored" data-anchor-id="procedimentos">Procedimentos</h2>
+<section id="tipos-de-módulos" class="level2">
+<h2 class="anchored" data-anchor-id="tipos-de-módulos">2. Tipos de Módulos</h2>
+<ul>
+<li><strong>Procedimentos</strong>: São módulos que executam uma ação, mas <strong>não retornam valor</strong>. Por exemplo, exibir uma mensagem na tela.</li>
+<li><strong>Funções</strong>: São módulos que executam uma ação e <strong>retornam um valor</strong>. Por exemplo, calcular a média de dois números.</li>
+<li><strong>Módulo principal</strong>: É o ponto de entrada do algoritmo, onde a execução começa.</li>
+<li><strong>Módulos auxiliares</strong>: São invocados pelo módulo principal ou por outros módulos para realizar tarefas específicas.</li>
+</ul>
 </section>
-<section id="parâmetros-formais" class="level2">
-<h2 class="anchored" data-anchor-id="parâmetros-formais">Parâmetros formais</h2>
+<section id="parâmetros" class="level2">
+<h2 class="anchored" data-anchor-id="parâmetros">3. Parâmetros</h2>
+<p>Os parâmetros são valores que um módulo recebe para realizar sua tarefa. Eles permitem que um mesmo módulo seja reutilizado com diferentes dados.</p>
+<ul>
+<li><strong>Parâmetros de entrada</strong>: Valores fornecidos ao módulo.</li>
+<li><strong>Parâmetros de saída</strong>: Valores que o módulo modifica e devolve ao chamador.</li>
+<li><strong>Por valor</strong>: O módulo recebe uma cópia do valor (modificações não afetam o valor original).</li>
+<li><strong>Por referência</strong>: O módulo recebe o endereço da variável original (modificações afetam o valor original).</li>
+</ul>
 </section>
-<section id="parâmetros-por-valor-ou-por-referência" class="level2">
-<h2 class="anchored" data-anchor-id="parâmetros-por-valor-ou-por-referência">Parâmetros por valor ou por referência</h2>
+<section id="escopo-de-variáveis" class="level2">
+<h2 class="anchored" data-anchor-id="escopo-de-variáveis">4. Escopo de Variáveis</h2>
+<p>O escopo determina onde uma variável pode ser acessada.</p>
+<ul>
+<li><strong>Variáveis locais</strong>: Declaradas dentro de um módulo, só existem durante sua execução.</li>
+<li><strong>Variáveis globais</strong>: Declaradas fora dos módulos, podem ser acessadas por todos eles.</li>
+<li><strong>Visibilidade</strong>: Determina onde uma variável pode ser usada.</li>
+<li><strong>Tempo de vida</strong>: Intervalo em que a variável existe na memória.</li>
+</ul>
 </section>
-<section id="exemplos-e-exercícios" class="level2">
-<h2 class="anchored" data-anchor-id="exemplos-e-exercícios">Exemplos e exercícios</h2>
+<section id="passagem-de-parâmetros" class="level2">
+<h2 class="anchored" data-anchor-id="passagem-de-parâmetros">5. Passagem de Parâmetros</h2>
+<p>A forma como os dados são passados para os módulos influencia o comportamento do algoritmo.</p>
+<ul>
+<li><strong>Por valor</strong>: O módulo trabalha com uma cópia dos dados. Exemplo: <code>Procedimento ExibirMensagem(texto)</code>.</li>
+<li><strong>Por referência</strong>: O módulo trabalha diretamente com a variável original. Exemplo: <code>Procedimento Incrementar(var x)</code>.</li>
+</ul>
+</section>
+<section id="estrutura-de-um-módulo" class="level2">
+<h2 class="anchored" data-anchor-id="estrutura-de-um-módulo">6. Estrutura de um Módulo</h2>
+<p>Um módulo deve ter uma estrutura clara e bem definida:</p>
+<pre><code>Função CalcularSoma(a, b)
+    Início
+        retorno &lt;- a + b
+    Fim</code></pre>
+<ul>
+<li><strong>Nome</strong>: Identificador claro e descritivo.</li>
+<li><strong>Parâmetros</strong>: Lista dos dados que o módulo recebe.</li>
+<li><strong>Corpo</strong>: Conjunto de instruções que executa a tarefa.</li>
+<li><strong>Retorno</strong>: (em funções) Valor devolvido ao chamador.</li>
+</ul>
+</section>
+<section id="chamadas-de-módulos" class="level2">
+<h2 class="anchored" data-anchor-id="chamadas-de-módulos">7. Chamadas de Módulos</h2>
+<p>Um módulo pode ser chamado em qualquer ponto do algoritmo, passando os valores apropriados.</p>
+<ul>
+<li><strong>Chamada simples</strong>: <code>Resultado &lt;- CalcularSoma(3, 5)</code></li>
+<li><strong>Chamada aninhada</strong>: <code>MostrarResultado(CalcularMedia(Notas))</code></li>
+<li><strong>Ordem de execução</strong>: A chamada transfere o controle para o módulo, que executa e retorna.</li>
+</ul>
+</section>
+<section id="organização-hierárquica" class="level2">
+<h2 class="anchored" data-anchor-id="organização-hierárquica">8. Organização Hierárquica</h2>
+<p>A estrutura modular pode ser representada em forma de árvore, com o módulo principal no topo.</p>
+<ul>
+<li><strong>Top-down</strong>: Inicia com uma visão geral e depois detalha os módulos.</li>
+<li><strong>Divisão funcional</strong>: Cada módulo trata de uma função específica.</li>
+</ul>
+<p>Exemplo de hierarquia:</p>
+<pre><code>Programa Principal
+├── LerDados
+├── ProcessarDados
+│   ├── CalcularMedia
+│   └── VerificarAprovacao
+└── ExibirResultado</code></pre>
+</section>
+<section id="coesão-e-acoplamento" class="level2">
+<h2 class="anchored" data-anchor-id="coesão-e-acoplamento">9. Coesão e Acoplamento</h2>
+<ul>
+<li><strong>Coesão</strong>: Grau em que as tarefas de um módulo estão relacionadas entre si. Alta coesão é desejável.</li>
+<li><strong>Acoplamento</strong>: Grau de dependência entre os módulos. Baixo acoplamento é desejável.</li>
+</ul>
+<p><strong>Boa prática:</strong> Criar módulos altamente coesos e fracamente acoplados.</p>
+</section>
+<section id="exemplos-em-pseudocódigo" class="level2">
+<h2 class="anchored" data-anchor-id="exemplos-em-pseudocódigo">10. Exemplos em Pseudocódigo</h2>
+<section id="exemplo-de-função" class="level3">
+<h3 class="anchored" data-anchor-id="exemplo-de-função">Exemplo de Função:</h3>
+<pre><code>Função CalcularArea(base, altura)
+    Início
+        retorno &lt;- base * altura / 2
+    Fim</code></pre>
+</section>
+<section id="exemplo-de-procedimento" class="level3">
+<h3 class="anchored" data-anchor-id="exemplo-de-procedimento">Exemplo de Procedimento:</h3>
+<pre><code>Procedimento ExibirMensagem(mensagem)
+    Início
+        Escreva(mensagem)
+    Fim</code></pre>
+</section>
+<section id="uso-no-programa-principal" class="level3">
+<h3 class="anchored" data-anchor-id="uso-no-programa-principal">Uso no Programa Principal:</h3>
+<pre><code>Início
+    area &lt;- CalcularArea(10, 5)
+    ExibirMensagem("Área calculada: " + area)
+Fim</code></pre>
+</section>
+</section>
+<section id="boas-práticas-na-modularização" class="level2">
+<h2 class="anchored" data-anchor-id="boas-práticas-na-modularização">11. Boas Práticas na Modularização</h2>
+<ul>
+<li>Escolher <strong>nomes significativos</strong> para módulos e variáveis.</li>
+<li>Garantir que cada módulo tenha <strong>uma única responsabilidade</strong>.</li>
+<li><strong>Evitar duplicação</strong> de código usando subalgoritmos reutilizáveis.</li>
+<li>Manter módulos com <strong>tamanho adequado</strong>: nem muito grandes, nem muito pequenos.</li>
+<li>Usar <strong>comentários</strong> para esclarecer objetivos quando necessário.</li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

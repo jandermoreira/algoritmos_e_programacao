@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<meta name="generator" content="quarto-1.6.43">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -69,10 +69,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-9e1f2a4632985dffc2c80318c992baf5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-673ef696772ae3f5d735fbdc0f05a12f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ca7e136d0d5988c87344814d6f3e778b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-1dd8d82aecac727982dd00c96d3bebf9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -100,15 +100,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Procurar"
   }
 }</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0NHDE9GGJP"></script>
-
-<script type="text/javascript">
-
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-0NHDE9GGJP', { 'anonymize_ip': true});
-</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -140,7 +131,6 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../book.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -168,8 +158,16 @@ window.Quarto = {
     <a class="nav-link active" href="../linguagem-c/index.html" aria-current="page"> 
 <span class="menu-text">Linguagem C</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../questoes/index.html"> 
+<span class="menu-text">Problemas</span></a>
+  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../questoes/index.html"> 
+<span class="menu-text">Questões</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../sobre.html"> 
 <span class="menu-text">Sobre…</span></a>
@@ -249,7 +247,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Controle de fluxo simples</span></a>
+ <span class="menu-text">Controle de fluxo</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -501,7 +499,7 @@ window.Quarto = {
 <p>Um programa em C lida com dados, que podem ser de diferentes tipos, como <code>int</code>, <code>long int</code> ou <code>double</code>, por exemplo. Neste capítulo são apresentados onde os dados são armazenados nos programas (variáveis), seus nomes (identificadores) e como guardar e substituir os valores desses dados (atribuição e leitura).</p>
 <section id="variáveis-declarações-e-atribuição" class="level1">
 <h1>Variáveis, declarações e atribuição</h1>
-<p>Qualquer informação precisa ser mapeada para bytes para poder ser utilizada em um sistema computacional.&nbsp;<a href="tipos-de-dados.html#sec-representacao-de-dados"><sup><img src="../figuras/connection.png" title="Veja mais" class="img-fluid" data-base="bottom" width="16"></sup></a></p>
+<p>Qualquer informação precisa ser mapeada para bytes para poder ser utilizada em um sistema computacional.&nbsp;<a href="tipos-de-dados.html#sec-representacao-de-dados">:veja:</a></p>
 <p>Para que um programa faça sua tarefa de resolver um dado problema, é preciso que ele tenha acesso à memória e sua representação. Quase na totalidade das linguagens de programação, uma área da memória na qual está guardado um dado é referenciado por um nome arbitrário. Por exemplo, se o ano de um evento é um dado que precisa ser guardado, os bytes reservados para o armazenamento dessa informação é referenciado por um identificador. E dado que o conteúdo da memória possa eventualmente ser modificado, a esse armazenamento é dado o nome de variável, no sentido de mutável.</p>
 <p> Assim, uma variável corresponde a uma área da memória principal e os bytes que a compõe são referenciados por um identificador.</p>
 <p>O programa seguinte exemplifica o uso de duas variáveis para o armazenamento de valores de temperatura.</p>
@@ -645,7 +643,7 @@ Tabela&nbsp;1: Identificadores e sua validade.
 <p>A escolha dos identificadores é responsabilidade do programador.</p>
 <section id="estilo" class="level2">
 <h2 class="anchored" data-anchor-id="estilo">Estilo</h2>
-<p>Nos programas apresentados neste livro, todos os identificadores de variáveis e de funções são escritos em <em>snake case</em>, que é um estilo de escrita. No <em>snake case</em>, todas as letras usadas são minúsculas e, quando um identificador é composto de duas ou mais palavras, é usada a sublinha para separá-las.</p>
+<p>Nos programas apresentados neste material, todos os identificadores de variáveis e de funções são escritos em <em>snake case</em>, que é um estilo de escrita. No <em>snake case</em>, todas as letras usadas são minúsculas e, quando um identificador é composto de duas ou mais palavras, é usada a sublinha para separá-las.</p>
 <p>Essa regra é seguida mesmo quando os nomes possuem sua combinação de maiúsculas e minúsculas característicos. Desta forma, o armazenamento do CPF usará uma variável <code>cpf</code>, um cálculo envolvendo o pH usará <code>ph</code> ou a temperatura em Fahrenheit usará <code>fahrenheit</code>.</p>
 <p>Esse padrão não é necessariamente adotado pelas bibliotecas da linguagem, que usam abreviações e combinações de estilo próprias e independentes. Como exemplos, não é usado <code>print_formatted</code>, mas <code>printf</code>, e na manipulação de caracteres há uma função chamada <code>strcat</code>, que significa <em>string concatenation</em> (sim, <em>concatenation</em> é abreviada para <em>cat</em>).</p>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -713,7 +711,7 @@ Dica
 <p>Se um programador precisar explicar, de alguma forma, o que uma variável contém, é porque o identificador dela foi mal escolhido.</p>
 </div>
 </div>
-<p>Ao longo do livro, os programas usam variáveis com nomes significativos. Muitas vezes os nomes são longos, o que pode levar o programador a ter preguiça de digitá-los. Felizmente, os IDEs modernos possuem recursos de auto-completar as digitações, que eliminam essa dificuldade.</p>
+<p>Ao longo do material, os programas usam variáveis com nomes significativos. Muitas vezes os nomes são longos, o que pode levar o programador a ter preguiça de digitá-los. Felizmente, os IDEs modernos possuem recursos de auto-completar as digitações, que eliminam essa dificuldade.</p>
 <p>Um problema de identificadores muito longos é que as linhas de código também ficam muito longas. Abreviações nos nomes podem ser empregadas, porém de forma criteriosa. Se <code>temperatura</code> é uma escolha clara para guardar um valor de temperatura, <code>temp</code> também pode ser. Porém <code>temp</code> é uma abreviação comum para um valor temporário e, em um contexto de temperaturas, não deve ser empregado.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -837,7 +835,7 @@ Dica
 <span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
 <span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb18"><pre class="sourceCode terminal cell-output code-with-copy"><code class="sourceCode terminal"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>valor: 6.95266e-310</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode terminal cell-output code-with-copy"><code class="sourceCode terminal"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>valor: 6.95314e-310</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>O valor que é apresentado é efetivamente o conteúdo da variável dado pelos bytes que estão na memória. A saída produzida pelo programa é imprevisível.</p>
 </div>
 </div>

@@ -10,3 +10,5 @@
 
 # Segredos
 .env
+
+**/*.quarto_ipynb

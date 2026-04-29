@@ -36,7 +36,7 @@ Há um volume de dados pequeno para esse problema, com apenas três valores. Sup
 %| title: Determinação do máximo entre dez valores reais.
 %| label: #alg-maximo-de-dez
 \begin{algorithmic}
-    \Description Determinação do máximo entre três reais
+    \Description Determinação do máximo entre 10 reais
     \Require dez valores reais
     \Ensure apresentação do valor máximo
     \Statex
